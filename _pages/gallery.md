@@ -130,7 +130,7 @@ category: site-gallery
 </div>
 
 <div align="middle" class="gallery-page-image">
-    <a href="https://www.instagram.com/p/CTPZegDs0BL/" class="gallery-text">
+    <a href="https://www.luchs.us/parallel-welt" class="gallery-text">
         <img src="assets/gallery/STATUE-ART.jpg" height="270" class="post-image" />
         ParallelWorlds <br /> LUCHS.US Team
     </a>
