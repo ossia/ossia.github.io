@@ -26,8 +26,8 @@ category: site-gallery
 <div id="fourfor" align="middle" class="gallery-page-image">
 <a href="https://bravozoulou.fr/projets/four-for/" class="gallery-text">
     <img src="assets/gallery/DID_4858.JPG" class="post-image" />
-    Four For  <br/> Bravo Zoulou</a>
-     <br/>&copy; Didier Crasnault
+    Four For  <br/> Bravo Zoulou <br/>&copy; Didier Crasnault
+</a> 
 </div>
 
 <div id="quarre" align="middle" class="gallery-page-image">
@@ -47,8 +47,8 @@ category: site-gallery
 <div align="middle" class="gallery-page-image">
     <a href="https://www.compagnie-ever.com/aleas" class="gallery-text">
         <img src="assets/gallery/MECA 2.jpg" class="post-image" />
-        ALEAS <br/> Compagnie EVER </a>
-    <br/> Camille Rocailleux
+        ALEAS <br/> Compagnie EVER <br/> Camille Rocailleux
+    </a>    
 </div>
 
 <div align="middle" class="gallery-page-image">
@@ -125,8 +125,8 @@ category: site-gallery
 <div align="middle" class="gallery-page-image">
     <a href="https://www.youtube.com/watch?v=3taCxcwjxcs" class="gallery-text">
         <img src="assets/gallery/marelle.jpg" class="post-image" />
-        Jeu de la Marelle <br /> Laurence Bouckaert </a>
-     <br /> Olivier Moyne
+        Jeu de la Marelle <br /> Laurence Bouckaert <br /> Olivier Moyne 
+    </a>
 </div>
 
 <div align="middle" class="gallery-page-image">
@@ -140,6 +140,13 @@ category: site-gallery
     <a href="https://youtu.be/IPW5e-OhMy8?t=2487" class="gallery-text">
         <img src="assets/gallery/S0327146.JPG" height="270" class="post-image" />
         Proteus <br /> Gordon Delap
+    </a>
+</div>
+
+<div align="middle" class="gallery-page-image">
+    <a href="https://vimeo.com/392372223" class="gallery-text">
+        <img src="assets/gallery/SNN2.png" class="post-image" />
+        SNN#2: <br /> Light/Space/Modulator <br /> Alex Saunier & Chris Salter
     </a>
 </div>
 
