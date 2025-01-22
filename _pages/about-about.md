@@ -130,6 +130,7 @@ We owe a lot to previous developers, notably:
 * <b>Théo De La Hogue</b>: ossia-python development, and previous OSSIA API development
 * <b>Nicolas Vuaille, LaBRI</b>: Graphical interface development
 * <b>Clément Bossut, LaBRI</b>: OSSIA API specification
+* <b>Raphaël Marczak, LaBRI</b>: Main developper of the Virage engine, score proof of concept
 
 And also to the initiators of the Virage/i-score sequencers:
 * <b>Myriam Desainte-Catherine, LaBRI</b>: Scientific advising
