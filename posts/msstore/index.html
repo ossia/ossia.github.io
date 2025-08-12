@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    Score on the Store
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="Score on the Store">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="Getting ossia score on the Microsoft Store">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/store/store.png">
+  <meta name="twitter:image:alt" content="ossia score on the Microsoft Store">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/msstore/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">Score on the Store</h2>
+    <p class="post-meta">News  •  Jul 31, 2022  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h1 id="getting-ossia-score-on-the-microsoft-store">Getting ossia score on the Microsoft Store</h1>
+
+<p>TL;DR: we released <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">ossia score on the Microsoft Store</a>, support and fund the development by buying it there!</p>
+
+<p style="text-align: center;"><a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19"><img src="/assets/blog/store/store.png" alt="Available on the store" width="40%" /></a></p>
+
+<p><em>ossia score</em> is an interactive and intermedia sequencer: it allows to score multimedia content and processes in an interactive timeline, such as sound, MIDI, OSC messages, gamepad controls, video, VST plug-ins, scripts, with a specifically tailored visual language.</p>
+
+<h1 id="technical-details">Technical details</h1>
+
+<p>What a drag this was! The Microsoft documentation is fairly complete, but also full of pretty old data – it is for instance not really clear how putting a Win32 app relates to UWP, to <em>which</em> version of UWP as the docs describes different ways between Windows 8 and Windows 10, etc.</p>
+
+<p>But, in the end, we managed to get a reproducible procedure that I’m happily sharing here to allow other open-source software to be distributed there – it can be for instance mostly automated in <a href="https://github.com/ossia/score/runs/7599655186?check_suite_focus=true">Github Actions</a>.
+In particular, it can likely be useful for anyone who uses a CMake / Qt / Clang toolchain (or any MinGW-ish toolchain) for building on Windows.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+  <li>Visual Studio installed with the Windows SDK of your choice.</li>
+  <li>An application that builds cleanly on Windows: running <code class="language-plaintext highlighter-rouge">cmake --build . --target install</code> should yield a clean installation folder with your app’s files.</li>
+  <li>A good few hours and roughly 3.5 liters of coffee and a couple liters of tea. Hopefully a bit less if you follow the steps below!</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<h3 id="account-creation">Account creation</h3>
+
+<p>First you need to register as a <a href="https://partner.microsoft.com/">Microsoft Partner</a>.</p>
+
+<ul>
+  <li>Fill in your banking details, tax forms, etc etc.</li>
+  <li>Create a new app, and set up the submission, description texts, etc etc.</li>
+</ul>
+
+<h3 id="asset-setup">Asset setup</h3>
+
+<p>A ton of different assets are required. Fortunately, it turns out that Visual Studio can generate them in the required format from a single base logo.</p>
+
+<ul>
+  <li>Open Visual Studio.</li>
+  <li>Create a new Windows UWP project, name it for instance <code class="language-plaintext highlighter-rouge">MyAppAssets</code> or something like this.</li>
+  <li>Click on the “Package.appxmanifest” on the file list on the left. This will open an UI editor for the manifest.</li>
+  <li>Set up the properties in the first tab, then switch to the second tab.</li>
+  <li>Set the source logo on the first field <a href="https://docs.microsoft.com/en-us/windows/apps/design/style/iconography/visual-studio-asset-generation">as explained here</a>.</li>
+  <li>Hit <code class="language-plaintext highlighter-rouge">Generate</code>. The <code class="language-plaintext highlighter-rouge">Assets</code> folder in the source directory should now contain all the generated PNGs at the right scales ; you can move them back to your repo and close VS.</li>
+</ul>
+
+<p>Of course, one could also generate them from a well-thought-out imagemagick script, if anyone has one please share it!</p>
+
+<h3 id="package-manifest-setup">Package manifest setup</h3>
+
+<p>This is the manifest that describes the package for your software. The <a href="https://github.com/ossia/score/blob/master/cmake/Deployment/Windows/store/manifests/Package.appxmanifest.in">one we made</a> can likely be used as a source. Note that this is a <code class="language-plaintext highlighter-rouge">.in</code> file to indicate that we are generating it from CMake (to set the version number from the git tag, mainly).</p>
+
+<p>You must in particular fill in the various identity-related variables that are available on the Microsoft Partner account:</p>
+
+<blockquote>
+  <p>Home &gt; Apps and games &gt; MyApp &gt; Product management: Product Identity</p>
+</blockquote>
+
+<p>Here you’ll see variables such as:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package/Identity/Name                    <span class="c"># e.g. "com.yourcompany.yourapp"</span>
+Package/Identity/Publisher               <span class="c"># e.g. "C=SOME LONG UUID-ISH THING"</span>
+Package/Properties/PublisherDisplayName  <span class="c"># e.g. "Your Company"</span>
+</code></pre></div></div>
+
+<p>which are to be copied in Package.appxmanifest’s <code class="language-plaintext highlighter-rouge">&lt;Identity&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;Properties&gt;</code>, as well as a few other places mentioned later in this post.</p>
+
+<h3 id="important-packageappxmanifest-details-for-win32-apps">Important Package.appxmanifest details for Win32 apps</h3>
+
+<p>The important steps for Win32 app validation to pass are:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">EntryPoint="Windows.FullTrustApplication"</code> in <code class="language-plaintext highlighter-rouge">&lt;Application&gt;</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;rescap:Capability Name="runFullTrust" /&gt;</code> in <code class="language-plaintext highlighter-rouge">&lt;Capabilities&gt;</code>.</li>
+</ul>
+
+<h3 id="xml-funsies">XML funsies</h3>
+
+<p>A few “fun” stuff I encountered while writing the XML:</p>
+
+<ul>
+  <li>
+    <p>The order of capabilities <a href="https://docs.microsoft.com/en-us/answers/questions/129313/why-does-the-order-of-items-in-ltcapabilitiesgt-of.html">apparently matters</a>: the <code class="language-plaintext highlighter-rouge">&lt;Capability ... /&gt;</code> (and more generally anything of the form <code class="language-plaintext highlighter-rouge">&lt;namespace:Capability ... /&gt;</code>) must come before the <code class="language-plaintext highlighter-rouge">&lt;DeviceCapability ... /&gt;</code> ones in the <code class="language-plaintext highlighter-rouge">&lt;Capabilities&gt;</code> list.</p>
+  </li>
+  <li>
+    <p>The order of namespaces in <code class="language-plaintext highlighter-rouge">IgnorableNamespaces="uap mp rescap uap2 uap3 rescap3"</code> may or may not matter – I got weird errors with it.</p>
+  </li>
+  <li>
+    <p>Depending on which “version” of the appxmanifest XML namespaces we are using, some elements are sometimes <a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-uap-visualelements">namespaced</a>, sometimes <a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/appxmanifestschema/element-visualelements">not</a>. It would not be an issue if everything on the internet was up-to-date, but you can’t expect to copy some steps from a 2017 StackOverflow answer and have things just work :p</p>
+  </li>
+</ul>
+
+<h3 id="package-layout-xml">Package layout XML</h3>
+
+<p>This <a href="https://github.com/ossia/score/blob/master/cmake/Deployment/Windows/store/PackagingLayout.xml">file</a> is used to describe all the sub-packages that compose your software: it can allow to do elaborate things such as providing a separate AMD64 and ARM64 pacakges, plus a separate asset package for the architecture-independent data such as images, sounds, etc.</p>
+
+<p>The most important thing to notice is <code class="language-plaintext highlighter-rouge">ManifestPath=".\manifests\Package.appxmanifest"</code>.</p>
+
+<p>This has to be the path to Package.appxmanifest, relative to the folder from which you are going to run the packaging procedure.</p>
+
+<p>e.g. If you run the packaging procedure from <code class="language-plaintext highlighter-rouge">%YOUR_INSTALL_PREFIX%\</code> the <code class="language-plaintext highlighter-rouge">Package.appxmanifest.in</code> file will have to be configured as <code class="language-plaintext highlighter-rouge">%YOUR_INSTALL_PREFIX%\manifests\Package.appxmanifest</code>.</p>
+
+<h3 id="application-manifest">Application manifest</h3>
+
+<p>Yay, more XML! You also need to make sure that your main application executable has a valid manifest associated, with explicit high-DPI support.</p>
+
+<p>We generate ours from <a href="https://github.com/ossia/score/blob/master/cmake/ScoreDeploymentWindowsStore.cmake#L9">CMake</a> as at some point there’s likely going to be a version number in there too.</p>
+
+<p>The important steps are:</p>
+<ul>
+  <li>
+    <p>Setting <code class="language-plaintext highlighter-rouge">dpiAware</code> and <code class="language-plaintext highlighter-rouge">dpiAwareness</code> (which are what different versions of windows will use).</p>
+  </li>
+  <li>
+    <p>Indicate the supported Windows versions ; in our manifest for instance we support 7, 8, 8.1, 10 and 11. The UUIDs for various versions can be found <a href="https://docs.microsoft.com/en-us/windows/win32/sysinfo/targeting-your-application-at-windows-8-1">here</a>.</p>
+  </li>
+</ul>
+
+<h2 id="generating-the-package">Generating the package</h2>
+
+<p>We now have all the data required for creating an <code class="language-plaintext highlighter-rouge">.appxbundle</code>. Apparently one can also generate a <code class="language-plaintext highlighter-rouge">.msix</code> / <code class="language-plaintext highlighter-rouge">.msixbundle</code> but, well, <code class="language-plaintext highlighter-rouge">appx</code> works!</p>
+
+<h3 id="generating-a-certificate">Generating a certificate</h3>
+
+<p>The submission requires the code to be signed with a certificate, which matches the information provided by Microsoft:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Package/Identity/Name                    <span class="c"># e.g. "com.yourcompany.yourapp"</span>
+Package/Identity/Publisher               <span class="c"># e.g. "C=SOME LONG UUID-ISH THING"</span>
+Package/Properties/PublisherDisplayName  <span class="c"># e.g. "Your Company"</span>
+</code></pre></div></div>
+
+<p>We can use Powershell to <a href="https://github.com/ossia/score/blob/master/ci/win32store.cert.ps1">generate a self-signed one</a> – thanks to <a href="https://github.com/OpenTTD/OpenTTD/blob/master/os/windows/winstore/generate-key.ps1">OpenTTD</a> for the example!</p>
+
+<p>Here the subject and password are passed through <a href="https://github.com/ossia/score/blob/master/.github/workflows/win-builds.yaml#L24">Github secrets</a> ; it’s not really necessary though as the certificate is regenerated for each build. From what I could read, Microsoft will then replace this certificate with their own once they validate the app and make it available to the store.</p>
+
+<p>For instance, to generate a certificate for your own use on a dev machine, with the very strong password “toto”, it would look like:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$cert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">New-SelfSignedCertificate</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-Type</span><span class="w"> </span><span class="nx">Custom</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-Subject</span><span class="w"> </span><span class="s2">"C=that-long-uuid-given-by-microsoft"</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-KeyUsage</span><span class="w"> </span><span class="nx">DigitalSignature</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-FriendlyName</span><span class="w"> </span><span class="s2">"friendly name given by microsoft"</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-CertStoreLocation</span><span class="w"> </span><span class="s2">"Cert:\CurrentUser\My"</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-TextExtension</span><span class="w"> </span><span class="p">@(</span><span class="s2">"2.5.29.37={text}1.3.6.1.5.5.7.3.3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2.5.29.19={text}"</span><span class="p">)</span><span class="w">
+
+</span><span class="n">Export-PfxCertificate</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-cert</span><span class="w"> </span><span class="s2">"Cert:\CurrentUser\My\</span><span class="si">$(</span><span class="nv">$cert</span><span class="o">.</span><span class="nf">Thumbprint</span><span class="si">)</span><span class="s2">"</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nx">c:\myapp\mycert.pfx</span><span class="w"> </span><span class="se">`
+</span><span class="w">  </span><span class="nt">-Password</span><span class="w"> </span><span class="nx">toto</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Be careful with rogue spaces, everything must be exactly as given on Microsoft’s website!
+Once done you should have a certificate file generated in <code class="language-plaintext highlighter-rouge">c:\myapp\mycert.pfx</code>.</p>
+
+<h3 id="packaging">Packaging</h3>
+
+<ul>
+  <li>Start a <code class="language-plaintext highlighter-rouge">Visual Studio 2022 Native x64 Command Prompt</code> or whatever equivalent you have.</li>
+  <li>Go into your install folder (the one which contains your locally installed app, after <code class="language-plaintext highlighter-rouge">make install</code> or whatever).</li>
+</ul>
+
+<p>In it you should have:</p>
+
+<ul>
+  <li>Your app’s .exe, for instance <code class="language-plaintext highlighter-rouge">myapp.exe</code>.</li>
+  <li>Your app’s .exe.manifest (which we generated above with CMake though this is of course not the only way).</li>
+  <li>Your app’s .DLLs, for instance <code class="language-plaintext highlighter-rouge">Qt6Core.dll</code>.</li>
+  <li><code class="language-plaintext highlighter-rouge">manifests/Package.appxmanifest</code></li>
+</ul>
+
+<p>Then, we’ll follow <a href="https://github.com/ossia/score/blob/master/ci/win32store.deploy.cmd">the steps in that file</a>.</p>
+
+<ul>
+  <li>Remove all unwanted files or files from a previous build / packaging step.</li>
+  <li>Create the resource files (here assuming a single language), used to indicate that e.g. all the <code class="language-plaintext highlighter-rouge">SmallTile.scale-XXX.png</code> files map to the <code class="language-plaintext highlighter-rouge">SmallTile.png</code> referenced in <code class="language-plaintext highlighter-rouge">Package.appmanifest</code>:</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="kd">makepri</span> <span class="kd">createconfig</span> <span class="na">/cf </span><span class="kd">priconfig</span>.xml <span class="na">/dq </span><span class="kd">en</span><span class="na">-US
+</span><span class="o">&gt;</span> <span class="kd">makepri</span> <span class="kd">new</span> <span class="na">/pr </span><span class="nv">%cd%</span> <span class="na">/cf </span><span class="nv">%cd%</span>\priconfig.xml <span class="na">/mn </span><span class="nv">%cd%</span>\manifests\Package.appxmanifest
+</code></pre></div></div>
+
+<ul>
+  <li>Embed the .exe.manifest in your .exe:</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="kd">mt</span> <span class="na">-nologo -manifest </span><span class="kd">myapp</span><span class="err">.exe</span>.manifest <span class="na">-outputresource</span>:<span class="s2">"myapp.exe;#1"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Sign all the executables and DLLs with the generated certificate: for instance, if the password for c:\myapp\mycert.pfx was “toto” as above, it would look like</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="kd">signtool</span> <span class="kd">sign</span> <span class="na">/fd </span><span class="kd">sha256</span> <span class="na">/a /f </span><span class="kd">c</span>:\myapp\mycert.pfx <span class="na">/p </span><span class="kd">toto</span> <span class="kd">myapp</span><span class="err">.exe</span>
+<span class="o">&gt;</span> <span class="kd">signtool</span> <span class="kd">sign</span> <span class="na">/fd </span><span class="kd">sha256</span> <span class="na">/a /f </span><span class="kd">c</span>:\myapp\mycert.pfx <span class="na">/p </span><span class="kd">toto</span> <span class="kd">Qt6Core</span>.dll
+<span class="o">&gt;</span> <span class="kd">etc</span>...
+</code></pre></div></div>
+
+<ul>
+  <li>Build the package (finally!). The following command will put the resulting package in <code class="language-plaintext highlighter-rouge">c:\output</code>.</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="kd">makeappx</span> <span class="kd">build</span> <span class="na">/v /f </span><span class="kd">c</span>:\path\to\PackagingLayout.xml <span class="na">/op </span><span class="kd">c</span>:\output <span class="na">/ca
+</span></code></pre></div></div>
+
+<p>Note that if you made any mistake in the Package.appxmanifest, this will fail and you’ll have to dig through the errors to understand what went wrong… good luck!</p>
+
+<ul>
+  <li>When you have a .appxbundle, you need to sign the package itself. The <code class="language-plaintext highlighter-rouge">x64.appx</code> generated next to it can be entirely ignored.</li>
+</ul>
+
+<div class="language-bat highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> <span class="kd">signtool</span> <span class="kd">sign</span> <span class="na">/fd </span><span class="kd">sha256</span> <span class="na">/a /f </span><span class="kd">c</span>:\myapp\mycert.pfx <span class="na">/p </span><span class="kd">toto</span> <span class="kd">c</span>:\output\my<span class="na">-app-package</span>.appxbundle
+</code></pre></div></div>
+
+<p>If this step fails, it is likely that the <code class="language-plaintext highlighter-rouge">Package.appxmanifest</code> file’s fields (Publisher=, etc) do not match the information used while generating the certificate.</p>
+
+<p>If it works, congrats, we can move on to testing!</p>
+
+<h2 id="testing-the-packaged-app">Testing the packaged app</h2>
+
+<p>One thing that bugged me the most was allowing the <code class="language-plaintext highlighter-rouge">.appxbundle</code> to install as it requires Windows to trust the generated certificate (which it won’t just by generating it).</p>
+
+<h3 id="installing-the-certificate">Installing the certificate</h3>
+<p>I read a <a href="https://stackoverflow.com/questions/23812471/installing-appx-without-trusted-certificate">lot of StackOverflow answers</a> and none did work – e.g. adding the certificate manually from the generated <code class="language-plaintext highlighter-rouge">.pfx</code> file into <code class="language-plaintext highlighter-rouge">Local Machine &gt; Third-Party Root Certification Authorities</code> or <code class="language-plaintext highlighter-rouge">Root CAs</code>, etc etc. What worked was right-clicking on the <code class="language-plaintext highlighter-rouge">.appxbundle</code> and adding the certificate from there (to the same location, <code class="language-plaintext highlighter-rouge">Local Machine &gt; Third-Party Root Certification Authorities</code>) instead of from the .pfx file.</p>
+
+<h3 id="running-the-app">Running the app</h3>
+<p>From there the app can install by double-clicking the .appxbundle, and you can finally try to run it from the Start menu! If it works, we are nearly there. If it crashes, well, time to inspect some coredumps :-)</p>
+
+<h3 id="checking-with-windows-app-cert-kit">Checking with Windows App Cert Kit</h3>
+
+<p>This utility validates that the package is well-formed and does not have basic issues. 
+The same checks will also be run by Microsoft when you submit your app so it’s a good idea to run it locally as it will be much faster – Microsoft will reject your app if it does not pass. Simply pass it your .appxbundle to ensure that it passes.</p>
+
+<p>Note that you may have errors show up in the “Optional” section if your program calls child processes, etc. It won’t make the submission fail even if “error” is written in a scary red but apparently it will prevent your app from being installed on restricted Windows versions.</p>
+
+<blockquote>
+  <p>Note that if you really want your app to work there and you use Qt, you will likely have to rebuild Qt by passing <code class="language-plaintext highlighter-rouge">-no-feature-process</code> to configure in order to disable the calls to <code class="language-plaintext highlighter-rouge">CreateProcess</code> that are in <code class="language-plaintext highlighter-rouge">QProcess</code>’s implementation, even if you do not use <code class="language-plaintext highlighter-rouge">QProcess</code> directly. Likewise for any other dependency you use which may have calls to <code class="language-plaintext highlighter-rouge">LoadProcess</code> and <code class="language-plaintext highlighter-rouge">ShellExecute</code>.</p>
+</blockquote>
+
+<p>When it’s good, congrats, you can finally submit the package to the store and cross fingers for it to be quickly validated!</p>
+
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/distributed/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Collaborative and distributed interactive scores</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/valuetypes/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Generalized "value" types and prototypal operation for C++ objects</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("News" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>
