@@ -11,16 +11,17 @@ category: site-gallery
 <div class="gallery-grid">
 
 <div id="fourfor" align="middle" class="gallery-page-image">
-<a href="https://bravozoulou.fr/projets/four-for/" class="gallery-text">
-    <img src="assets/gallery/DID_4858.JPG" class="post-image" />
-    <i>Four For </i> <br/> Bravo Zoulou <br/>&copy; Didier Crasnault
-</a> 
+    <a href="https://bravozoulou.fr/projets/four-for/" class="gallery-text">
+        <img src="assets/gallery/DID_4858.JPG" class="post-image" />
+        <i>Four For </i> <br/> Bravo Zoulou <br/>&copy; Didier Crasnault
+    </a> 
 </div>
 
 <div align="middle" class="gallery-page-image">
     <a href="https://www.navidnavab.com/tangibleflux" class="gallery-text">
         <img src="assets/gallery/tangibleFlux.png" class="post-image" />
-        <i> tangibleFlux φ plenumorphic ∴ chaosmosis</i> <br /> Navid Navab    </a>
+        <i> tangibleFlux φ plenumorphic ∴ chaosmosis</i> <br /> Navid Navab    
+    </a>
 </div>
 
 
@@ -34,21 +35,22 @@ category: site-gallery
 <div align="middle" class="gallery-page-image">
     <a href="https://www.contour-progressif.net/projets/spectacle/laveuglement" class="gallery-text">
         <img src="assets/gallery/aveuglement.png" class="post-image" />
-        <i> L'aveuglement </i> <br /> Cie Contour progressif / Mylène Benoît    </a>
+        <i> L'aveuglement </i> <br /> Cie Contour progressif / Mylène Benoît    
+    </a>
 </div>
 
 <div id="nebula" align="middle" class="gallery-page-image">
     <a href="https://www.baltazars.org/project/nebula/" class="gallery-text">
         <img src="assets/gallery/Nebula_ChampignonsNeigeJaune.jpg" class="post-image" />
-        <i>Nebula </i> <br/> The Baltazars</a>
+        <i>Nebula </i> <br/> The Baltazars
+    </a>
 </div>
-
-
 
 <div align="middle" class="gallery-page-image">
     <a href="https://vimeo.com/282498843" class="gallery-text">
         <img src="assets/gallery/Sun8mm.png" class="post-image" />
-        <i> Sun (~8 mn) </i> <br /> Félicie d'Estienne d'Orves    </a>
+        <i> Sun (~8 mn) </i> <br /> Félicie d'Estienne d'Orves    
+    </a>
 </div>
 
 <div id="Désoleil" align="middle" class="gallery-page-image">
@@ -89,7 +91,7 @@ category: site-gallery
 <div align="middle" class="gallery-page-image">
     <a href="https://vimeo.com/213259612" class="gallery-text" >
     <img src="assets/gallery/14-Virages2.jpg" class="post-image" />
-        (à) partir </i><br/> Thibaud le Maguer
+        (à) partir <br/> Thibaud le Maguer
     </a>
 </div>
 
@@ -159,31 +161,39 @@ category: site-gallery
 
 <div align="middle" class="gallery-page-image">
     <a href="https://youtu.be/IPW5e-OhMy8?t=2487" class="gallery-text">
-        <img src="assets/gallery/S0327146.JPG" height="270" class="post-image" />  <i>Proteus </i><br /> Gordon Delap
+        <img src="assets/gallery/S0327146.JPG" height="270" class="post-image" />  
+        <i>Proteus </i><br /> Gordon Delap
     </a>
 </div>
 
 <div align="middle" class="gallery-page-image">
     <a href="https://assoikari.wordpress.com/2016/09/15/matiere-creation-en-cours/" class="gallery-text">
         <img src="assets/gallery/matiere.png" class="post-image" />
-        <i> Matière </i> <br /> Cie Ikari / Thomas Pachoud    </a>
+        <i> Matière </i> <br /> Cie Ikari / Thomas Pachoud    
+    </a>
 </div>
-
 
 <div align="middle" class="gallery-page-image">
     <a href="https://serious.computer/" class="gallery-text">
         <img src="assets/gallery/nova_visual_01.png" class="post-image" />
-        <i> Nova </i> <br /> Nina Bouchard, Evan Montpellier / Serious Computer Group    </a>
+        <i> Nova </i> <br /> Nina Bouchard / Evan Montpellier / Serious Computer Group    
+    </a>
 </div>
 
+<div align="middle" class="gallery-page-image">
+    <a href="https://escuta.org/en/proj/assombros/" class="gallery-text">
+        <img src="assets/gallery/assombros.jpg" height="270" class="post-image" />
+        <i> Assombros </i> <br /> Iain Mott / Simone Reis 
+    </a>
+</div>
 
-
-
-
-
-
-
-
+<div align="middle" class="gallery-page-image">
+    <a href="https://irelandatvenice2025.ie/" class="gallery-text">
+        <img src="assets/gallery/assembly.jpg" class="post-image" />
+        <i> Assembly </i> <br /> Louise Cotter / David Naessens / Luke Naessens / 
+        Michelle Delea / David Stalling / Alan Meredith 
+    </a>
+</div>
 
 </div>
 <br/>

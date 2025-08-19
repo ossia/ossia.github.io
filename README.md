@@ -7,8 +7,8 @@ Then run the following commands in a shell:
 
 ```
 $ eval "$(rbenv init -)"
-$ rbenv install 2.7.3
-$ rbenv shell 2.7.3
+$ rbenv install 3.3.7
+$ rbenv shell 3.3.7
 $ bundle update
 ```
 
@@ -16,7 +16,7 @@ $ bundle update
 
 ```
 $ eval "$(rbenv init -)"
-$ rbenv shell 2.7.3
+$ rbenv shell 3.3.7
 
 # Check that ruby is not /usr/bin/ruby with: 
 $ which ruby
