@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    Generalized "value" types and prototypal operation for C++ objects
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="Generalized "value" types and prototypal operation for C++ objects">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="Compatibility between different value type specifications in a dataflow system">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/valuetype/cover.png">
+  <meta name="twitter:image:alt" content="Example of object processing">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/valuetypes/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">Generalized "value" types and prototypal operation for C++ objects</h2>
+    <p class="post-meta">Dev  •  Dec 1, 2022  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <p>This article is a followup to the series on <a href="/posts/reflection/">interoperability and reflection</a>.
+It covers extending our data model so that dataflow nodes can interoperate with not only basic types such as floats, doubles, etc. but also with more complex data models, in order to enable advanced data processing pipelines.</p>
+
+<p>It also introduces a few new objects and change in ossia score that leverage these low-level improvements to enable to write nice data processing pipelines with a small reimplementation of the <a href="https://stedolan.github.io/jq/">jq</a> expression language.</p>
+
+<h1 id="problem-position">Problem position</h1>
+
+<p>For instance, today one can write a simple <a href="https://celtera.github.io/avendish">Avendish</a> plug-in with ports which are ints, floats, strings, bools, etc. This covers many use cases in media art systems. What happens when one wants to interoperate with, say, Javascript code which may return complex nested objects? How can we handle dataflow processors whose output is fundamentally non-trivial, such as a live feature recognizer outputting a list of objects recognized in a given camera frame:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="w"> 
+  </span><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="s2">"flower"</span><span class="p">,</span><span class="w"> </span><span class="err">rect:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">]</span><span class="w"> </span><span class="p">},</span><span class="w"> 
+  </span><span class="p">{</span><span class="w"> </span><span class="err">type:</span><span class="w"> </span><span class="s2">"person"</span><span class="p">,</span><span class="w"> </span><span class="err">rect:</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">180</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> 
+</span><span class="p">]</span><span class="w">
+</span></code></pre></div></div>
+
+<p>TL;DR: The good news is that it now works, too! That is, an Avendish plug-in can now have the following port type which is a sink for recognized objects by some ML toolkit, e.g. a YOLOvX algorithm:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">recognized_object</span> <span class="p">{</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">type</span><span class="p">;</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">float</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">rect</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="p">{</span>
+  <span class="k">struct</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">recognized_object</span><span class="o">&gt;</span> <span class="n">value</span><span class="p">;</span>
+  <span class="p">}</span> <span class="n">recognizer</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">inputs</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>and any “compatible” input will be magically converted ; this means that even complex dataflow objects just need to speak roughly the same protocol to be interoperable, but not necessarily to use the exact same types, which allows to develop compatible libraries without requiring everyone to include gigantic base libraries such as OpenCV &amp; the likes.</p>
+
+<p>More precisely: where today one writing a PureData object would have to implement the “serialization / deserialization” protocol from PureData by hand by checking that the user’s types indeed match the types of the object’s internal data structures, now Avendish can automate that entirely.</p>
+
+<p>There is a small friction point: many creative coding environments have a list type, but not all of them have a “dict” / “object” / “map” / associative container type. In particular, OSC (Open Sound Control, a fairly common network protocol in media art) itself is a sort-of-dictionary, but does not really have a way to represent dictionaries as OSC values.</p>
+
+<p>Another one is that these environments generally have very, very, weak typing rule; many of our users in ossia expect the following to hold: <code class="language-plaintext highlighter-rouge">1.25 == "1.25"</code>.</p>
+
+<h3 id="aggregate-member-name-reflection">Aggregate member name reflection</h3>
+<p>Sadly, C++ does not have enough reflection to enable us to retrieve field names from aggregates.
+Thus, by default, they will get converted into lists:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">agg</span>
+<span class="p">{</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">123</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">456</span><span class="p">;</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>will be converted into <code class="language-plaintext highlighter-rouge">[123, 456]</code>. If one wants <code class="language-plaintext highlighter-rouge">{ a: 123, b: 456 }</code> the field names have to be specified by hand until C++ evolves a bit:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">agg</span>
+<span class="p">{</span> 
+  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">123</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">456</span><span class="p">;</span> 
+  <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">field_names</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="p">{</span><span class="s">"a"</span><span class="p">,</span> <span class="s">"b"</span><span class="p">};</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<h2 id="compatible-types">Compatible types</h2>
+
+<p>Most types that conform to a subset of the <code class="language-plaintext highlighter-rouge">std::</code> concepts for, say, containers, e.g. <a href="https://en.cppreference.com/w/cpp/named_req/SequenceContainer">SequenceContainer</a> or <a href="https://en.cppreference.com/w/cpp/named_req/SequenceContainer">AssociativeContainer</a> should work. In my tests I mainly tried <code class="language-plaintext highlighter-rouge">std::</code> and <code class="language-plaintext highlighter-rouge">boost::container::</code>, please report issues with any other container library! Even funkier stuff such as <code class="language-plaintext highlighter-rouge">std::bitset</code> works :-)</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">set_ish</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">set_ish</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unordered_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">set_ish</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">container</span><span class="o">::</span><span class="n">flat_set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">map_ish</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">map_ish</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">unordered_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+<span class="k">static_assert</span><span class="p">(</span><span class="n">avnd</span><span class="o">::</span><span class="n">map_ish</span><span class="o">&lt;</span><span class="n">boost</span><span class="o">::</span><span class="n">container</span><span class="o">::</span><span class="n">flat_map</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Here are some complete <a href="https://github.com/ossia/score/blob/master/src/plugins/score-plugin-avnd/Tests/from_ossia_value_Test.cpp">test cases</a> to get an idea of what works.</p>
+
+<h1 id="value-types">Value types?</h1>
+<p>The title of this article mentions “value” types. This is not about the common C++ concept (an <code class="language-plaintext highlighter-rouge">int</code> is a value type) but about types that are literally called “value”.
+You likely have encountered a few of those in various codebases. They tend to look like this:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">value</span> <span class="o">=</span> <span class="n">variant</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">string</span><span class="p">,</span> <span class="n">list</span><span class="p">,</span> <span class="n">dict</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>In older systems, the variant may have been implemented through ways other than templates, e.g. Qt’s <code class="language-plaintext highlighter-rouge">QVariant</code>, Poco’s <code class="language-plaintext highlighter-rouge">Poco::Dynamic::Var</code>, OpenFrameworks’s <code class="language-plaintext highlighter-rouge">ofParameter::Value</code>.</p>
+
+<p>Here are a few excerpts of current codebases, to show the extent of the pattern:</p>
+
+<p><a href="https://github.com/mspraggs/loxx">mspraggs/loxx</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">Variant</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="n">Object</span><span class="o">*&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+<p><a href="https://github.com/mrdepth/libdgmpp">mrdepth/libdgmpp</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">variant</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/mapnik/mapnik">mapnik/mapnik</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">value_base</span> <span class="o">=</span> <span class="n">util</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">value_null</span><span class="p">,</span> <span class="n">value_bool</span><span class="p">,</span> 
+    <span class="n">value_integer</span><span class="p">,</span> <span class="n">value_double</span><span class="p">,</span> <span class="n">value_unicode_string</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/mgiseski/dvisvgm">mgiseski/dvisvgm</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">mpark</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span>
+	<span class="n">PDFNull</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="n">PDFName</span><span class="p">,</span> <span class="n">PDFStream</span><span class="p">,</span> 
+    <span class="n">PDFIndirectObject</span><span class="p">,</span> <span class="n">PDFObjectRef</span><span class="p">,</span> <span class="n">PDFOperator</span><span class="p">,</span> 
+    <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PDFArray</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">PDFDict</span><span class="o">&gt;</span>
+<span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/openpower/hostboot">openpower/hostboot</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="p">,</span> <span class="kt">int16_t</span><span class="p">,</span> <span class="kt">uint16_t</span><span class="p">,</span> <span class="kt">int32_t</span><span class="p">,</span> <span class="kt">uint32_t</span><span class="p">,</span> <span class="kt">int64_t</span><span class="p">,</span>
+                 <span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/openbmc/phospho-net-ipmid">openbmc/phospho-net-ipmid</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">uint8_t</span><span class="p">,</span> <span class="kt">int16_t</span><span class="p">,</span> <span class="kt">uint16_t</span><span class="p">,</span> <span class="kt">int32_t</span><span class="p">,</span> <span class="kt">uint32_t</span><span class="p">,</span> <span class="kt">int64_t</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/dpacbach/parsco">dpacbach/parsco</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">value</span> <span class="o">=</span>
+  <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">number</span><span class="p">,</span> <span class="n">string_val</span><span class="p">,</span> <span class="n">boolean</span><span class="p">,</span>
+               <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">table</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">list</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/opencomputeproject/HWMgmt-MegaRAC-OpenEdition">opencomputeproject/HWMgmt-MegaRAC-OpenEdition</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p><a href="https://github.com/epoupon/lms">epoupon/lms</a></p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="n">Value</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="kt">long</span> <span class="kt">long</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>etc etc… this is only from the first page of the <a href="https://cs.github.com/?scopeName=All+repos&amp;scope=&amp;q=%22using+value+%3D%22+variant+path%3A*.hpp">Github code search</a> ; to say that the pattern is pervasive is an understatement.</p>
+
+<p>It’s of course also used in ossia, <code class="language-plaintext highlighter-rouge">ossia::value</code> is the central type of the entire system.</p>
+
+<p>The sad thing is, all these types are pretty much always entirely incompatible between them.
+Something as simple as</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">bool</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+<p>does not compile because even if <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code> are semantically… pretty close, they are in fact entirely different types. So something such as:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">float</span><span class="o">&gt;</span> <span class="n">b</span><span class="p">;</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>still doing more-or-less meaningful conversions (one could define this as “conversions that loose as few bits of information as possible”) between the types of <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code> is entirely uncharted territory at least from the point of view of the C++ language’s standard facilities :-)</p>
+
+<p>This all leads to another reinventing-the-wheel drama such as the one we have already mentioned in previous articles: an algorithm that uses “value” type A will have to be rewritten to work with “value” type B, even if these types are compatible, unless one is ready to turn the entire code into generic code which causes its own set of issues.</p>
+
+<h2 id="value-type-support-in-avendish">Value type support in Avendish</h2>
+
+<p>Very simply put, this works too :-)</p>
+
+<p>Here is a complete example test-case that we use: <code class="language-plaintext highlighter-rouge">TestAggregate</code> is the static type defined both as input and output of the object, simply to make sure that both input and output of arbitrary types work correctly.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">Aggregate</span>
+<span class="p">{</span>
+  <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">name</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"Aggregate Input"</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">c_name</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"avnd_aggregate"</span><span class="p">;</span> <span class="p">}</span>
+  <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">uuid</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"a66648f4-85d9-46dc-9a11-0b8dc700e1af"</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="k">struct</span> <span class="nc">TestAggregate</span>
+  <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+    <span class="kt">float</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">struct</span>
+    <span class="p">{</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">;</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">b</span><span class="p">;</span>
+      <span class="n">std</span><span class="o">::</span><span class="n">array</span><span class="o">&lt;</span><span class="kt">bool</span><span class="p">,</span> <span class="mi">4</span><span class="o">&gt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span> <span class="n">sub</span><span class="p">;</span>
+
+    <span class="k">using</span> <span class="n">variant_t</span> <span class="o">=</span> <span class="n">std</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">;</span>
+    <span class="n">variant_t</span> <span class="n">var</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">variant_t</span><span class="o">&gt;</span> <span class="n">varlist</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span> <span class="n">variant_t</span><span class="o">&gt;</span> <span class="n">varmap</span><span class="p">;</span>
+  <span class="p">};</span>
+
+  <span class="k">struct</span>
+  <span class="p">{</span>
+    <span class="k">struct</span>
+    <span class="p">{</span>
+      <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">name</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"In"</span><span class="p">;</span> <span class="p">}</span>
+      <span class="n">TestAggregate</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span> <span class="n">agg</span><span class="p">;</span>
+  <span class="p">}</span> <span class="n">inputs</span><span class="p">;</span>
+
+  <span class="k">struct</span>
+  <span class="p">{</span>
+    <span class="k">struct</span>
+    <span class="p">{</span>
+      <span class="k">static</span> <span class="k">consteval</span> <span class="k">auto</span> <span class="n">name</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"Out"</span><span class="p">;</span> <span class="p">}</span>
+      <span class="n">TestAggregate</span> <span class="n">value</span><span class="p">;</span>
+    <span class="p">}</span> <span class="n">agg</span><span class="p">;</span>
+  <span class="p">}</span> <span class="n">outputs</span><span class="p">;</span>
+
+  <span class="kt">void</span> <span class="k">operator</span><span class="p">()()</span> <span class="p">{</span> <span class="n">outputs</span><span class="p">.</span><span class="n">agg</span><span class="p">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">.</span><span class="n">agg</span><span class="p">.</span><span class="n">value</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<p>A simple JS script can be used from score for testing that this works correctly:</p>
+
+<div class="language-qml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Score</span> <span class="mf">1.0</span>
+<span class="kt">Script</span> <span class="p">{</span>
+  <span class="kt">ValueOutlet</span> <span class="p">{</span> <span class="nl">id</span><span class="p">:</span> <span class="kd">out1</span> <span class="p">}</span>
+  <span class="kt">FloatSlider</span> <span class="p">{</span> <span class="nl">id</span><span class="p">:</span> <span class="kd">sl</span><span class="p">;</span> <span class="nl">min</span><span class="p">:</span> <span class="mi">10</span><span class="p">;</span> <span class="nl">max</span><span class="p">:</span> <span class="mi">100</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="nl">tick</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">out1</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="p">[</span>
+         <span class="mi">1</span><span class="p">,</span> 
+         <span class="mi">2</span><span class="p">,</span> 
+         <span class="nx">sl</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> 
+         <span class="p">[</span> 
+           <span class="p">[</span> <span class="nx">sl</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mf">0.6</span> <span class="p">],</span> 
+           <span class="dl">"</span><span class="s2">foo</span><span class="dl">"</span><span class="p">,</span> 
+           <span class="p">[</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="kc">false</span> <span class="p">]</span>
+         <span class="p">],</span>
+         <span class="dl">"</span><span class="s2">hiii</span><span class="dl">"</span><span class="p">,</span>
+         <span class="p">[</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span> <span class="dl">"</span><span class="s2">foo</span><span class="dl">"</span><span class="p">,</span> <span class="mi">456</span><span class="p">],</span>
+         <span class="p">{</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">:</span> <span class="mi">123</span><span class="p">,</span> <span class="dl">"</span><span class="s2">another</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">variant</span><span class="dl">"</span><span class="p">}</span>
+    <span class="p">];</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This gives us the expected output, without us having to write any explicit serialization / deserialization code, thanks to the magic powers of Boost.PFR and C++20 concepts:</p>
+
+<p><img src="/assets/blog/valuetype/js-test.png" alt="Result of printing the output of the object" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h1 id="jk-jq-for-any-object">jk: jq for any object</h1>
+
+<p>In order to manipulate this kind of data easily at run-time without having to resort to a full-blown very slow JS interpreter, I decided to reimplement a subset of an extremely useful tool for working with JSON-structured data: <a href="https://stedolan.github.io/jq/">jq</a>. The object in score is called <code class="language-plaintext highlighter-rouge">Object Filter</code> ; the meat of the expression language parsing is done in <a href="https://github.com/celtera/jk">the jk repository</a>.</p>
+
+<p>One can appreciate that the actual parser <a href="https://github.com/celtera/jk/blob/main/src/parser.cpp">fits in 75 lines of C++</a>, thanks to the awesome superpowers of Boost.Spirit!
+The library also leverages C++ coroutines quite a bit, as they lend themselves very nicely to the kind of operations we want to do with the library, enable lazy computations, etc.</p>
+
+<h2 id="primer-of-jq-syntax">Primer of jq syntax</h2>
+<p><code class="language-plaintext highlighter-rouge">jq</code> is able to process and transform JSON thanks to a very simple expression language. For instance, <code class="language-plaintext highlighter-rouge">.foo[2:4]</code> will iterate over the values 2 to 4 of the array <code class="language-plaintext highlighter-rouge">foo</code> in the following json:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w"> </span><span class="nl">"foo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Another example: given <code class="language-plaintext highlighter-rouge">[ .foo[2:5][].bar ]</code> and the JSON</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"foo"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w"> </span><span class="nl">"bar"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="p">}</span><span class="w">
+     </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>we are going to get as output: <code class="language-plaintext highlighter-rouge">[ 4, 2, 5 ]</code>. This can be tried on the online playground <a href="https://jqplay.org/s/oAzLxYm5GG5">here</a>. Thus, the tool is extremely efficient for manipulating complex JSON-like datasets - and our internal data model in ossia score is now compatible with this!</p>
+
+<p>Only a small subset of jq has been implemented so far, but it’s already enough to perform a lot of useful data transformations. The best way to check if something is supported yet is to look into the <a href="https://github.com/celtera/jk/blob/main/tests/parse.cpp">unit tests</a>… sorry not sorry :)</p>
+
+<h2 id="implementation">Implementation</h2>
+<p>Of course, <code class="language-plaintext highlighter-rouge">jk</code> needs a value type too. It is defined as follows and should cover most cases:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">value</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">string_type</span> <span class="o">=</span> <span class="n">config</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">list_type</span> <span class="o">=</span> <span class="n">config</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">map_type</span> <span class="o">=</span> <span class="n">config</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">string_type</span><span class="p">,</span> <span class="n">value</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="k">using</span> <span class="n">variant</span> <span class="o">=</span> <span class="n">config</span><span class="o">::</span><span class="n">variant</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="p">,</span> <span class="kt">double</span><span class="p">,</span> <span class="kt">bool</span><span class="p">,</span> <span class="n">string_type</span><span class="p">,</span> <span class="n">list_type</span><span class="p">,</span> <span class="n">map_type</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>The actual types are configurable by the application using the library, in order to be able to use, say, fast hash maps, better variants than the <code class="language-plaintext highlighter-rouge">std::</code> one (in ossia we mostly migrated to <code class="language-plaintext highlighter-rouge">Boost.Variant2</code> for instance) or containers with custom allocators easily.</p>
+
+<p>Combined with what we mentioned before, this means that the inputs and outputs of our Avendish object are simply of type <code class="language-plaintext highlighter-rouge">jk::value</code> and everything gets converted automatically from and to our internal <code class="language-plaintext highlighter-rouge">ossia::value</code> (which cannot be changed for legacy reasons), while enabling others to use the library without the dependency on libossia. This will allow making the object work in other environments, e.g. PureData when there is some time (and enough people interested in it!).</p>
+
+<h2 id="usage">Usage</h2>
+<p>The main thing to be aware of is how the <code class="language-plaintext highlighter-rouge">jk</code> object will output its values. If things are enclosed in a set of square brackets, e.g. <code class="language-plaintext highlighter-rouge">[ .foo[0], .foo[2] ]</code>, then the output of the Object Filter in ossia scor’e will be a list. If it is without square brackets, the object in ossia score will output all the values one after each other as different messages.</p>
+
+<h1 id="treating-osc-nodes-as-objects">Treating OSC nodes as objects</h1>
+
+<p>A big change in libossia recently has been to remove the pretty much unused CHAR type and replace it with a MAP type (that is, a <code class="language-plaintext highlighter-rouge">map&lt;string, value&gt;</code>).
+This allows us to transmit arbitrary maps / dicts / … between objects when processing a score, and more generally get very close of the JS object model which is fairly ubiquitous and well-understood nowadays.</p>
+
+<p>The first use of this is to allow using a complete OSC node and not only a parameter as input of an ossia object: the children of the node will just be treated as map elements.</p>
+
+<p>That is, given the following OSC tree:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>OSC:/foo/bar 1.0
+OSC:/foo/baz/a "hello" 
+OSC:/foo/baz/b "bye"
+</code></pre></div></div>
+
+<p>if one sets <code class="language-plaintext highlighter-rouge">OSC:/foo</code> in ossia score 3.1.5 as input of an object, the object will receive a data structure akin to:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="err">bar:</span><span class="w"> </span><span class="mf">1.0</span><span class="w">
+  </span><span class="err">baz:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">a:</span><span class="w"> </span><span class="s2">"hello"</span><span class="p">,</span><span class="w">
+    </span><span class="err">b:</span><span class="w"> </span><span class="s2">"bye"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For instance, this allows to do things such as this to query specific members: in the following examples, the input of the Object Filter is set to <code class="language-plaintext highlighter-rouge">Millumin:/millumin/layer</code>.</p>
+
+<p><img src="/assets/blog/valuetype/millumin.png" alt="Easy OSC processing" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Or do it more generally like this:</p>
+
+<p><img src="/assets/blog/valuetype/get-instance.png" alt="Advanced OSC processing" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Or even recursively (in the next version as it was not implemented in time for 3.1.5):</p>
+
+<p><img src="/assets/blog/valuetype/get-instance-rec.png" alt="Recursive OSC processing" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Of course, when used as the input of a JavaScript object in score, one will get a proper JS object, which will enable much more advanced data processing!</p>
+
+<h1 id="example">Example</h1>
+<p>In this very simple example, we use a YOLOv4 recognizer’s raw output information to keep my side of the lab squarely into ǹ̸̙è̵̦g̷̹͒a̷̛̮t̴͚̿i̷̻̓v̴̗̎ē̶̜ ̶̩̐s̸̨̒p̴̨͛a̶̲̕c̷̢̿ë̷͈́. Now that the groundwork has been put to enable this kind of advanced objects to exist, they are going to slowly appear into further score versions.</p>
+<video controls="" style="width: 70%">
+  <source src="/assets/blog/valuetype/yolo.mp4" type="video/mp4" />
+</video>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>Overall, the whole point of this is to allow us to transparently bridge between run-time-defined objects and transformations such as in JS or OSC, and compile-time static types to enable data processing in every way possible ; C++ objects for ossia should be able to define arbitrarily complex data structures for their inputs and outputs, and things should still be perfectly useable from the run-time environment without the end-user feeling restricted in what they can do, and with the object implementer still being able to write the cleanest code possible that solves the task at hand without having to worry about the interoperability glue code.</p>
+
+<p>I think we are not far from succeeding :-) very likely a few other objects will have to be developed to simplify common use cases, but the general idea is there and held water pretty well over a few months of testing.</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/msstore/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Score on the Store</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/air-filtration/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Case study: [re]capture</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("Dev" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>

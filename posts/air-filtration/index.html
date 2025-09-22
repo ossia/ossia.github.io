@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    Case study: [re]capture
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="Case study: [re]capture">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="Residency for the use of ossia score for Air Filtration">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/airfiltration/airfiltration.jpeg">
+  <meta name="twitter:image:alt" content="A picture of Air Filtration">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/air-filtration/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">Case study: [re]capture</h2>
+    <p class="post-meta">News  •  Dec 23, 2022  •  Jean-Michaël</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h1 id="case-study-scored-air-filtration-in-recapture">Case study: scored air filtration in [re]capture</h1>
+
+<p><code class="language-plaintext highlighter-rouge">[re]capture</code> (2022) is created by Alice Jarry and her team, consisting of Brice Ammar-Khodja, Jacqui Beaumont, Asa Perlman, Philippe Vandal, and Ariane Plante at Concordia University, where I am currently operating as a postdoctoral fellow.</p>
+
+<p>This post presents a case study on the writing of a score with ossia score for such a complete artwork involving
+a wealth of interesting behaviours, sensors, actuators and protocols.</p>
+
+<p><img src="/assets/blog/airfiltration/airfiltration.jpeg" alt="[re]capture" width="90%" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h1 id="the-recapture-project">The [re]capture project</h1>
+
+<blockquote>
+  <p>Exploring the concept of ‘filtration’ using biomaterials, plants, and electronic strategies, [re]capture is a dialogue between in situ atmospheric data capture devices and gallery installation. With air toxicity a growing issue, this ongoing project seeks to give shape to the microscopic invisibility and the macroscopic dimension of air pollution.</p>
+
+  <p>With the support of the Conseil des arts de Montréal, (@conseil.des.arts.de.montreal), the Fonds de recherche du Québec – Société et Culture (@fondsrecherchequebec) and the Concordia University Research Chair in Critical Practices in Materials and Materiality.</p>
+</blockquote>
+
+<p>There are two main physical items involved in this artwork: air quality sensors (Nomad AirKits) which sense various atmospheric properties - temperature, CO² and pollution levels, etc., and the main installation which is a set of modules consisting of LEDs, fans and motors in a tubular circuit involving various materials, most importantly filtrating abaca and bioplastics. The general idea is that changes in sensor data will make the motors release dust in the tubular circuit ; fans will propel the dust inside it and LED lights accentuates the dramaturgy and allows the public to visualize the process.</p>
+
+<p>To learn more about the artwork, head straight to the <a href="https://materials-materiality.ca/Air-Filtration-and-Soft-Membranes">Materials Materiality research chair website</a></p>
+
+<h1 id="prototyping-and-producing-a-score">Prototyping and producing a score</h1>
+
+<p>The general idea for this score is still grounded in experimentation: the production time with the actual entire hardware set-up was a few days ; a big part of which was about learning how to play with the material and physical properties of the piece in order to make it look interesting.</p>
+
+<p>This section will describe the setup, the general compositional process and the various features of score that were useful during the production work.</p>
+
+<p>The goal is to leverage the external sensor data to activate the various air filtration modules inside the piece, by triggering motors and fans.
+For instance: when the CO² levels of a sensor reach some particular limit, something should happen ; the light intensity could be mapped to the average temperature of all the sensors ; etc.
+These mappings should evolve and vary over time to make the piece more dynamic.</p>
+
+<h2 id="connecting-ossia-to-the-devices">Connecting ossia to the devices</h2>
+
+<p>Before doing anything, we have to focus on how score is going to interoperate with the external world for this piece: how are we going to get and process sensor data, and how are we going to control the stepper motors, LEDs, fans  of the main installation.</p>
+
+<p>There are as such two connections: inbound, from the sensors and outbound, to the serial port.</p>
+
+<h3 id="input-devices">Input devices</h3>
+<p>The inbound connection is trivial: it is sufficient to create a new OSC device listening on the port on which the Nomad AirKits emit, 
+and use the OSC learn functionality. The current experiment has three sets of sensors operating, simply identified as <code class="language-plaintext highlighter-rouge">sensors:/&lt;sensor number&gt;/co2</code>, etc.</p>
+
+<h3 id="output-devices">Output devices</h3>
+
+<p>The outputs are controlled directly through a fairly simple serial protocol: the electronics side of the piece 
+is divided in multiple boards. Each board has multiple controls. 
+All the output modules are handled by this electronic board:</p>
+
+<p><img src="/assets/blog/airfiltration/electronics.jpg" alt="Electronics board" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>A Nomad AirKit is also pictured above: the tube with the small solar panel sheets.</p>
+
+<p>Remember than score allows to communicate with 
+arbitrary systems over a serial port thanks to the <a href="https://ossia.io/score-docs/devices/serial-device.html">Serial device</a>, which defines how the device tree maps to the actual communication protocol in QML / JS.</p>
+
+<p>Here is the <a href="https://ossia.io/score-docs/devices/serial-device.html">Serial device</a> source code used for this work, which replaces a complex PureData patch.</p>
+
+<div class="language-qml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Ossia</span> <span class="mf">1.0</span> <span class="k">as</span> <span class="nx">Ossia</span>
+
+<span class="kt">Ossia.Serial</span> <span class="p">{</span>
+    <span class="c1">// The serial boards have a very low baud rate (56k). </span>
+    <span class="c1">// To not spam them too much, we force a coalescing </span>
+    <span class="c1">// of the values coming out of score so that there is </span>
+    <span class="c1">// at most one new value every 20 ms.    </span>
+    <span class="kd">property</span> <span class="kt">real</span> <span class="nl">coalesce</span><span class="p">:</span> <span class="mi">20</span>
+
+    <span class="c1">// This is the implementation of the protocol our serial board expects: </span>
+    <span class="c1">// a b c \r \n</span>
+    <span class="c1">// </span>
+    <span class="c1">// `a` is the board number byte</span>
+    <span class="c1">// `b` is the control n° on that board</span>
+    <span class="c1">// `c` the control value.</span>
+    <span class="c1">// </span>
+    <span class="c1">// We use Uint8Array in order to send binary data.</span>
+    <span class="kd">function</span> <span class="nx">frame</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span>
+    <span class="p">{</span>
+      <span class="kd">let</span> <span class="nx">auint8</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">ArrayBuffer</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+      <span class="kd">let</span> <span class="nx">uint8</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Uint8Array</span><span class="p">(</span><span class="nx">auint8</span><span class="p">);</span>
+      <span class="nx">uint8</span><span class="p">.</span><span class="kd">set</span><span class="p">(</span><span class="nx">array</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+      <span class="nx">uint8</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="se">\r</span><span class="dl">'</span><span class="p">;</span>
+      <span class="nx">uint8</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="se">\n</span><span class="dl">'</span><span class="p">;</span>
+      <span class="k">return</span> <span class="nx">auint8</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Quick global mapping for our parameters.</span>
+    <span class="kd">function</span> <span class="nx">mapValue</span><span class="p">(</span><span class="nx">val</span><span class="p">,</span> <span class="nx">tp</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">tp</span> <span class="o">===</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="c1">// This is a bit of an emergency cheat we added to disable the stepper motors</span>
+            <span class="c1">// in the central range as they were otherwise too noisy.</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">val</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">64</span> <span class="o">-</span> <span class="mi">55</span><span class="p">))</span> <span class="k">return</span> <span class="nx">val</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">val</span> <span class="o">&gt;</span> <span class="p">(</span><span class="mi">64</span> <span class="o">+</span> <span class="mi">55</span><span class="p">))</span> <span class="k">return</span> <span class="nx">val</span><span class="p">;</span>
+            <span class="k">return</span> <span class="mi">64</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="kt">else</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">val</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// All our boards have the same parameters, so we refactor the parameter creation</span>
+    <span class="c1">// with a simple utility function.</span>
+    <span class="kd">function</span> <span class="nx">createNode</span><span class="p">(</span><span class="nx">board</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="c1">// Each parameter is pretty similar so we can also refactor this.</span>
+        <span class="kd">const</span> <span class="nx">createObj</span> <span class="o">=</span> <span class="p">(</span><span class="nx">sensor</span><span class="p">,</span> <span class="nx">desc</span><span class="p">,</span> <span class="nx">def</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="kt">return</span> <span class="p">{</span>
+            <span class="nl">name</span><span class="p">:</span> <span class="nx">sensor</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span> 
+            <span class="nl">type</span><span class="p">:</span> <span class="nx">Ossia</span><span class="p">.</span><span class="nx">Type</span><span class="p">.</span><span class="nx">Int</span><span class="p">,</span> 
+            <span class="nl">min</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nl">max</span><span class="p">:</span> <span class="mi">127</span><span class="p">,</span>
+            <span class="nl">value</span><span class="p">:</span> <span class="nx">def</span><span class="p">,</span>
+            <span class="nl">description</span><span class="p">:</span> <span class="nx">desc</span><span class="p">,</span>
+            <span class="nl">request</span><span class="p">:</span> <span class="p">(</span><span class="nx">val</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">frame</span><span class="p">([</span>
+                <span class="nx">board</span> <span class="o">+</span> <span class="mi">128</span><span class="p">,</span> 
+                <span class="nx">sensor</span><span class="p">,</span> 
+                <span class="nx">mapValue</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">val</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mi">127</span><span class="p">),</span> <span class="mi">0</span><span class="p">),</span> <span class="nx">def</span><span class="p">)</span>
+            <span class="p">])</span>
+        <span class="p">}</span> <span class="p">};</span>
+
+        <span class="kt">return</span> <span class="p">{</span> 
+            <span class="nl">name</span><span class="p">:</span> <span class="nx">board</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span> 
+            <span class="nl">children</span><span class="p">:</span> <span class="p">[</span>
+                  <span class="nx">createObj</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="dl">"</span><span class="s2">stepper</span><span class="dl">"</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+                <span class="p">,</span> <span class="nx">createObj</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fet5</span><span class="dl">"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="p">,</span> <span class="nx">createObj</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="dl">"</span><span class="s2">fet9</span><span class="dl">"</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="p">]</span> 
+        <span class="p">};</span>
+    <span class="p">}</span>
+
+    <span class="c1">// We have four boards, we define them here:</span>
+    <span class="kd">function</span> <span class="nx">createTree</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
+        <span class="k">for</span><span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span>
+          <span class="nx">arr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">createNode</span><span class="p">(</span><span class="nx">i</span><span class="p">));</span>
+        <span class="k">return</span> <span class="nx">arr</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="test-cues">Test cues</h2>
+
+<p>Sensors were not always available: some needed repairing, and their short battery life means that it was not 
+possible to access live air pollution data at all times.
+To still be able to test changes in the score, a very simple pattern is to create a state (by double-clicking in the background of a scenario), 
+drop the values of the cue from the explorer, set a trigger on it and mark it as enabled.
+It is also possible to make a small sub-scenario with a loop in order to have some automatic variation of our simulated sensor state.</p>
+
+<p><img src="/assets/blog/airfiltration/simulator.png" alt="Simulating sensor input" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="experimenting-with-mappings">Experimenting with mappings</h2>
+
+<p>Using the “local play” feature was instrumental for quick testing of individual mappings: at any point, it is possible 
+to go inside a mapping sub-scenario and hit “Local play” (the “Play” button in orange, below): only this specific mapping will be executed, which allows to concentrate on making it look nice and interesting.</p>
+
+<p><img src="/assets/blog/airfiltration/transport.png" alt="Transport bar" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="organizing-the-score">Organizing the score</h2>
+
+<p>For this score, we chose a triptych organisation. 
+There are three “panels” in the score, which are going to loop over a hour and a half. 
+Each gives a different perspective on the piece and involve different mappings with the sensors and actuators part of the piece.</p>
+
+<p><img src="/assets/blog/airfiltration/orga.png" alt="General organisation" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>The first part contains individual mappings from sensors to modules. The second part is mainly pre-written automations, which are noisified and whose playback speed is altered depending on the external conditions. The last part is mappings from the average state of all the sensors, to all the modules taken together.</p>
+
+<h2 id="making-it-loop">Making it loop</h2>
+
+<p>As you may know, it is fairly easy to make a score loop forever to run in installation mode, like this: 
+it is done with the graph link, created by dragging from the small red plus icon when selecting the last state of the score.</p>
+
+<p><img src="/assets/blog/airfiltration/loop.gif" alt="Making the score loop" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="score-experiment-triggering-a-fan-after-a-motor">Score experiment: triggering a fan after a motor</h2>
+
+<p>One of the low-level scoring needs of the piece is that the fans should start blowing after the motors trigger in order to make sure 
+that dust is indeed being blown in the tubes. Here’s a simple score example of how to do this:</p>
+
+<p><img src="/assets/blog/airfiltration/motor.png" alt="Motor behaviour" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="score-experiment-emergency-behaviours">Score experiment: Emergency behaviours</h2>
+
+<p>One of the various ideas that were experimented with during the prototyping phase was to have a nominal behaviour for the piece, and 
+switch to an “emergency” mode if for instance some sensor data is detected to be too high for human safety. The score shall go back to its nominal mode 
+whenever the atmospheric particle levels go back to safer values.</p>
+
+<p>Here is an example of a small score that implements this behaviour. This leverages all the syntax elements of the ossia score visual language:
+triggers, conditions, loop transitions…</p>
+
+<p><img src="/assets/blog/airfiltration/pm25.png" alt="PM25 warning" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h1 id="mappings">Mappings</h1>
+
+<h2 id="mapping-a-set-of-sensor-to-a-module">Mapping a set of sensor to a module</h2>
+
+<p>In this piece, we have as you remember:</p>
+
+<ul>
+  <li>
+    <p>Sensors (Nomad AirKits). These are ESP32 boards which regularly send air quality and sensor data over OSC. 
+The sensed parameters are: temperature, humidity, TVOC, CO², PM1, PM10, PM25.</p>
+  </li>
+  <li>
+    <p>Modules: a module is a part of the installation which contains a LED ribbon, a stepper motor, and a fan to blow the dust inside the tubes.</p>
+  </li>
+</ul>
+
+<p>The first approach for scoring, inspired from previous prototypes, has been to define a mapping / sub-score that processes arbitrary input sensors and writes it to an arbitrary module.
+In order to do this, we used a custom OSC device for storing score variables.</p>
+
+<p>The composition rule for this part was that each mapping could leverage two distinct parameters, abstractly named “p1” and “p2” and map them to the three outputs of the module, stepper, led intensity and fan.</p>
+
+<p>For this, we simply created a dummy OSC device which is used as a variables holder.</p>
+
+<p><img src="/assets/blog/airfiltration/variables.png" alt="OSC device" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Creating such a device was actually fairly simple as it is possible to create multiple addresses thanks to OSC pattern expressions: the pattern <code class="language-plaintext highlighter-rouge">module/{A..J}/{fan,led,motor,p1,p2}</code> will automatically create most of the addresses needed in one go when entering the “Add child” dialog.</p>
+
+<p><img src="/assets/blog/airfiltration/pattern.png" alt="OSC device pattern creation" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Then, we created our modules:</p>
+
+<p><img src="/assets/blog/airfiltration/modules.png" alt="Compositional modules" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Each module has a slightly (or very) different behaviour. Some have pre-written parts for dramatic effect, while others are purely function of the input parameters.
+They are defined as free-floating intervals.</p>
+
+<p>For each, the first trigger is configured to start whenever the OSC address <code class="language-plaintext highlighter-rouge">variables:/modules/(the module)/run</code> is set to true. Notice that “auto-play” is set on the trigger: otherwise, it will never start!</p>
+
+<p><img src="/assets/blog/airfiltration/module.trigger.start.png" alt="Compositional modules: start" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>The last trigger is configured to kill the module when the <code class="language-plaintext highlighter-rouge">run</code> variable is set to false:</p>
+
+<p><img src="/assets/blog/airfiltration/module.trigger.end.png" alt="Compositional modules: stop" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Then, inside each modules, the addresses are read live from the defined variables and used from the various objects in the mapping.
+For instance, the module A’s LED output is configured like this:</p>
+
+<p><img src="/assets/blog/airfiltration/module.a.png" alt="Compositional modules: output" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>At runtime, whenever the address stored in <code class="language-plaintext highlighter-rouge">variables:/modules/A/led</code> changes (for instance it could be the string <code class="language-plaintext highlighter-rouge">serial:/2/9</code>, <code class="language-plaintext highlighter-rouge">serial:/1/9</code> or even <code class="language-plaintext highlighter-rouge">serial:/*/9</code> to address them all), the mapping’s output will be redirected to the new parameter.</p>
+
+<p>Finally, we have a small temporal composition of states which will change the value of these variables over time ; the score is organised per-module board, that is, the first line defines all the modules used by the module 1, etc.:</p>
+
+<p><img src="/assets/blog/airfiltration/module.compo.png" alt="Compositional modules: score" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Each state will change the module used at a given point in time by a board ; it looks like this:</p>
+
+<p><img src="/assets/blog/airfiltration/module.compo.state.png" alt="Compositional modules: state" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>This of course calls for some evolutions to ossia score to make this kind of compositional system easier to define and write for: mainly, we are missing the ability to instantiate and remove a given module on the fly and use them as a template.</p>
+
+<h2 id="scripting">Scripting</h2>
+
+<p>The second part of the score uses another approach: the general shape of the parameter evolutions for every module is written manually, in order to try to emphasis a slightly more dramatic narrative that the one we are able to achieve with simple parameter mapping.</p>
+
+<p><img src="/assets/blog/airfiltration/tableau2.png" alt="Scripting: automations" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>The LED automations are not directly used to control the LEDs ; before, they go through an expression mapper which adds progressively more noise both over time and depending on the external conditions detected by the sensors.</p>
+
+<p><img src="/assets/blog/airfiltration/tableau2.noise.png" alt="Scripting: noise" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>Finally, we also use an average humidity measure to control the speed at which these automations are being played, by using a tempo process and writing a small mapping.
+In many parts of the score, the Smooth object was extremely useful: the sensors only give updated values every 5-10 seconds on average, which would sometimes give very surprising jumps. Smoothing over a second-ish allows to avoid that.</p>
+
+<p><img src="/assets/blog/airfiltration/tableau2.tempo.png" alt="Scripting: tempo control" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="global-mappings">Global mappings</h2>
+
+<p>Finally, the last part of our tryptich focuses on mapping averages of our sensor data into communicating behaviour across all the modules.
+For this, we used for instance the Sweeper object described below, which makes a specific behaviour “run” across all the serial modules in a rhythm defined by one of the sensor data.
+Multiple mappings succeed one another. Below, one is pictured: it maps the CO² average of our sensors to both light intensity and circulation speed of the LEDs and fans.</p>
+
+<p><img src="/assets/blog/airfiltration/tableau3.module.png" alt="Global mappings" width="100%" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="video-mapping">Video mapping</h2>
+
+<p>The piece also features a video projection of video recordings done at the sites where the Nomad Airkits did air measurements.
+The video feed, captured with a 360° fisheye camera, is re-projected on the artwork.</p>
+
+<h3 id="on-squishiness-and-light-adjustements">On squishiness and light adjustements</h3>
+
+<p>The video projection used made the video too wide: we used a very quick and dirty Video Mapper object to make it more round to fit the artwork. Likewise, some exposure adjust was needed as the video projector we had really wasn’t bright enough. Thankfully, ossia score’s user library comes with objects for handling this built-in, thanks to the great <a href="https://github.com/Vidvox/ISF-Files">ISF library shared by Vidvox</a>!</p>
+
+<p><img src="/assets/blog/airfiltration/video-map.png" alt="Video mappings" width="40%" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h3 id="mapping-parameters-to-real-time-video-filters">Mapping parameters to real-time video filters</h3>
+
+<p>In addition, we can of course use parameters from our sensors to adjust the video. For this experiment, we simply mapped the measured temperature to the chromaticity of the displayed picture ; more interesting mappings could very likely be devised over time.</p>
+
+<!-- 
+## Embedding
+
+
+# Musicality
+
+Using the stepper motor noise.
+-->
+
+<h1 id="new-objects-for-pattern-control">New objects for pattern control</h1>
+
+<p>As part of the conception of this artwork, a few new objects made their way into score, which can be generally useful to the community.
+They could be developed very quickly thanks to the magical superpowers of <a href="https://celtera.github.io/avendish">Avendish</a> which makes writing custom ossia objects an absolute breeze ; the development time for each object was at most one hour for each.</p>
+
+<p>Here’s an overview:</p>
+
+<h2 id="calibrator">Calibrator</h2>
+
+<p><img src="/assets/blog/airfiltration/calibrator.png" alt="Calibrating sensor input" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>This object was born from the observation that every sensor would have a fairly different range depending on the time of the day.
+It calibrates the input signal with its actual min and max bound over time, in order to enable to detect meaningful variations in the signal.
+It also provides some useful statistical analysis tools: mean, variance, lower and upper bound.</p>
+
+<p>It is available under Control &gt; Mappings in the processes pane.</p>
+
+<h2 id="pattern-combiner">Pattern combiner</h2>
+
+<p><img src="/assets/blog/airfiltration/combiner.png" alt="Combining input patterns" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>This object fetches and processes addresses matching an OSC pattern, and allows to compute for instance the mean of the matched parameters, combine them in a list, etc.</p>
+
+<p>Note that if you just need to get all the messages in succession from a set of OSC addresses, no particular object is needed: you can just directly use a pattern match expression as the input of a port in the address field.</p>
+
+<p>It is available under Control &gt; Data Processing in the processes pane.</p>
+
+<h2 id="pattern-applier">Pattern applier</h2>
+
+<p><img src="/assets/blog/airfiltration/applier.png" alt="Applying a list to a pattern" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>This object takes a list as input, and an address pattern for output which will match multiple addresses.</p>
+
+<p>For instance: if the pattern is <code class="language-plaintext highlighter-rouge">serial:/*/5</code>, the actual addresses will be in our case <code class="language-plaintext highlighter-rouge">serial:/1/5</code>, <code class="language-plaintext highlighter-rouge">serial:/2/5</code>, <code class="language-plaintext highlighter-rouge">serial:/3/5</code> , <code class="language-plaintext highlighter-rouge">serial:/4/5</code>.</p>
+
+<p>The object will send every element of the list passed in input to the addresses, e.g. if the list <code class="language-plaintext highlighter-rouge">[4, 6, 12, 7]</code> is passed as input to the object, 
+then <code class="language-plaintext highlighter-rouge">serial:/1/5</code> will get 4, <code class="language-plaintext highlighter-rouge">serial:/2/5</code> will get 6, <code class="language-plaintext highlighter-rouge">serial:/3/5</code> will get 12, etc.</p>
+
+<p>It is available under Control &gt; Data Processing in the processes pane.</p>
+
+<p>Note that if you need to send the same message to every address matching a pattern, no specific object is needed: OSC pattern match expressions
+can already be specified for every output port of score.</p>
+
+<h2 id="pattern-sweeper">Pattern sweeper</h2>
+
+<p><img src="/assets/blog/airfiltration/sweeper.png" alt="Sweeping over outputs" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<p>This object sweeps over the addresses specified in the pattern expression at a given rhythm.</p>
+
+<p>For instance, in the screenshot below, every quarter note, the next address matched by the pattern will get the input routed to it.</p>
+
+<p>It is available under Control &gt; Data Processing in the processes pane.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Thanks for reading all this! In the end, I must say that I had a lot of fun writing the score for this piece ; it also brought some small usability issues to the spotlight, which will be worked on in further releases.</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/valuetypes/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Generalized "value" types and prototypal operation for C++ objects</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("News" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>
