@@ -181,7 +181,7 @@ category: site-gallery
 </div>
 
 <div align="middle" class="gallery-page-image">
-    <a href="https://escuta.org/en/proj/assombros/" class="gallery-text">
+    <a href="https://escuta.org/en/proj/assombros/intro.html" class="gallery-text">
         <img src="assets/gallery/assombros.jpg" height="270" class="post-image" />
         <i> Assombros </i> <br /> Iain Mott / Simone Reis 
     </a>
