@@ -104,7 +104,7 @@ category: site-gallery
 </div>
 
 <div id="meta-chef-d-orchestre" align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Meta-Chef-d-Orchestre" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/meta-chef-dorchestre" class="gallery-text">
         <img src="assets/gallery/dome_scrime.jpg" class="post-image" />
         <i> Méta Chef d’Orchestre </i><br/> Serge Delaubier
     </a>
@@ -118,14 +118,14 @@ category: site-gallery
 </div>
 
 <div id="sonotact" align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Sonotact" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/sonotact" class="gallery-text">
         <img src="assets/gallery/sonotact.jpg" class="post-image" />
         <i> Sonotact </i><br/> Pascale Criton
     </a>
 </div>
 
 <div align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Rain-of-Music" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/rain-music" class="gallery-text">
         <img src="assets/gallery/metabot_score.jpg" class="post-image" />
         <i> Rain of Music </i><br/> Josu Rekalde 
     </a>
