@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    ossia score 3 beta
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="ossia score 3 beta">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="Announcing the beta version 3 for ossia score, the intermedia sequencer">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/v3/score.png">
+  <meta name="twitter:image:alt" content="Screenshot of ossia score 3">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/beta-v3/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">ossia score 3 beta</h2>
+    <p class="post-meta">Dev  •  Aug 17, 2021  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h1 id="introducing-ossia-score-3">Introducing ossia score 3</h1>
+
+<p><img src="/assets/score.png" alt="ossia score 3" width="100%" /></p>
+
+<p><em>ossia score</em> is an interactive and intermedia sequencer: it allows to score multimedia content and processes in a timeline, such as sound, MIDI, OSC messages, video, VST plug-ins, scripts, with a specifically tailored visual language. It has two defining features: first, the signal processing being applied can evolve over time. The first half of
+a score can have a given set of effects applied on sound, video… , and the second part of the score, a completely different set of effects being applied.
+Second, the timeline can encode interactivity: it is possible to state that a part of the score will only execute when someone touches a control or does something
+on stage, while others are kept in check with the musical beat, and then resynchronize these multiple competing timelines afterwards.</p>
+
+<p>Version 3 fulfills the long-term goal of intermedia score authoring of the <em>ossia</em> project,
+by allowing our timeline to combine state-of-the-art audio, control and video processing pipelines in a single integrated system.</p>
+
+<p>Where the version 2 focused on integrating audio processing to the execution engine, version 3’s defining feature are video processing &amp; playback support, which opens <em>ossia score</em> to the VJ world, and musical metrics support, which enables its use in works requiring tempo and beats.</p>
+
+<p>The <a href="/score/download.html">beta is freely downloadable</a>. We aim for a final release in early autumn, when all the bugs are ironed out during the beta testing cycle.</p>
+
+<p>This post will present the new major features, and then sketch the way to version 4.</p>
+
+<h1 id="the-road-since-score-20">The road since score 2.0</h1>
+
+<p>This release cycle has been exceptionally long ; thankfully, we are nearing the end:</p>
+<ul>
+  <li>The last stable version, <a href="https://github.com/ossia/score/releases/tag/v2.5.2">2.5.2</a>, was released on August 26, 2019, almost two years ago.</li>
+  <li>The first <a href="https://github.com/ossia/score/releases/tag/v3.0.0-alpha0">3.0.0 alpha</a> was released on February 10, 2020.</li>
+</ul>
+
+<p>So, what did happen during these two years, totalling 1920 commits of work, since version 2.5 ? Let’s take a look at it !</p>
+
+<h2 id="a-metric-ton-of-user-interface-work">A metric ton of user interface work</h2>
+
+<p>An image speaks a thousand words:</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">August 28, 2017 to August 17, 2021 😊 thanks to all the fine people involved ! <a href="https://x.com/ossia_io?ref_src=twsrc%5Etfw">@ossia_io</a> <a href="https://x.com/hashtag/intermedia?src=hash&amp;ref_src=twsrc%5Etfw">#intermedia</a> <a href="https://x.com/hashtag/ossia?src=hash&amp;ref_src=twsrc%5Etfw">#ossia</a> <a href="https://x.com/hashtag/ossiascore?src=hash&amp;ref_src=twsrc%5Etfw">#ossiascore</a> <a href="https://x.com/hashtag/musicsoftware?src=hash&amp;ref_src=twsrc%5Etfw">#musicsoftware</a> <a href="https://x.com/hashtag/newmediaart?src=hash&amp;ref_src=twsrc%5Etfw">#newmediaart</a> <a href="https://x.com/hashtag/floss?src=hash&amp;ref_src=twsrc%5Etfw">#floss</a> <a href="https://x.com/hashtag/opensource?src=hash&amp;ref_src=twsrc%5Etfw">#opensource</a> <a href="https://x.com/hashtag/freesoftware?src=hash&amp;ref_src=twsrc%5Etfw">#freesoftware</a> <a href="https://t.co/ROQocR1ShD">pic.x.com/ROQocR1ShD</a></p>&mdash; jm (@jcelerie) <a href="https://x.com/jcelerie/status/1427731589967007748?ref_src=twsrc%5Etfw">August 17, 2021</a></blockquote>
+<script async="" src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+<p>Many thanks in particular to Akané who spent a lot of time improving colours, sizes, positioning, etc. to make everything much more harmonious, pretty, and enjoyable to use.</p>
+
+<h2 id="proper-documentation">Proper documentation</h2>
+
+<p>Julien and Thibaud contributed a <a href="/score-docs/">neat documentation</a> for version 3, which was sorely missing in the prior versions.</p>
+
+<p>In particular, a lot of techniques are described in the first two chapters, which act like a tutorial of sorts:</p>
+<ul>
+  <li><a href="/score-docs/quick-start">Quick Start</a></li>
+  <li><a href="/score-docs/common-practices">Common Practices</a></li>
+</ul>
+
+<h2 id="node-based-view">Node-based view</h2>
+
+<p>Intervals can now be viewed in nodal mode to easily interconnect their processes, with a switch in the transport bar.
+Purely non-temporal processes (VSTs, etc.) will always show up as a small nodal slot in intervals.</p>
+
+<h2 id="video-pipeline">Video pipeline</h2>
+
+<p><img src="/assets/blog/v3/video.png" alt="ossia score 3" width="100%" /></p>
+
+<p>We developed a complete <a href="https://x.com/jcelerie/status/1236809800727617537" target="_blank">GPU-based video processing pipeline</a>, which allows to generate, transform, filter, and modify visuals without affecting CPU usage.</p>
+
+<ul>
+  <li>FFMPEG is used for decoding videos, which means that most formats should be supported. Additionally, the HAP codec is independently supported, to ensure that we get the most out of the file format and decode it entirely on GPU.</li>
+  <li>We support applying shader-based filters on these videos and editing these shaders live, during the execution of a score. <a href="https://isf.video/">Interactive Shader Format</a>, the well-known Vidvox technology is used as the main shader system.</li>
+  <li>The render graph is based on <a href="https://www.qt.io/blog/graphics-in-qt-6.0-qrhi-qt-quick-qt-quick-3d">Qt RHI</a>: it is possible to leverage Vulkan, OpenGL, Metal, or Direct3D for rendering. For version 3, only OpenGL will be officially supported, but it is easy to try the other APIs in the application settings.</li>
+  <li>Standard camera input is supported ; proper Spout and Syphon support are targeted for a 3.x release. NDI input and output is being developed in a separate add-on which will be shipped as part of the package manager.</li>
+</ul>
+
+<h2 id="musical-metrics-and-quantization">Musical metrics and quantization</h2>
+
+<p><img src="/assets/blog/v3/tempo.png" alt="ossia score 3" width="100%" /></p>
+
+<p>Support for tempo, musical bars, and quantization has been introduced, as well as a snap-on-grid system.</p>
+
+<ul>
+  <li>Time-streching is supported through different algorithms (resampling with libsamplerate, pitch-preserving timestretch with RubberBand).</li>
+  <li>It is now possible to sync the triggering of a trigger, to the beginning of the following bar for instance.</li>
+  <li>Poly-rhythm and poly-tempo are supported: each interval can have its own tempo and metrics timeline which applies recursively to its children.
+For instance, the parent scenario can be in a 4/4 metric, while a child scenario can be at 3/4.</li>
+  <li>It is also possible to play and stop any interval during execution in a quantized way, to enable live-looping workflows.</li>
+</ul>
+
+<h2 id="presets">Presets</h2>
+
+<p>A <a href="https://x.com/jcelerie/status/1241774333535666176" target="_blank">preset mechanism</a> has been introduced for all processes, to allow to save and restore
+processes’s state easily and to allow to create a great <a href="https://github.com/ossia/score-user-library/tree/master/Presets">user library</a> of presets.</p>
+
+<p>If you make cool presets, you are more than welcome to contribute them to the official repository !</p>
+
+<h2 id="graph-intervals">Graph intervals</h2>
+
+<video controls="" style="width: 100%">
+    <source src="/assets/blog/v3/graph.mp4" type="video/mp4" />
+</video>
+
+<p>This is the main breaking change in ossia score 3: in version 1 and 2, looping was handled by a specific process.
+In version 3, we redid that in a much more general way, by allowing to create a <a href="https://x.com/jcelerie/status/1245484342274646017" target="_blank">new type of interval</a> which can cycle back to any other part of the score.</p>
+
+<p>This means that it is now possible to create state-machine-like scores, where one part plays after the other, which then goes back to the first part, which is particularly useful for installations, and more generally very arbitrary changes and loopings in a score, we look forward to what you are going to create with it !</p>
+
+<h2 id="package-manager">Package manager</h2>
+
+<p>In the settings, the “Package” tab allows to download add-ons and media packs.</p>
+
+<h2 id="pure-data-integration">Pure Data integration</h2>
+
+<p>Thanks to the <a href="https://github.com/libpd/libpd">libpd</a> project, we are able to provide a fairly complete integration of Pure Data patches as score processes.
+Read more on the <a href="/score-docs/processes/puredata.html">documentation</a> !</p>
+
+<video controls="" style="width: 100%">
+    <source src="/assets/blog/v3/pd.mp4" type="video/mp4" />
+</video>
+
+<h2 id="c-jit-support">C++ JIT support</h2>
+
+<p><a href="https://x.com/jcelerie/status/1307792769277190147" target="_blank">JIT compilation support</a> allows to live-code C++ extensions directly from within the software,
+just like it was possible with the Javascript process, but with greatly improved performance (and stronger real-time guarantees).</p>
+
+<p>This will be an experimental feature for the 3.0 release cycle.</p>
+
+<p>Along with that add-on, comes the upcoming stable plug-in API, currently being worked on <a href="https://github.com/jcelerier/score-simple-api-2">here</a>.
+The end goal is to ship plug-ins as source form in the package manager: this will allow them to be compiled knowing the user’s host CPU’s
+capabilities, thus giving peak performance by leveraging SSE, AVX, etc. whenever possible.</p>
+
+<p>For instance, Maria Paula implemented the audio oracle and VMO improvisation algorithms in C++ as score plug-ins, which are then going to be integrated through the package manager:</p>
+
+<iframe style="width: 100%" src="https://www.youtube.com/embed/videoseries?list=PLRF2ObSnwtrmyp2nnT5vKJolqilDGSH9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Théo Barbé has been working on a video mapping plug-in, and Arthur Fourcadet on a GPU particles system ; both will also be released as add-ons.</p>
+
+<h2 id="remote-control">Remote control</h2>
+
+<p><img src="/assets/blog/v3/remote.png" alt="Remote app" width="60%" /></p>
+
+<p>The remote control API, introduced at the end of 2.5.2, has been leveraged by a team of students
+to create a neat app for tablets, which can be used to control parts of the score from a mobile device very easily.
+Our intern Antoine has been improving it over the summer in order to make it useable from web browsers directly.
+More on this in a future blog post !</p>
+
+<h2 id="smaller-improvements">Smaller improvements</h2>
+
+<ul>
+  <li>We added a built-in looping feature for individual processes, to easily loop audio files by simply extending them, like in most audio sequencers.</li>
+  <li>Many small and useful processes have been introduced, go discover them in the <a href="/score-docs/processes.html">docs</a> !</li>
+  <li>Intervals can act as mixing busses, available in a panel at the bottom.</li>
+  <li>Integration of the <a href="https://open-fixture-library.org/">OLA DMX fixture library</a>, to allow to automate lighting hardware more easily.</li>
+  <li>Official support for running score on Raspberry Pi 3 and 4, with an official release build. This build is able to use EGLFS to show video content directly in the most performant way for art installations.</li>
+</ul>
+
+<h1 id="roadmap-to-v4">Roadmap to v4</h1>
+<p>The main work for v4 will concentrate on a few major things: a stable plug-in API, MIDI 2.0, user interface improvements for the authoring and scripting, and recording.
+In addition, as usual, a lot of small-ish new features and improvements may make their way into the software :-)</p>
+
+<p>In particular, most of the project management has moved to <a href="https://github.com/ossia/score/projects">Github Projects</a>:
+the tools is far from perfect but allows to very easily link project steps to issues and centralizes things very efficiently.</p>
+
+<h2 id="proper-unreal-engine-integration">Proper Unreal Engine integration</h2>
+<p>The work done since 2019 has been achieved thanks to a generous MegaGrant from Epic, allowing Jean-Michaël to work full-time on improving <em>score</em> in order to provide an integration with Unreal Engine.</p>
+
+<p>Part of that work has gone into making a prototype of <a href="https://github.com/ossia/libossia-ue4">libossia integration</a> in UE, which did not work and required a refactor of
+all the network internals of libossia, from a threaded model where every protocol was living its life freely in one or multiple threads,
+to a much simple event-based model leveraging Boost.Asio, which will more easily integrate into the Unreal event loop.</p>
+
+<p>This refactor is pretty much finished and will now enable work on making a library version of <em>score</em> which will then be
+embeddable in UE and other creative coding environments ; what remains to be specified technically is the efficient passing of sound and video data to other environments,
+especially when GPU processing is involved.</p>
+
+<h2 id="stable-plug-in-api">Stable plug-in API</h2>
+<p>The v3 to v4 release cycle will be about stabilizing things: we aim to finish the work on the execution engine
+to make sure that it is possible to write score plug-ins without any compromise in performance, in order
+to create a lasting and vibrant ecosystem of extensions to <em>score</em>.</p>
+
+<p>As such, a lot of work is going into defining the ideal plug-in API ; the previous <a href="/posts/reflection/">blog post</a> gives hints at the path we are taking for that API.</p>
+
+<h2 id="support-for-midi-20">Support for MIDI 2.0</h2>
+
+<p>Multiple ossia.io members are part of the Intermedia Mapping and Scripting MIDI Special Interest Group.
+As part of the SIG, our mission is to find ways to make sure that MIDI 2.0 is a first-class protocol for
+all intermedia needs ; the main way to do this will be to first try to implement MIDI 2.0 in libossia and score,
+and see what is missing or problematic to give recommendations to the MIDI SIG.</p>
+
+<h2 id="timeline-ux-improvements">Timeline UX improvements</h2>
+
+<p>This concerns all the improvements to the central score view, in order to make it as easy as possible to author temporal content.</p>
+
+<p>Things that are being evaluated for the version 4 are for instance:</p>
+<ul>
+  <li>Better support for sequences of automations and controls on the same parameters.</li>
+  <li>Track-like processes for sound and MIDI data, to allow applying effects more easily to a sequence of sounds.</li>
+  <li>Support for saving and reloading presets of processes as part of the timeline.</li>
+  <li>Parametric processes and variables: how to have a “configurable” process preset.
+That would enable for instance having a scenario preset for controlling a parameter with multiple automations and states,
+and being able to change the address being controlled by that preset in a single place in the user interface.</li>
+  <li>Hierarchical data support for types other than sound: for instance, automatically mixing video content in the parent like
+it is being done for sound right now.</li>
+</ul>
+
+<p>The actual ideas are being put in our project board, everyone is free to participate by requesting features on the <a href="https://forum.ossia.io">forum</a> or on the <a href="https://gitter.im/ossia/score">chat</a> :-)</p>
+<ul>
+  <li><a href="https://github.com/ossia/score/projects/29">UX evolutions</a></li>
+  <li><a href="https://github.com/ossia/score/projects/19">UX improvements and bugfixes</a></li>
+</ul>
+
+<h2 id="proper-recording-mechanism">Proper recording mechanism</h2>
+
+<p>Right now we only support a mechanism for recording data-like addresses from the device explorer to the score: OSC messages, MIDI controls, etc.</p>
+
+<p>The goal for the version 4 is to work on a unified system for recording all kinds of media: sound, MIDI notes, video.
+This needs a better implementation than what we have now - the current recording facilities were implemented back in 2015 for the sake of a deadline and have not been touched since. In particular, they are not integrated at all with the execution data flow.</p>
+
+<h1 id="longer-term-roadmap">Longer term roadmap</h1>
+
+<p>The long-term vision for ossia score has one definite use-case: it should ultimately be possible to:</p>
+
+<ul>
+  <li>Open a web browser to our web <a href="/score-web">version</a>.</li>
+  <li>Join a collaborative scoring session, edit sound, video, etc.</li>
+  <li>Press “play”, and have the score’s execution on every browser synchronize the way it was specified by the composers: for instance, a first interval plays on user 1’s browser, and a second interval plays on user 2’s browser ; user 1 receives the sound that is generated by that interval, processes it, and sends it back to user 2.</li>
+  <li>Press “export”, and get a bundled webassembly player, which contains a compiled and optimized version of the score, either for instance as a native Windows / Mac / Linux executable, or as a WASM bundle that can then be embedded in another web page.</li>
+</ul>
+
+<p>We are roughly 15% towards that vision, which requires a lot of different parts working together. Most importantly, the transfer of data and media assets between machines should be as efficient as possible, and has not been done at all until now.</p>
+
+<h2 id="webassembly-port">WebAssembly port</h2>
+<p>Right now, one can make very simple scores in our <a href="/score-web">web prototype</a>, but this is not useable in any production facility.
+We would like to be able to export scores using sound, video, Faust plug-ins, … as a WASM object which could then be embedded in a web page.</p>
+
+<h2 id="collaborative-edition-and-distributed-execution">Collaborative edition and distributed execution</h2>
+<p>These capabilities have been <a href="https://github.com/ossia/iscore-addon-network" target="_blank">prototyped but not kept up to date with the rest of the software</a>.
+A recent contract work has helped making the codebase compile again, it remains to fix the synchronisation issues between computers.</p>
+
+<h1 id="contributing-to-ossia-score">Contributing to ossia score</h1>
+
+<p>ossia is a free software project at its core, and the free software values we hold dearly.</p>
+
+<p>As such, we are open to contributions from everyone interested in improving it: if you want to start
+contributing to score and don’t really know where to look, come to the <a href="https://gitter.im/ossia/score">chat</a> and we
+will do our best to mentor you !</p>
+
+<p>Thanks for reading, and have fun with the beta !</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/reflection/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Achieving generic bliss with reflection in modern C++</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/genuary/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Genuary 2022 with ossia score</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("Dev" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>

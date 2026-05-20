@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    Collaborative and distributed interactive scores
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="Collaborative and distributed interactive scores">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="Collaborative features in score 3.0.11">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/distributed/image.png">
+  <meta name="twitter:image:alt" content="Distributed score screenshot">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/distributed/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">Collaborative and distributed interactive scores</h2>
+    <p class="post-meta">News  •  Jun 14, 2022  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h1 id="collaborative-features-in-score-3011">Collaborative features in score 3.0.11</h1>
+
+<p><a href="https://github.com/ossia/score/releases/tag/v3.0.11">ossia score 3.0.11</a> introduces experimental collaborative features,
+that had been developed <a href="https://github.com/ossia/iscore-addon-network">a few years ago</a> as part of my <a href="https://scholar.google.fr/citations?view_op=view_citation&amp;hl=fr&amp;user=v1_52IMAAAAJ&amp;citation_for_view=v1_52IMAAAAJ:4TOpqqG69KYC">thesis work</a>, 
+but had remained dormant since then (very precisely, since the presentation for the Journées d’Informatique Musicale 2017):</p>
+
+<p><img src="/assets/blog/distributed/contribs.png" alt="Contributions" width="100%" /></p>
+
+<p>Recent projects involving distributed performance, such as João Svidzinski’s <a href="https://isidore.science/document/10670/1.7jax6r">HERMES v2</a> distributed musical piece, an AFIM workgroup,
+a demo at SMC 2022, and a lot of great presentations at TENOR 2022, have reinvigorated the motivation for making this work correctly.</p>
+
+<p>Two relatively orthogonal experimental features have been developed: rather than keeping them gated until it’s all perfect, 
+we have decided to release them in a preliminary state as they can already be useful (with <strong>many caveats and disclaimers</strong> scattered through this blog post! No warranty, no stability guarantees, assume that everything can change in the next version!), and to gather feedback from live usage.</p>
+
+<ul>
+  <li><strong>Collaborative edition</strong>: multiple people can connect together to edit a score just like in e.g. Framapad or Google Docs.</li>
+  <li><strong>Distributed execution</strong>: the score can be annotated to indicate how the execution must occur across multiple machines and exchange live data between them.</li>
+</ul>
+
+<p>For instance, it is easily possible to have a single score with synchronized playback, where a machine will process all the audio and another all the video, 
+which is useful for complex scene situations requiring horsepower that a single computer would not be able to provide.</p>
+
+<blockquote>
+  <p>Caveat: live temporal synchronization is currently very barebones. Previous versions used to rely on proper clock sync at the system clock level, by using for instance PTP.
+Since this was developed before score even processed data and was backed by the audio clock rate, it has not been updated to make the synchronisation fit with the new execution pipeline.
+Further work on resyncing things correctly is planned !</p>
+</blockquote>
+
+<h2 id="going-network-goblin-mode">Going network goblin mode</h2>
+
+<p>The architecture is client-server. A machine hosts, and the others connect to it. Everything is based on WebSockets.</p>
+
+<ul>
+  <li>The host can start hosting through the <code class="language-plaintext highlighter-rouge">File &gt; Make server</code> menu option.</li>
+  <li>Clients can join a session with the <code class="language-plaintext highlighter-rouge">File &gt; Join</code> menu option.</li>
+</ul>
+
+<p>A network session allows both collaborative edition and distributed execution.</p>
+
+<blockquote>
+  <p>Caveat: if VST plug-ins and media such as sound files, videos, etc. are used, 
+the paths must match on all computers, until we finish developing a proper distributed media management system.</p>
+</blockquote>
+
+<video preload="auto" style="width: 100%" muted="" controls="">
+    <source src="/assets/blog/distributed/edition.mp4" type="video/mp4" />
+</video>
+
+<p>Once a score instance is part of a network session, the “Network” panel will initialize itself:</p>
+
+<p><img src="/assets/blog/distributed/panes.png" alt="Network Groups Panel" /></p>
+
+<p>There are three tabs:</p>
+
+<ul>
+  <li>Topology is about the definition of the network (more on this later).</li>
+  <li>Transport allows to play / stop everyone and control collaborative edition.</li>
+  <li>Object allows to set network-specific properties on objects of the score.</li>
+</ul>
+
+<h3 id="collaborative-edition-features">Collaborative edition features</h3>
+
+<p>The only “feature” of collaborative edition is that it can be optionally turned off.</p>
+
+<p>This is useful for instance for playing with controls locally once a score has been defined and allows 
+each client to have some amount of variation and play the collaborative score like an instrument.</p>
+
+<p>In the following video for instance, the two score instances edit the parameters of a shader [1]; at any point they 
+can “opt out” of sending new control changes.</p>
+
+<video preload="auto" style="width: 100%" muted="" controls="">
+    <source src="/assets/blog/distributed/edition-control.mp4" type="video/mp4" />
+</video>
+
+<h2 id="distributed-execution">Distributed execution</h2>
+
+<p>The interesting part of this work is the ability to specify, as part of a score, how it is going to be distributed across the network when executing.</p>
+
+<p>That is, it is possible to say: “this part of the score runs on computer A”, “that part on computer B”. It is also possible to get the value 
+of some computation or local input, and share it across the other computers.</p>
+
+<p>A small abstraction level is introduced, to separate hardware from the high-level specification of the score: groups.
+In the “Topology” tab of the network panel, one can add groups:</p>
+
+<p><img src="/assets/blog/distributed/groups.png" alt="Network Groups Panel with Groups" /></p>
+
+<p>The matrix below indicates which client is part of which group, a bit like UNIX users and groups. 
+Clients are not saved with the score, but groups are.</p>
+
+<p>Then, in the Objects tab, one can select objects of the score and assign a group to them.</p>
+
+<p>For instance, in the video below, the top automation (A) is in group “audio” (there’s no audio, the name is just an example!), 
+while the bottom automation (B) is in group “video”. The top client (“master”) is put in group “audio”, and the bottom client (“A client”) 
+is put in group video. When executing, both scores process the ISF shader, but each only execute one of the two automations.</p>
+
+<video preload="auto" style="width: 100%" muted="" controls="">
+    <source src="/assets/blog/distributed/exec-groups.mp4" type="video/mp4" />
+</video>
+
+<h2 id="distributing-expression-evaluation">Distributing expression evaluation</h2>
+
+<p>The evaluation of triggers can be synchronized across the network, or left independent.</p>
+
+<p>That is, one can choose whether a trigger is supposed to execute on all clients, or only on the client on which the trigger became true due to some external condition.</p>
+
+<p>In this video, for instance, the top score instance is connected to a joystick, which triggers the successive automations.
+The bottom instance does not even have the joystick showing up in its Device Explorer - but when the topmost instance receives the trigger (a button press),
+the bottom one is informed and triggers too.</p>
+
+<video preload="auto" style="width: 100%" muted="" controls="">
+    <source src="/assets/blog/distributed/exec-trigger.mp4" type="video/mp4" />
+</video>
+
+<blockquote>
+  <p>Caveat: synchronized triggering is only supported for triggers that are triggered through expressions involving devices, not yet when they are clicked 
+with the mouse in the score.</p>
+</blockquote>
+
+<h2 id="distributing-interval-speed">Distributing interval speed</h2>
+
+<p>The interval speed can be shared too.</p>
+
+<video preload="auto" style="width: 100%" muted="" controls="">
+    <source src="/assets/blog/distributed/exec-intervals.mp4" type="video/mp4" />
+</video>
+
+<p>Both these sharing features are enabled / disabled at the scenario level, by indicating whether it is a “Free” or “Shared” scenario.</p>
+
+<p>More fine-grained techniques are in a work-in-progress state in the codebase and not yet available for use, but the plan is to allow this 
+choice for individual elements.</p>
+
+<h2 id="message-pit-sharing-messages-across-the-session">Message pit: sharing messages across the session</h2>
+
+<p>Execution data is local to each instance: by default, an LFO will be computed on each individual client for instance, and data is passed locally 
+in the synchronous engine of the software.</p>
+
+<p>A process has been implemented to allow sharing data across all instances, to allow for instance a live input on a client to be used to control 
+an effect on another client… or even more fun things, such as allowing computing the mean value for a control for various clients, to enable 
+laptop-orchestra-ish scenarios.</p>
+
+<p>The process is called “Message pit”: it takes messages as input, and gives messages as output, by combining all the messages from all the clients 
+which are sending messages to this process and executing it.</p>
+
+<p>That is, given 3 clients A, B, C, if clients A and C send messages to a Message Pit process, and A, B, C execute it, then they will all see a message 
+which is a combination of the two A, C inputs.</p>
+
+<p><img src="/assets/blog/distributed/pit.png" alt="Message Pit" /></p>
+
+<p>Multiple combinations are possible. 
+Assuming that the last message sent by “A” was “1”, and the last message sent by “C” was “2”</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">List</code>: A, B, C will see the list <code class="language-plaintext highlighter-rouge">[1, 2]</code> or <code class="language-plaintext highlighter-rouge">[2, 1]</code> in output of the process.</li>
+  <li><code class="language-plaintext highlighter-rouge">Average</code>: A, B, C will see the value 1.5 at the output of the process.</li>
+  <li><code class="language-plaintext highlighter-rouge">Sum</code>: A, B, C will see the value 3 at the output of the process.</li>
+</ul>
+
+<p>Similar support for audio, video, and MIDI is planned but understandably quite a bit more involved to do properly.</p>
+
+<h2 id="it-even-works-on-the-wasm-build">It even works on the WASM build</h2>
+
+<p>… but it crashes very quickly and is not what anyone would call useable at this time… yet this is where we are going! 
+Interactive distributed scores spanning from microcontrollers to web pages ;p</p>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">it actually works 🥳 one score in a browser compiled as <a href="https://x.com/hashtag/webassembly?src=hash&amp;ref_src=twsrc%5Etfw">#webassembly</a>, another as a desktop app, both edit and play the same document. sync is imperfect, wasm clicks, but I think that this opens up cool new avenues for distributed music performance, laptop orchestras, etc ! <a href="https://t.co/Poh6jj1txf">pic.x.com/Poh6jj1txf</a></p>&mdash; jm (@jcelerie) <a href="https://x.com/jcelerie/status/1535539371314712576?ref_src=twsrc%5Etfw">June 11, 2022</a></blockquote>
+<script async="" src="https://platform.x.com/widgets.js" charset="utf-8"></script>
+
+<p>[1] Shader Based on “Twist” Shadertoy by fb39ca4 - https://www.shadertoy.com/view/XsXXDH ; Inspired by Matthew DiVito’s gifs https://cargocollective.com/matthewdivito/Animated-Gifs-02 ; Credit: Joseph Fiola, Matthew DiVito, Shadertoy user fb39ca4”</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/minimum-viable/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Minimum viable declarative GUI in C++</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/msstore/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Score on the Store</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("News" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>

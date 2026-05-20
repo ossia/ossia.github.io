@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<head>
+  <title>
+    Introducing ossia score 3
+  </title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="Open Software System for Interactive Applications - home of ossia score, a free, open-source, cross-platform intermedia sequencer for precise and flexible scripting of interactive scenarios.
+" />
+  <meta
+    name="keywords"
+    content="ossia, score, libossia, sequencer, interactive art, intermedia, new media art, osc, open sound control, midi, oscquery, timeline, dmx, artnet, osc timeline"
+  />
+
+  
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GCNDFW0NH6');
+  </script>
+  
+<!-- Twitter card metatags -->
+
+<!-- Image size option -->
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Twitter username -->
+<meta name="twitter:site" content="@ossia_io">
+
+<!-- Page title -->
+<meta name="twitter:title" content="Introducing ossia score 3">
+
+<!-- Page description -->
+
+  <meta name="twitter:description" content="The interactive and intermedia sequencer reaches a stable release">
+
+
+<!-- Image path -->
+
+  <meta name="twitter:image" content="https://ossia.io/assets/blog/v3-final/ossia-score-3.jpg">
+  <meta name="twitter:image:alt" content="ossia score 3">
+
+
+  <link rel="shortcut icon" type="image/png" href="/assets/score-logo.png" />
+  <noscript>
+    <link rel="stylesheet" href="/css/skel.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </noscript>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/skel.min.js"></script>
+  <script src="/js/skel-layers.min.js"></script>
+  <script src="/js/init.js"></script>
+
+  <meta name="viewport" content="width=device-width" />
+
+  <link
+    rel="canonical"
+    href="https://ossia.io/posts/ossia-score-3/"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Catamaran:regular,bold,semi-bold,medium|Libre+Franklin:regular,bold,semi-bold,light,medium|Lato:regular,bold,semi-bold,light,medium"
+  />
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <image src="/assets/score-logo.png" height="45px" alt="score logo"/>
+                <h2 class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</h2>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html">score</a>
+			<a href="/site-libossia/about.html">libossia</a>
+			<a href="/docs.html">docs</a>
+            <a href="/gallery.html">gallery</a>
+			<a href="/about.html">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+	</nav>
+</header>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h2 class="post-title">Introducing ossia score 3</h2>
+    <p class="post-meta">News  •  Feb 5, 2022  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h1 id="introducing-ossia-score-3">Introducing ossia score 3</h1>
+
+<div class="videoWrapper">
+<iframe src="" data-src="https://www.youtube.com/embed/8-KpNaF2K8Q" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p><br /></p>
+
+<p>We are happy to announce that after a few months of beta-testing, a stable version of ossia score 3 can be <a href="https://ossia.io/score/download.html">downloaded</a>.</p>
+
+<p><em>ossia score</em> is an interactive and intermedia sequencer: it allows to score multimedia content and processes in an interactive timeline, such as sound, MIDI, OSC messages, gamepad controls, video, VST plug-ins, scripts, with a specifically tailored visual language.</p>
+
+<p>It has two defining features: first, the signal processing being applied can evolve over time. The first half of
+a score can have a given set of effects applied on sound, video… , and the second part of the score, a completely different set of effects being applied.
+Second, the timeline can encode interactivity: it is possible to state that a part of the score will only execute when someone touches a control or does something
+on stage, while others are kept in check with the musical beat, and then resynchronize these multiple competing timelines afterwards.</p>
+
+<p>Our <a href="https://ossia.io/gallery.html">gallery</a> presents a few artworks that use score and/or libossia, to give a feel of what people do with it: installation and video art, light shows, modular music</p>
+
+<p>To get started, you can follow the tutorials that come with the <a href="https://ossia.io/score-docs/">documentation</a> if you prefer reading, and check our <a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw/playlists">Youtube playlists</a> if you prefer to follow videos.</p>
+
+<h1 id="new-features-and-changes-since-v2-and-v3-beta">New features and changes since v2 and v3 beta</h1>
+<p>The <a href="../../posts/beta-v3/">beta blog post</a> covers most of the new features since 2.5.2, as well as the roadmap. In particular, the next few months will focus on fixing all the small quality-of-life issues and bugs that can be encountered right now – things such as missing copy-paste in some places, UI bugs, unclear menus, etc. A high priority is also put on complete support for Spout and Syphon for video artists and mappers.</p>
+
+<h2 id="jsfx-support">JSFX support</h2>
+<p>One last major feature was added during the v3 beta cycle: support for JSFX plug-ins (used mainly by Reaper). This is thanks to the <a href="https://github.com/jpcima/ysfx">ysfx</a> library developed by Jean Pierre Cimalando, which was fairly easy to integrate.</p>
+
+<p>The <a href="https://github.com/ossia/score-user-library/">user library</a> does not ship any JSFX plug-ins yet, but libraries such as provided by <a href="https://github.com/JoepVanlier/JSFX">Joep Vanlier</a>, <a href="https://github.com/geraintluff/jsfx">Geraint Luff</a> or <a href="https://github.com/Justin-Johnson/ReJJ">Justin Johnson</a> have been tested to work by putting them in the user library folder (score will look for .jsfx files).</p>
+
+<p><img src="/assets/blog/v3-final/jsfx.png" alt="JSFX plug-ins in ossia score" width="85%" style="display:block; margin-left:auto; margin-right:auto" /></p>
+
+<h2 id="official-raspberry-pi-builds">Official Raspberry Pi builds</h2>
+<p>A lot of work has been put in ensuring smooth experience with the <a href="https://ossia.io/score-docs/in-depth/embedded.html">Raspberry Pi</a> build, which has now been promoted from experimental to officially supported. A plain ALSA audio back-end has been added to drive various audio shields with minimal performance overhead when score is the only software running on the system, which would generally be the case for art installations.</p>
+
+<h1 id="contributing-to-ossia-score">Contributing to ossia score</h1>
+
+<p>ossia is a free software project at its core, and the free software values we hold dearly.</p>
+
+<p>As such, we are open to contributions from everyone interested in improving it: if you want to start
+contributing to score and don’t really know where to look, come to the <a href="https://gitter.im/ossia/score">chat</a> and we
+will do our best to mentor you!</p>
+
+<h1 id="a-huge-thanks">A huge thanks</h1>
+
+<p>A huge thanks to the public and private sponsors who believe in the project – in particular Epic and the Megagrant thanks to which we could afford working full-time on ossia. To all the occasional and regular contributors, to all the individuals who take the time to report issues when they hit a bug, to all the developers and testers of the ton of libraries we use (check out the About screen once in a while!) and to all the artists who use score to create great artworks: thank you so much for your time and work!</p>
+
+<p><a href="https://www.reddit.com/r/ossia/comments/slaihs/introducing_ossia_score_3/">Discuss this post on Reddit !</a></p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/genuary/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Genuary 2022 with ossia score</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/minimum-viable/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Minimum viable declarative GUI in C++</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h4 class="follow-us">Follow us !</h4>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/privacy.html">Privacy policy</a></li>
+    </ul>
+</footer>
+
+<script>
+$(function(){
+    $('.cat a').each(function(){
+    var category_name = "site-" + this.text;
+    if("News" ===  category_name){
+        $(this).addClass('active');
+        return false;
+    }
+    });
+});
+
+// load asynchronously videos to avoid slowing the page showing
+function init() {
+var vidDefer = document.getElementsByTagName('iframe');
+for (var i=0; i<vidDefer.length; i++) {
+if(vidDefer[i].getAttribute('data-src')) {
+vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
+} } }
+window.onload = init;
+</script>
+
+
+  </body>
+</html>
