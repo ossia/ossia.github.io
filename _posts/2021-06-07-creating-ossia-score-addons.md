@@ -7,7 +7,7 @@ category: Dev
 image: /assets/blog/addondev/banner.png
 thumbnail: "/assets/blog/addondev/banner.webp"
 image-alt: Hairy C++ plug-in code
-description: A tutorial for making custom ossia score add-ons, involving C++ JIT'ing
+description: "A tutorial for making custom ossia score add-ons, involving C++ JIT-compilation to make ultra-high-performance extensions."
 ---
 
 ### Introduction

@@ -4,6 +4,7 @@ title:  "About ossia"
 
 permalink: /about.html
 category: site-about
+description: "Meet the ossia team: the artists, researchers and developers behind ossia score and libossia, in France and Canada."
 ---
 <h2 class="feature-title" style="margin-top:0.5em;">France</h2>
 <br/>
@@ -11,58 +12,58 @@ category: site-about
 
 <div class="bubble-grid">
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/jcelerier.webp"/>
+    <img alt="Portrait of Jean-Michaël Celerier" class="bubble-image" src="assets/association/jcelerier.webp"/>
     <a href="https://jcelerier.name/" target="_blank" class="bubble-title">Jean-Michaël Celerier</a>
     <div class="bubble-description">Lead developer. A freelance researcher, interested in art, code, computer music and interactive show control.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/pbaltazar.webp"/>
+    <img alt="Portrait of Pia Baltazar" class="bubble-image" src="assets/association/pbaltazar.webp"/>
     <a href="https://web.archive.org/web/20260209151532/http://www.baltazars.org/" target="_blank" class="bubble-title">Pia Baltazar</a>
     <div class="bubble-description">Intermedia composer (The <a href="https://web.archive.org/web/20260209151532/http://www.baltazars.org/">Baltazars</a> duo). She coordinates the ossia organization. She has contributed to the visual syntax and interaction design of score and to the specification design of the libossia namespace model.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/tkeller.jpg"/>
+    <img alt="Portrait of Thibaud Keller" class="bubble-image" src="assets/association/tkeller.jpg"/>
     <a href="https://github.com/thibaudk" target="_blank" class="bubble-title">Thibaud Keller</a>
     <div class="bubble-description">Preacher, workshop conductor, creator of ossia-sclang Quark.
 He gives workshops, conduct residencies and collect user experiences focused on score and the ossia environnement.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/alevy.webp"/>
+    <img alt="Portrait of Akané Lévy" class="bubble-image" src="assets/association/alevy.webp"/>
     <a href="https://aklevy.github.io" target="_blank" class="bubble-title">Akané Lévy</a>
     <div class="bubble-description">UI designer, website graphic designer and sometimes developer.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/antoine.webp"/>
+    <img alt="Portrait of Antoine Villeret" class="bubble-image" src="assets/association/antoine.webp"/>
     <a href="http://antoine.villeret.free.fr/?lang=fr" target="_blank"  class="bubble-title">Antoine Villeret</a>
     <div class="bubble-description">Creator of interactive artworks and experienced software engineer. He is the main developer of ossia-max and ossia-pd.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/himito.webp"/>
+    <img alt="Portrait of Jaime Arias" class="bubble-image" src="assets/association/himito.webp"/>
     <a href="https://www.jaime-arias.fr/" target="_blank" class="bubble-title">Jaime Arias</a>
     <div class="bubble-description">CNRS research engineer interested in applying formal methods to interactive multimedia.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/julien.png"/>
+    <img alt="Portrait of Julien Rabin" class="bubble-image" src="assets/association/julien.png"/>
     <a href="" target="_blank"  class="bubble-title">Julien Rabin</a>
     <div class="bubble-description">Musician, composer, involved with ossia since the very beginnings of the project. Julien is currently involved with writing the documentation for score and is an ossia-max expert.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="http://www.mathieuchamagne.com/" target="_blank"  class="bubble-title">Mathieu Chamagne</a>
     <div class="bubble-description">Mathieu Chamagne invents virtual spaces to be discovered and explored using digital devices. With a piano background, he has been developing a musical practice around electroacoustic instruments since the 90s. </div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="https://vincentgoudard.com/" target="_blank"  class="bubble-title">Vincent Goudard</a>
     <div class="bubble-description">Researcher and maker crafting digital musical instruments for audio/visual live performances, installations and interactive applications.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="" target="_blank"  class="bubble-title">Pierre Cochard</a>
     <div class="bubble-description">Intermedia creator and musician, he has helped creating multiple artworks and pieces with i-score and ossia score.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/oscar.webp"/>
+    <img alt="Oscar, the ossia mascot" class="bubble-image" src="assets/association/oscar.webp"/>
     <a href="https://opencollective.com/ossia" target="_blank"  class="bubble-title">Oscar</a>
     <div class="bubble-description">Full-time mascot. Interested in the design of time and space.</div>
 </div>
@@ -74,34 +75,34 @@ He gives workshops, conduct residencies and collect user experiences focused on 
 <section class="wrapper style4 association-page">
 <div class="bubble-grid">
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/emontpellier.webp"/>
+    <img alt="Portrait of Evan Montpellier" class="bubble-image" src="assets/association/emontpellier.webp"/>
     <a href="https://evanmontpellier.net/" target="_blank" class="bubble-title">Evan Montpellier</a>
     <div class="bubble-description">Evan Montpellier, coordinator of the Canadian non-profit, is a musician and artist based in Montréal, Québec. Working mainly with selfbuilt software and electronic instruments, Evan creates live video and sound performances, recorded music and interactive artworks.</div>
 </div>
 
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/aobscura.webp"/>
+    <img alt="Portrait of Ashley Obscura" class="bubble-image" src="assets/association/aobscura.webp"/>
     <a href="https://web.archive.org/web/20250618164024/https://www.ashleyobscura.net/" target="_blank" class="bubble-title">Ashley Obscura</a>
     <div class="bubble-description">Ashley Obscura is a multidisciplinary poet, writer and publisher. She is the founder and managing editor of Metatron Press, the author of Ambient Technology and I Am Here, and the scriptwriter of experimental video games Oceanarium, Songs of the Lost, and Museum of Symmetry.</div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nnavab.webp"/>
+    <img alt="Portrait of Navid Navab" class="bubble-image" src="assets/association/nnavab.webp"/>
     <a href="https://www.navidnavab.com/" target="_blank" class="bubble-title">Navid Navab</a>
     <div class="bubble-description">A media alchemist, multidisciplinary  composer, audiovisual sculptor, phono-menologist, perSonifier,  gestureBender, and interdisciplinary artist-researcher. Interested in  the poetics of schizophonia, gesture, materiality, and embodiment, his  work investigates the transmutation of matter and the enrichment of its  inherent performative qualities.</div>
 </div>
 
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="https://www.idmil.org/people/travis-west/" target="_blank"  class="bubble-title">Travis West</a>
     <div class="bubble-description">Travis West is a multidisciplinary programmer, composer-performer, and musical instrument designer. His research explores the design of gestural interfaces, sound synthesis algorithms, and the mappings made between the two. </div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="https://petervanhaaften.net" target="_blank"  class="bubble-title">Peter van Haaften</a>
     <div class="bubble-description">Peter van Haaften is a multidisciplinary composer based in Montreal. He creates live performances, interactive installations, and fixed media for speakers. </div>
 </div>
 <div class="bubble-item">
-    <img class="bubble-image" src="assets/association/nani.png"/>
+    <img alt="" class="bubble-image" src="assets/association/nani.png"/>
     <a href="https://kivanctatar.com/" target="_blank"  class="bubble-title">Kıvanç Tatar</a>
     <div class="bubble-description">Kıvanç Tatar is a musician, new media artist, and researcher focusing on Artificial Intelligence for Music and Interactive Media.</div>
 </div>

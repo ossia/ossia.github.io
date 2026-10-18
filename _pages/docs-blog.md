@@ -4,6 +4,7 @@ title:  "Blog"
 
 permalink: /blog.html
 category: site-docs
+description: "News, release announcements, case studies and technical articles about ossia score, libossia and C++ for creative coding."
 ---
 {% comment%}
 Here we generate all the categories.

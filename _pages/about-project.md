@@ -4,6 +4,7 @@ title:  "Project"
 
 permalink: /project.html
 category: site-about
+description: "History of the ossia project: from i-score research at LaBRI and SCRIME to ossia score, publications, partners and funding."
 ---
 
 The software developed by ossia partly relies on specifications produced during the *i-score* research project, which has been led by LaBRI (with several academic, industrial and artistic partners) since the late 1990s, in order to devise new models and applications for designing and executing interactive scores, first for musical composition with *Boxes*, and *IScore*.

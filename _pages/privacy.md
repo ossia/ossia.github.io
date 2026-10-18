@@ -4,6 +4,7 @@ title:  "Privacy policy"
 
 permalink: /privacy.html
 category: "site-score"
+description: "Privacy policy for ossia.io and our open-source software, ossia score and libossia."
 ---
 
 

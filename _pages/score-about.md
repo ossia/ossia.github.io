@@ -4,13 +4,14 @@ title:  "About ossia score"
 
 permalink: /score/about.html
 category: "site-score"
+description: "Features of ossia score: timeline and nodal editing, OSC, OSCQuery, MIDI, DMX, audio, video, shaders, scripting and interactive scenarios."
 ---
 
 <h3><a href="https://github.com/ossia/score" target="_blank" >ossia score</a> is a sequencer for audio-visual artists, designed to enable the creation of interactive shows, museum installations, intermedia digital artworks, interactive music and more in an intuitive user interface.</h3>
 
 
 <br/>
-<img class="post-image" src="/assets/score.webp" />
+<img alt="Screenshot of the ossia score interface showing a timeline scenario with automations and processes" class="post-image" src="/assets/score.webp" />
 
 It allows to sequence OSC, MIDI, DMX, sound files and more, between multiple software and hardware.
 Its novel interactive timeline enables scores written with it to depend on external events and controls through a simple visual language.

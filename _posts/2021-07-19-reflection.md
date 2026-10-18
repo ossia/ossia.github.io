@@ -7,7 +7,7 @@ category: Dev
 image: /assets/blog/reflection/banner.png
 thumbnail: "/assets/blog/reflection/banner.webp"
 image-alt: Some nifty C++20 code
-description: Techniques for reflection in C++20 applied to multimedia systems
+description: "Techniques for reflection in C++20 applied to multimedia systems"
 ---
 
 Reflection is often presented as a feature that makes software harder to understand.

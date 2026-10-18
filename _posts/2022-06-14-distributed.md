@@ -7,7 +7,7 @@ category: News
 image: /assets/blog/distributed/image.png
 thumbnail: "/assets/blog/distributed/image.webp"
 image-alt: Distributed score screenshot
-description: Collaborative features in score 3.0.11
+description: "Collaborative features in score 3.0.11: edit and execute a score across multiple computers."
 ---
 
 ## Collaborative features in score 3.0.11
