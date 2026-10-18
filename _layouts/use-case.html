@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: "en" -%}
+<link rel="stylesheet" href="/css/use-cases.css" />
+<article id="main" class="use-case">
+  <header class="container use-case-header">
+    <h1 class="page-title">{{ page.headline | default: page.title }}</h1>
+    {% if page.subtitle %}<p class="use-case-subtitle">{{ page.subtitle }}</p>{% endif %}
+    {% include use-case-cta.html %}
+  </header>
+
+  <section class="style4 wrapper container use-case-body">
+    {{ content }}
+
+    {% include use-case-cta.html %}
+
+    <nav class="use-case-others" aria-label="{% if lang == 'fr' %}Autres usages{% else %}Other uses{% endif %}">
+      <h2>{% if lang == 'fr' %}Autres usages d'ossia score{% else %}More ways to use ossia score{% endif %}</h2>
+      <ul>
+      {% for uc in site.data.use_cases %}
+        {%- assign item = uc[lang] -%}
+        {% unless item.url == page.url %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.blurb }}</li>
+        {% endunless %}
+      {% endfor %}
+      </ul>
+      {% if page.translation %}
+      <p class="use-case-translation">{% if lang == 'fr' %}<a href="{{ page.translation }}" hreflang="en">Read this page in English</a>{% else %}<a href="{{ page.translation }}" hreflang="fr">Lire cette page en français</a>{% endif %}</p>
+      {% endif %}
+    </nav>
+  </section>
+</article>

@@ -1,0 +1,20 @@
+# Use-case / alternative landing pages, in display order.
+# Used by the use-case layout (links to the other pages) and the hub pages.
+- key: show-control
+  en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theatre, concerts and events: an open alternative to QLab." }
+  fr: { url: /fr/regie-spectacle.html, title: "Régie de spectacle", blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel : une alternative libre à QLab." }
+- key: osc-timeline
+  en: { url: /osc-midi-dmx-timeline.html, title: "OSC, MIDI and DMX timeline", blurb: "Automate any OSC, MIDI or DMX parameter on an interactive timeline, like Vezér or Chataigne." }
+  fr: { url: /fr/timeline-osc-midi-dmx.html, title: "Timeline OSC, MIDI et DMX", blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, comme avec Vezér ou Chataigne." }
+- key: projection-mapping
+  en: { url: /projection-mapping.html, title: "Video, mapping and VJing", blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronised with sound and light." }
+  fr: { url: /fr/mapping-video.html, title: "Vidéo, mapping et VJing", blurb: "Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière." }
+- key: visual-programming
+  en: { url: /visual-programming.html, title: "Visual programming", blurb: "Patch audio, video and interaction with nodes and a timeline: a free complement or alternative to Max/MSP." }
+  fr: { url: /fr/programmation-visuelle.html, title: "Programmation visuelle", blurb: "Patchez audio, vidéo et interaction avec des nœuds et une timeline : un complément ou une alternative gratuite à Max/MSP." }
+- key: lighting
+  en: { url: /dmx-lighting.html, title: "DMX lighting and LEDs", blurb: "Art-Net, sACN and DMX USB with a fixture library, LED pixel mapping, all in sync with sound and video." }
+  fr: { url: /fr/eclairage-dmx.html, title: "Éclairage DMX et LED", blurb: "Art-Net, sACN et DMX USB avec une bibliothèque de projecteurs et le pixel mapping LED, synchronisés avec le son et la vidéo." }
+- key: installations
+  en: { url: /interactive-installations.html, title: "Interactive installations", blurb: "Sensors, cameras and tracking, sound and video, running unattended on a PC or a Raspberry Pi." }
+  fr: { url: /fr/installations-interactives.html, title: "Installations interactives", blurb: "Capteurs, caméras et tracking, son et vidéo, en fonctionnement autonome sur un PC ou un Raspberry Pi." }
