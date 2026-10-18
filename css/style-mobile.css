@@ -463,6 +463,12 @@ header.container {
     line-height: 1.0em;
     width: 30%;
 }
+.page-button.download-page.small {
+    font-size: 13px;
+    width: 22%;
+    height: 100px;
+    margin: 3px;
+}
 /* Gallery */
 .gallery-list {
     padding-left: 0.2em;

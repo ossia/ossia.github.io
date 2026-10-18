@@ -1465,6 +1465,22 @@ p.description {
     background: none;
 }
 
+.page-button.download-page.small {
+    width: 120px;
+    height: 120px;
+    font-size: 15px;
+    margin: 0 4px;
+}
+.page-button.download-page.small img {
+    height: 40px;
+}
+
+p.download-others-title {
+    margin: 1.5em 0 0 0;
+    font-size: 16px;
+    color: #595959;
+}
+
 p.download-page-layout {
     display: flex;
     flex-direction: row;

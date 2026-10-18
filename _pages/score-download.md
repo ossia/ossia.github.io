@@ -12,15 +12,20 @@ We sell score on the Microsoft store as a way to get financial support to ensure
 </div>
 ## Download ossia score v{{site.score_version}}
 ### Released on {{site.score_released_date}}
-<p class="download-page-layout" align="center">
-<a id="winstore" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80px"/> Microsoft Store</a>
-<a id="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-win64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80px"/> Windows</a>
-<a id="osx-intel" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 10.15 and later (Intel)</a>
-<a id="osx-arm" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 13 and later (AppleSilicon / M1 etc.)</a>
-<a id="linux" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80px"/>Linux AppImage x86_64</a>
-<a id="pi64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80px"/>Linux AppImage AArch64</a>
-<a id="linux" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80px"/>Linux Flatpak</a>
+<p id="download-current" class="download-page-layout" align="center">
+<a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80px"/>Microsoft Store</a>
+<a data-os="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-win64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80px"/>Windows</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 13 and later (AppleSilicon / M1 etc.)</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 13 and later (Intel)</a>
+<a data-os="linux linux-x86_64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80px"/>Linux AppImage x86_64</a>
+<a data-os="linux linux-aarch64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80px"/>Linux AppImage AArch64</a>
+<a data-os="linux linux-x86_64 linux-aarch64" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80px"/>Linux Flatpak</a>
+<a data-os="web" href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80px"/>WebAssembly</a>
 </p>
+<div id="download-others-block" style="display: none;">
+<p class="download-others-title" align="center">Other platforms</p>
+<p id="download-others" class="download-page-layout" align="center"></p>
+</div>
 
 
 Take a look at the <a href="https://github.com/ossia/score/releases/latest" target="_blank">change log</a> for the latest release information and additional downloads, or scroll down this page for more options.
