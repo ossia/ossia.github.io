@@ -23,7 +23,7 @@
     ads: 'Mesure des annonces',
     adsDesc: 'Indique à Google Ads quand une personne ayant cliqué sur l\'une de nos annonces Ad Grants télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite.',
     always: 'Toujours actif : la mémorisation de ce choix, stockée uniquement dans votre navigateur.',
-    who: 'Responsables : l\'association ossia (France) et son organisme à but non lucratif canadien (Montréal). Destinataire : Google (Irlande, États-Unis).',
+    who: 'Responsables : l\'association ossia (France) et ossia.io, organisme à but non lucratif (Montréal). Destinataire : Google (Irlande, États-Unis).',
     saved: 'Choix enregistré.'
   } : {
     lang: 'en', policyUrl: '/privacy.html',
@@ -37,7 +37,7 @@
     ads: 'Ad measurement',
     adsDesc: 'Lets Google Ads know when someone who clicked one of our Ad Grants ads downloads ossia score or visits a key page. Requires audience statistics.',
     always: 'Always on: remembering this choice, stored only in your browser.',
-    who: 'Controllers: the ossia association (France) and its Canadian non-profit (Montréal). Recipient: Google (Ireland, USA).',
+    who: 'Controllers: the ossia association (France) and ossia.io, a non-profit in Montréal. Recipient: Google (Ireland, USA).',
     saved: 'Choice saved.'
   };
 
