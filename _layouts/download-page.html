@@ -21,19 +21,40 @@
 
   </body>
   <script type="text/javascript">
-    let os = navigator.platform;
-    let windows = os.includes('Win');
-    document.getElementById('winstore').style.display = windows ? 'flex' : 'none'; 
-    document.getElementById('win').style.display = windows ? 'flex' : 'none'; 
-    
-    let osx = os.includes('Mac');
-    document.getElementById('osx-intel').style.display = osx ? 'flex' : 'none';
-    document.getElementById('osx-arm').style.display = osx ? 'flex' : 'none';
-    
-    let linux = os.includes('Linux');
-    document.getElementById('linux').style.display = linux ? 'flex' : 'none';
-    document.getElementById('pi').style.display = linux ? 'flex' : 'none';
-    document.getElementById('pi64').style.display = linux ? 'flex' : 'none';
+    (function() {
+      const current = document.getElementById('download-current');
+      const others = document.getElementById('download-others');
+      if (!current || !others)
+        return;
+
+      const platform = navigator.platform || '';
+      const ua = navigator.userAgent || '';
+      let os = null;
+      if (platform.includes('Win'))
+        os = 'win';
+      else if (platform.includes('Mac'))
+        os = 'mac';
+      else if (platform.includes('Linux') && !ua.includes('Android')) {
+        if (/x86_64|amd64/i.test(platform))
+          os = 'linux-x86_64';
+        else if (/aarch64|arm64|armv8/i.test(platform))
+          os = 'linux-aarch64';
+        else
+          os = 'linux';
+      }
+
+      // Unknown OS: keep every download in the large row
+      if (!os)
+        return;
+
+      for (const btn of Array.from(current.querySelectorAll('a[data-os]'))) {
+        if (!btn.dataset.os.split(' ').includes(os)) {
+          btn.classList.add('small');
+          others.appendChild(btn);
+        }
+      }
+      document.getElementById('download-others-block').style.display = 'block';
+    })();
   </script>
 </html>
 
