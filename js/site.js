@@ -38,3 +38,40 @@
   });
 })();
 
+
+// Conversion tracking: name the clicks that matter so they can be marked as
+// key events in Google Analytics and imported into Google Ads.
+(function() {
+  var rules = [
+    { re: /github\.com\/ossia\/score\/releases\/download\//, event: 'score_download', method: 'direct' },
+    { re: /apps\.microsoft\.com\/.*ossia-score/,             event: 'score_download', method: 'microsoft_store' },
+    { re: /flathub\.org\/apps\/io\.ossia\.score/,            event: 'score_download', method: 'flathub' },
+    { re: /github\.com\/ossia\/libossia\/releases\/download\//, event: 'libossia_download', method: 'direct' },
+    { re: /ossia\.io\/score-web/,                            event: 'try_web_version' },
+    { re: /discord\.(gg|com)\//,                             event: 'join_community', method: 'discord' },
+    { re: /opencollective\.com\/ossia|github\.com\/sponsors\/jcelerier/, event: 'donate_click' }
+  ];
+  var platformOf = function(url) {
+    if (/\.exe$|microsoft/.test(url)) return /aarch64/.test(url) ? 'windows_arm64' : 'windows';
+    if (/\.dmg$/.test(url)) return /AppleSilicon/.test(url) ? 'macos_arm64' : 'macos_intel';
+    if (/AppImage$/.test(url)) return /aarch64/.test(url) ? 'linux_aarch64' : 'linux_x86_64';
+    if (/flathub/.test(url)) return 'linux_flatpak';
+    if (/src\.tar/.test(url)) return 'source';
+    return undefined;
+  };
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || typeof window.gtag !== 'function') return;
+    var url = a.href;
+    for (var i = 0; i < rules.length; i++) {
+      if (!rules[i].re.test(url)) continue;
+      window.gtag('event', rules[i].event, {
+        method: rules[i].method,
+        platform: platformOf(url),
+        link_url: url,
+        page_path: location.pathname
+      });
+      return;
+    }
+  });
+})();

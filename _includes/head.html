@@ -65,14 +65,23 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-GCNDFW0NH6');
-    window.addEventListener('load', function() {
-      setTimeout(function() {
+    (function() {
+      var loaded = false;
+      function load() {
+        if (loaded) return;
+        loaded = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
         document.head.appendChild(s);
-      }, 1500);
-    });
+      }
+      // After the page has rendered, or as soon as the visitor interacts,
+      // so that early clicks on downloads are still measured.
+      window.addEventListener('load', function() { setTimeout(load, 1500); });
+      ['pointerdown', 'keydown', 'scroll'].forEach(function(ev) {
+        window.addEventListener(ev, load, { once: true, passive: true });
+      });
+    })();
   </script>
   <script defer src="/js/site.js"></script>
 </head>
