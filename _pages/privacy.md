@@ -3,11 +3,20 @@ layout: page
 title:  "Privacy policy"
 
 permalink: /privacy.html
+translation: /fr/confidentialite.html
 category: "site-score"
 description: "Privacy policy for ossia.io and our open-source software, ossia score and libossia."
 ---
 
-## ossia score
+*Last updated: October 18, 2026* · [Version française](/fr/confidentialite.html)
+
+## Who we are
+
+ossia.io is published by the **ossia association** (France) and by **[to be completed: legal name of the Canadian non-profit]** (Montréal, Québec), the non-profit organisations that develop ossia score and libossia.
+
+Person in charge of the protection of personal information: **[to be completed: title]**, reachable at [contact@ossia.io](mailto:contact@ossia.io).
+
+## ossia score and libossia
 
 * ossia score does not access, collect, record, use, share, transmit or resell any personal information or user data.
 * On startup, ossia score checks if it is up-to-date by comparing the locally installed software version with the last official release, through encrypted HTTPS connections.
@@ -15,8 +24,35 @@ description: "Privacy policy for ossia.io and our open-source software, ossia sc
 
 ## This website
 
-* ossia.io uses Google Analytics to measure how the website is used: pages visited, the approximate country of visitors, the browser and operating system, and clicks on download, donation and community links. We use this to improve the website and to measure the effectiveness of the ads we run through the Google Ad Grants program for non-profits.
-* This data is processed by Google; see [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites). We do not sell it or use it to identify you.
-* You can opt out with the [Google Analytics opt-out browser add-on](https://tools.google.com/dlpage/gaoptout), or by blocking cookies from google-analytics.com and googletagmanager.com.
+### Measurement, only with your consent
+
+With your consent, the website uses **Google Analytics** (Google Ireland Limited and Google LLC). Nothing is loaded, and no cookie is set, until you accept. Measurement is **off by default**. You choose two purposes separately:
+
+| Purpose | What it does | Cookies |
+|---|---|---|
+| **Audience statistics** | Counts pages visited, the approximate country of visitors, the browser and device type, and clicks on download, community and donation links, so that we can improve the website. | `_ga`, `_ga_GCNDFW0NH6` |
+| **Ad measurement** | Lets Google Ads know when someone who clicked one of the free ads we run through Google Ad Grants, Google's program for non-profits, downloads ossia score or visits a key page. Requires audience statistics. | `_gcl_au` and the Google Analytics cookies above |
+
+* **Legal basis:** your consent (article 6(1)(a) of the GDPR; article 82 of the French *Loi Informatique et Libertés*; sections 8.1 and 14 of Québec's *Act respecting the protection of personal information in the private sector*).
+* **What we never do:** ads personalised for you, Google Signals, remarketing, selling data, or combining it with other information to identify you.
+* **Retention:** Google Analytics cookies expire after 13 months and are not extended on later visits. Statistics are kept in Google Analytics for 14 months.
+* **Transfers:** Google may process data in the United States, under the EU–US Data Privacy Framework. See [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).
+
+### Your choice, and changing your mind
+
+* The banner offers **Refuse all**, **Accept all** and **Customize**, with the same prominence. Closing the settings without saving changes nothing.
+* Your choice, whether you accept or refuse, is remembered for **6 months** in your browser's local storage (`ossia-consent`: your choices and the date). It never leaves your browser. We then ask again, or earlier if the purposes change.
+* You can change your mind at any time with **Cookie settings** at the bottom of every page. If you withdraw your consent, the Google cookies are deleted and Google Analytics is no longer loaded.
+* If your browser sends the **Global Privacy Control** signal, we treat it as a refusal and do not show the banner.
+
+### Videos and hosting
+
+* Embedded videos from YouTube and Vimeo use their privacy-enhanced modes (`youtube-nocookie.com`, Vimeo's "do not track"). On the home page, the YouTube video is only loaded when you click it.
 * The website is hosted by GitHub Pages, which may log the IP addresses of visitors for security purposes; see the [GitHub privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
-* For any question about your data, contact us at [contact@ossia.io](mailto:contact@ossia.io).
+* Fonts and all other resources are served from ossia.io itself.
+
+## Your rights
+
+You can ask to access, correct or delete your personal information, object to its processing, or withdraw your consent, by writing to [contact@ossia.io](mailto:contact@ossia.io). As the measurement data is pseudonymous, the simplest way to stop it is the **Cookie settings** button.
+
+You can also file a complaint with the [CNIL](https://www.cnil.fr/) in France or the [Commission d'accès à l'information](https://www.cai.gouv.qc.ca/) in Québec.

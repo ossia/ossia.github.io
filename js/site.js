@@ -61,7 +61,8 @@
   };
   document.addEventListener('click', function(e) {
     var a = e.target.closest && e.target.closest('a[href]');
-    if (!a || typeof window.gtag !== 'function') return;
+    // Only when the visitor has accepted audience statistics (see js/consent.js)
+    if (!a || !window.ossiaAnalyticsLoaded) return;
     var url = a.href;
     for (var i = 0; i < rules.length; i++) {
       if (!rules[i].re.test(url)) continue;
