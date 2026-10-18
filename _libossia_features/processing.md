@@ -18,5 +18,5 @@ visible: true
 
 # Video tutorial
 <div class="videoWrapper">
-    <iframe title="Video: Processing bindings" loading="lazy" src="https://www.youtube.com/embed/geXzernb2vI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    <iframe title="Video: Processing bindings" loading="lazy" src="https://www.youtube-nocookie.com/embed/geXzernb2vI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>

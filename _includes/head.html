@@ -65,29 +65,57 @@
   <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
   <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
 
-  <!-- Google Analytics, loaded after the page has rendered -->
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-GCNDFW0NH6');
-    (function() {
-      var loaded = false;
-      function load() {
-        if (loaded) return;
-        loaded = true;
+    gtag('consent', 'default', {
+      ad_storage: 'denied', ad_user_data: 'denied',
+      ad_personalization: 'denied', analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    window.ossiaConsentVersion = 1;
+    window.ossiaConsent = (function() {
+      try {
+        var c = JSON.parse(localStorage.getItem('ossia-consent'));
+        if (!c || c.v !== window.ossiaConsentVersion) return null;
+        var days = (Date.now() - Date.parse(c.date)) / 864e5;
+        return (days >= 0 && days < 182) ? c : null;
+      } catch (e) { return null; }
+    })();
+    window.ossiaLoadAnalytics = function(c, now) {
+      if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+      window.ossiaAnalyticsLoaded = true;
+      gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: c.ads ? 'granted' : 'denied',
+        ad_user_data: c.ads ? 'granted' : 'denied'
+      });
+      gtag('js', new Date());
+      gtag('config', 'G-GCNDFW0NH6', {
+        cookie_expires: 34128000, cookie_update: false,
+        allow_google_signals: false, allow_ad_personalization_signals: false
+      });
+      var load = function() {
+        if (window.ossiaAnalyticsScript) return;
+        window.ossiaAnalyticsScript = true;
         var s = document.createElement('script');
         s.async = true;
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
         document.head.appendChild(s);
-      }
-      // After the page has rendered, or as soon as the visitor interacts,
-      // so that early clicks on downloads are still measured.
+      };
+      if (now) { load(); return; }
+      // Returning visitors who consented: load once the page has rendered,
+      // or on the first interaction so that early clicks are still measured.
       window.addEventListener('load', function() { setTimeout(load, 1500); });
       ['pointerdown', 'keydown', 'scroll'].forEach(function(ev) {
         window.addEventListener(ev, load, { once: true, passive: true });
       });
-    })();
+    };
+    if (window.ossiaConsent) window.ossiaLoadAnalytics(window.ossiaConsent, false);
   </script>
+  <link rel="stylesheet" href="/css/consent.css" />
   <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
 </head>
