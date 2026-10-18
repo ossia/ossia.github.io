@@ -21,6 +21,12 @@
   <title>{{ seo_title | escape }}</title>
   <meta name="description" content="{{ seo_description | escape }}" />
   <link rel="canonical" href="{{ seo_url }}" />
+  {% if page.translation %}
+  {%- assign translation_url = page.translation | prepend: site.url -%}
+  <link rel="alternate" hreflang="{{ page.lang | default: 'en' }}" href="{{ seo_url }}" />
+  <link rel="alternate" hreflang="{% if page.lang == 'fr' %}en{% else %}fr{% endif %}" href="{{ translation_url }}" />
+  <link rel="alternate" hreflang="x-default" href="{% if page.lang == 'fr' %}{{ translation_url }}{% else %}{{ seo_url }}{% endif %}" />
+  {% endif %}
 
   {% if page.noindex %}
   <meta name="robots" content="noindex" />
@@ -34,7 +40,7 @@
   <meta property="og:url" content="{{ seo_url }}" />
   <meta property="og:image" content="{{ seo_image }}" />
   <meta property="og:image:alt" content="{{ page.image-alt | default: page.title | default: 'ossia score' | escape }}" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale" content="{% if page.lang == 'fr' %}fr_FR{% else %}en_US{% endif %}" />
   {% if page.layout == 'post' %}
   <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
   {% endif %}
