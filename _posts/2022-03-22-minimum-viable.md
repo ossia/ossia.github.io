@@ -192,7 +192,7 @@ way to specify audio and media plug-ins in a way entirely independent from any h
 
 Here is the example plug-in showcased above, done in two ways:
 
-- First version really only uses zero dependencies to show the sausage-making [https://github.com/celtera/avendish/blob/main/examples/Ui.hpp](https://github.com/celtera/avendish/blob/main/examples/Ui.hpp).
+- First version really only uses zero dependencies to show the sausage-making [https://github.com/celtera/avendish/blob/07beb43db484341addc121ac18727258000c44bd/examples/Ui.hpp](https://github.com/celtera/avendish/blob/07beb43db484341addc121ac18727258000c44bd/examples/Ui.hpp).
 - Second version use some helpers macros: [https://github.com/celtera/avendish/blob/main/examples/Helpers/Ui.hpp](https://github.com/celtera/avendish/blob/main/examples/Helpers/Ui.hpp). I don't find them super convincing, but the nice thing is that the "public API" can be prototyped without issues ; as many distinct versions can exist concurrently. In the end, they pretty much won't exist in the binary as things can be made constexpr fairly extensively: the whole layout object can be constexpr for instance.
 
 A few small additional things may be useful: 

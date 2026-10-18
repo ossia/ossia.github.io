@@ -108,7 +108,7 @@ The Flatpak and Nix versions are also available as AArch64.
 <li><a href="https://aur.archlinux.org/packages/ossia-score">ArchLinux (AUR)</a>: paru -S ossia-score</li>
 <li><a href="https://search.nixos.org/packages?channel=unstable&amp;show=ossia-score">Nix</a>: nix-shell -p ossia-score</li>
 <li><a href="https://www.freshports.org/multimedia/ossia-score">FreeBSD</a>: pkg install ossia-score</li>
-<li><a href="https://packages.msys2.org/package/mingw-w64-x86_64-ossia-score">MSYS2</a>: pacman -S mingw-w64-x86_64-ossia-score</li>
+<li><a href="https://packages.msys2.org/base/mingw-w64-ossia-score">MSYS2</a>: pacman -S mingw-w64-x86_64-ossia-score</li>
 <li><a href="https://winget.run/pkg/ossia/score">WinGet</a>: winget install -e --id ossia.score</li>
 <li><a href="https://formulae.brew.sh/cask/ossia-score">Homebrew</a>: brew install --cask ossia-score</li>
 </ul>

@@ -48,7 +48,7 @@ Note that there is *no warranty* provided - it is however possible to contact ou
 
 <p type="button" class="collapsible" > How can I help ?</p>
 <div class="collapsible-content">
-The easiest way to contribute is by donating to the <a href="https://opencollective.org/ossia">development fund</a>.
+The easiest way to contribute is by donating to the <a href="https://opencollective.com/ossia">development fund</a>.
 
 A very good way to participate is by contributing through bug reports, and code improvements.
 See the <a href="/project.html">Contributing</a> page for more information.

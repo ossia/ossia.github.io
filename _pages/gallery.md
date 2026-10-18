@@ -10,6 +10,48 @@ category: site-gallery
 
 <div class="gallery-grid">
 
+<div id="resilience-des-bois" align="middle" class="gallery-page-image">
+    <a href="https://ateliercirculaire.org/project/resiliencedesbois/" class="gallery-text">
+        <img src="assets/gallery/resilience-des-bois.webp" class="post-image" />
+        <i>Résilience des bois</i> <br/> Shabnam Zeraati, Gilnaz Arzpeyma, Zahra Nabavi / Atelier Circulaire <br/>&copy; Jean-Michael Séminaro
+    </a>
+</div>
+
+<div id="organism" align="middle" class="gallery-page-image">
+    <a href="https://www.navidnavab.com/organism-excitable-chaos" class="gallery-text">
+        <img src="assets/gallery/organism.webp" class="post-image" />
+        <i>Organism + Excitable Chaos</i> <br/> Navid Navab & Garnet Willis <br/>&copy; Miha Godec
+    </a>
+</div>
+
+<div id="metascene" align="middle" class="gallery-page-image">
+    <a href="https://oara.fr/metascene/" class="gallery-text">
+        <img src="assets/gallery/metascene.webp" class="post-image" />
+        <i>METAscène</i> <br/> OARA / SCRIME / György Kurtág Jr. / Pía Baltazar <br/>&copy; OARA
+    </a>
+</div>
+
+<div id="en-sur-et-face" align="middle" class="gallery-page-image">
+    <a href="https://b-ak.com/projects/en-sur-et-face/" class="gallery-text">
+        <img src="assets/gallery/en-sur-et-face.webp" class="post-image" />
+        <i>En, Sur et Face</i> <br/> Brice Ammar-Khodja <br/>&copy; Brice Ammar-Khodja
+    </a>
+</div>
+
+<div id="ballets-residuels" align="middle" class="gallery-page-image">
+    <a href="https://b-ak.com/projects/ballets-residuels/" class="gallery-text">
+        <img src="assets/gallery/ballets-residuels.webp" class="post-image" />
+        <i>Ballets Résiduels</i> <br/> Brice Ammar-Khodja <br/>&copy; Diego Bravo
+    </a>
+</div>
+
+<div id="recapture" align="middle" class="gallery-page-image">
+    <a href="https://b-ak.com/projects/recapture/" class="gallery-text">
+        <img src="assets/gallery/recapture.webp" class="post-image" />
+        <i>[re]capture</i> <br/> Alice Jarry, Brice Ammar-Khodja, Jacqueline Beaumont, Jean-Michaël Celerier, Matthew Halpenny, Asa Perlman, Philippe Vandal <br/>&copy; Alice Jarry
+    </a>
+</div>
+
 <div id="fourfor" align="middle" class="gallery-page-image">
     <a href="https://bravozoulou.fr/projets/four-for/" class="gallery-text">
         <img src="assets/gallery/DID_4858.webp" class="post-image" />
@@ -40,7 +82,7 @@ category: site-gallery
 </div>
 
 <div id="nebula" align="middle" class="gallery-page-image">
-    <a href="https://www.baltazars.org/project/nebula/" class="gallery-text">
+    <a href="https://web.archive.org/web/20260209152743/http://www.baltazars.org/project/nebula/" class="gallery-text">
         <img src="assets/gallery/Nebula_ChampignonsNeigeJaune.webp" class="post-image" />
         <i>Nebula </i> <br/> The Baltazars
     </a>
@@ -68,21 +110,21 @@ category: site-gallery
 </div>
 
 <div id="quarre" align="middle" class="gallery-page-image">
-    <a href="https://wpn214.com/en/" class="gallery-text">
+    <a href="https://web.archive.org/web/20210614062011/http://wpn214.com/en/" class="gallery-text">
         <img src="assets/gallery/quarre.webp" class="post-image" />
         <i>Quarrè</i> <br/> Pierre Cochard
     </a>
 </div>
 
 <div id="carousel" align="middle" class="gallery-page-image" >
-    <a href="https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/" class="gallery-text">
+    <a href="https://web.archive.org/web/20240805094104/https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/" class="gallery-text">
         <img src="assets/gallery/carrousel.webp" class="post-image" />
         <i>Carousel Musical</i> <br/> (Abbaye aux Dames)</a>
-    <a href="https://www.blueyeti.fr/le-carrousel-musical-abbaye-aux-dames/" class="gallery-text">Blue Yeti</a>
+    <a href="https://web.archive.org/web/20251215210829/http://www.blueyeti.fr/le-carrousel-musical-abbaye-aux-dames/" class="gallery-text">Blue Yeti</a>
 </div>
 
 <div align="middle" class="gallery-page-image">
-    <a href="https://www.donatiengarnier.com/un-spectacle-en-3d/" class="gallery-text">
+    <a href="https://web.archive.org/web/20221224064957/http://www.donatiengarnier.com/un-spectacle-en-3d/" class="gallery-text">
         <img src="assets/gallery/arbre-intégrale.webp" class="post-image" />
         <i>L'Arbre Intégral</i> <br/> Le Poème en volume
     </a>
@@ -96,7 +138,7 @@ category: site-gallery
 </div>
 
 <div id="Qui parle donc" align="middle" class="gallery-page-image">
-    <a href="https://passerelle-arts-sciences.fr/qui-parle-donc-2019/"
+    <a href="https://scrime.u-bordeaux.fr/residences/qui-parle-donc"
     class="gallery-text">
         <img src="assets/gallery/Qui-parle-donc_Event.webp" class="post-image" />
         <i> Qui parle donc</i>  <br/> Passerelle arts-sciences
@@ -104,7 +146,7 @@ category: site-gallery
 </div>
 
 <div id="meta-chef-d-orchestre" align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Meta-Chef-d-Orchestre" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/meta-chef-dorchestre" class="gallery-text">
         <img src="assets/gallery/dome_scrime.webp" class="post-image" />
         <i> Méta Chef d’Orchestre </i><br/> Serge Delaubier
     </a>
@@ -118,14 +160,14 @@ category: site-gallery
 </div>
 
 <div id="sonotact" align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Sonotact" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/sonotact" class="gallery-text">
         <img src="assets/gallery/sonotact.webp" class="post-image" />
         <i> Sonotact </i><br/> Pascale Criton
     </a>
 </div>
 
 <div align="middle" class="gallery-page-image">
-    <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Rain-of-Music" class="gallery-text">
+    <a href="https://scrime.u-bordeaux.fr/residences/rain-music" class="gallery-text">
         <img src="assets/gallery/metabot_score.webp" class="post-image" />
         <i> Rain of Music </i><br/> Josu Rekalde 
     </a>
@@ -202,6 +244,16 @@ category: site-gallery
 <h2>More (details of) projects using ossia: </h2>
 
 <ul>
+<li> Reflet – Noukii (Anouk Ethier), with Isabella Salas and Allison Moore, in partnership with RE-AK, Gradiant and SAT – show logic and real-time generative imagery (StreamDiffusion with LoRAs trained on the artists' work) in score (2025–2026) </li>
+<li> Résilience des bois – Shabnam Zeraati, Gilnaz Arzpeyma, Zahra Nabavi, Atelier Circulaire, Montréal – five-projector video mapping in score, running on a single older Mac (2026) </li>
+<li> Calligraphic gesture lecture-performance – Sahar Homami & Pía Baltazar, Perte de Signal, Montréal – qalam pressure sensor, IMU, tablet and Leap Motion processed in score to generate sound and image (2026) </li>
+<li> BioSynth light show – Erin Gee – LED / DMX lighting console in score running headless on a Raspberry Pi, driven by biosignals (2025) </li>
+<li> Organism + Excitable Chaos / Organism in Turbulence – Navid Navab & Garnet Willis – Prix Ars Electronica 2025 Golden Nica – network communication between the pendulum and computers with ossia-max </li>
+<li> METAscène – OARA, MÉCA Bordeaux, commissioned to SCRIME – music by György Kurtág Jr., spatialisation with Pía Baltazar and Joseph Larralde – 50+ channels of spatialised sound, three video screens and lighting run from score (2024–) </li>
+<li> VIBH2O / VIB.E-MOTION – Fheel Concepts / Corinne Linder – participatory circus performance driven by audience heart rates (Bluetooth sensors), network and sound in score (2024) </li>
+<li> En, Sur et Face (Perte de Signal, Montréal, 2024) and Ballets Résiduels (Champ des Possibles, Montréal) – Brice Ammar-Khodja, in collaboration with Jean-Michaël Celerier – score on Orange Pi / Raspberry Pi + ESP32 for sound, light and scent </li>
+<li> [re]capture – Alice Jarry et al., Eisode gallery, Montréal (2024) and Centre culturel canadien, Paris (2025) – cameras, video processing, lights, pumps and motors run entirely by score on a Raspberry Pi </li>
+<li> Dô d'eau – ENSATT sound and lighting students, Lyon – spatialised sound, video and DMX lighting with score (2023) </li>
 <li> tangibleFlux φ plenumorphic ∴ chaosmosis – Navid Navab – score with Max, ossia and Jamoma </li>
 <li> ParOral, Georges Gagneré – didascalie.net – score with SuperCollider + Unity/Unreal Engine </li>
 <li> L’Arbre intégral, Le Poème en Volume –  (score with Reaper, Live, Unity3D, + android  smartphone) </li>
