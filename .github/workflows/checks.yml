@@ -1,0 +1,80 @@
+name: Site checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    # Daily: catches release assets that were renamed or removed
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-and-check:
+    name: Build, links, alt text, downloads
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Internal links, images and alt text
+        run: |
+          bundle exec htmlproofer ./_site \
+            --disable-external \
+            --checks Links,Images,Scripts \
+            --ignore-urls "/^\/score-docs/,/^\/score-web/,/^\/libossia\//" \
+            --swap-urls "^https\://ossia\.io:"
+
+      - name: Download links of the current release exist
+        run: ./.github/scripts/check-downloads.sh _site/score/download.html
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 3
+
+  lighthouse:
+    name: Lighthouse
+    needs: build-and-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+      - uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./.github/lighthouserc.json
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+
+  external-links:
+    name: External links (report only)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+      - run: bundle exec jekyll build
+      - run: |
+          bundle exec htmlproofer ./_site \
+            --checks Links \
+            --ignore-status-codes "403,429,999" \
+            --ignore-urls "/^\/score-docs/,/^\/score-web/,/^\/libossia\//,/web\.archive\.org/" \
+            --swap-urls "^https\://ossia\.io:"
