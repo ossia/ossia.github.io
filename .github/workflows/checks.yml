@@ -36,7 +36,9 @@ jobs:
             --swap-urls "^https\://ossia\.io:"
 
       - name: Download links of the current release exist
-        run: ./.github/scripts/check-downloads.sh _site/score/download.html
+        run: |
+          ./.github/scripts/check-downloads.sh _site/score/download.html
+          ./.github/scripts/check-downloads.sh _site/site-libossia/download.html
 
       - uses: actions/upload-artifact@v4
         with:

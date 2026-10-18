@@ -11,6 +11,8 @@ include: ["_pages", "CNAME", ".nojekyll", "score-last-version.txt", "download-st
 # exclude: ["vendor"]
 permalink: /posts/:title/
 score_version: 3.9.0
+libossia_version: 2.1.0
+libossia_released_date: "June 20, 2026"
 score_released_date: "October 15, 2026"
 plugins:
   - jekyll-sitemap

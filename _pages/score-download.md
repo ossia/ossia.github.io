@@ -54,9 +54,9 @@ Take a look at the <a href="https://github.com/ossia/score/releases/latest" targ
 <div class="collapsible-content">
 Must be at least macOS Ventura 13.0.
 <br/><br/>
-The latest version to support back to macOS 10.15 Catalina is 3.3.2, downloadable from the <a href="https://github.com/ossia/score/releases/v3.3.2">ossia score 3.3.2 release page</a>.
+The latest version to support back to macOS 10.15 Catalina is 3.3.2, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.3.2">ossia score 3.3.2 release page</a>.
 <br/>
-The latest version to support back to macOS 10.13 High Sierra is 3.1.8, downloadable from <a href="https://github.com/ossia/score/releases/v3.4.1">its release page</a>.
+The latest version to support back to macOS 10.13 High Sierra is 3.4.1, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.4.1">ossia score 3.4.1 release page</a>.
 </div>
 
 <h3 type="button" class="collapsible" > Linux (Desktop) </h3>
