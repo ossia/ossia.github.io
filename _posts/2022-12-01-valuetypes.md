@@ -109,7 +109,7 @@ using value_base = util::variant<value_null, value_bool,
     value_integer, value_double, value_unicode_string>;
 ```
 
-[mgiseski/dvisvgm](https://github.com/mgiseski/dvisvgm)
+[mgiseski/dvisvgm](https://github.com/mgieseki/dvisvgm)
 ```cpp
 using Value = mpark::variant<
 	PDFNull, bool, int, double, PDFName, PDFStream, 
@@ -118,14 +118,14 @@ using Value = mpark::variant<
 >;
 ```
 
-[openpower/hostboot](https://github.com/openpower/hostboot)
+[openpower/hostboot](https://github.com/open-power/hostboot)
 ```cpp
 using Value =
     std::variant<bool, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t,
                  uint64_t, double, std::string, std::vector<uint8_t>>;
 ```
 
-[openbmc/phospho-net-ipmid](https://github.com/openbmc/phospho-net-ipmid)
+[openbmc/phospho-net-ipmid](https://github.com/openbmc/phosphor-net-ipmid)
 ```cpp
 using Value = std::variant<bool, uint8_t, int16_t, uint16_t, int32_t, uint32_t, int64_t, uint64_t, double, std::string>;
 ```

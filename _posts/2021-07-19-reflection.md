@@ -88,7 +88,7 @@ void cv_jit_noise_set_stddev(t_cv_jit_noise *x, t_symbol *s, short argc, t_atom 
 What happens if `argv + j` isn't a float but a string ? Let's leave that for future generations to discover !
 
 * [Audio filter suitable for use as a VST](https://github.com/SpotlightKid/faustfilters/blob/master/plugins/oberheim/Oberheim.cpp). Notice how the parameters to the algorithms are handled in `switch/case 0,1,2...` ; thankfully this is all generated code from the Faust programming language. What happens if at some point a parameter is removed ? Better have good unit tests to catch all the implicit uses of each parameter...
-* [OpenFX image filter](https://openfx.readthedocs.io/en/master/Guide/ofxExample3_Gain.html#gainexample): here's how one says that the algorithm has a bounded input widget (e.g. a slider going from 0 to 10 with a default value of 1):
+* [OpenFX image filter](https://openfx.readthedocs.io/en/main/Guide/ofxExample3_Gain.html#gainexample): here's how one says that the algorithm has a bounded input widget (e.g. a slider going from 0 to 10 with a default value of 1):
 
 {% highlight cpp %}
 gPropertySuite->propSetString(paramProps, kOfxParamPropDoubleType, 0, kOfxParamDoubleTypeScale);
