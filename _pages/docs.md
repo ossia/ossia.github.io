@@ -4,7 +4,7 @@ title:  "Documentation"
 
 permalink: /docs.html
 category: site-docs
-
+description: "Documentation for ossia score and libossia: user manual, tutorials, video guides, API references and community resources."
 ---
 <div class="menu" style="display:flex; align-items:center; width: 100%;margin:auto; padding: auto; ">
         <!-- <a href="/score/learn/faq.html"  class="menu-item panel" ><span class="icon-svg icon-chat"></span> FAQ

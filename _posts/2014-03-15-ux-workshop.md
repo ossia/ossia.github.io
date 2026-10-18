@@ -4,6 +4,7 @@ title:  "User experience workshop"
 date:   2014-03-15
 author: Julien
 category: News
+description: "Report from the 2014 user experience workshop where artists and developers tested i-score and shaped its interface."
 ---
 
 <div class="videoWrapper">

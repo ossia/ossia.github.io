@@ -6,7 +6,7 @@ author: Jean-Michaël Celerier
 category: Dev
 image: /assets/blog/mvp-ui/banner.png
 image-alt: Some nifty C++20 code
-description: Techniques for defining a declarative GUI in C++
+description: "Techniques for defining a declarative GUI in C++"
 ---
 
 ## Introducing a "toolkit"

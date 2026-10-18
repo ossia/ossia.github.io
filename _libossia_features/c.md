@@ -5,7 +5,7 @@ title:  "C bindings"
 permalink: /site-libossia/features/c.html
 category: "site-libossia"
 image: /assets/logo/c.png
-description: "Using libossia with C"
+description: "Using libossia with the C programming language"
 
 tag: "Bindings"
 visible: true

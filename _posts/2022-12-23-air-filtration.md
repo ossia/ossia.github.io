@@ -7,7 +7,7 @@ category: News
 image: /assets/blog/airfiltration/airfiltration.jpeg
 thumbnail: "/assets/blog/airfiltration/airfiltration.webp"
 image-alt: A picture of Air Filtration
-description: Residency for the use of ossia score for Air Filtration
+description: "Residency for the use of ossia score for Air Filtration"
 ---
 
 

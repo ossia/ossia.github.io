@@ -5,6 +5,7 @@ date: 2018-12-08
 author: Jean-Michaël
 category: News
 image: /assets/blog/openbidouille/logo.jpg
+description: "ossia at the Open Bidouille Camp 2019: demos and workshops on interactive sequencing with ossia score."
 ---
 
 We were present to make a small demonstration of ossia this afternoon at [Open Bidouille Camp](https://openbidouille.net/) in Bordeaux. We showed robot controls, real-time audio effects and

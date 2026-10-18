@@ -6,6 +6,7 @@ permalink: /site-libossia/download.html
 category: site-libossia
 release_link: https://github.com/ossia/libossia/releases/tag/v1.2.5
 ossia_version: https://github.com/ossia/libossia/releases/download/v1.2.4
+description: "Download libossia, to connect your creative environment to ossia score and other OSCQuery-compliant software."
 ---
 
 <b>libossia</b> is available for many platforms and environments:

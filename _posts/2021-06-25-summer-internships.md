@@ -7,7 +7,7 @@ category: Community
 image: /assets/blog/internships-2021/banner.jpg
 thumbnail: "/assets/blog/internships-2021/banner.webp"
 image-alt: Our interns
-description: Summer internships for 2021 for ossia score
+description: "Summer internships for 2021 for ossia score"
 ---
 
 ### Summer internships in ossia.io

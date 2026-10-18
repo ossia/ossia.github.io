@@ -6,7 +6,7 @@ author: Jean-Michaël Celerier
 category: Dev
 image: /assets/blog/valuetype/cover.png
 image-alt: Example of object processing
-description: Compatibility between different value type specifications in a dataflow system
+description: "Compatibility between different value type specifications in a dataflow system"
 ---
 
 This article is a followup to the series on [interoperability and reflection]({% post_url 2021-07-19-reflection %}).

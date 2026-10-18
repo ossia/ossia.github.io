@@ -7,7 +7,7 @@ category: News
 image: /assets/blog/v3-final/ossia-score-3.jpg
 thumbnail: "/assets/blog/v3-final/ossia-score-3.webp"
 image-alt: ossia score 3
-description: The interactive and intermedia sequencer reaches a stable release
+description: "The interactive and intermedia sequencer ossia score reaches a stable release in version 3, featuring a graphics shader pipeline and many other novel features."
 ---
 
 ## Introducing ossia score 3

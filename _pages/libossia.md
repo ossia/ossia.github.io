@@ -4,7 +4,7 @@ title:  "About libossia"
 
 permalink: /site-libossia/about.html
 category: site-libossia
-
+description: "libossia is a modern C++ library for OSC, OSCQuery, MIDI and more, with bindings for Max, PureData, Unity, Python, SuperCollider and others."
 ---
 
 libossia is a modern C++, cross-environment distributed object model for creative coding.
@@ -81,7 +81,7 @@ libossia is distributed under the terms of the CeCILL-C license and of the LGPLv
          <div class="features-list">
         {% for post in site.libossia_features %}
                 <a href="{{post.url}}" class="thumbnail">
-                    <img loading="lazy" class="thumbnail-feature-libossia" src="{{post.image}}" />
+                    {% if post.image %}<img loading="lazy" class="thumbnail-feature-libossia" src="{{post.image}}" alt="" />{% endif %}
                     <h3 class="blog-title">{{post.title}} </h3>
                     <span class="feature-description">{{post.description}}</span>
                 </a>
