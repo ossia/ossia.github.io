@@ -8,13 +8,8 @@ layout: wide-page
 <!--     </section> -->
 
 <script>
-$(function(){
-    $('.menu a').each(function(){
-    if("{{page.title}}" ===  this.text){
-        $(this).addClass('active');
-         return false;
-    }
-    });
-});
+for (const a of document.querySelectorAll('.menu a')) {
+    if (a.textContent === {{ page.title | jsonify }}) { a.classList.add('active'); break; }
+}
 </script>
     

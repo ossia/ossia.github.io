@@ -7,7 +7,7 @@ doclink: /in-depth/remote.html
 permalink: /score/features/controlling-score.html
 category: "site-score"
 
-image: /assets/features/controlling_score.png
+image: "/assets/features/controlling_score.webp"
 description: "Controlling score execution from external software"
 
 tag: "Controls"

@@ -7,7 +7,7 @@ doclink: /processes/texgen.html
 permalink: /score/features/texgen.html
 category: "site-score"
 
-image: /assets/features/texgen.png
+image: "/assets/features/texgen.webp"
 description: "Using C++ scripts"
 
 tag: "Graphics"

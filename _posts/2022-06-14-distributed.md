@@ -5,11 +5,12 @@ date:   2022-06-14
 author: Jean-Michaël Celerier
 category: News
 image: /assets/blog/distributed/image.png
+thumbnail: "/assets/blog/distributed/image.webp"
 image-alt: Distributed score screenshot
 description: Collaborative features in score 3.0.11
 ---
 
-# Collaborative features in score 3.0.11
+## Collaborative features in score 3.0.11
 
 [ossia score 3.0.11](https://github.com/ossia/score/releases/tag/v3.0.11) introduces experimental collaborative features,
 that had been developed [a few years ago](https://github.com/ossia/iscore-addon-network) as part of my [thesis work](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=v1_52IMAAAAJ&citation_for_view=v1_52IMAAAAJ:4TOpqqG69KYC), 
@@ -33,7 +34,7 @@ which is useful for complex scene situations requiring horsepower that a single 
 > Since this was developed before score even processed data and was backed by the audio clock rate, it has not been updated to make the synchronisation fit with the new execution pipeline.
 > Further work on resyncing things correctly is planned !
 
-## Going network goblin mode
+### Going network goblin mode
 
 The architecture is client-server. A machine hosts, and the others connect to it. Everything is based on WebSockets.
 
@@ -59,7 +60,7 @@ There are three tabs:
 - Transport allows to play / stop everyone and control collaborative edition.
 - Object allows to set network-specific properties on objects of the score.
 
-### Collaborative edition features
+#### Collaborative edition features
 
 The only "feature" of collaborative edition is that it can be optionally turned off.
 
@@ -73,7 +74,7 @@ can "opt out" of sending new control changes.
     <source src="{{ site.img }}/assets/blog/distributed/edition-control.mp4" type="video/mp4">
 </video>
 
-## Distributed execution
+### Distributed execution
 
 The interesting part of this work is the ability to specify, as part of a score, how it is going to be distributed across the network when executing.
 
@@ -98,7 +99,7 @@ is put in group video. When executing, both scores process the ISF shader, but e
     <source src="{{ site.img }}/assets/blog/distributed/exec-groups.mp4" type="video/mp4">
 </video>
 
-## Distributing expression evaluation
+### Distributing expression evaluation
 
 The evaluation of triggers can be synchronized across the network, or left independent.
 
@@ -116,7 +117,7 @@ the bottom one is informed and triggers too.
 > with the mouse in the score.
 
 
-## Distributing interval speed
+### Distributing interval speed
 
 The interval speed can be shared too.
 
@@ -129,7 +130,7 @@ Both these sharing features are enabled / disabled at the scenario level, by ind
 More fine-grained techniques are in a work-in-progress state in the codebase and not yet available for use, but the plan is to allow this 
 choice for individual elements.
 
-## Message pit: sharing messages across the session
+### Message pit: sharing messages across the session
 
 Execution data is local to each instance: by default, an LFO will be computed on each individual client for instance, and data is passed locally 
 in the synchronous engine of the software.
@@ -155,7 +156,7 @@ Assuming that the last message sent by "A" was "1", and the last message sent by
 
 Similar support for audio, video, and MIDI is planned but understandably quite a bit more involved to do properly.
 
-## It even works on the WASM build
+### It even works on the WASM build
 
 ... but it crashes very quickly and is not what anyone would call useable at this time... yet this is where we are going! 
 Interactive distributed scores spanning from microcontrollers to web pages ;p

@@ -1,0 +1,70 @@
+{%- comment -%}
+  JSON-LD structured data. Parameters: seo_description, seo_image, seo_url.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "ossia",
+      "url": "{{ site.url }}/",
+      "logo": "{{ site.url }}/assets/score-logo.png",
+      "email": "{{ site.email }}",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": "ossia",
+      "url": "{{ site.url }}/",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+    {%- if page.url == "/" or page.url == "/index.html" or page.url == "/score/download.html" or page.url == "/score/about.html" -%},
+    {
+      "@type": "SoftwareApplication",
+      "@id": "{{ site.url }}/#score",
+      "name": "ossia score",
+      "alternateName": "score",
+      "description": "Free, open-source, cross-platform intermedia sequencer for interactive shows, installations and live performance.",
+      "url": "{{ site.url }}/score/about.html",
+      "downloadUrl": "{{ site.url }}/score/download.html",
+      "image": "{{ site.url }}/assets/score.webp",
+      "screenshot": "{{ site.url }}/assets/score.webp",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Windows 10, Windows 11, macOS 13+, Linux",
+      "softwareVersion": "{{ site.score_version }}",
+      "datePublished": "{{ site.score_released_date | date: '%Y-%m-%d' }}",
+      "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "{{ site.url }}/#organization" },
+      "codeRepository": "https://github.com/ossia/score",
+      "releaseNotes": "https://github.com/ossia/score/releases/tag/v{{ site.score_version }}"
+    }
+    {%- endif -%}
+    {%- if page.layout == "post" -%},
+    {
+      "@type": "BlogPosting",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ include.seo_description | jsonify }},
+      "image": "{{ include.seo_image }}",
+      "url": "{{ include.seo_url }}",
+      "mainEntityOfPage": "{{ include.seo_url }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "author": { "@type": "Person", "name": {{ page.author | default: "ossia" | jsonify }} },
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+    {%- endif %}
+  ]
+}
+</script>

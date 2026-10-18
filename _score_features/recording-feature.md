@@ -7,7 +7,7 @@ doclink: /in-depth/recording.html
 permalink: /score/features/recording.html
 category: "site-score"
 
-image: /assets/features/record.gif
+image: /assets/features/record.avif
 description: "Recording external parameter changes"
 
 tag: "Structure"

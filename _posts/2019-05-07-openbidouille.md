@@ -12,7 +12,7 @@ Kinect integration.
 
 Lots of fun with guitars, synthesizers, and a great maker & DIY community !
 
-![Photo 1]({{site.baseurl}}/assets/blog/openbidouille/20181208_113539.jpg){: width="500" }
-![Photo 2]({{site.baseurl}}/assets/blog/openbidouille/20181208_113553.jpg){: width="500" }
-![Photo 3]({{site.baseurl}}/assets/blog/openbidouille/20181208_113611.jpg){: width="500" }
-![Photo 4]({{site.baseurl}}/assets/blog/openbidouille/20181208_120512.jpg){: width="500" }
+![Photo 1]({{site.baseurl}}/assets/blog/openbidouille/20181208_113539.webp){: width="500" }
+![Photo 2]({{site.baseurl}}/assets/blog/openbidouille/20181208_113553.webp){: width="500" }
+![Photo 3]({{site.baseurl}}/assets/blog/openbidouille/20181208_113611.webp){: width="500" }
+![Photo 4]({{site.baseurl}}/assets/blog/openbidouille/20181208_120512.webp){: width="500" }

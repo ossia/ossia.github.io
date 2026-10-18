@@ -10,7 +10,7 @@ category: "site-score"
 
 
 <br/>
-<img class="post-image" src="/assets/score.png" />
+<img class="post-image" src="/assets/score.webp" />
 
 It allows to sequence OSC, MIDI, DMX, sound files and more, between multiple software and hardware.
 Its novel interactive timeline enables scores written with it to depend on external events and controls through a simple visual language.
@@ -41,8 +41,12 @@ You can fund the development of ossia on [OpenCollective](https://opencollective
             {% if post.tag contains ct %}
             {% if post.visible %}
                 <a href="https://ossia.io/score-docs{{post.doclink}}" class="thumbnail dark" >
-                    <h1 class="blog-title" style="margin-bottom: 0.4em;">{{post.title}}</h1>
-                    <img class="thumbnail-feature" src="/assets/blank.png" alt="{{post.title}}" data-echo="{{post.image}}"  width="auto"/>
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">{{post.title}}</h3>
+                    {% if post.image contains ".avif" %}
+                    <picture><source type="image/avif" srcset="{{post.image}}"><img class="thumbnail-feature" src="{{ post.image | replace: '.avif', '.webp' }}" alt="{{post.title}}" loading="lazy"/></picture>
+                    {% else %}
+                    <img class="thumbnail-feature" src="{{post.image}}" alt="{{post.title}}" loading="lazy"/>
+                    {% endif %}
                     <span class="feature-description">{{post.description}}</span>
                 </a>
             {% endif %}
@@ -52,4 +56,4 @@ You can fund the development of ossia on [OpenCollective](https://opencollective
     {% endfor %}
 </div>
 
-{% include lazyload.html %}
+

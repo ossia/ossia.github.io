@@ -10,7 +10,7 @@ layout: default
             <a href="/score/download.html" class="menu-item" ><span class="icon-svg icon-download"/></span>Download</a>
     </div>
         
-  <h2 class="page-title">{{ page.title }}</h2> 
+  <h1 class="page-title">{{ page.title }}</h1> 
   </header>
   <section class="wrapper style4 container">
     {{ content }}
@@ -18,12 +18,7 @@ layout: default
 </article>
 
 <script>
-$(function(){
-    $('.menu a').each(function(){
-    if("{{page.title}}" ===  this.text){
-        $(this).addClass('active');
-         return false;
-    }
-    });
-});
+for (const a of document.querySelectorAll('.menu a')) {
+    if (a.textContent === {{ page.title | jsonify }}) { a.classList.add('active'); break; }
+}
 </script>

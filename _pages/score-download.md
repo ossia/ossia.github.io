@@ -8,19 +8,19 @@ category: site-score
 
 <div class="support">
 <h2> Support us! </h2>
-We sell score on the Microsoft store as a way to get financial support to ensure continued development so please consider buying it <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">there</a>, or funding us through <a href="https://opencollective.com/ossia">OpenCollective</a> or <a href="https://github.com/sponsors/jcelerier">Github Sponsors</a>!
+We sell score on the Microsoft store as a way to get financial support to ensure continued development so please consider <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">buying it on the Microsoft Store</a>, or funding us through <a href="https://opencollective.com/ossia">OpenCollective</a> or <a href="https://github.com/sponsors/jcelerier">Github Sponsors</a>!
 </div>
-## Download ossia score v{{site.score_version}}
-### Released on {{site.score_released_date}}
+<h1 class="download-title">Download ossia score v{{site.score_version}}</h1>
+<p class="download-date">Released on {{site.score_released_date}}</p>
 <p id="download-current" class="download-page-layout" align="center">
-<a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80px"/>Microsoft Store</a>
-<a data-os="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80px"/>Windows</a>
-<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 13 and later (AppleSilicon / M1 etc.)</a>
-<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60px"/>macOS 13 and later (Intel)</a>
-<a data-os="linux linux-x86_64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80px"/>Linux AppImage x86_64</a>
-<a data-os="linux linux-aarch64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80px"/>Linux AppImage AArch64</a>
-<a data-os="linux linux-x86_64 linux-aarch64" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80px"/>Linux Flatpak</a>
-<a data-os="web" href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80px"/>WebAssembly</a>
+<a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
+<a data-os="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 13 and later (AppleSilicon / M1 etc.)</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 13 and later (Intel)</a>
+<a data-os="linux linux-x86_64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt=""/>Linux AppImage x86_64</a>
+<a data-os="linux linux-aarch64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt=""/>Linux AppImage AArch64</a>
+<a data-os="linux linux-x86_64 linux-aarch64" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt=""/>Linux Flatpak</a>
+<a data-os="web" href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt=""/>WebAssembly</a>
 </p>
 <div id="download-others-block" style="display: none;">
 <p class="download-others-title" align="center">Other platforms</p>
@@ -53,9 +53,9 @@ Take a look at the <a href="https://github.com/ossia/score/releases/latest" targ
 <div class="collapsible-content">
 Must be at least macOS Ventura 13.0.
 <br/><br/>
-The latest version to support back to macOS 10.15 Catalina is 3.3.2, downloadable <a href="https://github.com/ossia/score/releases/v3.3.2">here</a>.
+The latest version to support back to macOS 10.15 Catalina is 3.3.2, downloadable from the <a href="https://github.com/ossia/score/releases/v3.3.2">ossia score 3.3.2 release page</a>.
 <br/>
-The latest version to support back to macOS 10.13 High Sierra is 3.1.8, downloadable <a href="https://github.com/ossia/score/releases/v3.4.1">here</a>.
+The latest version to support back to macOS 10.13 High Sierra is 3.1.8, downloadable from <a href="https://github.com/ossia/score/releases/v3.4.1">its release page</a>.
 </div>
 
 <h3 type="button" class="collapsible" > Linux (Desktop) </h3>
@@ -64,7 +64,7 @@ The latest version to support back to macOS 10.13 High Sierra is 3.1.8, download
 <p> To integrate the AppImage into your system, please follow: <br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/AppImage/awesome-appimage/#desktop-integration">https://github.com/AppImage/awesome-appimage/#desktop-integration</a>
 <br/>
-Important: AppImageLauncher below version 3.0.0 does not support the score AppImage and crashes. See <a herf="https://github.com/TheAssassin/AppImageLauncher/issues/711">this thread</a> and update your version.
+Important: AppImageLauncher below version 3.0.0 does not support the score AppImage and crashes. See <a href="https://github.com/TheAssassin/AppImageLauncher/issues/711">this thread</a> and update your version.
 </p>
 
 All Linux distributions from at least 2022 should be supported:
@@ -127,20 +127,20 @@ The source code for the latest release can be downloaded from here:
 <h2 type="button" class="collapsible" > All downloads </h2>
 <div class="collapsible-content">
 <p class="download-page-layout" align="center">
-<a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80px"/>Microsoft Store</a>
-<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80px"/>Windows</a>
+<a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
 </p>
 <p class="download-page-layout" align="center">
-<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80px"/>macOS (Intel)</a>
-<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80px"/>macOS (AppleSilicon / M1 etc.)</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80" alt=""/>macOS (Intel)</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80" alt=""/>macOS (AppleSilicon / M1 etc.)</a>
 </p>
 <p class="download-page-layout" align="center">
-<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80px"/>Linux AppImage x86_64</a>
-<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80px"/>Linux AppImage AArch64</a>
-<a href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80px"/>Linux (Flatpak)</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt=""/>Linux AppImage x86_64</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt=""/>Linux AppImage AArch64</a>
+<a href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt=""/>Linux (Flatpak)</a>
 </p>
 <p class="download-page-layout" align="center">
-<a href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80px"/>WebAssembly</a>
+<a href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt=""/>WebAssembly</a>
 </p>
 
 <p style="display: flex; justify-content: center;align-content:space-evenly;" align="center">

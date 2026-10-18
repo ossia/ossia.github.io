@@ -5,17 +5,18 @@ date: 2021-06-07
 author: Jean-Michaël
 category: Dev
 image: /assets/blog/addondev/banner.png
+thumbnail: "/assets/blog/addondev/banner.webp"
 image-alt: Hairy C++ plug-in code
 description: A tutorial for making custom ossia score add-ons, involving C++ JIT'ing
 ---
 
-## Introduction
+### Introduction
 
 _ossia score_ is a free and open-source _intermedia_ sequencer: it allows to sequence not only sound files and MIDI like most Digital Audio Workstations, but also JavaScript scripts, videos and visual effects on the GPU, OSC, DMX and a whole lot of communication protocols.
 
 This article is an introductory tutorial about writing and distributing add-ons for _ossia score_ ; it presents the technology used, the tools put in place to help writing such add-ons, showcases the available APIs and explains how it differs from other common plug-in APIs.
 
-## Tech stack
+### Tech stack
 
 _score_ add-ons are developped in C++20, like the rest of _score_. The main code-base still uses C++17 mostly to keep compatibility with Debian Stable's native compiler (GCC 8) but add-ons should not restrain themselves as the official releases are built with Clang 12 which supports most of C++20.
 
@@ -34,7 +35,7 @@ SDK headers are provided from the _score_ package manager ; they are generated a
 
 The most important thing is that the user does not have to install any compiler ; no tens-of-gigabytes of Visual Studio or XCode toolchains to install, just the _score_ binary (a few hundred megabytes) and the SDK headers (another few hundred megabytes).
 
-### Features provided
+#### Features provided
 
 The Clang / LLVM JIT feature is used for:
 * Compiling add-ons which add new processes, features, etc. to the software. Pretty much the entirety of *ossia score* can be changed that way.
@@ -42,11 +43,11 @@ The Clang / LLVM JIT feature is used for:
 * A simple [CPU texture generator](https://ossia.io/score-docs/processes/texgen.html) for retro, analog video synth-like effects.
 * The [C++ JIT Process](https://ossia.io/score-docs/processes/cpp_jit.html) is an experiment in providing very simple computation nodes without much type safety. It uses the libossia API for graph nodes ([example](https://github.com/ossia/libossia/blob/master/src/ossia/dataflow/nodes/merger.hpp)).
 
-### Current restrictions
+#### Current restrictions
 
 Since LLVM's LLJIT work is still an ongoing work-in-progress, some features may be missing (or slightly more buggy :p).
 
-#### No thread_local
+##### No thread_local
 
 For instance, I encountered issues with `thread_local` on macOS -- apparently, the relocations used aren't supported by LLJIT yet, given the `MachO TLV relocations not yet supported` error I was getting whenever `thread_local` or `__thread` were used.
 
@@ -54,13 +55,13 @@ Thankfully, it was used in only two places: in the [spdlog](https://github.com/g
 
 In order to make the issue explicit, when building add-ons, using `thread_local` will give a compile error as the symbol has been redefined to `__do_not_use_thread_local__`.
 
-#### Exceptions ?
+##### Exceptions ?
 
 Exceptions especially on Windows are still iffy from what can be read on various LLVM mailing-list topics -- but you wouldn't throw an exception from the audio thread anyways, would you :-)
 
 On Linux and Mac they seem to work.
 
-### What we gain : performance
+#### What we gain : performance
 
 The main benefit is the performance win of building add-ons in a way that will leverage (as much as LLVM and Clang's optimizers permit) the users's CPU features.
 
@@ -73,7 +74,7 @@ Thus, the main x86_64 binaries aren't particularly optimized besides what SSE2 (
 
 When doing tests [back in 2019](https://lac.linuxaudio.org/2019/doc/celerier.pdf), the benefits of using more recent vector instructions was a no-brainer ; going from `-march=x86_64` to `-march=native` makes some effects run roughly twice as fast (which means that as musicians, we can stack a few dozen more choruses and reverbs in that effect chain ;p).
 
-### What we gain : simplicity and coherence
+#### What we gain : simplicity and coherence
 
 As mentioned before, _score_'s official releases are built against one single platform: Clang / LLVM 12 (which implies lld-12, and libc++-12). This is the case on Windows (thanks to [the llvm-mingw project of Martin Storsjö](https://github.com/mstorsjo/llvm-mingw)), on Linux with custom-built toolchains (build scripts [in the ossia/sdk repo](https://github.com/ossia/sdk)) and on Mac ; on Mac this is already the version shipped by Xcode so we use that one. We also use Emscripten for the [WebAssembly builds](https://ossia.io/score-web) which are right now on a patched version of LLVM 13, but this is more of an experiment than an actual product.
 
@@ -88,7 +89,7 @@ Some recent interesting discussions on C++ ABI comptibility (and what it implies
 - On the recent [cppcast with Marshall Clow](https://www.youtube.com/watch?v=PueTm4nFrSQ).
 - On Cor3ntin's very good blog post, [The Day The Standard Library Died](https://cor3ntin.github.io/posts/abi/).
 
-### What we lose : binary size
+#### What we lose : binary size
 
 Since _score_ add-ons can use any part of score or the libraries it uses (Qt, libav, boost, and even LLVM and libclang themselves), this means that most symbols need to be exported from _score_, which makes the executable... chonky. LLVM and libclang themselves account for roughly 60% of the chonk, it's likely that this could be optimized a bit more.
 
@@ -126,7 +127,7 @@ This logic is **wrong** - one can build static libraries, or even executables, a
 
 In _score_ there is a fork of the [GenerateExportHeader](https://github.com/ossia/libossia/blob/master/cmake/GenerateStaticExport.cmake) CMake function where I added a parameter to allow exporting symbols from static libraries, maybe I should upstream it.
 
-### How it works
+#### How it works
 
 The actual design is very simple:
 
@@ -137,13 +138,13 @@ The actual design is very simple:
 - We look for a pointer to a factory function and invoke that ; it creates a factory object which is passed to the usual score's plug-in loading mechanism.
 - Done !
 
-### Long-term plans
+#### Long-term plans
 
 Right now, single processes are compiled independently.
 The next step is obviously to compile the execution graph, currently dynamic, itself, directly from _score_.
 This would ideally enable inter-procedural optimizations between execution nodes and other similar niceties.
 
-### Frequently Asked Questions
+#### Frequently Asked Questions
 
 One may ask, very reasonably, the following questions:
 
@@ -156,7 +157,7 @@ in order to make some patterns more easy. We're not there yet but it is much eas
 To the second: this would mean shipping a linker too. This is relatively easy on Linux and Windows, but much much harder on Mac where until recently with the work on [zld](https://github.com/michaeleisel/zld) and on the Zig project, the only workable linker was the one provided with Xcode, and we explicitely do not want our users to have to install Xcode.
 Loading the code with LLJIT also allows us to have more fine-grained control on what symbols are exposed to the plug-ins ; a further step would be to look into generating and using profile data to recompile plug-ins on-the-fly.
 
-## Developping add-ons
+### Developping add-ons
 
 The simplest way to develop or change an add-on is to do a clone of the score repository and put the add-on folder inside the `src/addons` directory.
 The next time CMake is run, it will pick up the add-on and build it along with the rest. It will be treated like any other part of _score_, which is built almost entirely [around plug-ins providing every feature](https://github.com/ossia/score/tree/master/src/plugins).
@@ -165,7 +166,7 @@ An introductory video guiding the development environment installation, and show
 
 The user manual of _score_ has a very incomplete section on [development of score extensions](https://ossia.io/score-docs/development) ; in particular the Doxygen has some information. But a lot more work is needed in that area :-)
 
-### Add-on templates
+#### Add-on templates
 
 We provide a few templates to get started writing custom _score_ add-ons in the [ossia-templates](https://github.com/ossia-templates/) GitHub organization:
 
@@ -186,7 +187,7 @@ They also come with Github actions which will test your code on macOS, Windows a
 
 Note that the templates would definitely benefit from more polish ; any contribution is welcome !
 
-### Future APIs
+#### Future APIs
 
 For the upcoming v3 release of _score_, the core API may still be in fluctuation. In particular, recording, and in general the way information is passed back from the execution threads to the UI thread is to be reworked ; likewise the graphics pipeline is likely to still change a bit in order to accomodate for more use-cases: it started as a simple "apply an effect on a full-screen quad" thing but is likely going to grow a bit.
 
@@ -214,7 +215,7 @@ struct Node {
 };
 {% endhighlight %}
 
-## Sharing add-ons
+### Sharing add-ons
 
 Once your add-on is ready to be shared to the greater public, it can be submitted to the package manager.
 The package manager simply uses a JSON file which references [add-ons metadatas](https://github.com/ossia/score-addons/blob/master/addons.json) ; create a PR to the repository which adds your add-on.

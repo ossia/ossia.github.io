@@ -16,17 +16,17 @@ This OSC tree-based architecture (coined “device” in the OSSIA terminology) 
 libossia offers bindings and implementations for several environments such as:
 
 <div class="logo-grid" style="margin-top: 1em; margin-bottom: 1em;">
-    <a href="download.html#cpp-binding"><img src="/assets/logo/cpp.png" height="60" width="auto"/></a>
-    <a href="download.html#c-binding" ><img src="/assets/logo/c.png" height="60" width="auto"/></a>
-    <a href="download.html#max-binding"><img src="/assets/logo/max.jpg" height="70" width="auto"/></a>
-    <a href="download.html#pd-binding" ><img src="/assets/logo/pd.png" height="60" width="auto"/></a>
-    <a href="download.html#unity-binding"><img src="/assets/logo/unity.png" height="60" width="auto"/></a>
-    <a href="download.html#processing-binding"><img src="/assets/logo/processing.jpg" height="60" width="auto"/></a>
-    <a href="download.html#of-binding"><img src="/assets/logo/of.png" height="40" width="auto"/></a>
-    <a href="download.html#supercollider-binding"><img src="/assets/logo/supercollider-logo.png" height="60" width="auto"/></a>
-    <a href="download.html#qt-binding"><img src="/assets/logo/qt-logo.png" height="60" width="auto"/></a>
-    <a href="download.html#python-binding"><img src="/assets/logo/python-logo.png" height="60" width="auto"/></a>
-    <a href="download.html#faust-binding"><img src="/assets/logo/faust.png" height="50" width="auto"/></a>
+    <a href="download.html#cpp-binding"><img alt="C++ logo" src="/assets/logo/cpp.png" height="60" width="auto"/></a>
+    <a href="download.html#c-binding" ><img alt="C logo" src="/assets/logo/c.png" height="60" width="auto"/></a>
+    <a href="download.html#max-binding"><img alt="Max/MSP logo" src="/assets/logo/max.jpg" height="70" width="auto"/></a>
+    <a href="download.html#pd-binding" ><img alt="PureData logo" src="/assets/logo/pd.png" height="60" width="auto"/></a>
+    <a href="download.html#unity-binding"><img alt="Unity3D logo" src="/assets/logo/unity.png" height="60" width="auto"/></a>
+    <a href="download.html#processing-binding"><img alt="Processing logo" src="/assets/logo/processing.jpg" height="60" width="auto"/></a>
+    <a href="download.html#of-binding"><img alt="openFrameworks logo" src="/assets/logo/of.png" height="40" width="auto"/></a>
+    <a href="download.html#supercollider-binding"><img alt="SuperCollider logo" src="/assets/logo/supercollider-logo.png" height="60" width="auto"/></a>
+    <a href="download.html#qt-binding"><img alt="Qt / QML logo" src="/assets/logo/qt-logo.png" height="60" width="auto"/></a>
+    <a href="download.html#python-binding"><img alt="Python logo" src="/assets/logo/python-logo.png" height="60" width="auto"/></a>
+    <a href="download.html#faust-binding"><img alt="Faust logo" src="/assets/logo/faust.png" height="50" width="auto"/></a>
 </div>
 
 ## Documentation
@@ -81,8 +81,8 @@ libossia is distributed under the terms of the CeCILL-C license and of the LGPLv
          <div class="features-list">
         {% for post in site.libossia_features %}
                 <a href="{{post.url}}" class="thumbnail">
-                    <img class="thumbnail-feature-libossia" src="/assets/blank.png" data-echo="{{post.image}}" />
-                    <h1 class="blog-title">{{post.title}} </h1>
+                    <img loading="lazy" class="thumbnail-feature-libossia" src="{{post.image}}" />
+                    <h3 class="blog-title">{{post.title}} </h3>
                     <span class="feature-description">{{post.description}}</span>
                 </a>
         {% endfor %}
@@ -91,6 +91,6 @@ libossia is distributed under the terms of the CeCILL-C license and of the LGPLv
     {% endfor %}
 </div>
 
-{% include lazyload.html %}
+
 
 
