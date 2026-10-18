@@ -7,7 +7,7 @@ doclink: /devices/oscquery-device.html
 permalink: /score/features/oscquery.html
 category: "site-score"
 
-image: /assets/features/oscquery.png
+image: "/assets/features/oscquery.webp"
 description: "Using OSCQuery for automatic discovery of OSC devices"
 
 tag: "Interoperability"

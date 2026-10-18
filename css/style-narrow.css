@@ -76,7 +76,7 @@ div.line{
 h1.software{
     font-size: 42px;
 }
-h2.software{
+h2.software, span.software {
     font-size: 42px;
 }
 /* Main */

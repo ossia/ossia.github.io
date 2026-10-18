@@ -1,5 +1,6 @@
 ---
 layout: landing-page
+preload_image: /css/images/banner-960.webp
 ---
 
 
@@ -14,14 +15,14 @@ layout: landing-page
 <!-- Banner -->
 <div style="text-align: center;">
 <div id="banner" class="background" >
-   <img class="background-image" src="css/images/banner.jpg" alt="[re]capture"/>
+   <img class="background-image" src="/css/images/banner.webp" srcset="/css/images/banner-960.webp 960w, /css/images/banner.webp 1920w" sizes="100vw" width="1920" height="1121" fetchpriority="high" alt="The [re]capture installation, controlled with ossia score"/>
 
    <div class="overlay">
         <div class="inner">
             <header>
                 <!-- Logo -->
                 <div style="display:flex; justify-content:center; align-items: center;">
-                    <image class="software-logo" src="/assets/score-logo.png" alt="score logo"/>
+                    <img class="software-logo" src="/assets/score-logo.png" width="512" height="512" alt="ossia score logo"/>
                     <h1 class="software">ossia score</h1>
                 </div>
 
@@ -60,13 +61,13 @@ layout: landing-page
 
    <!-- Features -->
 <div id="overlay" onclick="hideOverlay()">
-<img id="overlay-image" loading="lazy" src="/assets/score.png" alt="score" />
+<img id="overlay-image" loading="lazy" src="/assets/score.webp" alt="Enlarged screenshot" />
 </div>
  <section id="index" class="dark-grey" >
        <h2 style="text-align: center;" ><a href="/score/about.html" class="title-section">What is ossia score ?</a></h2>
        <div class="feature-container">
             <div class="feature image-container">
-                <img onclick="displayInOverlay(this.src)" loading="lazy" src="/assets/score.png"  alt="score" />
+                <img onclick="displayInOverlay(this)" loading="lazy" src="/assets/score.webp"  alt="score" />
             </div>
             <div class="feature text" >
                 <h2>An intermedia sequencer</h2>
@@ -92,12 +93,12 @@ layout: landing-page
                 </p>
             </div>
             <div class="feature image-container">
-                <img onclick="displayInOverlay(this.src)" loading="lazy"  src="/assets/feature-interaction.gif" alt="Interaction"/>
+                <picture><source type="image/avif" srcset="/assets/feature-interaction.avif"><img onclick="displayInOverlay(this)" loading="lazy" width="580" height="452" src="/assets/feature-interaction.webp" alt="Triggering parts of a score from external events in ossia score"/></picture>
             </div>
        </div>
        <div class="feature-container">
             <div class="feature image-container">
-                <img onclick="displayInOverlay(this.src)" loading="lazy"  src="/assets/feature-script.png"  alt="Scripting"/>
+                <img onclick="displayInOverlay(this)" loading="lazy"  src="/assets/feature-script.webp"  alt="Scripting"/>
             </div>
             <div class="feature text" >
                 <h2>A scriptable, open software</h2>
@@ -123,7 +124,7 @@ layout: landing-page
                </p>
            </div>
            <div class="feature image-container">
-                <img onclick="displayInOverlay(this.src)" loading="lazy"  src="/assets/feature-nodal.gif"  alt="Nodal"/>
+                <picture><source type="image/avif" srcset="/assets/feature-nodal.avif"><img onclick="displayInOverlay(this)" loading="lazy" width="624" height="340" src="/assets/feature-nodal.webp" alt="Switching between the timeline and the nodal view in ossia score"/></picture>
            </div>
       </div>
  </section>
@@ -195,22 +196,24 @@ layout: landing-page
     <section id="index" class="black" style="">
         <div class="frontpage-video">
         <div class="videoWrapper">
-            <iframe src="" data-src="https://www.youtube.com/embed/8-KpNaF2K8Q" frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+            <button type="button" class="yt-facade" data-id="8-KpNaF2K8Q" data-title="ossia score 3 trailer" aria-label="Play video: ossia score 3 trailer">
+                <img src="/assets/video/ossia-score-3-trailer.webp" width="1280" height="720" loading="lazy" alt="ossia score 3 trailer"/>
+            </button>
         </div>
         </div>
     </section>
 
-   <!-- Recent posts and twitter feed -->
+   <!-- Recent posts -->
     <section class="grey blog-twitter" id="index">
         <div style="display: flex; justify-content: space-around; margin: 0;">
             <div class="blog-list">
                 <h2 style="text-align: center;" ><a href="/blog.html" class="title-section" style="color: black;">Blog</a></h2>
 
                 <div class="recent-post-view">
-                    {% for post in site.posts limit:2 %}
+                    {% for post in site.posts limit:3 %}
                         <a href={{post.url}} class="thumbnail" >
                             {% if post.image %}
-                                <img loading="lazy" class="thumbnail-blogpost" alt="{{post.title}}" src={{post.image}} width="auto"/>
+                                <img loading="lazy" class="thumbnail-blogpost" alt="{{post.title}}" src="{{ post.thumbnail | default: post.image }}" width="400"/>
                             {% else %}
                                 <img loading="lazy" class="thumbnail-blogpost" alt="{{post.title}}" src="assets/default_post_thumbnail.png"/>
                             {% endif %}
@@ -222,10 +225,6 @@ layout: landing-page
                     {% endfor %}
                 </div>
             </div>
-            <!-- Twitter timeline -->
-            <div class="twitter" style="width: 30%;">
-                 <h2><a class="twitter-timeline" data-tweet-limit="1" href="https://x.com/ossia_io?ref_src=twsrc%5Etfw">Tweets by ossia_io</a> </h2>
-            </div>
         </div>
     </section>
 
@@ -234,38 +233,38 @@ layout: landing-page
         <h2 style="text-align: center;" ><a href="/gallery.html" class="title-section">Gallery</a></h2>
         <div class="owl-carousel owl-theme" >
             <div class="carouselcontainer">
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Carrousel" data-echo="assets/gallery/frontpage/carrousel-frontpage.jpg"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/carrousel-frontpage.webp" alt="Carrousel"/></a>
                 <header>
                     <a href="https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/" class="gallery-text">Carousel Musical</a> <span class="gallery-text">-</span> <a href="https://www.blueyeti.fr/le-carrousel-musical-abbaye-aux-dames/" class="gallery-text">Blue Yeti, Abbaye aux Dames</a>
                 </header>
             </div>
             <div class="carouselcontainer">
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Nebula" data-echo="assets/gallery/frontpage/Nebula_ChampignonsNeigeJaune-frontpage.jpg"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/Nebula_ChampignonsNeigeJaune-frontpage.webp" alt="Nebula"/></a>
                 <header>
                     <a href="https://www.baltazars.org/project/nebula/" class="gallery-text">Nebula</a> <span class="gallery-text">-</span> <a href="https://www.baltazars.org/" class="gallery-text">Les Baltazars</a>
                 </header>
             </div>
             <div class="carouselcontainer">
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Four For" data-echo="assets/gallery/frontpage/DID_4858.JPG"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/DID_4858.webp" alt="Four For"/></a>
                 <header>
                     <a href="https://bravozoulou.fr/projets/four-for/" class="gallery-text">Four For - Bravo Zoulou</a>
                     <span class="copyright"><br/>&copy; Didier Crasnault</span>
                 </header>
             </div>
             <div class="carouselcontainer">
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Quarrè" data-echo="assets/gallery/frontpage/quarre-frontpage.jpg"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/quarre-frontpage.webp" alt="Quarrè"/></a>
                 <header>
                     <a href="" class="gallery-text">Quarrè - Pierre Cochard</a>
                 </header>
             </div>
             <div class="carouselcontainer" >
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Méta Chef d'Orchestre" data-echo="assets/gallery/frontpage/dome_scrime-frontpage.jpg"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/dome_scrime-frontpage.webp" alt="Méta Chef d'Orchestre"/></a>
                 <header>
                     <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Meta-Chef-d-Orchestre" class="gallery-text">Méta Chef d’Orchestre - Serge Delaubier</a>
                 </header>
             </div>
             <div class="carouselcontainer" >
-                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="/assets/blank.png" alt="Sonotact" data-echo="assets/gallery/frontpage/sonotact-frontpage.jpg"/></a>
+                <a href="/gallery.html"><img loading="lazy" class="frontpage-gallery" src="assets/gallery/frontpage/sonotact-frontpage.webp" alt="Sonotact"/></a>
                 <header>
                     <a href="https://scrime.u-bordeaux.fr/Arts-Sciences/Residences/Residences/Sonotact" class="gallery-text">Sonotact - Pascale Criton</a>
                 </header>
@@ -274,10 +273,11 @@ layout: landing-page
       </section>
 </article>
 
-<script async src="/owlcarousel/owl.carousel.min.js"></script>
+<script defer src="/js/jquery.min.js"></script>
+<script defer src="/owlcarousel/owl.carousel.min.js"></script>
 <script>
-$(window).on('load',function(){
-  $('.owl-carousel').owlCarousel({
+window.addEventListener('load',function(){
+  jQuery('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
     nav:false,
@@ -286,15 +286,14 @@ $(window).on('load',function(){
 })
 });
 
-function displayInOverlay(image) {
+function displayInOverlay(img) {
   document.getElementById("overlay").style.display = "block";
-  document.getElementById("overlay-image").src = image;
+  document.getElementById("overlay-image").src = img.currentSrc || img.src;
 }
 
 function hideOverlay() {
   document.getElementById("overlay").style.display = "none";
 }
 </script>
- <script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 
- {% include lazyload.html %}
+ 

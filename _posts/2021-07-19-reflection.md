@@ -5,6 +5,7 @@ date:   2021-07-22
 author: Jean-Michaël Celerier
 category: Dev
 image: /assets/blog/reflection/banner.png
+thumbnail: "/assets/blog/reflection/banner.webp"
 image-alt: Some nifty C++20 code
 description: Techniques for reflection in C++20 applied to multimedia systems
 ---
@@ -13,7 +14,7 @@ Reflection is often presented as a feature that makes software harder to underst
 In this article, I will present ways to approximate some level of static reflection in pure C++, thanks to C++17 and C++20 features, show how that tool can considerably simplify a class of programs and libraries, and more generally enable ontologies to be specified and implemented in code.
 <!--more-->
 
-# What we aim to solve
+## What we aim to solve
 
 Imagine that you are writing a neat algorithm. You've worked on it for a few years ; it produces great results and is now ready to be shared to the world.
 Let's say that this algorithm is a noise generator.
@@ -44,7 +45,7 @@ On the other hand, if you implement your algorithm in C#, Java, or Python, havin
 
 This post is a hint of how much better and easier life is with true reflection as available in other languages, and in particular how attribute reflection and user-defined attributes, would make one's life. And most importantly, what kind of abstracting power "reflective programming" holds over existing generic programming techniques in C++: macro-based metaprogramming, template-based metaprogramming (with e.g. CRTP being commonly used for that).
 
-### The problem domain
+#### The problem domain
 
 The software in which we want to embed our algorithm should be able to display UI widgets adapted for the control of `alpha` and `beta`, whose bounds you have so painstakingly and thoroughly defined. Likewise, the UI widgets should adapt to the type of the parameter ; a spinbox may make more sense for `beta`, and a slider, knob, or any kind of continuous control for `alpha`.
 
@@ -60,7 +61,7 @@ If for instance you were using the OSC protocol, to make your algorithm controll
 
 Maybe you'd also like to serialize your algorithm's inputs, in order to have a preset system, or just to exchange with another runtime system expecting a serialized version of your data. In JSON ? YAML ? Binary ? Network-byte-order binary ? GLSL `std140` ? So many possibilities !
 
-### Hell on earth
+#### Hell on earth
 
 For *every* protocol, host environment, plug-in system, ... that you want to provide your algorithm to, you will have to write some amount of binding code, also often called *glue code*.
 
@@ -115,7 +116,7 @@ Of course, the above list is not an indictment on the code quality of those vari
 
 We will show how reflection allows to improve on that, and in particular get down to N+M pieces of code to write instead of NxM.
 
-### Problem statement
+#### Problem statement
 Basically: there's a ton of environments (also called "hosts", "host APIs" in the remainder of this article) which define ad-hoc protocols or object systems. Can we find a way to make a C++ definition ("algorithm", "plug-in" in the article) which:
 
 - Does not depend on any pre-existing code: doesn't inherit from a class, doesn't call arbitrary run-time functions, etc. The *definition* of the algorithm shall be writable without having to include *anything*, even standard headers (discounting of course whatever third-party library is required for the algorithm implementation).
@@ -128,13 +129,13 @@ Basically: there's a ton of environments (also called "hosts", "host APIs" in th
 
 - Allows that definition to be *automatically* used to generate binding code to any of the environments, protocols, runtime systems mentioned above, with for only tool a C++20 compiler.
 
-# Massaging the problem
+## Massaging the problem
 
 Sadly, C++ does not offer true reflection on any entity: from the generic function `noise` defined above, it would be fairly hard to extract its parameter list, and reconstruct what we need to perform the above. Likewise, due to the lack of user-defined attributes, one wouldn't be able to tag the input / output parameters, to give them a name, bounds, etc.
 
 We will however show that with very simple transformations, we can reach our goals !
 
-### First transformation: function to class
+#### First transformation: function to class
 
 This transformation is commonplace in C++: classes / structs are in general more convenient to use than straight function pointers. They are easier to pass as arguments, work better with the type system as template arguments, etc.
 
@@ -159,7 +160,7 @@ Thankfully, the actual implementation does not change ; we merely put some argum
 
 What if, dear reader, I told you that, as of C++17 (and actually even 14 if using a non-legal hack), this is pretty much enough for achieving three of our four goals (with some limitations, mainly on the number of members) ?
 
-### Mapping our class to a run-time API automagically
+#### Mapping our class to a run-time API automagically
 
 Assume the following imaginary run-time API for doing some level of processing, in cross-platform C89:
 
@@ -201,7 +202,7 @@ lib_type_t main()
 What we want, is simply to use C++ to generate all the code above automatically.
 That means, most importantly, to call the relevant `lib_add_*` function for each parameter with the correct arguments.
 
-### Enumerating members
+#### Enumerating members
 
 This is trivial, thanks to a library, Boost.PFR, which technically works from C++14 and up.
 Note that the library is under the Boost umbrella but does not have any dependencies and can be used stand-alone.
@@ -248,7 +249,7 @@ This gets us 90% there: if our C API was just `lib_add_float(lib_type_t, float*)
 
 But, as it stands, our API also expects some additional metadata: a pretty name to show to the user, mins and maxs...
 
-### Second transformation: ad-hoc types for parameters
+#### Second transformation: ad-hoc types for parameters
 
 This transformation is mechanical, but complexifies our code a little bit.
 We will change each of our parameters, into an anonymous structure containing the parameter:
@@ -308,7 +309,7 @@ struct alpha {
 } alpha;
 {% endhighlight %}
 
-#### How user-defined attributes and attribute reflection would help
+##### How user-defined attributes and attribute reflection would help
 Now, if we were in, say, C#, what we'd most likely write instead would instead just be:
 {% highlight csharp %}
 [Name("α")]
@@ -323,7 +324,7 @@ We could even try (okay, that's a little bit far-fetched) to read the pre/post c
 
 Although in practice some methods may be needed: for instance, multiple APIs require the user to provide a method which will from an input value, render a string to show to the user.
 
-### Updating our binding code
+#### Updating our binding code
 We now have to go back and work on the binding function implementation: the main issue is that where we were using the actual type of the values, `boost::pfr::for_each_field` will give us references to anonymous types (or, even if not anonymous, types that we shouldn't have knowledge of in our binding code).
 
 In our case, we assume (as part of our ontology), that *parameters* have a *value*. This is a compile-time protocol.
@@ -405,7 +406,7 @@ But, what if our algorithm *doesn't* actually need bounds ? We'd still want it t
 
 In this case, we'd get a combinatorial explosion of concepts: we'd need an overload for a parameter with a name and no range, an overload for a parameter with a range and no name, etc.
 
-### Handling optionality
+#### Handling optionality
 As an algorithm author, you cannot specify every possible metadata known to man. We want our algorithm to be future-proof: even if refinements can be added, we want the code we write today to still be able to integrate into tomorrow's host.
 
 Thankfully, the age-old notion of condition can help here ; in particular compile-time conditions depending on the existence of a member.
@@ -435,7 +436,7 @@ This way, the algorithm has maximal flexibility: it can provide the bare minimal
 
 This last part works in Clang and GCC, but MSVC's concepts implementation [does not support it yet](https://www.reddit.com/r/cpp/comments/old0t6/why_does_msvc_blatantly_lies_about_its_supported/).
 
-### Calling our code
+#### Calling our code
 
 There's not much difference with the previous technique when we want to call our process (`operator()`) function.
 
@@ -519,7 +520,7 @@ void register_process(T& algo)
 }
 {% endhighlight %}
 
-### Going thread-safe
+#### Going thread-safe
 
 Suppose that our C host API specifies that the `process` method is run in a separate thread, for efficiency concerns.
 Such an API's `lib_add_float` function could look like this:
@@ -638,7 +639,7 @@ void for_nth_parameter(Parameters& params, int n, F&& func) noexcept
 }
 {% endhighlight %}
 
-# Conclusion
+## Conclusion
 From this, it is obvious that writing, for instance, a generic serializer, hash function, etc... that will work on any such types is trivial ; Boost.PFR already provides some amount of it. A fun exercise left to the reader would be memoization of plug-in state, for the sake of undo-redo.
 
 Note that the algorithm could also easily be generic ; for instance, some audio plug-in APIs support working with either single- or double- precision floating-point ; one could just provide a `noise<std::floating_point>` algorithm if it fits the algorithm's spec. Otherwise, the binding library would simply perform the conversion from / to the correct floating-point type if that is a meaningful thing to do.

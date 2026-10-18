@@ -42,7 +42,7 @@ We can help you into making your first contributions to the project.
 Here is a video explaining how to contribute to the code of ossia score:
 
 <div class="videoWrapper">
-    <iframe src="" data-src="https://www.youtube.com/embed/LSifHFbuky0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+    <iframe title="Video: Project" loading="lazy" src="" data-src="https://www.youtube.com/embed/LSifHFbuky0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <!--- Roadmap !-->
@@ -278,8 +278,5 @@ NB : Virage is a intermedia sequencer. It can be considered as a prototype from 
 * <a href="https://hal.archives-ouvertes.fr/hal-00307927">Specification of Temporal Relations Between Interactive Events</a>, by M. Desainte-Catherine et al. @SMC04
 * Boxes, un logiciel pour la composition musicale combinant modèle spectral, structures hiérarchiques et constraintes, by A. Beurivé (in French)
 
-<!--
-<p>The ossia software family tree graph:</p>
-<p><img class="alignnone wp-image-2909 size-full" src="https://web.archive.org/web/20190514213808im_/https://ossia.io/wp-content/uploads/2018/11/HeritageI-score-1.png" alt="" width="1167" height="866" srcset="https://web.archive.org/web/20190514213808im_/https://ossia.io/wp-content/uploads/2018/11/HeritageI-score-1.png 1167w, https://web.archive.org/web/20190514213808im_/https://ossia.io/wp-content/uploads/2018/11/HeritageI-score-1-300x223.png 300w, https://web.archive.org/web/20190514213808im_/https://ossia.io/wp-content/uploads/2018/11/HeritageI-score-1-768x570.png 768w, https://web.archive.org/web/20190514213808im_/https://ossia.io/wp-content/uploads/2018/11/HeritageI-score-1-1024x760.png 1024w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px"/></p>
-
--->
+<p>The ossia software family tree:</p>
+<p><img src="/assets/project/score-history.webp" width="768" height="570" loading="lazy" alt="Family tree of the i-score and ossia software, from Boxes (2000) and Iscore through Acousmoscribe, Virage and i-score 0.1 to 0.3, up to ossia score 1.0 and libossia (2016)"/></p>

@@ -5,13 +5,13 @@
     <ul class="icons">
 	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32px" alt="Twitter" /></a></li>
 	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32px" alt="GitHub" /></a></li>
-	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.png" width="32px" alt="Instagram" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32px" alt="Instagram" /></a></li>
 	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32px" alt="Vimeo"/></a></li>
 	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32px" alt="YouTube"/></a></li>
 	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34px" alt="Facebook"/></a></li>
     </ul>
     <ul class="copyright">
-        <li>&copy; ossia 2025</li><li>Design: HTML5 UP</li>
+        <li>&copy; ossia {{ site.time | date: "%Y" }}</li><li>Design: HTML5 UP</li>
     </ul>
     <ul class="copyright">
 	<li><a href="/privacy.html">Privacy policy</a></li>
@@ -19,22 +19,7 @@
 </footer>
 
 <script>
-$(function(){
-    $('.cat a').each(function(){
-    var category_name = "site-" + this.text;
-    if("{{page.category}}" ===  category_name){
-        $(this).addClass('active');
-        return false;
-    }
-    });
-});
-
-// load asynchronously videos to avoid slowing the page showing
-function init() {
-var vidDefer = document.getElementsByTagName('iframe');
-for (var i=0; i<vidDefer.length; i++) {
-if(vidDefer[i].getAttribute('data-src')) {
-vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'));
-} } }
-window.onload = init;
+for (const a of document.querySelectorAll('.cat a')) {
+    if ("site-" + a.textContent === {{ page.category | jsonify }}) { a.classList.add('active'); break; }
+}
 </script>

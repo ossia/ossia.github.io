@@ -7,7 +7,7 @@ category: News
 ---
 
 <div class="videoWrapper">
-    <iframe src="https://player.vimeo.com/video/83989990"  frameborder="0" allow="fullscreen" allowfullscreen></iframe>
+    <iframe title="Video: User experience workshop" loading="lazy" src="https://player.vimeo.com/video/83989990"  frameborder="0" allow="fullscreen" allowfullscreen></iframe>
 </div>
 <p>
 <a href="https://vimeo.com/83989990">Le chant du filament</a> from <a href="https://vimeo.com/user24205756">NICOLAS VILLENAVE</a> on <a href="https://vimeo.com">Vimeo</a>.

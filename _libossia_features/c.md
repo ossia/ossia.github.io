@@ -1,6 +1,6 @@
 ---
 layout: libossia-feature
-title:  "Unreal Engine bindings"
+title:  "C bindings"
 
 permalink: /site-libossia/features/c.html
 category: "site-libossia"

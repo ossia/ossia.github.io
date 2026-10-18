@@ -14,7 +14,7 @@ It covers extending our data model so that dataflow nodes can interoperate with 
 
 It also introduces a few new objects and change in ossia score that leverage these low-level improvements to enable to write nice data processing pipelines with a small reimplementation of the [jq](https://stedolan.github.io/jq/) expression language.
 
-# Problem position 
+## Problem position 
 
 For instance, today one can write a simple [Avendish](https://celtera.github.io/avendish) plug-in with ports which are ints, floats, strings, bools, etc. This covers many use cases in media art systems. What happens when one wants to interoperate with, say, Javascript code which may return complex nested objects? How can we handle dataflow processors whose output is fundamentally non-trivial, such as a live feature recognizer outputting a list of objects recognized in a given camera frame:
 
@@ -48,7 +48,7 @@ There is a small friction point: many creative coding environments have a list t
 
 Another one is that these environments generally have very, very, weak typing rule; many of our users in ossia expect the following to hold: `1.25 == "1.25"`.
 
-### Aggregate member name reflection
+#### Aggregate member name reflection
 Sadly, C++ does not have enough reflection to enable us to retrieve field names from aggregates.
 Thus, by default, they will get converted into lists: 
 
@@ -67,7 +67,7 @@ struct agg
 };
 ```
 
-## Compatible types
+### Compatible types
 
 Most types that conform to a subset of the `std::` concepts for, say, containers, e.g. [SequenceContainer](https://en.cppreference.com/w/cpp/named_req/SequenceContainer) or [AssociativeContainer](https://en.cppreference.com/w/cpp/named_req/SequenceContainer) should work. In my tests I mainly tried `std::` and `boost::container::`, please report issues with any other container library! Even funkier stuff such as `std::bitset` works :-)
 
@@ -82,7 +82,7 @@ static_assert(avnd::map_ish<boost::container::flat_map<int, int>>);
 
 Here are some complete [test cases](https://github.com/ossia/score/blob/master/src/plugins/score-plugin-avnd/Tests/from_ossia_value_Test.cpp) to get an idea of what works.
 
-# Value types?
+## Value types?
 The title of this article mentions "value" types. This is not about the common C++ concept (an `int` is a value type) but about types that are literally called "value".
 You likely have encountered a few of those in various codebases. They tend to look like this:
 
@@ -171,7 +171,7 @@ still doing more-or-less meaningful conversions (one could define this as "conve
 
 This all leads to another reinventing-the-wheel drama such as the one we have already mentioned in previous articles: an algorithm that uses "value" type A will have to be rewritten to work with "value" type B, even if these types are compatible, unless one is ready to turn the entire code into generic code which causes its own set of issues.
 
-## Value type support in Avendish
+### Value type support in Avendish
 
 Very simply put, this works too :-)
 
@@ -253,14 +253,14 @@ This gives us the expected output, without us having to write any explicit seria
 
 ![Result of printing the output of the object]({{site.baseurl}}/assets/blog/valuetype/js-test.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-# jk: jq for any object
+## jk: jq for any object
 
 In order to manipulate this kind of data easily at run-time without having to resort to a full-blown very slow JS interpreter, I decided to reimplement a subset of an extremely useful tool for working with JSON-structured data: [jq](https://stedolan.github.io/jq/). The object in score is called `Object Filter` ; the meat of the expression language parsing is done in [the jk repository](https://github.com/celtera/jk).
 
 One can appreciate that the actual parser [fits in 75 lines of C++](https://github.com/celtera/jk/blob/main/src/parser.cpp), thanks to the awesome superpowers of Boost.Spirit!
 The library also leverages C++ coroutines quite a bit, as they lend themselves very nicely to the kind of operations we want to do with the library, enable lazy computations, etc.
 
-## Primer of jq syntax
+### Primer of jq syntax
 `jq` is able to process and transform JSON thanks to a very simple expression language. For instance, `.foo[2:4]` will iterate over the values 2 to 4 of the array `foo` in the following json:
 
 ```json
@@ -286,7 +286,7 @@ we are going to get as output: `[ 4, 2, 5 ]`. This can be tried on the online pl
 
 Only a small subset of jq has been implemented so far, but it's already enough to perform a lot of useful data transformations. The best way to check if something is supported yet is to look into the [unit tests](https://github.com/celtera/jk/blob/main/tests/parse.cpp)... sorry not sorry :)
 
-## Implementation
+### Implementation
 Of course, `jk` needs a value type too. It is defined as follows and should cover most cases:
 
 ```c++
@@ -301,10 +301,10 @@ The actual types are configurable by the application using the library, in order
 
 Combined with what we mentioned before, this means that the inputs and outputs of our Avendish object are simply of type `jk::value` and everything gets converted automatically from and to our internal `ossia::value` (which cannot be changed for legacy reasons), while enabling others to use the library without the dependency on libossia. This will allow making the object work in other environments, e.g. PureData when there is some time (and enough people interested in it!).
 
-## Usage
+### Usage
 The main thing to be aware of is how the `jk` object will output its values. If things are enclosed in a set of square brackets, e.g. `[ .foo[0], .foo[2] ]`, then the output of the Object Filter in ossia scor'e will be a list. If it is without square brackets, the object in ossia score will output all the values one after each other as different messages.
 
-# Treating OSC nodes as objects
+## Treating OSC nodes as objects
 
 A big change in libossia recently has been to remove the pretty much unused CHAR type and replace it with a MAP type (that is, a `map<string, value>`).
 This allows us to transmit arbitrary maps / dicts / ... between objects when processing a score, and more generally get very close of the JS object model which is fairly ubiquitous and well-understood nowadays. 
@@ -345,13 +345,13 @@ Or even recursively (in the next version as it was not implemented in time for 3
 
 Of course, when used as the input of a JavaScript object in score, one will get a proper JS object, which will enable much more advanced data processing!
 
-# Example
+## Example
 In this very simple example, we use a YOLOv4 recognizer's raw output information to keep my side of the lab squarely into ǹ̸̙è̵̦g̷̹͒a̷̛̮t̴͚̿i̷̻̓v̴̗̎ē̶̜ ̶̩̐s̸̨̒p̴̨͛a̶̲̕c̷̢̿ë̷͈́. Now that the groundwork has been put to enable this kind of advanced objects to exist, they are going to slowly appear into further score versions.
 <video controls style="width: 70%">
   <source src="{{ site.img }}/assets/blog/valuetype/yolo.mp4" type="video/mp4">
 </video>
 
-# Conclusion
+## Conclusion
 Overall, the whole point of this is to allow us to transparently bridge between run-time-defined objects and transformations such as in JS or OSC, and compile-time static types to enable data processing in every way possible ; C++ objects for ossia should be able to define arbitrarily complex data structures for their inputs and outputs, and things should still be perfectly useable from the run-time environment without the end-user feeling restricted in what they can do, and with the object implementer still being able to write the cleanest code possible that solves the task at hand without having to worry about the interoperability glue code.
 
 I think we are not far from succeeding :-) very likely a few other objects will have to be developed to simplify common use cases, but the general idea is there and held water pretty well over a few months of testing.

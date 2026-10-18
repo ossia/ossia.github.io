@@ -37,10 +37,10 @@ Here we generate all the categories.
         {% for post in site.posts %}
             <li class="wrapper blog" >
                 <h2 class="blog title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-                <h1 class="blog">{{ post.categories }}  •  {{ post.date | date: "%b %-d, %Y" }}  •  {{post.author}}</h1>
+                <p class="blog post-meta">{{ post.categories }}  •  {{ post.date | date: "%b %-d, %Y" }}  •  {{post.author}}</p>
                     {% if post.image %}
                         <div class="blog-image-header">
-                            <img src="{{post.image}}">
+                            <img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title | escape }}" loading="lazy">
                         </div>
                     {% endif %}
                     {{ post.excerpt }}
@@ -49,9 +49,9 @@ Here we generate all the categories.
     </ul>
     <!-- Sidebar -->
     <section class="categories">
-            <h1 class="blog category-title">Post by category</h1>
+            <h2 class="blog category-title">Posts by category</h2>
             {% for ct in cats %}
-                <h1 class="blog category" style="margin:0;"> {{ ct }} </h1>
+                <h3 class="blog category" style="margin:0;"> {{ ct }} </h3>
                     {% for post in site.posts %}
                         {% if post.category contains ct %}
                         <a class="link-cat" href="{{ post.url }}">{{ post.title }} </a>

@@ -5,11 +5,12 @@ date: 2021-06-25
 author: Jean-Michaël
 category: Community
 image: /assets/blog/internships-2021/banner.jpg
+thumbnail: "/assets/blog/internships-2021/banner.webp"
 image-alt: Our interns
 description: Summer internships for 2021 for ossia score
 ---
 
-## Summer internships in ossia.io
+### Summer internships in ossia.io
 
 This year we are extremely lucky in having five great interns and students working on the software.
 
@@ -17,7 +18,7 @@ This summer, they are going to work on improving the *score* documentation, work
 
 <br/>
 
-### Aldwin Baïetto
+#### Aldwin Baïetto
 
 ![Aldwin]({{site.baseurl}}/assets/blog/internships-2021/aldwin.jpg){: width="300"  style="float: right;margin-left: 10px;margin-top: 7px;" }
 
@@ -29,9 +30,9 @@ Aldwin helps improving the overall ergonomy and user experience of the system af
 <br/>
 <br/>
 
-### Théo Barbé
+#### Théo Barbé
 
-![Théo]({{site.baseurl}}/assets/blog/internships-2021/theo.jpg){: width="300" style="float: left;margin-right: 10px;margin-top: 7px;" }
+![Théo]({{site.baseurl}}/assets/blog/internships-2021/theo.webp){: width="300" style="float: left;margin-right: 10px;margin-top: 7px;" }
 
 *Student in computer science and engineering at [ENSEIRB-MATMECA](https://enseirb-matmeca.bordeaux-inp.fr/fr), I want to specialize in multimedia. Passionate about music, I will take off soon towards Canada for new adventures.*
 
@@ -42,9 +43,9 @@ Théo is working on the graphics and video pipeline of ossia score. He is workin
 <br/>
 <br/>
 
-### Maria Paula Carrero
+#### Maria Paula Carrero
 
-![Maria Paula]({{site.baseurl}}/assets/blog/internships-2021/maria.jpg){: width="300" style="float: right;margin-left: 10px;margin-top: 7px;" }
+![Maria Paula]({{site.baseurl}}/assets/blog/internships-2021/maria.webp){: width="300" style="float: right;margin-left: 10px;margin-top: 7px;" }
 
 *My name is Maria Paula Carrero, I’m a Colombian Computer Science student.*
 *I’m a hard-working, self-starter, responsible and meticulous woman who wants to inspire women to work in STEM.*
@@ -57,9 +58,9 @@ Maria Paula has already provided implementations of Factor Oracle algorithms for
 
 <br/>
 
-### Antoine Dudouit
+#### Antoine Dudouit
 
-![Antoine]({{site.baseurl}}/assets/blog/internships-2021/antoine.jpg){: width="300" style="float: left;margin-right: 10px;margin-top: 7px;" }
+![Antoine]({{site.baseurl}}/assets/blog/internships-2021/antoine.webp){: width="300" style="float: left;margin-right: 10px;margin-top: 7px;" }
 
 *Through my studies in engineering school at [ENSEIRB-MATMECA](https://enseirb-matmeca.bordeaux-inp.fr/fr), I satisfy my interest in computer science, though I am also very attracted to art.
 So, I would like to combine the two and use computer science as an artistic tool.*
@@ -73,7 +74,7 @@ Antoine is continuing the work started this year on the remote control for ossia
 <br/>
 <br/>
 
-### Arthur Fourcadet
+#### Arthur Fourcadet
 
 ![Arthur]({{site.baseurl}}/assets/blog/internships-2021/arthur.jpg){: width="300" style="float: right;margin-left: 10px;margin-top: 7px;" }
 

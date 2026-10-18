@@ -5,21 +5,22 @@ date:   2022-12-23
 author: Jean-Michaël
 category: News
 image: /assets/blog/airfiltration/airfiltration.jpeg
+thumbnail: "/assets/blog/airfiltration/airfiltration.webp"
 image-alt: A picture of Air Filtration
 description: Residency for the use of ossia score for Air Filtration
 ---
 
 
-# Case study: scored air filtration in [re]capture
+## Case study: scored air filtration in [re]capture
 
 `[re]capture` (2022) is created by Alice Jarry and her team, consisting of Brice Ammar-Khodja, Jacqui Beaumont, Asa Perlman, Philippe Vandal, and Ariane Plante at Concordia University, where I am currently operating as a postdoctoral fellow.
 
 This post presents a case study on the writing of a score with ossia score for such a complete artwork involving
 a wealth of interesting behaviours, sensors, actuators and protocols. 
 
-![[re]capture]({{site.baseurl}}/assets/blog/airfiltration/airfiltration.jpeg){: width="90%" style="display:block; margin-left:auto; margin-right:auto" }
+![[re]capture]({{site.baseurl}}/assets/blog/airfiltration/airfiltration.webp){: width="90%" style="display:block; margin-left:auto; margin-right:auto" }
 
-# The [re]capture project
+## The [re]capture project
 
 > Exploring the concept of ‘filtration’ using biomaterials, plants, and electronic strategies, [re]capture is a dialogue between in situ atmospheric data capture devices and gallery installation. With air toxicity a growing issue, this ongoing project seeks to give shape to the microscopic invisibility and the macroscopic dimension of air pollution.
 > 
@@ -29,7 +30,7 @@ There are two main physical items involved in this artwork: air quality sensors 
 
 To learn more about the artwork, head straight to the [Materials Materiality research chair website](https://materials-materiality.ca/Air-Filtration-and-Soft-Membranes)
 
-# Prototyping and producing a score
+## Prototyping and producing a score
 
 The general idea for this score is still grounded in experimentation: the production time with the actual entire hardware set-up was a few days ; a big part of which was about learning how to play with the material and physical properties of the piece in order to make it look interesting.
 
@@ -39,23 +40,23 @@ The goal is to leverage the external sensor data to activate the various air fil
 For instance: when the CO² levels of a sensor reach some particular limit, something should happen ; the light intensity could be mapped to the average temperature of all the sensors ; etc.
 These mappings should evolve and vary over time to make the piece more dynamic.
 
-## Connecting ossia to the devices
+### Connecting ossia to the devices
 
 Before doing anything, we have to focus on how score is going to interoperate with the external world for this piece: how are we going to get and process sensor data, and how are we going to control the stepper motors, LEDs, fans  of the main installation.
 
 There are as such two connections: inbound, from the sensors and outbound, to the serial port.
 
-### Input devices
+#### Input devices
 The inbound connection is trivial: it is sufficient to create a new OSC device listening on the port on which the Nomad AirKits emit, 
 and use the OSC learn functionality. The current experiment has three sets of sensors operating, simply identified as `sensors:/<sensor number>/co2`, etc.
 
-### Output devices
+#### Output devices
 
 The outputs are controlled directly through a fairly simple serial protocol: the electronics side of the piece 
 is divided in multiple boards. Each board has multiple controls. 
 All the output modules are handled by this electronic board:
 
-![Electronics board]({{site.baseurl}}/assets/blog/airfiltration/electronics.jpg){: style="display:block; margin-left:auto; margin-right:auto" }
+![Electronics board]({{site.baseurl}}/assets/blog/airfiltration/electronics.webp){: style="display:block; margin-left:auto; margin-right:auto" }
 
 A Nomad AirKit is also pictured above: the tube with the small solar panel sheets.
 
@@ -149,7 +150,7 @@ Ossia.Serial {
 ```
 
 
-## Test cues
+### Test cues
 
 Sensors were not always available: some needed repairing, and their short battery life means that it was not 
 possible to access live air pollution data at all times.
@@ -159,14 +160,14 @@ It is also possible to make a small sub-scenario with a loop in order to have so
 
 ![Simulating sensor input]({{site.baseurl}}/assets/blog/airfiltration/simulator.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-## Experimenting with mappings
+### Experimenting with mappings
 
 Using the "local play" feature was instrumental for quick testing of individual mappings: at any point, it is possible 
 to go inside a mapping sub-scenario and hit "Local play" (the "Play" button in orange, below): only this specific mapping will be executed, which allows to concentrate on making it look nice and interesting.
 
 ![Transport bar]({{site.baseurl}}/assets/blog/airfiltration/transport.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-## Organizing the score
+### Organizing the score
 
 For this score, we chose a triptych organisation. 
 There are three "panels" in the score, which are going to loop over a hour and a half. 
@@ -176,21 +177,21 @@ Each gives a different perspective on the piece and involve different mappings w
 
 The first part contains individual mappings from sensors to modules. The second part is mainly pre-written automations, which are noisified and whose playback speed is altered depending on the external conditions. The last part is mappings from the average state of all the sensors, to all the modules taken together.
 
-## Making it loop
+### Making it loop
 
 As you may know, it is fairly easy to make a score loop forever to run in installation mode, like this: 
 it is done with the graph link, created by dragging from the small red plus icon when selecting the last state of the score.
 
-![Making the score loop]({{site.baseurl}}/assets/blog/airfiltration/loop.gif){: style="display:block; margin-left:auto; margin-right:auto" }
+<picture><source type="image/avif" srcset="{{site.baseurl}}/assets/blog/airfiltration/loop.avif"><img loading="lazy" style="display:block; margin-left:auto; margin-right:auto; max-width:100%" src="{{site.baseurl}}/assets/blog/airfiltration/loop.webp" alt="Making the score loop"/></picture>
 
-## Score experiment: triggering a fan after a motor
+### Score experiment: triggering a fan after a motor
 
 One of the low-level scoring needs of the piece is that the fans should start blowing after the motors trigger in order to make sure 
 that dust is indeed being blown in the tubes. Here's a simple score example of how to do this:
 
 ![Motor behaviour]({{site.baseurl}}/assets/blog/airfiltration/motor.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-## Score experiment: Emergency behaviours
+### Score experiment: Emergency behaviours
 
 One of the various ideas that were experimented with during the prototyping phase was to have a nominal behaviour for the piece, and 
 switch to an "emergency" mode if for instance some sensor data is detected to be too high for human safety. The score shall go back to its nominal mode 
@@ -201,9 +202,9 @@ triggers, conditions, loop transitions...
 
 ![PM25 warning]({{site.baseurl}}/assets/blog/airfiltration/pm25.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-# Mappings
+## Mappings
 
-## Mapping a set of sensor to a module
+### Mapping a set of sensor to a module
 
 In this piece, we have as you remember: 
 
@@ -257,61 +258,61 @@ Each state will change the module used at a given point in time by a board ; it 
 
 This of course calls for some evolutions to ossia score to make this kind of compositional system easier to define and write for: mainly, we are missing the ability to instantiate and remove a given module on the fly and use them as a template.
 
-## Scripting
+### Scripting
 
 The second part of the score uses another approach: the general shape of the parameter evolutions for every module is written manually, in order to try to emphasis a slightly more dramatic narrative that the one we are able to achieve with simple parameter mapping.
 
-![Scripting: automations]({{site.baseurl}}/assets/blog/airfiltration/tableau2.png){: style="display:block; margin-left:auto; margin-right:auto" }
+![Scripting: automations]({{site.baseurl}}/assets/blog/airfiltration/tableau2.webp){: style="display:block; margin-left:auto; margin-right:auto" }
 
 The LED automations are not directly used to control the LEDs ; before, they go through an expression mapper which adds progressively more noise both over time and depending on the external conditions detected by the sensors.
 
-![Scripting: noise]({{site.baseurl}}/assets/blog/airfiltration/tableau2.noise.png){: style="display:block; margin-left:auto; margin-right:auto" }
+![Scripting: noise]({{site.baseurl}}/assets/blog/airfiltration/tableau2.noise.webp){: style="display:block; margin-left:auto; margin-right:auto" }
 
 Finally, we also use an average humidity measure to control the speed at which these automations are being played, by using a tempo process and writing a small mapping.
 In many parts of the score, the Smooth object was extremely useful: the sensors only give updated values every 5-10 seconds on average, which would sometimes give very surprising jumps. Smoothing over a second-ish allows to avoid that.
 
 ![Scripting: tempo control]({{site.baseurl}}/assets/blog/airfiltration/tableau2.tempo.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
-## Global mappings
+### Global mappings
 
 Finally, the last part of our tryptich focuses on mapping averages of our sensor data into communicating behaviour across all the modules.
 For this, we used for instance the Sweeper object described below, which makes a specific behaviour "run" across all the serial modules in a rhythm defined by one of the sensor data.
 Multiple mappings succeed one another. Below, one is pictured: it maps the CO² average of our sensors to both light intensity and circulation speed of the LEDs and fans.
 
-![Global mappings]({{site.baseurl}}/assets/blog/airfiltration/tableau3.module.png){: width="100%" style="display:block; margin-left:auto; margin-right:auto" }
+![Global mappings]({{site.baseurl}}/assets/blog/airfiltration/tableau3.module.webp){: width="100%" style="display:block; margin-left:auto; margin-right:auto" }
 
-## Video mapping
+### Video mapping
 
 The piece also features a video projection of video recordings done at the sites where the Nomad Airkits did air measurements.
 The video feed, captured with a 360° fisheye camera, is re-projected on the artwork. 
 
-### On squishiness and light adjustements
+#### On squishiness and light adjustements
 
 The video projection used made the video too wide: we used a very quick and dirty Video Mapper object to make it more round to fit the artwork. Likewise, some exposure adjust was needed as the video projector we had really wasn't bright enough. Thankfully, ossia score's user library comes with objects for handling this built-in, thanks to the great [ISF library shared by Vidvox](https://github.com/Vidvox/ISF-Files)!
 
 ![Video mappings]({{site.baseurl}}/assets/blog/airfiltration/video-map.png){: width="40%" style="display:block; margin-left:auto; margin-right:auto" }
 
-### Mapping parameters to real-time video filters
+#### Mapping parameters to real-time video filters
 
 In addition, we can of course use parameters from our sensors to adjust the video. For this experiment, we simply mapped the measured temperature to the chromaticity of the displayed picture ; more interesting mappings could very likely be devised over time.
 
 <!-- 
-## Embedding
+### Embedding
 
 
-# Musicality
+## Musicality
 
 Using the stepper motor noise.
 -->
 
-# New objects for pattern control
+## New objects for pattern control
 
 As part of the conception of this artwork, a few new objects made their way into score, which can be generally useful to the community.
 They could be developed very quickly thanks to the magical superpowers of [Avendish](https://celtera.github.io/avendish) which makes writing custom ossia objects an absolute breeze ; the development time for each object was at most one hour for each.
 
 Here's an overview: 
 
-## Calibrator
+### Calibrator
 
 ![Calibrating sensor input]({{site.baseurl}}/assets/blog/airfiltration/calibrator.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
@@ -321,7 +322,7 @@ It also provides some useful statistical analysis tools: mean, variance, lower a
 
 It is available under Control > Mappings in the processes pane.
 
-## Pattern combiner
+### Pattern combiner
 
 ![Combining input patterns]({{site.baseurl}}/assets/blog/airfiltration/combiner.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
@@ -331,7 +332,7 @@ Note that if you just need to get all the messages in succession from a set of O
 
 It is available under Control > Data Processing in the processes pane.
 
-## Pattern applier
+### Pattern applier
 
 ![Applying a list to a pattern]({{site.baseurl}}/assets/blog/airfiltration/applier.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
@@ -347,7 +348,7 @@ It is available under Control > Data Processing in the processes pane.
 Note that if you need to send the same message to every address matching a pattern, no specific object is needed: OSC pattern match expressions
 can already be specified for every output port of score.
 
-## Pattern sweeper
+### Pattern sweeper
 
 ![Sweeping over outputs]({{site.baseurl}}/assets/blog/airfiltration/sweeper.png){: style="display:block; margin-left:auto; margin-right:auto" }
 
@@ -357,6 +358,6 @@ For instance, in the screenshot below, every quarter note, the next address matc
 
 It is available under Control > Data Processing in the processes pane.
 
-# Conclusion
+## Conclusion
 
 Thanks for reading all this! In the end, I must say that I had a lot of fun writing the score for this piece ; it also brought some small usability issues to the spotlight, which will be worked on in further releases.

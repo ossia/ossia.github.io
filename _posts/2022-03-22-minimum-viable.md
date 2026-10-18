@@ -9,7 +9,7 @@ image-alt: Some nifty C++20 code
 description: Techniques for defining a declarative GUI in C++
 ---
 
-# Introducing a "toolkit"
+## Introducing a "toolkit"
 
 Here is the code of a minimal GUI toolkit for defining declarative UIs: 
 
@@ -42,7 +42,7 @@ constexpr struct {
 
 without requiring any custom header. Some yet-unknown .cpp file will include `foo.hpp`, and, no matter what the content of `my_ui` is, will execute a nice user interface from it. Anyone will be able to create independent libraries which will render UIs according to whatever platform-specific intricacies there are, but the actual UI code will be entirely independent from anything: peak separation of concerns is achieved.
 
-## Advanced UI
+### Advanced UI
 
 The code above can be trivially extended to showing not one, but TWO labels:
 
@@ -77,7 +77,7 @@ And we get:
 ![The UI]({{site.baseurl}}/assets/blog/mvp-ui/hbox.png)
 
 
-## Nested UI
+### Nested UI
 
 We may want to imbricate multiple things:
 
@@ -105,7 +105,7 @@ Gives:
 
 We may want to go a bit deeper:
 
-![The UI]({{site.baseurl}}/assets/blog/mvp-ui/complete.gif)
+<picture><source type="image/avif" srcset="{{site.baseurl}}/assets/blog/mvp-ui/complete.avif"><img loading="lazy" src="{{site.baseurl}}/assets/blog/mvp-ui/complete.webp" alt="The complete UI"/></picture>
 
 The controls are pointers to simple structs which define a couple of metadatas in the way mentioned in the [reflection]({{site.baseurl}}/posts/reflection) blogpost.
 
@@ -118,10 +118,10 @@ for a large amount of potential UIs.
 
 To give an example, the screenshots above were taken with a first prototype of renderer which generates QML / QtQuick code (and runs it).
 
-# Trivial UI backends
+## Trivial UI backends
 Here is the exact same UI specification, but rendered with [Nuklear](https://github.com/Immediate-Mode-UI/Nuklear) instead, which is a fairly different UI paradigm code-wise:
 
-![The UI]({{site.baseurl}}/assets/blog/mvp-ui/nuklear.gif)
+<picture><source type="image/avif" srcset="{{site.baseurl}}/assets/blog/mvp-ui/nuklear.avif"><img loading="lazy" src="{{site.baseurl}}/assets/blog/mvp-ui/nuklear.webp" alt="The UI rendered with the Nuklear backend"/></picture>
 
 I have spent an hour on it without prior knowledge of the library and did not find how to do splitters and group boxes well with it, but I'm sure there is a way ! 
 
@@ -183,7 +183,7 @@ void createItem(const Item& item)
 }
 {% endhighlight %}
 
-# Conclusion
+## Conclusion
 
 *Glory to the post-library era and to declarative, struct & enum-based specification !*
 
