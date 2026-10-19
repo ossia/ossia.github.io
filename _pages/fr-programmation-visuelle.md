@@ -3,11 +3,11 @@ layout: use-case
 lang: fr
 title: "Programmation visuelle gratuite : audio, vidéo, interaction"
 headline: "La programmation visuelle, avec une timeline"
-subtitle: "Patchez audio, vidéo, 3D et capteurs avec des nœuds, puis organisez-les dans le temps. ossia score est un complément ou une alternative libre et gratuite à Max/MSP, et il exécute vos patchs Pure Data."
+subtitle: "Patchez audio, vidéo, 3D et capteurs avec des nœuds, puis organisez-les dans le temps. ossia score est libre et gratuit, et il exécute vos patchs Pure Data."
 permalink: /fr/programmation-visuelle.html
 translation: /visual-programming.html
 category: site-score
-description: "Programmation visuelle libre pour l'audio, la vidéo et l'interaction, avec nœuds et timeline. Exécute Pure Data, Faust et JavaScript. Alternative à Max/MSP."
+description: "Programmation visuelle libre pour l'audio, la vidéo et l'interaction, avec nœuds et timeline. Exécute Pure Data, Faust et JavaScript."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -25,14 +25,8 @@ où le patch lui-même évolue dans le temps. On passe de l'une à l'autre à to
 
 <picture><source type="image/avif" srcset="/assets/feature-nodal.avif"><img src="/assets/feature-nodal.webp" width="624" height="340" loading="lazy" alt="Passage de la timeline à la vue nodale dans ossia score"/></picture>
 
-## ossia score face aux environnements de patch
+## Fonctionne avec
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Logiciel</th><th>Choisissez ossia score si…</th><th>Gardez l'autre logiciel si…</th></tr>
-<tr><td><b>Max/MSP</b></td><td>vous voulez un outil libre et gratuit sous Windows, macOS et Linux, ou votre pièce a besoin d'une timeline, de scènes et d'une régie.</td><td>vous dépendez de la bibliothèque d'objets de Max, de Jitter ou de Max for Live. Max et ossia score fonctionnent aussi ensemble : le package ossia pour Max expose vos patchs à score.</td></tr>
-<tr><td><b>Pure Data</b></td><td>vous voulez ajouter une timeline, de la vidéo et de la 3D autour de vos patchs existants : score les exécute.</td><td>le patch léger de Pd vous suffit.</td></tr>
-<tr><td><b>vvvv, Processing, openFrameworks</b></td><td>vous voulez des visuels génératifs et de l'interaction avec peu ou pas de code, synchronisés avec le son et la lumière.</td><td>vous préférez écrire un programme complet ; libossia expose les paramètres d'openFrameworks et de Processing à score.</td></tr>
-<tr><td><b>TouchDesigner</b></td><td>vous voulez un outil libre et gratuit avec timeline, plug-ins audio et régie.</td><td>vous dépendez de son écosystème et de sa communauté ; les deux échangent vidéo et données en NDI, Spout et OSC.</td></tr>
-</table>
-</div>
+- **Pure Data** : score exécute vos patchs existants, et ajoute autour une timeline, de la vidéo et de la 3D.
+- **Votre propre code** : [libossia](/site-libossia/about.html) expose à score les paramètres de patchs Max et Pure Data et de programmes openFrameworks, Processing, Unity ou Python, prêts à être automatisés.
+- **D'autres logiciels** en OSC, NDI, Spout et Syphon.

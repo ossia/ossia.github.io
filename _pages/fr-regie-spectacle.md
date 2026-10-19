@@ -3,11 +3,11 @@ layout: use-case
 lang: fr
 title: "Logiciel de régie de spectacle libre et gratuit"
 headline: "Un logiciel de régie de spectacle libre et gratuit"
-subtitle: "Déclenchez le son, la vidéo, la lumière et n'importe quel appareil OSC ou MIDI depuis une timeline interactive. ossia score fonctionne sous Windows, macOS, Linux et Raspberry Pi : une alternative libre à QLab et aux autres lecteurs de cues."
+subtitle: "Déclenchez le son, la vidéo, la lumière et n'importe quel appareil OSC ou MIDI depuis une timeline interactive. ossia score fonctionne sous Windows, macOS, Linux et Raspberry Pi."
 permalink: /fr/regie-spectacle.html
 translation: /show-control.html
 category: site-score
-description: "Régie de spectacle libre et gratuite pour Windows, macOS et Linux : cues son, vidéo, lumière DMX, OSC et MIDI sur une timeline interactive. Alternative à QLab."
+description: "Régie de spectacle libre et gratuite pour Windows, macOS et Linux : cues son, vidéo, lumière DMX, OSC et MIDI sur une timeline interactive."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -28,16 +28,10 @@ ou réagir aux capteurs et aux interprètes, dans la même conduite.
 
 <img src="/assets/blog/v3-9/scriptable-processes.webp" width="1077" height="650" loading="lazy" alt="Cues et automations de paramètres de processus dans une timeline ossia score"/>
 
-## ossia score face aux lecteurs de cues
+## Bon à savoir
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Logiciel</th><th>Choisissez ossia score si…</th><th>Gardez l'autre logiciel si…</th></tr>
-<tr><td><b>QLab</b> (macOS)</td><td>vous travaillez sous Windows ou Linux, cherchez un outil gratuit, ou voulez un spectacle interactif : conditions, capteurs, scènes à embranchements, vidéo générative et 3D.</td><td>vous voulez une liste de cues linéaire avec un bouton GO et une numérotation de type théâtre : ossia score organise les cues sur une timeline.</td></tr>
-<tr><td><b>Linux Show Player, SCS, Multiplay</b></td><td>vous avez besoin de vidéo, de lumière et d'appareils OSC/MIDI dans le même spectacle, sur n'importe quel système.</td><td>une simple liste de cues son vous suffit.</td></tr>
-<tr><td><b>Bitfocus Companion</b></td><td>vous voulez séquencer du matériel audiovisuel dans le temps : ossia score exécute directement les modules Companion.</td><td>vous avez surtout besoin d'une surface de contrôle Stream Deck ; les deux se complètent bien.</td></tr>
-</table>
-</div>
+- ossia score organise les cues **sur une timeline** plutôt que dans une liste numérotée : un spectacle linéaire est une suite de scènes qui attendent chacune un GO, et un spectacle interactif y ajoute conditions et embranchements.
+- Il exécute directement les **modules Bitfocus Companion** : le matériel audiovisuel pris en charge par Companion peut être séquencé dans le temps.
 
 ossia score ne cherche pas à remplacer tous les outils : il peut aussi piloter vos logiciels existants en OSC ou en MIDI,
 par exemple un serveur média, une console lumière ou une station audionumérique.

@@ -19,7 +19,7 @@ Its novel interactive timeline enables scores written with it to depend on exter
 ossia score is free, libre & open source software and runs on desktop (Windows / macOS / Linux), mobile and embedded.
 It leverages [libossia](../site-libossia/about.html) for its implementation, as well as reputed open-source technologies such as Qt 5, Boost and LLVM. It is written primarily in modern C++.
 
-See how it is used for [show control](/show-control.html), [OSC, MIDI and DMX sequencing](/osc-midi-dmx-timeline.html), [video and projection mapping](/projection-mapping.html), [visual programming](/visual-programming.html), [DMX lighting](/dmx-lighting.html) and [interactive installations](/interactive-installations.html), and [how it compares to other tools](/alternatives.html).
+See how it is used for [show control](/show-control.html), [OSC, MIDI and DMX sequencing](/osc-midi-dmx-timeline.html), [video and projection mapping](/projection-mapping.html), [visual programming](/visual-programming.html), [DMX lighting](/dmx-lighting.html) and [interactive installations](/interactive-installations.html), or [all its uses](/use-cases.html).
 
 <br/>
 <p align="center">

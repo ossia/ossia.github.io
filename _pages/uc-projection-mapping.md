@@ -25,14 +25,7 @@ fulldome shows and audio-reactive visuals, often in the same project as the soun
 
 <img src="/assets/blog/v3-9/feedback-cables.webp" width="1230" height="567" loading="lazy" alt="A reaction-diffusion visual effect patched with feedback cables in ossia score"/>
 
-## ossia score compared to video software
+## Good to know
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Tool</th><th>Choose ossia score when…</th><th>Keep the other tool when…</th></tr>
-<tr><td><b>Millumin, MadMapper, HeavyM</b></td><td>you need Linux or a free tool, or want video, sound, lights and interaction in one timeline.</td><td>you rely on their dedicated mapping editors (masks, LED mapping UIs). ossia score can also drive Millumin over OSC.</td></tr>
-<tr><td><b>Resolume, VDMX</b></td><td>you build a timed or interactive show rather than a live set, or need shaders, 3D and sensors together.</td><td>you perform live with a clip-launching grid: ossia score has no VJ clip grid.</td></tr>
-<tr><td><b>Isadora</b></td><td>you want a free, open-source, cross-platform tool for interactive theatre and dance with cameras and sensors.</td><td>you depend on Isadora's theatre-oriented workflow and actors.</td></tr>
-<tr><td><b>TouchDesigner</b></td><td>you need a free tool without resolution limits, with a timeline and show control built in.</td><td>you rely on TouchDesigner's large ecosystem; the two work together over OSC, NDI or Spout.</td></tr>
-</table>
-</div>
+- ossia score is designed for **written or interactive shows** rather than live clip launching: there is no VJ clip grid, but every visual can be cued, automated and triggered.
+- It exchanges video with other software over **NDI, Spout and Syphon**, and can drive media servers over OSC.

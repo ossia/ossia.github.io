@@ -44,7 +44,9 @@ Here we generate all the categories.
                             <img src="{{ post.thumbnail | default: post.image }}" alt="{{ post.title | escape }}" loading="lazy">
                         </div>
                     {% endif %}
-                    {{ post.excerpt }}
+                    {%- assign summary = post.description | default: "" -%}
+                    {%- if summary == "" -%}{%- assign summary = post.excerpt | strip_html | truncatewords: 50 -%}{%- endif %}
+                    <p>{{ summary }}</p>
             </li>
         {% endfor %}
     </ul>
