@@ -23,14 +23,7 @@ Il convient aux installations, aux concerts avec bandes, aux salles immersives e
 - **Interactivité** : déclenchez et modifiez la lumière depuis des capteurs, des caméras, de l'OSC ou des contrôleurs MIDI.
 - **En autonomie** : fonctionnement sans interface sur un petit ordinateur ou un Raspberry Pi, avec démarrage automatique ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)).
 
-## ossia score face aux logiciels DMX
+## Bon à savoir
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Logiciel</th><th>Choisissez ossia score si…</th><th>Gardez l'autre logiciel si…</th></tr>
-<tr><td><b>QLC+, Freestyler, Lightkey</b></td><td>la lumière doit être précisément synchronisée avec le son, la vidéo ou l'interaction, dans une seule timeline.</td><td>vous jouez la lumière en direct avec une logique de console, des palettes, un moteur d'effets ou un visualiseur 3D.</td></tr>
-<tr><td><b>Consoles lumière</b> (grandMA, ETC Eos…)</td><td>vous voulez envoyer à la console des changements pilotés par les médias ou les capteurs, en OSC, MIDI ou timecode.</td><td>vous exploitez un vrai parc lumière avec un pupitreur : ossia score complète une console, il ne la remplace pas.</td></tr>
-</table>
-</div>
-
-Deux logiciels ne peuvent pas partager le même port Art-Net sur un même ordinateur : si vous utilisez aussi QLC+, utilisez des interfaces réseau ou des machines différentes.
+- ossia score **complète une console lumière**, il ne la remplace pas : avec un vrai parc et un pupitreur, utilisez-le pour envoyer à la console des changements pilotés par les médias ou les capteurs, en OSC, MIDI ou timecode.
+- Deux logiciels ne peuvent pas partager le même port Art-Net sur un même ordinateur : si vous utilisez aussi un autre logiciel DMX, utilisez des interfaces réseau ou des machines différentes.

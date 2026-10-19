@@ -1,17 +1,17 @@
-# Use-case / alternative landing pages, in display order.
+# Use-case landing pages, in display order.
 # Used by the use-case layout (links to the other pages) and the hub pages.
 - key: show-control
-  en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theatre, concerts and events: an open alternative to QLab." }
-  fr: { url: /fr/regie-spectacle.html, title: "Régie de spectacle", blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel : une alternative libre à QLab." }
+  en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theatre, concerts and events." }
+  fr: { url: /fr/regie-spectacle.html, title: "Régie de spectacle", blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel." }
 - key: osc-timeline
-  en: { url: /osc-midi-dmx-timeline.html, title: "OSC, MIDI and DMX timeline", blurb: "Automate any OSC, MIDI or DMX parameter on an interactive timeline, like Vezér or Chataigne." }
-  fr: { url: /fr/timeline-osc-midi-dmx.html, title: "Timeline OSC, MIDI et DMX", blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, comme avec Vezér ou Chataigne." }
+  en: { url: /osc-midi-dmx-timeline.html, title: "OSC, MIDI and DMX timeline", blurb: "Automate any OSC, MIDI or DMX parameter on an interactive timeline, with triggers and conditions." }
+  fr: { url: /fr/timeline-osc-midi-dmx.html, title: "Timeline OSC, MIDI et DMX", blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, avec déclencheurs et conditions." }
 - key: projection-mapping
   en: { url: /projection-mapping.html, title: "Video, mapping and VJing", blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronised with sound and light." }
   fr: { url: /fr/mapping-video.html, title: "Vidéo, mapping et VJing", blurb: "Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière." }
 - key: visual-programming
-  en: { url: /visual-programming.html, title: "Visual programming", blurb: "Patch audio, video and interaction with nodes and a timeline: a free complement or alternative to Max/MSP." }
-  fr: { url: /fr/programmation-visuelle.html, title: "Programmation visuelle", blurb: "Patchez audio, vidéo et interaction avec des nœuds et une timeline : un complément ou une alternative gratuite à Max/MSP." }
+  en: { url: /visual-programming.html, title: "Visual programming", blurb: "Patch audio, video and interaction with nodes and a timeline, and run your Pure Data patches." }
+  fr: { url: /fr/programmation-visuelle.html, title: "Programmation visuelle", blurb: "Patchez audio, vidéo et interaction avec des nœuds et une timeline, et exécutez vos patchs Pure Data." }
 - key: lighting
   en: { url: /dmx-lighting.html, title: "DMX lighting and LEDs", blurb: "Art-Net, sACN and DMX USB with a fixture library, LED pixel mapping, all in sync with sound and video." }
   fr: { url: /fr/eclairage-dmx.html, title: "Éclairage DMX et LED", blurb: "Art-Net, sACN et DMX USB avec une bibliothèque de projecteurs et le pixel mapping LED, synchronisés avec le son et la vidéo." }

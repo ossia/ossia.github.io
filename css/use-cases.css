@@ -1,4 +1,4 @@
-/* Use-case and alternative landing pages */
+/* Use-case landing pages */
 .use-case-header {
     padding-top: 4em;
     text-align: center;
@@ -53,24 +53,6 @@
     color: #595959;
     margin-top: -0.5em;
 }
-.comparison {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0 1.5em 0;
-    font-size: 0.95em;
-}
-.comparison th, .comparison td {
-    border: 1px solid #d6d6d6;
-    padding: 0.6em 0.8em;
-    text-align: left;
-    vertical-align: top;
-}
-.comparison th {
-    background: rgba(88, 184, 197, 0.15);
-}
-.comparison-scroll {
-    overflow-x: auto;
-}
 .use-case-others {
     margin-top: 2em;
     padding-top: 1em;
@@ -108,8 +90,5 @@
     .use-case-cta .page-button {
         width: 100%;
         text-align: center;
-    }
-    .comparison {
-        min-width: 34em;
     }
 }

@@ -25,15 +25,10 @@ ossia score is used in museums, exhibitions, art residencies and research labs f
 
 <picture><source type="image/avif" srcset="/assets/features/gamepad.avif"><img src="/assets/features/gamepad.webp" width="320" height="270" loading="lazy" alt="A gamepad controlling parameters in ossia score"/></picture>
 
-## ossia score compared to other installation setups
+## Good to know
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Setup</th><th>Choose ossia score when…</th><th>Keep the other tool when…</th></tr>
-<tr><td><b>A DAW</b> (Ableton Live, Reaper, Bitwig) running a sound installation</td><td>the installation must react to visitors, include video or lights, or run headless on a Raspberry Pi.</td><td>you produce and mix music: ossia score is not a production DAW.</td></tr>
-<tr><td><b>Media players</b> (BrightSign-type players, looping video players)</td><td>you need interaction, sound spatialisation or synchronised lights, on affordable hardware.</td><td>you only loop one video file.</td></tr>
-<tr><td><b>Custom code</b> (Python, openFrameworks, Unity…)</td><td>you want artists and technicians to adjust the piece without programming, while keeping scripting for specific parts.</td><td>the piece is essentially a game or a fully custom application; libossia can still expose its parameters to score.</td></tr>
-</table>
-</div>
+- ossia score is **not a music production DAW**: use it to play, spatialise and make the sound react, and produce the material in your usual tools.
+- It suits pieces that artists and technicians must adjust **without programming**, while keeping scripting (JavaScript, Faust, shaders, C++) for specific parts.
+- For fully custom applications, [libossia](/site-libossia/about.html) can expose their parameters to score.
 
 See the [gallery](/gallery.html) for installations made with ossia score.

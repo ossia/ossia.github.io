@@ -2,11 +2,11 @@
 layout: use-case
 title: "Free show control software for Windows, macOS and Linux"
 headline: "Show control software, free and open-source"
-subtitle: "Cue sound, video, lights and any OSC or MIDI device from one interactive timeline. ossia score runs on Windows, macOS, Linux and Raspberry Pi: an open alternative to QLab and other cue players."
+subtitle: "Cue sound, video, lights and any OSC or MIDI device from one interactive timeline. ossia score runs on Windows, macOS, Linux and Raspberry Pi."
 permalink: /show-control.html
 translation: /fr/regie-spectacle.html
 category: site-score
-description: "Free, open-source show control software for Windows, macOS and Linux: cue sound, video, DMX lights, OSC and MIDI on an interactive timeline. An alternative to QLab."
+description: "Free, open-source show control software for Windows, macOS and Linux: cue sound, video, DMX lights, OSC and MIDI on an interactive timeline."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -27,16 +27,10 @@ or react to sensors and performers — all in the same score.
 
 <img src="/assets/blog/v3-9/scriptable-processes.webp" width="1077" height="650" loading="lazy" alt="Cues and automations of process parameters in an ossia score timeline"/>
 
-## ossia score compared to cue players
+## Good to know
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Tool</th><th>Choose ossia score when…</th><th>Keep the other tool when…</th></tr>
-<tr><td><b>QLab</b> (macOS)</td><td>you work on Windows or Linux, need a free tool, or want interactive shows: conditions, sensors, branching scenes, generative video and 3D.</td><td>you want a linear cue list with a GO button and theatre-style cue numbering: score organises cues on a timeline instead.</td></tr>
-<tr><td><b>Linux Show Player, SCS, Multiplay</b></td><td>you need video, lights and OSC/MIDI devices in the same show, on any operating system.</td><td>you only need a simple list of sound cues.</td></tr>
-<tr><td><b>Bitfocus Companion</b></td><td>you want to sequence AV equipment over time: score runs Companion modules directly.</td><td>you mainly need a Stream Deck control surface; both work well together.</td></tr>
-</table>
-</div>
+- ossia score organises cues **on a timeline** rather than in a numbered cue list: a linear show is a sequence of scenes, each waiting for a GO, and an interactive one adds conditions and branches.
+- It runs **Bitfocus Companion modules** directly, so the AV equipment Companion supports can be sequenced over time.
 
 ossia score does not try to replace every tool: it can also sit next to your existing software and drive it over OSC or MIDI —
 for instance a media server, a lighting console or a DAW.

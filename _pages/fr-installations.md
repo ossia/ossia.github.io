@@ -26,15 +26,10 @@ ossia score est utilisé pour cela dans des musées, des expositions, des résid
 
 <picture><source type="image/avif" srcset="/assets/features/gamepad.avif"><img src="/assets/features/gamepad.webp" width="320" height="270" loading="lazy" alt="Une manette de jeu qui contrôle des paramètres dans ossia score"/></picture>
 
-## ossia score face aux autres solutions
+## Bon à savoir
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Solution</th><th>Choisissez ossia score si…</th><th>Gardez l'autre outil si…</th></tr>
-<tr><td><b>Une station audionumérique</b> (Ableton Live, Reaper, Bitwig) pour une installation sonore</td><td>l'installation doit réagir au public, inclure de la vidéo ou de la lumière, ou tourner sans écran sur un Raspberry Pi.</td><td>vous produisez et mixez de la musique : ossia score n'est pas une station de production.</td></tr>
-<tr><td><b>Lecteurs média</b> (type BrightSign, lecteurs vidéo en boucle)</td><td>vous avez besoin d'interaction, de son spatialisé ou de lumière synchronisée, sur du matériel abordable.</td><td>vous bouclez simplement une vidéo.</td></tr>
-<tr><td><b>Code sur mesure</b> (Python, openFrameworks, Unity…)</td><td>vous voulez que les artistes et techniciens puissent ajuster l'œuvre sans programmer, tout en gardant du script pour certaines parties.</td><td>l'œuvre est essentiellement un jeu ou une application sur mesure ; libossia peut quand même exposer ses paramètres à score.</td></tr>
-</table>
-</div>
+- ossia score **n'est pas une station de production musicale** : il sert à jouer, spatialiser et faire réagir le son, que vous produisez avec vos outils habituels.
+- Il convient aux œuvres que les artistes et techniciens doivent pouvoir ajuster **sans programmer**, tout en gardant du script (JavaScript, Faust, shaders, C++) pour certaines parties.
+- Pour une application entièrement sur mesure, [libossia](/site-libossia/about.html) peut exposer ses paramètres à score.
 
 Voyez la [galerie](/gallery.html) des installations réalisées avec ossia score.

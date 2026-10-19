@@ -26,14 +26,7 @@ aux spectacles en fulldome et aux visuels réactifs au son, souvent dans le mêm
 
 <img src="/assets/blog/v3-9/feedback-cables.webp" width="1230" height="567" loading="lazy" alt="Un effet de réaction-diffusion réalisé avec des câbles de rétroaction dans ossia score"/>
 
-## ossia score face aux logiciels vidéo
+## Bon à savoir
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Logiciel</th><th>Choisissez ossia score si…</th><th>Gardez l'autre logiciel si…</th></tr>
-<tr><td><b>Millumin, MadMapper, HeavyM</b></td><td>vous avez besoin de Linux ou d'un outil gratuit, ou voulez vidéo, son, lumière et interaction dans une seule timeline.</td><td>vous dépendez de leurs éditeurs de mapping dédiés (masques, mapping LED). ossia score peut aussi piloter Millumin en OSC.</td></tr>
-<tr><td><b>Resolume, VDMX</b></td><td>vous construisez un spectacle écrit ou interactif plutôt qu'un set live, ou avez besoin de shaders, de 3D et de capteurs ensemble.</td><td>vous performez en live avec une grille de clips : ossia score n'a pas de grille de clips VJ.</td></tr>
-<tr><td><b>Isadora</b></td><td>vous voulez un outil libre, gratuit et multiplateforme pour le théâtre et la danse interactifs, avec caméras et capteurs.</td><td>vous dépendez du fonctionnement d'Isadora, pensé pour le théâtre.</td></tr>
-<tr><td><b>TouchDesigner</b></td><td>vous voulez un outil gratuit sans limite de résolution, avec timeline et régie intégrées.</td><td>vous dépendez de l'écosystème de TouchDesigner ; les deux fonctionnent ensemble en OSC, NDI ou Spout.</td></tr>
-</table>
-</div>
+- ossia score est pensé pour des **spectacles écrits ou interactifs** plutôt que pour le lancement de clips en direct : il n'a pas de grille de clips VJ, mais chaque visuel peut être mis en cue, automatisé et déclenché.
+- Il échange de la vidéo avec d'autres logiciels en **NDI, Spout et Syphon**, et peut piloter des serveurs média en OSC.

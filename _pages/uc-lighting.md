@@ -22,14 +22,7 @@ It is a good fit for installations, concerts with backing tracks, immersive room
 - **Interactivity**: trigger and change lighting from sensors, cameras, OSC or MIDI controllers.
 - **Unattended**: run headless on a small computer or a Raspberry Pi, starting automatically ([headless mode](https://ossia.io/score-docs/faq/nogui.html)).
 
-## ossia score compared to DMX software
+## Good to know
 
-<div class="comparison-scroll">
-<table class="comparison">
-<tr><th>Tool</th><th>Choose ossia score when…</th><th>Keep the other tool when…</th></tr>
-<tr><td><b>QLC+, Freestyler, Lightkey</b></td><td>lights must be precisely synchronised with sound, video or interaction, in one timeline.</td><td>you operate lights live with a console-style workflow, palettes, an effects engine or a 3D visualiser.</td></tr>
-<tr><td><b>Lighting consoles</b> (grandMA, ETC Eos…)</td><td>you want to send media-driven or sensor-driven changes to the console over OSC, MIDI or timecode.</td><td>you run a full lighting rig with an operator: ossia score complements a console, it does not replace one.</td></tr>
-</table>
-</div>
-
-Note that two programs cannot share the same Art-Net port on one computer: if you also use QLC+, run them on different interfaces or machines.
+- ossia score **complements a lighting console**, it does not replace one: with a full rig and an operator, use it to send media-driven or sensor-driven changes to the console over OSC, MIDI or timecode.
+- Two programs cannot share the same Art-Net port on one computer: if you also use other DMX software, run them on different network interfaces or machines.
