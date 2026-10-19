@@ -12,14 +12,27 @@ image: /assets/social/ossia-score-og.jpg
 ---
 
 ossia score est un **séquenceur intermédia** : il réunit son, vidéo, 3D, lumière, capteurs et n'importe quel appareil OSC ou MIDI sur une même timeline interactive.
-Il ne cherche pas à tout remplacer : il pilote souvent les logiciels que vous utilisez déjà.
-Mais pour beaucoup de projets, il suffit à lui seul.
+Pour beaucoup de projets, il suffit à lui seul, de la première esquisse au spectacle ; et quand vous avez déjà d'autres logiciels ou matériels, il les pilote aussi.
 
 <ul class="use-case-hub">
 {% for uc in site.data.use_cases %}
   <li><a href="{{ uc.fr.url }}">{{ uc.fr.title }}</a><br/>{{ uc.fr.blurb }}</li>
 {% endfor %}
 </ul>
+
+## En bref
+
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>Si vous devez…</th><th>ossia score vous offre</th></tr>
+<tr><td>conduire un spectacle de théâtre, de danse ou un concert</td><td>une <a href="/fr/regie-spectacle.html">régie</a> avec cues, scènes, timecode, et de l'interactivité quand le spectacle en a besoin.</td></tr>
+<tr><td>automatiser des paramètres OSC, MIDI ou DMX dans le temps</td><td>une <a href="/fr/timeline-osc-midi-dmx.html">timeline OSC, MIDI et DMX</a> avec déclencheurs, conditions et OSCQuery.</td></tr>
+<tr><td>lire, projeter ou générer de la vidéo</td><td><a href="/fr/mapping-video.html">vidéo, mapping et visuels génératifs</a>, avec shaders et 3D, pour des spectacles écrits ou interactifs.</td></tr>
+<tr><td>patcher audio, vidéo et interaction</td><td>un environnement de <a href="/fr/programmation-visuelle.html">programmation visuelle</a> avec timeline, qui exécute aussi les patchs Pure Data.</td></tr>
+<tr><td>éclairer un spectacle ou une installation</td><td>le <a href="/fr/eclairage-dmx.html">pilotage DMX et LED</a>, synchronisé avec le son et la vidéo.</td></tr>
+<tr><td>créer une installation interactive ou sonore</td><td>un outil pour les <a href="/fr/installations-interactives.html">installations</a>, en autonomie sur PC ou Raspberry Pi.</td></tr>
+</table>
+</div>
 
 ## Pourquoi ossia score
 

@@ -26,10 +26,17 @@ ossia score est utilisé pour cela dans des musées, des expositions, des résid
 
 <picture><source type="image/avif" srcset="/assets/features/gamepad.avif"><img src="/assets/features/gamepad.webp" width="320" height="270" loading="lazy" alt="Une manette de jeu qui contrôle des paramètres dans ossia score"/></picture>
 
-## Bon à savoir
+## Les besoins d'une installation, et les réponses d'ossia score
 
-- ossia score **n'est pas une station de production musicale** : il sert à jouer, spatialiser et faire réagir le son, que vous produisez avec vos outils habituels.
-- Il convient aux œuvres que les artistes et techniciens doivent pouvoir ajuster **sans programmer**, tout en gardant du script (JavaScript, Faust, shaders, C++) pour certaines parties.
-- Pour une application entièrement sur mesure, [libossia](/site-libossia/about.html) peut exposer ses paramètres à score.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<tr><td>Une œuvre sonore ou vidéo qui réagit aux visiteurs</td><td>Capteurs, caméras de profondeur et vision par ordinateur pilotent états, conditions et boucles au lieu d'une playlist.</td></tr>
+<tr><td>Vidéo, lumière et son spatialisé dans une même œuvre</td><td>Un seul projet pour l'audio multicanal et spatialisé, la vidéo, la 3D et le DMX.</td></tr>
+<tr><td>Tourner des mois sur du matériel abordable</td><td>Mode sans interface avec lecture automatique, Raspberry Pi et Linux embarqué, applications autonomes pour bornes.</td></tr>
+<tr><td>Laisser artistes et techniciens ajuster l'œuvre sans programmer</td><td>Une timeline et un patcher visuels, avec JavaScript, Faust, shaders ou C++ pour les parties spécifiques.</td></tr>
+<tr><td>Intégrer une application sur mesure</td><td><a href="/site-libossia/about.html">libossia</a> expose ses paramètres à score.</td></tr>
+</table>
+</div>
 
 Voyez la [galerie](/gallery.html) des installations réalisées avec ossia score.

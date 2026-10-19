@@ -27,13 +27,22 @@ or react to sensors and performers — all in the same score.
 
 <img src="/assets/blog/v3-9/scriptable-processes.webp" width="1077" height="650" loading="lazy" alt="Cues and automations of process parameters in an ossia score timeline"/>
 
-## Good to know
+## Show control needs, and how ossia score answers them
 
-- ossia score organises cues **on a timeline** rather than in a numbered cue list: a linear show is a sequence of scenes, each waiting for a GO, and an interactive one adds conditions and branches.
-- It runs **Bitfocus Companion modules** directly, so the AV equipment Companion supports can be sequenced over time.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<tr><td>A sequence of cues, each started with GO</td><td>Scenes that each wait for a GO from the keyboard, a MIDI controller, OSC or a browser, and <i>Play from here</i> to restart anywhere.</td></tr>
+<tr><td>Running on Windows, Linux or a Raspberry Pi, with no licence to buy</td><td>Free and open-source on every operating system, with the same features everywhere.</td></tr>
+<tr><td>Shows that react to performers or the audience</td><td>Triggers, conditions and branching scenes, fed by sensors, cameras, tracking systems or any OSC or MIDI message.</td></tr>
+<tr><td>Sound, video and lights in one show file</td><td>Multichannel sound, video, 3D, DMX lights and OSC/MIDI devices on the same timeline.</td></tr>
+<tr><td>Controlling AV equipment: projectors, video switchers, cameras</td><td>Bitfocus Companion modules run directly inside ossia score.</td></tr>
+<tr><td>Following timecode</td><td>LTC in and out, MIDI clock and MIDI timecode.</td></tr>
+</table>
+</div>
 
-ossia score does not try to replace every tool: it can also sit next to your existing software and drive it over OSC or MIDI —
-for instance a media server, a lighting console or a DAW.
+ossia score can run a whole show on its own, and it can also drive the software and hardware you already have over OSC, MIDI or DMX —
+for instance a media server, a lighting desk or a DAW.
 
 ## Who uses it
 
