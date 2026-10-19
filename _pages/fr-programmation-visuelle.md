@@ -25,8 +25,15 @@ où le patch lui-même évolue dans le temps. On passe de l'une à l'autre à to
 
 <picture><source type="image/avif" srcset="/assets/feature-nodal.avif"><img src="/assets/feature-nodal.webp" width="624" height="340" loading="lazy" alt="Passage de la timeline à la vue nodale dans ossia score"/></picture>
 
-## Fonctionne avec
+## Les besoins du patch, et les réponses d'ossia score
 
-- **Pure Data** : score exécute vos patchs existants, et ajoute autour une timeline, de la vidéo et de la 3D.
-- **Votre propre code** : [libossia](/site-libossia/about.html) expose à score les paramètres de patchs Max et Pure Data et de programmes openFrameworks, Processing, Unity ou Python, prêts à être automatisés.
-- **D'autres logiciels** en OSC, NDI, Spout et Syphon.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<tr><td>Un environnement de patch gratuit sous Windows, macOS et Linux</td><td>Libre (GPLv3), avec des objets audio, vidéo, 3D et de contrôle.</td></tr>
+<tr><td>Organiser un patch dans le temps : scènes, sections, régie</td><td>Le patch vit dans une timeline, avec scènes, cues, déclencheurs et conditions.</td></tr>
+<tr><td>Réutiliser des patchs Pure Data existants</td><td>ossia score les exécute directement, et ajoute autour une timeline, de la vidéo et de la 3D.</td></tr>
+<tr><td>Des visuels génératifs et de l'interaction avec peu ou pas de code</td><td>Shaders, vision par ordinateur et objets ONNX, avec JavaScript, Faust ou C++ si besoin.</td></tr>
+<tr><td>Exposer vos propres programmes et patchs</td><td><a href="/site-libossia/about.html">libossia</a> rend pilotables depuis score des patchs Max et Pure Data et des programmes openFrameworks, Processing, Unity ou Python.</td></tr>
+</table>
+</div>

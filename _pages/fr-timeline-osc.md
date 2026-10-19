@@ -26,10 +26,19 @@ enregistrer, transformer et écrire dans le temps. Il sert à piloter des patchs
 
 <picture><source type="image/avif" srcset="/assets/feature-interaction.avif"><img src="/assets/feature-interaction.webp" width="580" height="452" loading="lazy" alt="Une timeline interactive où un déclencheur attend un événement externe dans ossia score"/></picture>
 
-## Bon à savoir
+## Les besoins du séquençage OSC, et les réponses d'ossia score
 
-- Au-delà de l'automation linéaire, une timeline peut **attendre, bifurquer et boucler**, et contenir son, vidéo et 3D à côté des données de contrôle.
-- La **télécommande web** offre une surface de contrôle simple sur téléphone ou tablette, sans application à installer.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<tr><td>Automatiser dans le temps les paramètres d'un autre logiciel</td><td>Des courbes sur n'importe quelle adresse OSC, MIDI ou DMX, et OSCQuery pour parcourir les paramètres au lieu de les taper.</td></tr>
+<tr><td>Le même outil sous Windows, macOS et Linux</td><td>Les mêmes fonctions sur les trois, et sur Raspberry Pi.</td></tr>
+<tr><td>Une timeline qui attend des événements, bifurque et boucle</td><td>Déclencheurs, conditions et boucles font partie de la timeline.</td></tr>
+<tr><td>Transformer contrôleurs et capteurs en OSC</td><td>Manettes, contrôleurs MIDI, Arduino, caméras de profondeur et systèmes de tracking, transformés avec des courbes, du JavaScript ou des expressions.</td></tr>
+<tr><td>Du son et de la vidéo à côté des données de contrôle</td><td>Audio, vidéo, 3D et shaders dans la même timeline que vos automations OSC, MIDI et DMX.</td></tr>
+<tr><td>Une surface de contrôle simple sur téléphone ou tablette</td><td>La télécommande web, sans application à installer.</td></tr>
+</table>
+</div>
 
 ## Fonctionne avec
 

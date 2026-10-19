@@ -10,8 +10,8 @@ description: "Free DMX software for Windows, macOS, Linux and Raspberry Pi: Art-
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score is not a lighting console: it is a timeline where lights live next to sound, video and interaction.
-It is a good fit for installations, concerts with backing tracks, immersive rooms and LED art, where lights must follow the media precisely.
+ossia score drives DMX fixtures and LEDs directly: it can run all the lights of a show or an installation, on the same timeline as sound, video and interaction.
+It is a good fit for theatre and dance, concerts, immersive rooms, installations and LED art, wherever lights must follow the media precisely.
 
 ## What you can do
 
@@ -22,7 +22,17 @@ It is a good fit for installations, concerts with backing tracks, immersive room
 - **Interactivity**: trigger and change lighting from sensors, cameras, OSC or MIDI controllers.
 - **Unattended**: run headless on a small computer or a Raspberry Pi, starting automatically ([headless mode](https://ossia.io/score-docs/faq/nogui.html)).
 
-## Good to know
+## Lighting needs, and how ossia score answers them
 
-- ossia score **complements a lighting console**, it does not replace one: with a full rig and an operator, use it to send media-driven or sensor-driven changes to the console over OSC, MIDI or timecode.
-- Two programs cannot share the same Art-Net port on one computer: if you also use other DMX software, run them on different network interfaces or machines.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<tr><td>Running the lights of a show or an installation, with no other lighting software</td><td>DMX straight from ossia score over Art-Net, sACN or DMX USB, with a fixture library, cues and curves.</td></tr>
+<tr><td>Lights precisely synchronised with sound and video</td><td>Lights, sound and video share one timeline and one clock.</td></tr>
+<tr><td>LED strips and pixel effects</td><td>LED patterns from shaders or arrays, and NeoPixel strips over SPI from a Raspberry Pi.</td></tr>
+<tr><td>Lights that react to music, sensors or performers</td><td>Audio analysis, beat tracking, sensors, cameras, OSC and MIDI can drive any fixture parameter.</td></tr>
+<tr><td>A permanent installation on small hardware</td><td>Headless mode with autostart, on a mini PC or a Raspberry Pi.</td></tr>
+</table>
+</div>
+
+Two programs cannot share the same Art-Net port on one computer: if you also use other DMX software, run them on different network interfaces or machines.

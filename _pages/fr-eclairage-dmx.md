@@ -11,8 +11,8 @@ description: "Logiciel DMX libre pour Windows, macOS, Linux et Raspberry Pi : Ar
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score n'est pas une console lumière : c'est une timeline où la lumière vit à côté du son, de la vidéo et de l'interaction.
-Il convient aux installations, aux concerts avec bandes, aux salles immersives et à l'art lumineux, quand la lumière doit suivre précisément les médias.
+ossia score pilote directement projecteurs DMX et LED : il peut conduire toute la lumière d'un spectacle ou d'une installation, sur la même timeline que le son, la vidéo et l'interaction.
+Il convient au théâtre et à la danse, aux concerts, aux salles immersives, aux installations et à l'art lumineux, partout où la lumière doit suivre précisément les médias.
 
 ## Ce que vous pouvez faire
 
@@ -23,7 +23,17 @@ Il convient aux installations, aux concerts avec bandes, aux salles immersives e
 - **Interactivité** : déclenchez et modifiez la lumière depuis des capteurs, des caméras, de l'OSC ou des contrôleurs MIDI.
 - **En autonomie** : fonctionnement sans interface sur un petit ordinateur ou un Raspberry Pi, avec démarrage automatique ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)).
 
-## Bon à savoir
+## Les besoins de la lumière, et les réponses d'ossia score
 
-- ossia score **complète une console lumière**, il ne la remplace pas : avec un vrai parc et un pupitreur, utilisez-le pour envoyer à la console des changements pilotés par les médias ou les capteurs, en OSC, MIDI ou timecode.
-- Deux logiciels ne peuvent pas partager le même port Art-Net sur un même ordinateur : si vous utilisez aussi un autre logiciel DMX, utilisez des interfaces réseau ou des machines différentes.
+<div class="comparison-scroll">
+<table class="comparison">
+<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<tr><td>Conduire la lumière d'un spectacle ou d'une installation, sans autre logiciel lumière</td><td>Le DMX directement depuis ossia score en Art-Net, sACN ou DMX USB, avec bibliothèque de projecteurs, cues et courbes.</td></tr>
+<tr><td>Une lumière précisément synchronisée avec le son et la vidéo</td><td>Lumière, son et vidéo partagent une timeline et une horloge.</td></tr>
+<tr><td>Des rubans LED et des effets de pixels</td><td>Motifs LED depuis des shaders ou des tableaux, et rubans NeoPixel en SPI depuis un Raspberry Pi.</td></tr>
+<tr><td>Une lumière qui réagit à la musique, aux capteurs ou aux interprètes</td><td>Analyse audio, détection de tempo, capteurs, caméras, OSC et MIDI pilotent n'importe quel paramètre de projecteur.</td></tr>
+<tr><td>Une installation permanente sur du petit matériel</td><td>Mode sans interface avec démarrage automatique, sur un mini-PC ou un Raspberry Pi.</td></tr>
+</table>
+</div>
+
+Deux logiciels ne peuvent pas partager le même port Art-Net sur un même ordinateur : si vous utilisez aussi un autre logiciel DMX, utilisez des interfaces réseau ou des machines différentes.
