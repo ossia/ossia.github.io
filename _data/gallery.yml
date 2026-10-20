@@ -1,0 +1,490 @@
+# Works made with ossia, shown on /gallery.html.
+# Entries with an `image` become cards; the others go in the "More works" table.
+# Order is the display order (newest first, then earlier works).
+#
+# Fields:
+#   title, artists          required
+#   year, place             optional, shown as "year · place"
+#   url                     main link (artist / project page)
+#   links                   optional extra links: [{label, url}]
+#   image                   file name in assets/gallery/
+#   credit                  photo credit, shown small in the image corner
+#   ossia                   what ossia did in the work
+#   award                   optional highlight line
+#   kind                    list of: installation, performance, stage, museum, education
+#   featured                true: double-width card
+#   sat                     true: made in collaboration with SAT (Société des arts technologiques)
+
+- title: "EarthBound Futures"
+  artists: "EarthBound Futures"
+  place: "Montréal"
+  url: https://www.earthboundfutures.com/
+  image: earthbound-futures.webp
+  ossia: "Show control for a live performance mixing wrestling, music and theatre"
+  kind: [performance, stage]
+
+- title: "The Most Dangerous Games We (Might) Play"
+  artists: "Éva B.Csonka, in collaboration with Pía Baltazar"
+  year: "2026"
+  place: "EMAP residency, iMAL, Brussels"
+  url: https://www.imal.org/fr/events/eva-pia
+  image: csonka-dangerous-games.webp
+  kind: [performance]
+
+- title: "Reflet"
+  artists: "Noukii (Anouk Ethier), Isabella Salas, Allison Moore, with RE-AK and Gradiant"
+  year: "2025–2026"
+  place: "SAT, Montréal"
+  image: reflet.webp
+  credit: Agustina Isidori
+  ossia: "Show logic and real-time generative imagery (StreamDiffusion with LoRAs trained on the artists' work)"
+  sat: true
+  kind: [installation]
+
+- title: "Constant Points of Data"
+  artists: "Indistinct voices over PA"
+  year: "2026"
+  url: https://www.creativeapplications.net/member/constant-points-of-data-indistinct-voices-over-pa/
+  links:
+    - label: Bandcamp
+      url: https://indistinctvoices.bandcamp.com/album/constant-points-of-data
+  image: constant-points-of-data.webp
+  ossia: "Turntablism and elastic tempo manipulation for audiovisual performance, with Ableton Live, Max/Jitter and score"
+  kind: [performance]
+
+- title: "flux opératoires"
+  artists: "Philippe Vandal"
+  year: "2026"
+  url: https://vimeo.com/1233840973
+  image: vandal-flux-operatoires.webp
+  kind: [installation]
+
+- title: "Résilience des bois"
+  artists: "Shabnam Zeraati, Gilnaz Arzpeyma, Zahra Nabavi"
+  year: "2026"
+  place: "Atelier Circulaire, Montréal"
+  url: https://ateliercirculaire.org/project/resiliencedesbois/
+  image: resilience-des-bois.webp
+  credit: Jean-Michael Séminaro
+  ossia: "Five-projector video mapping, running on a single older Mac"
+  sat: true
+  kind: [installation]
+
+- title: "Organism + Excitable Chaos / Organism in Turbulence"
+  artists: "Navid Navab & Garnet Willis"
+  year: "2024–2026"
+  place: "Ars Electronica, ELEKTRA, MaerzMusik, iMAL…"
+  url: https://www.navidnavab.com/organism-excitable-chaos
+  image: organism.webp
+  credit: Miha Godec
+  award: "Golden Nica, Prix Ars Electronica 2025"
+  ossia: "Network communication between the pendulum and the computers with ossia-max"
+  sat: true
+  kind: [installation, performance]
+  featured: true
+
+- title: "On Air"
+  artists: "Peter van Haaften, Michael Montanaro, Garnet Willis"
+  year: "2025"
+  place: "ELEKTRA Montréal, Ars Electronica, Biennale Némo Paris"
+  url: https://petervanhaaften.net/works/onair
+  image: on-air.webp
+  credit: Jonathan Goulet
+  award: "Honorary Mention, Prix Ars Electronica 2025"
+  ossia: "ossia-max"
+  kind: [installation]
+
+- title: "spectral narratives"
+  artists: "Philippe Vandal"
+  year: "2025"
+  place: "Eisode, Montréal"
+  url: https://philippevandal.github.io/
+  image: vandal-spectral-narratives.webp
+  ossia: "Four glass and solvent modules sequenced with score"
+  kind: [installation]
+
+- title: "BioSynth light show"
+  artists: "Erin Gee"
+  year: "2025"
+  url: https://eringee.net
+  image: erin-show.webp
+  ossia: "LED / DMX lighting console in score, running headless on a Raspberry Pi, driven by biosignals"
+  sat: true
+  kind: [performance]
+
+- title: "Our Bodies Know More Than We Do"
+  artists: "Psʌnía (Pía Baltazar & Sunjeong Hwang)"
+  year: "2025"
+  place: "WeSA Jeju residency, Daejeon"
+  url: https://www.baltazar.studio/art/our-bodies
+  image: pia-ourbodies.webp
+  ossia: "Gestural interface: the two performers' movements drive sound and light"
+  kind: [performance]
+
+- title: "Some Light in the Crumbling"
+  artists: "Pía Baltazar & Saba Alizadeh"
+  year: "2025"
+  place: "Saint-Rémi Church, Molenbeek, Brussels"
+  url: https://www.baltazar.studio/art/somelightinthecrumbling
+  image: pia-somelight.webp
+  ossia: "Site-specific concert with loudspeakers spread through the church"
+  kind: [performance]
+
+- title: "The Ripples of Consequence"
+  artists: "Pía Baltazar, performed by Audréanne Filion"
+  year: "2025"
+  place: "Le Vivier, Édifice Wilder, Montréal"
+  url: https://www.baltazar.studio/art/ripples
+  image: pia-ripples.webp
+  ossia: "Composition for the Table de Babel (Totem Contemporain)"
+  kind: [performance]
+
+- title: "On the Edge"
+  artists: "Kasey Pocius"
+  year: "2024"
+  place: "Sound Symposium XXI, St. John's"
+  url: https://www.youtube.com/watch?v=M_nGusbX8zM
+  image: pocius-on-the-edge.webp
+  ossia: "Audiovisual work for video, T-Stick and surround sound"
+  kind: [performance]
+
+- title: "VIBH2O / VIB.E-MOTION"
+  artists: "Fheel Concepts / Corinne Linder"
+  year: "2024"
+  place: "SAT, Altigone, Quai des Savoirs (Toulouse)"
+  url: https://quaidessavoirs.toulouse-metropole.fr/2025/01/10/lemotion-comme-donnee-scenique-fheel-concepts/
+  image: vibh2o.webp
+  credit: Emmanuel Grimault
+  ossia: "Participatory circus performance driven by audience heart rates (Bluetooth sensors); network and sound in score"
+  sat: true
+  kind: [stage]
+
+- title: "A Breathing Void"
+  artists: "Pía Baltazar"
+  year: "2024"
+  place: "Centre Clark, Montréal"
+  url: https://www.baltazar.studio/art/abreathingvoid
+  image: pia-breathing.webp
+  ossia: "Veil of plastic animated by fans, LED lights and spatialised sound"
+  kind: [installation]
+
+- title: "METAscène"
+  artists: "OARA / SCRIME. Music by György Kurtág Jr., spatialisation with Pía Baltazar and Joseph Larralde"
+  year: "2024–"
+  place: "MÉCA, Bordeaux"
+  url: https://oara.fr/metascene/
+  image: metascene.webp
+  credit: OARA
+  ossia: "50+ channels of spatialised sound, three video screens and lighting, all run from score"
+  sat: true
+  kind: [installation]
+  featured: true
+
+- title: "En, Sur et Face"
+  artists: "Brice Ammar-Khodja"
+  year: "2024"
+  place: "Perte de Signal, Montréal"
+  url: https://b-ak.com/projects/en-sur-et-face/
+  image: en-sur-et-face.webp
+  credit: Brice Ammar-Khodja
+  ossia: "score on Orange Pi + ESP32 for sound, light and scent"
+  sat: true
+  kind: [installation]
+
+- title: "Ballets Résiduels"
+  artists: "Brice Ammar-Khodja, in collaboration with Jean-Michaël Celerier"
+  year: "2023–2024"
+  place: "Champ des Possibles, Montréal"
+  url: https://b-ak.com/projects/ballets-residuels/
+  image: ballets-residuels.webp
+  credit: Diego Bravo
+  ossia: "score on Raspberry Pi + ESP32 for sound, light and scent"
+  sat: true
+  kind: [performance, installation]
+
+- title: "[re]capture"
+  artists: "Alice Jarry, Brice Ammar-Khodja, Jacqueline Beaumont, Jean-Michaël Celerier, Matthew Halpenny, Asa Perlman, Philippe Vandal"
+  year: "2024–2025"
+  place: "Eisode, Montréal · Centre culturel canadien, Paris"
+  url: https://b-ak.com/projects/recapture/
+  image: recapture.webp
+  credit: Alice Jarry
+  ossia: "Cameras, video processing, lights, pumps and motors, run entirely by score on a Raspberry Pi"
+  sat: true
+  kind: [installation]
+
+- title: "Assembly"
+  artists: "Louise Cotter, David Naessens, Luke Naessens, Michelle Delea, David Stalling, Alan Meredith"
+  year: "2025"
+  place: "Irish Pavilion, Venice Architecture Biennale"
+  url: https://irelandatvenice2025.ie/
+  image: assembly.webp
+  award: "Ireland at the Venice Biennale 2025"
+  kind: [installation]
+  featured: true
+
+- title: "Assombros"
+  artists: "Iain Mott & Simone Reis"
+  url: https://escuta.org/en/proj/assombros/
+  image: assombros.webp
+  ossia: "Pepper's ghost peepshow cabinets (first shown as Petit Godot): video and LED sequencing with score on a Raspberry Pi"
+  kind: [installation]
+
+- title: "Four For"
+  artists: "Bravo Zoulou"
+  url: https://bravozoulou.fr/projets/four-for/
+  image: DID_4858.webp
+  credit: Didier Crasnault
+  kind: [performance]
+
+- title: "tangibleFlux φ plenumorphic ∴ chaosmosis"
+  artists: "Navid Navab"
+  url: https://www.navidnavab.com/tangibleflux
+  image: tangibleFlux.webp
+  ossia: "score with Max, ossia and Jamoma"
+  kind: [performance]
+
+- title: "SNN#2: Light/Space/Modulator"
+  artists: "Alex Saunier & Chris Salter"
+  url: https://vimeo.com/429115710
+  image: SNN2.webp
+  kind: [installation]
+
+- title: "L'aveuglement"
+  artists: "Cie Contour progressif / Mylène Benoît"
+  url: https://www.contour-progressif.net/projets/spectacle/laveuglement
+  image: aveuglement.webp
+  ossia: "ossia-pd and score"
+  kind: [stage]
+
+- title: "Nebula"
+  artists: "The Baltazars"
+  url: https://web.archive.org/web/20260209152743/http://www.baltazars.org/project/nebula/
+  image: Nebula_ChampignonsNeigeJaune.webp
+  kind: [installation]
+
+- title: "Sun (~8 mn)"
+  artists: "Félicie d'Estienne d'Orves"
+  url: https://vimeo.com/282498843
+  image: Sun8mm.webp
+  ossia: "score and ofxOssia"
+  kind: [installation]
+
+- title: "Désoleil"
+  artists: "Anne-Charlotte Finel"
+  url: https://fracnouvelleaquitaine-meca.fr/evenement/desoleil-anne-charlotte-finel/
+  image: Désoleil.webp
+  kind: [installation]
+
+- title: "Dyew"
+  artists: "Djeff"
+  url: https://djeff.com/portfolio/dyew/
+  image: Big_Dyew-1920x917.webp
+  kind: [installation]
+
+- title: "Quarrè"
+  artists: "Pierre Cochard"
+  url: https://web.archive.org/web/20210614062011/http://wpn214.com/en/
+  image: quarre.webp
+  kind: [installation]
+
+- title: "Carousel Musical"
+  artists: "Blue Yeti, Abbaye aux Dames"
+  url: https://web.archive.org/web/20240805094104/https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/
+  links:
+    - label: Blue Yeti
+      url: https://web.archive.org/web/20251215210829/http://www.blueyeti.fr/le-carrousel-musical-abbaye-aux-dames/
+  image: carrousel.webp
+  kind: [museum]
+
+- title: "L'Arbre Intégral"
+  artists: "Le Poème en volume"
+  url: https://web.archive.org/web/20221224064957/http://www.donatiengarnier.com/un-spectacle-en-3d/
+  image: arbre-intégrale.webp
+  ossia: "score with Reaper, Live, Unity3D and Android smartphones"
+  kind: [stage]
+
+- title: "(à) partir"
+  artists: "Thibaud le Maguer"
+  url: https://vimeo.com/213259612
+  image: 14-Virages2.webp
+  ossia: "score, ossia-pd and ofxOssia"
+  kind: [installation]
+
+- title: "Qui parle donc"
+  artists: "Passerelle arts-sciences"
+  url: https://scrime.u-bordeaux.fr/residences/qui-parle-donc
+  image: Qui-parle-donc_Event.webp
+  kind: [stage]
+
+- title: "Méta Chef d'Orchestre"
+  artists: "Serge Delaubier"
+  url: https://scrime.u-bordeaux.fr/residences/meta-chef-dorchestre
+  image: dome_scrime.webp
+  kind: [performance]
+
+- title: "ALEAS"
+  artists: "Compagnie EVER / Camille Rocailleux"
+  url: https://www.compagnie-ever.com/aleas
+  image: meca-dome.webp
+  kind: [stage]
+
+- title: "Sonotact"
+  artists: "Pascale Criton"
+  url: https://scrime.u-bordeaux.fr/residences/sonotact
+  image: sonotact.webp
+  kind: [performance]
+
+- title: "Rain of Music"
+  artists: "Josu Rekalde"
+  url: https://scrime.u-bordeaux.fr/residences/rain-music
+  image: metabot_score.webp
+  kind: [installation]
+
+- title: "Walking Down The Street"
+  artists: "Lina Rahal & Jean-Marie Colin"
+  year: "2021"
+  place: "SCRIME residency, Bordeaux"
+  url: https://scrime.u-bordeaux.fr/residences/walking-down-street
+  image: walking-down-the-street.webp
+  credit: Jean-Marie Colin
+  ossia: "Hip-hop dance; the whole show driven by score and controlled live with a Karlax"
+  kind: [stage]
+
+- title: "Le regard du hibou"
+  artists: "The Baltazars"
+  year: "2021"
+  url: https://vimeo.com/572657592
+  image: chant-hibou.webp
+  kind: [performance]
+
+- title: "Heimat"
+  artists: "Dennis Scheiba"
+  year: "2021"
+  url: https://dennis-scheiba.com/events/2021-06-04_kolorit.html
+  image: heimat.webp
+  kind: [performance]
+
+- title: "HERMES v2"
+  artists: "João Svidzinski"
+  year: "2021"
+  url: https://jim2021.sciencesconf.org/361406
+  image: hermes-captureécran.webp
+  kind: [performance]
+
+- title: "ParallelWorlds"
+  artists: "LUCHS.US Team"
+  url: https://www.luchs.us/parallel-welt
+  image: STATUE-ART.webp
+  kind: [installation]
+
+- title: "Proteus"
+  artists: "Gordon Delap"
+  url: https://youtu.be/IPW5e-OhMy8?t=2487
+  image: S0327146.webp
+  kind: [performance]
+
+- title: "Solo.K"
+  artists: "Jean-Marie Colin"
+  year: "2019"
+  place: "Festival Haizebegi, Bayonne"
+  url: https://hal.science/hal-04226027
+  image: solo-k.webp
+  ossia: "Karlax solo; score drives the music and images"
+  kind: [performance]
+
+- title: "Ad Astra"
+  artists: "Djeff"
+  year: "2018"
+  url: https://djeff.com/portfolio/ad-astra/
+  image: adastra.webp
+  ossia: "score"
+  kind: [installation]
+
+- title: "Immersion"
+  artists: "Louxor Spectacle"
+  year: "2017"
+  url: https://louxorspectacle.com/spectacles/immersion/
+  image: louxor-immersion.webp
+  ossia: "Floating projection, with score and ofxOssia"
+  kind: [installation]
+
+- title: "Voyage Voyage"
+  artists: "Cie Princesse Léopold, scenography by Thomas Pachoud"
+  place: "Théâtre du Passage, Neuchâtel"
+  url: https://web.archive.org/web/2021/https://www.theatredupassage.ch/spectacles/voyage-voyage
+  image: voyage-voyage.webp
+  ossia: "score and ofxOssia"
+  kind: [stage]
+
+- title: "Shape of Light, Ascension"
+  artists: "Cie IKARI / Thomas Pachoud"
+  year: "2015–2016"
+  url: https://assoikari.wordpress.com/2015/02/27/shape-of-light/
+  links:
+    - label: Ascension
+      url: https://assoikari.wordpress.com/2016/02/08/ascension/
+  image: ikari-shape-of-light.webp
+  ossia: "score and ofxOssia"
+  kind: [stage]
+
+- title: "ParOral"
+  artists: "Georges Gagneré (didascalie.net)"
+  year: "2015–2016"
+  place: "LaBRI / SCRIME, Bordeaux"
+  url: https://didascalie.net/tiki-index.php?page=rech-paroral
+  image: paroral.webp
+  ossia: "score with SuperCollider + Unity / Unreal Engine"
+  kind: [stage]
+
+- title: "Matière"
+  artists: "Cie Ikari / Thomas Pachoud"
+  year: "2016"
+  url: https://assoikari.wordpress.com/2016/09/15/matiere-creation-en-cours/
+  image: matiere.webp
+  ossia: "score and ofxOssia"
+  kind: [stage]
+
+- title: "Nova"
+  artists: "Nina Bouchard, Evan Montpellier / Serious Computer Group"
+  url: https://serious.computer/
+  image: nova_visual_01.webp
+  kind: [installation]
+
+# ---- Works without a photo: listed in the "More works" table ----
+
+- title: "Calligraphic gesture lecture-performance"
+  artists: "Sahar Homami & Pía Baltazar"
+  year: "2026"
+  place: "Perte de Signal, Montréal"
+  ossia: "Qalam pressure sensor, IMU, tablet and Leap Motion processed in score to generate sound and image"
+  sat: true
+  kind: [performance]
+
+- title: "Dô d'eau"
+  artists: "ENSATT sound and lighting students"
+  year: "2023"
+  place: "ENSATT, Lyon"
+  ossia: "Spatialised sound, video and DMX lighting with score"
+  sat: true
+  kind: [education]
+
+- title: "pianotronics #3"
+  artists: "Alain Bonardi"
+  ossia: "score"
+  kind: [performance]
+
+- title: "Le Chant des Nanos"
+  artists: "Collectif Genre (SCRIME / IdEx Arts et Sciences)"
+  ossia: "score with Max4Live + Modul8"
+  kind: [performance]
+
+- title: "Musée de la nature et de la chasse, Gien"
+  artists: "Blue Yeti"
+  ossia: "libossia-QML"
+  kind: [museum]
+
+- title: "Interactive museum route, Chocolaterie Camille Bloch (Switzerland)"
+  artists: "Blue Yeti"
+  ossia: "libossia-QML"
+  kind: [museum]
