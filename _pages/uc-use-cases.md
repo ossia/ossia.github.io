@@ -6,6 +6,7 @@ subtitle: "One free, open-source tool for show control, OSC and MIDI sequencing,
 permalink: /use-cases.html
 translation: /fr/usages.html
 category: site-score
+hub: true
 description: "Show control, OSC, MIDI and DMX timelines, video mapping, lighting, visual programming and interactive installations: what ossia score is used for."
 image: /assets/social/ossia-score-og.jpg
 ---
@@ -13,11 +14,9 @@ image: /assets/social/ossia-score-og.jpg
 ossia score is an **intermedia sequencer**: it puts sound, video, 3D, lights, sensors and any OSC or MIDI device on the same interactive timeline.
 For many projects it is all you need, from the first sketch to the show; and when you already have other software or hardware, it drives them too.
 
-<ul class="use-case-hub">
-{% for uc in site.data.use_cases %}
-  <li><a href="{{ uc.en.url }}">{{ uc.en.title }}</a><br/>{{ uc.en.blurb }}</li>
-{% endfor %}
-</ul>
+## Find your use case
+
+{% include use-case-list.html lang="en" cards=true %}
 
 ## At a glance
 
@@ -33,6 +32,17 @@ For many projects it is all you need, from the first sketch to the show; and whe
 <tr><td>play live electronic music</td><td><a href="/live-music.html">instruments, step sequencers and plug-ins</a> in sync with MIDI clock, timecode and visuals.</td></tr>
 <tr><td>place and move sounds over many loudspeakers</td><td><a href="/spatial-audio.html">spatial audio</a> with DBAP, GBAP, trajectories and control of spatialisation renderers.</td></tr>
 <tr><td>use AI in a piece</td><td><a href="/realtime-ai.html">real-time AI</a>: pose detection, image generation and language models, run locally.</td></tr>
+<tr><td>make movement drive a dance or theatre piece</td><td><a href="/dance-theatre.html">pose detection, depth cameras and sensors</a> mapped to sound, video and light, inside cues and scenes.</td></tr>
+<tr><td>write electronics for instrumentalists</td><td><a href="/live-electronics.html">interactive scores</a> that wait for the performers, with live processing and spatial sound.</td></tr>
+<tr><td>make generative art</td><td><a href="/generative-art.html">shaders, 3D and live coding</a>, performed live or rendered frame by frame.</td></tr>
+<tr><td>record, stream or route video</td><td><a href="/recording-streaming.html">video inputs, recording and streaming</a>, processed on the GPU with sound.</td></tr>
+<tr><td>run a museum or an exhibition</td><td><a href="/museums-exhibitions.html">unattended exhibits</a> with monitoring, a staff control panel and kiosk apps.</td></tr>
+<tr><td>run an escape room or an interactive attraction</td><td><a href="/escape-rooms.html">game logic, props and sensors</a> driving sound, video and lights, with a game master panel.</td></tr>
+<tr><td>move motors, pumps or robots</td><td><a href="/kinetic-art-robotics.html">kinetic art and robotics</a>: movements on a timeline, reacting to sensors.</td></tr>
+<tr><td>connect devices that speak different protocols</td><td>a <a href="/protocol-bridge.html">protocol bridge</a> between MIDI, OSC, DMX, MQTT, serial, HTTP and Bluetooth LE.</td></tr>
+<tr><td>sonify data or work with biosignals</td><td><a href="/research-sonification.html">LSL, HDF5 and CSV</a> data mapped to sound, image and light, recorded and replayed.</td></tr>
+<tr><td>teach interactive media</td><td><a href="/teaching.html">one free tool</a> for sound, video, light, sensors and code, also in the browser.</td></tr>
+<tr><td>ship a project as an application</td><td><a href="/custom-apps.html">custom apps</a> with your own interface, name and icon.</td></tr>
 </table>
 </div>
 

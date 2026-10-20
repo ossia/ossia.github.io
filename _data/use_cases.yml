@@ -1,29 +1,82 @@
-# Use-case landing pages, in display order.
+# Use-case landing pages, in display order within each group (see use_case_groups.yml).
 # Used by the use-case layout (links to the other pages) and the hub pages.
 - key: show-control
+  group: stage
   en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theatre, concerts and events." }
   fr: { url: /fr/regie-spectacle.html, title: "Régie de spectacle", blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel." }
 - key: osc-timeline
+  group: tools
   en: { url: /osc-midi-dmx-timeline.html, title: "OSC, MIDI and DMX timeline", blurb: "Automate any OSC, MIDI or DMX parameter on an interactive timeline, with triggers and conditions." }
   fr: { url: /fr/timeline-osc-midi-dmx.html, title: "Timeline OSC, MIDI et DMX", blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, avec déclencheurs et conditions." }
 - key: projection-mapping
+  group: visuals
   en: { url: /projection-mapping.html, title: "Video, mapping and VJing", blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronised with sound and light." }
   fr: { url: /fr/mapping-video.html, title: "Vidéo, mapping et VJing", blurb: "Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière." }
 - key: visual-programming
+  group: tools
   en: { url: /visual-programming.html, title: "Visual programming", blurb: "Patch audio, video and interaction with nodes and a timeline, and run your Pure Data patches." }
   fr: { url: /fr/programmation-visuelle.html, title: "Programmation visuelle", blurb: "Patchez audio, vidéo et interaction avec des nœuds et une timeline, et exécutez vos patchs Pure Data." }
 - key: lighting
+  group: visuals
   en: { url: /dmx-lighting.html, title: "DMX lighting and LEDs", blurb: "Art-Net, sACN and DMX USB with a fixture library, LED pixel mapping, all in sync with sound and video." }
   fr: { url: /fr/eclairage-dmx.html, title: "Éclairage DMX et LED", blurb: "Art-Net, sACN et DMX USB avec une bibliothèque de projecteurs et le pixel mapping LED, synchronisés avec le son et la vidéo." }
 - key: installations
+  group: spaces
   en: { url: /interactive-installations.html, title: "Interactive installations", blurb: "Sensors, cameras and tracking, sound and video, running unattended on a PC or a Raspberry Pi." }
   fr: { url: /fr/installations-interactives.html, title: "Installations interactives", blurb: "Capteurs, caméras et tracking, son et vidéo, en fonctionnement autonome sur un PC ou un Raspberry Pi." }
 - key: live-music
+  group: stage
   en: { url: /live-music.html, title: "Live electronic music", blurb: "Synths, drum machines, sampler, step sequencers and plug-ins, in sync with MIDI clock, timecode and visuals." }
   fr: { url: /fr/musique-live.html, title: "Musique électronique live", blurb: "Synthés, boîtes à rythmes, sampler, séquenceurs pas à pas et plug-ins, synchronisés avec l'horloge MIDI, le timecode et les visuels." }
 - key: spatial-audio
+  group: stage
   en: { url: /spatial-audio.html, title: "Spatial audio", blurb: "DBAP, GBAP and trajectories over any loudspeaker layout, up to 1024 channels, and control of spatialisation renderers." }
   fr: { url: /fr/spatialisation-sonore.html, title: "Spatialisation sonore", blurb: "DBAP, GBAP et trajectoires sur tout dispositif de haut-parleurs, jusqu'à 1024 canaux, et pilotage de moteurs de spatialisation." }
 - key: realtime-ai
+  group: tools
   en: { url: /realtime-ai.html, title: "Real-time AI", blurb: "Pose detection, depth from a webcam, real-time image generation, language models and machine learning by example, run locally." }
   fr: { url: /fr/ia-temps-reel.html, title: "IA en temps réel", blurb: "Détection de pose, profondeur depuis une webcam, génération d'images en temps réel, modèles de langage et apprentissage par l'exemple, en local." }
+- key: dance-theatre
+  group: stage
+  en: { url: /dance-theatre.html, title: "Dance and interactive theatre", blurb: "Pose detection, depth cameras, sensors and tracking drive sound, video and light, inside cues and scenes." }
+  fr: { url: /fr/danse-theatre.html, title: "Danse et théâtre interactifs", blurb: "Détection de pose, caméras de profondeur, capteurs et tracking pilotent son, vidéo et lumière, dans des cues et des scènes." }
+- key: live-electronics
+  group: stage
+  en: { url: /live-electronics.html, title: "Contemporary music and live electronics", blurb: "Interactive scores that wait for the performers, cues from pedals, live processing and spatial sound." }
+  fr: { url: /fr/musique-mixte.html, title: "Musique mixte", blurb: "Des partitions interactives qui attendent les interprètes, cues aux pédales, traitement en direct et son spatialisé." }
+- key: generative-art
+  group: visuals
+  en: { url: /generative-art.html, title: "Generative art", blurb: "Shaders, 3D, gaussian splats and live coding, performed live or rendered frame by frame." }
+  fr: { url: /fr/art-generatif.html, title: "Art génératif", blurb: "Shaders, 3D, gaussian splats et live coding, joués en direct ou rendus image par image." }
+- key: recording-streaming
+  group: visuals
+  en: { url: /recording-streaming.html, title: "Recording and streaming", blurb: "Cameras, SDI, NDI and SRT in; ProRes or MP4 recording, RTMP streaming and NDI or Spout out." }
+  fr: { url: /fr/enregistrement-streaming.html, title: "Enregistrement et streaming", blurb: "Caméras, SDI, NDI et SRT en entrée ; enregistrement ProRes ou MP4, streaming RTMP et NDI ou Spout en sortie." }
+- key: museums
+  group: spaces
+  en: { url: /museums-exhibitions.html, title: "Museums and exhibitions", blurb: "Exhibits that run all day without staff, with monitoring, a staff control panel and kiosk apps." }
+  fr: { url: /fr/musees-expositions.html, title: "Musées et expositions", blurb: "Des dispositifs qui tournent toute la journée sans personnel, supervisés, avec panneau de contrôle et bornes." }
+- key: escape-rooms
+  group: spaces
+  en: { url: /escape-rooms.html, title: "Escape rooms and attractions", blurb: "Puzzles, props and sensors driving sound, video and lights, with game logic and a game master panel." }
+  fr: { url: /fr/escape-games.html, title: "Escape games et attractions", blurb: "Énigmes, accessoires et capteurs qui pilotent son, vidéo et lumière, avec logique de jeu et panneau maître du jeu." }
+- key: kinetic-art
+  group: spaces
+  en: { url: /kinetic-art-robotics.html, title: "Kinetic art and robotics", blurb: "Motors, pumps and robots written on a timeline, reacting to sensors, in sync with sound, video and lights." }
+  fr: { url: /fr/art-cinetique-robotique.html, title: "Art cinétique et robotique", blurb: "Moteurs, pompes et robots écrits sur une timeline, réactifs aux capteurs, synchronisés avec son, vidéo et lumière." }
+- key: protocol-bridge
+  group: tools
+  en: { url: /protocol-bridge.html, title: "Protocol bridge", blurb: "Convert between MIDI, OSC, DMX, MQTT, serial, HTTP and Bluetooth LE, with mapping and filtering, always on." }
+  fr: { url: /fr/passerelle-protocoles.html, title: "Passerelle entre protocoles", blurb: "Convertissez entre MIDI, OSC, DMX, MQTT, série, HTTP et Bluetooth LE, avec mapping et filtrage, en permanence." }
+- key: research
+  group: tools
+  en: { url: /research-sonification.html, title: "Research, sonification and biosignals", blurb: "LSL, HDF5 and CSV data, sonification, biofeedback, and sessions recorded and replayed on a timeline." }
+  fr: { url: /fr/recherche-sonification.html, title: "Recherche et sonification", blurb: "LSL, données HDF5 et CSV, sonification, biofeedback, et sessions enregistrées et rejouées sur une timeline." }
+- key: teaching
+  group: tools
+  en: { url: /teaching.html, title: "Teaching and workshops", blurb: "One free tool for sound, video, light, sensors and code, on every OS, in the browser and on Raspberry Pi." }
+  fr: { url: /fr/enseignement.html, title: "Enseignement et ateliers", blurb: "Un outil gratuit pour le son, la vidéo, la lumière, les capteurs et le code, sur tous les systèmes et dans le navigateur." }
+- key: custom-apps
+  group: tools
+  en: { url: /custom-apps.html, title: "Custom apps", blurb: "Package a project with your own interface as an app for Windows, macOS, Linux or the web." }
+  fr: { url: /fr/applications-sur-mesure.html, title: "Applications sur mesure", blurb: "Empaquetez un projet avec votre interface en application pour Windows, macOS, Linux ou le web." }
