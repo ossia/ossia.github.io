@@ -1,0 +1,9 @@
+{%- comment -%} Use-case pages grouped by family. include.lang: en or fr; include.exclude: URL to leave out; include.cards: true for the hub grid. {%- endcomment -%}
+{%- for g in site.data.use_case_groups %}
+<h3 class="use-case-group">{{ g[include.lang] }}</h3>
+<ul class="{% if include.cards %}use-case-hub{% else %}use-case-links{% endif %}">
+{%- for uc in site.data.use_cases %}{% if uc.group == g.key %}{% assign item = uc[include.lang] %}{% unless item.url == include.exclude %}
+  {% if include.cards %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/>{{ item.blurb }}</li>{% else %}<li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.blurb }}</li>{% endif %}
+{%- endunless %}{% endif %}{% endfor %}
+</ul>
+{%- endfor %}

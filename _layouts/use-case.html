@@ -15,19 +15,14 @@ layout: default
 
     {% include use-case-cta.html %}
 
+    {% unless page.hub %}
     <nav class="use-case-others" aria-label="{% if lang == 'fr' %}Autres usages{% else %}Other uses{% endif %}">
       <h2>{% if lang == 'fr' %}Autres usages d'ossia score{% else %}More ways to use ossia score{% endif %}</h2>
-      <ul>
-      {% for uc in site.data.use_cases %}
-        {%- assign item = uc[lang] -%}
-        {% unless item.url == page.url %}
-        <li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.blurb }}</li>
-        {% endunless %}
-      {% endfor %}
-      </ul>
-      {% if page.translation %}
-      <p class="use-case-translation">{% if lang == 'fr' %}<a href="{{ page.translation }}" hreflang="en">Read this page in English</a>{% else %}<a href="{{ page.translation }}" hreflang="fr">Lire cette page en français</a>{% endif %}</p>
-      {% endif %}
+      {% include use-case-list.html lang=lang exclude=page.url %}
     </nav>
+    {% endunless %}
+    {% if page.translation %}
+    <p class="use-case-translation">{% if lang == 'fr' %}<a href="{{ page.translation }}" hreflang="en">Read this page in English</a>{% else %}<a href="{{ page.translation }}" hreflang="fr">Lire cette page en français</a>{% endif %}</p>
+    {% endif %}
   </section>
 </article>
