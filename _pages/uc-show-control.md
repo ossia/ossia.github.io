@@ -24,6 +24,11 @@ or react to sensors and performers — all in the same score.
 - **Control anything**: OSC, OSCQuery, MIDI, HTTP, WebSockets, MQTT, serial ports, and Bitfocus Companion modules to drive AV equipment ([Companion](https://ossia.io/score-docs/devices/companion-device.html)).
 - **Cue any parameter**: since version 3.9, the parameters of every process (an effect, a shader, a synthesizer…) can be cued and automated like those of an external device.
 - **Remote control**: start and stop the show from a browser, a phone or any OSC controller ([remote control](https://ossia.io/score-docs/in-depth/remote.html)).
+- **Hardware control surfaces**: MCU-compatible fader banks follow the process you select, and MIDI controllers can be described once so that their knobs and faders have names ([MIDI controllers](https://ossia.io/score-docs/devices/midi-controller-device.html)).
+- **Follow, scrub and rewind**: the tempo synchroniser follows incoming timecode smoothly, and a scenario can be scrubbed or played backwards ([timecode synchroniser](https://ossia.io/score-docs/processes/timecode-synchronizer.html)).
+- **Alternating cues**: the exclusive mode plays one interval at a time, for sounds or videos that replace each other.
+- **Show files that travel**: collect all media into the project folder, find missing files, and archive the show as a zip.
+- **Launch other programs** and shell commands from the timeline ([process launcher](https://ossia.io/score-docs/processes/process-launcher.html)).
 
 <img src="/assets/blog/v3-9/scriptable-processes.webp" width="1077" height="650" loading="lazy" alt="Cues and automations of process parameters in an ossia score timeline"/>
 

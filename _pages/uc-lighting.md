@@ -21,6 +21,10 @@ It is a good fit for theatre and dance, concerts, immersive rooms, installations
 - **Sound-to-light**: drive lights from audio analysis, beat tracking or MIDI.
 - **Interactivity**: trigger and change lighting from sensors, cameras, OSC or MIDI controllers.
 - **Unattended**: run headless on a small computer or a Raspberry Pi, starting automatically ([headless mode](https://ossia.io/score-docs/faq/nogui.html)).
+- **Detailed fixtures**: 16-bit channels, colour and gobo wheel names, fixtures with LED matrices, and quick creation of dimmers and RGB pars.
+- **Shaders to LEDs**: turn any shader into RGB or RGBW values in your strip's channel order, preview it, and send colour arrays to Art-Net universes of any size ([LED view](https://ossia.io/score-docs/processes/led-view.html), [LED device](https://ossia.io/score-docs/devices/led-device.html)).
+- **DMX interfaces** such as the Enttec DMX USB Pro and Pro Mk2.
+- **DMX input**: receive and record Art-Net and sACN, then replay or transform it.
 
 ## Lighting needs, and how ossia score answers them
 

@@ -23,6 +23,11 @@ ossia score est utilisé pour cela dans des musées, des expositions, des résid
 - **Un comportement non linéaire** : états, conditions et boucles décrivent comment l'installation évolue et réagit, au lieu d'une simple playlist ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html)).
 - **En autonomie** : mode sans interface avec lecture automatique, Raspberry Pi et Linux embarqué (Yocto), et applications autonomes personnalisées pour les bornes ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html), [Raspberry Pi](https://ossia.io/score-docs/in-depth/embedded.html), [applications](https://ossia.io/score-docs/development/custom-apps.html)).
 - **Sonification de données** : jouez des jeux de données CSV et HDF5 en son, en lumière ou en images.
+- **Électronique** : GPIO, PWM, ADC et DAC sur des cartes Linux comme le Raspberry Pi et l'Orange Pi (expérimental).
+- **Œuvres géolocalisées** : des zones géographiques dessinées comme polygones de latitude et longitude ([zones géographiques](https://ossia.io/score-docs/processes/geo-zones.html)).
+- **Supervision** : un appareil système indique l'usage du processeur, de la carte graphique, de la mémoire, de la batterie et du réseau des installations de longue durée ([supervision](https://ossia.io/score-docs/faq/monitor-activity.html)).
+- **Plus de capteurs** : centrales inertielles LP-Research, tablettes Wacom, périphériques d'entrée Linux bruts, bus CAN.
+- **De la vision sans matériel spécial** : profondeur depuis une simple caméra, segmentation et pose de plusieurs personnes (voir [IA en temps réel](/fr/ia-temps-reel.html)).
 
 <picture><source type="image/avif" srcset="/assets/features/gamepad.avif"><img src="/assets/features/gamepad.webp" width="320" height="270" loading="lazy" alt="Une manette de jeu qui contrôle des paramètres dans ossia score"/></picture>
 

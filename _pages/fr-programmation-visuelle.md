@@ -22,6 +22,11 @@ où le patch lui-même évolue dans le temps. On passe de l'une à l'autre à to
 - **Héberger des plug-ins** : VST, VST3, CLAP, LV2 et JSFX ([plug-ins audio](https://ossia.io/score-docs/processes/audio-plugins.html)).
 - **Vision par ordinateur et IA** : objets portés depuis cv.jit (blobs, flux optique, contours, homographie), modèles ONNX pour la détection de pose et la reconnaissance.
 - **Construire des interfaces** en QML avec les widgets d'ossia score, et empaqueter un projet en application autonome ([interfaces personnalisées](https://ossia.io/score-docs/custom-ui.html), [applications](https://ossia.io/score-docs/development/custom-apps.html)).
+- **Modifier pendant l'exécution** : déposez un processus sur un câble ou un nœud pour l'insérer ou le remplacer sans arrêter, et codez en direct des effets JSFX.
+- **Apprentissage automatique interactif** : entraînez un classifieur ou un régresseur par l'exemple, et analysez des gestes (ACP, clustering, corrélation) ([classifieur](https://ossia.io/score-docs/processes/classifier.html), [gestes](https://ossia.io/score-docs/processes/gestures.html)).
+- **Instruments et effets inclus** : synthétiseurs, boîtes à rythmes, sampler, granulateur et effets Airwindows (voir [musique live](/fr/musique-live.html)).
+- **Programmation GPU** : compute shaders, pipelines de rendu avec instanciation, et vos propres pipelines de rendu ([compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html)).
+- **Une trentaine de thèmes**, dont des thèmes adaptés au daltonisme et à fort contraste.
 
 <picture><source type="image/avif" srcset="/assets/feature-nodal.avif"><img src="/assets/feature-nodal.webp" width="624" height="340" loading="lazy" alt="Passage de la timeline à la vue nodale dans ossia score"/></picture>
 

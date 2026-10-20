@@ -31,6 +31,9 @@ Pour beaucoup de projets, il suffit à lui seul, de la première esquisse au spe
 <tr><td>patcher audio, vidéo et interaction</td><td>un environnement de <a href="/fr/programmation-visuelle.html">programmation visuelle</a> avec timeline, qui exécute aussi les patchs Pure Data.</td></tr>
 <tr><td>éclairer un spectacle ou une installation</td><td>le <a href="/fr/eclairage-dmx.html">pilotage DMX et LED</a>, synchronisé avec le son et la vidéo.</td></tr>
 <tr><td>créer une installation interactive ou sonore</td><td>un outil pour les <a href="/fr/installations-interactives.html">installations</a>, en autonomie sur PC ou Raspberry Pi.</td></tr>
+<tr><td>jouer de la musique électronique live</td><td>des <a href="/fr/musique-live.html">instruments, séquenceurs et plug-ins</a> synchronisés avec l'horloge MIDI, le timecode et les visuels.</td></tr>
+<tr><td>placer et déplacer des sons sur de nombreux haut-parleurs</td><td>la <a href="/fr/spatialisation-sonore.html">spatialisation sonore</a> avec DBAP, GBAP, trajectoires et pilotage de moteurs de spatialisation.</td></tr>
+<tr><td>utiliser l'IA dans une œuvre</td><td>l'<a href="/fr/ia-temps-reel.html">IA en temps réel</a> : détection de pose, génération d'images et modèles de langage, en local.</td></tr>
 </table>
 </div>
 

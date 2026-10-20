@@ -30,6 +30,9 @@ For many projects it is all you need, from the first sketch to the show; and whe
 <tr><td>patch audio, video and interaction</td><td>a <a href="/visual-programming.html">visual programming</a> environment with a timeline, which also runs Pure Data patches.</td></tr>
 <tr><td>light a show or an installation</td><td><a href="/dmx-lighting.html">DMX and LED control</a>, synchronised with sound and video.</td></tr>
 <tr><td>build an interactive or sound installation</td><td>a tool for <a href="/interactive-installations.html">installations</a> that runs unattended on a PC or a Raspberry Pi.</td></tr>
+<tr><td>play live electronic music</td><td><a href="/live-music.html">instruments, step sequencers and plug-ins</a> in sync with MIDI clock, timecode and visuals.</td></tr>
+<tr><td>place and move sounds over many loudspeakers</td><td><a href="/spatial-audio.html">spatial audio</a> with DBAP, GBAP, trajectories and control of spatialisation renderers.</td></tr>
+<tr><td>use AI in a piece</td><td><a href="/realtime-ai.html">real-time AI</a>: pose detection, image generation and language models, run locally.</td></tr>
 </table>
 </div>
 

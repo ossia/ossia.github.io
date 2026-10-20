@@ -25,6 +25,11 @@ ou réagir aux capteurs et aux interprètes, dans la même conduite.
 - **Pilotez tout** : OSC, OSCQuery, MIDI, HTTP, WebSockets, MQTT, ports série, et modules Bitfocus Companion pour contrôler le matériel audiovisuel ([Companion](https://ossia.io/score-docs/devices/companion-device.html)).
 - **Des cues sur n'importe quel paramètre** : depuis la version 3.9, les paramètres de chaque processus (effet, shader, synthétiseur…) peuvent être mis en cue et automatisés comme ceux d'un appareil externe.
 - **Télécommande** : lancez et arrêtez le spectacle depuis un navigateur, un téléphone ou un contrôleur OSC ([contrôle à distance](https://ossia.io/score-docs/in-depth/remote.html)).
+- **Surfaces de contrôle** : les surfaces à faders compatibles MCU suivent le processus sélectionné, et un contrôleur MIDI peut être décrit une fois pour que ses boutons et faders aient des noms ([contrôleurs MIDI](https://ossia.io/score-docs/devices/midi-controller-device.html)).
+- **Suivre, parcourir et revenir en arrière** : le synchroniseur suit en douceur un timecode entrant, et un scénario peut être parcouru à la souris ou joué à l'envers ([synchroniseur de timecode](https://ossia.io/score-docs/processes/timecode-synchronizer.html)).
+- **Cues alternées** : le mode exclusif ne joue qu'un intervalle à la fois, pour des sons ou des vidéos qui se remplacent.
+- **Des conduites qui voyagent** : rassemblez tous les médias dans le dossier du projet, retrouvez les fichiers manquants et archivez le spectacle en zip.
+- **Lancez d'autres programmes** et des commandes système depuis la timeline ([lanceur de processus](https://ossia.io/score-docs/processes/process-launcher.html)).
 
 <img src="/assets/blog/v3-9/scriptable-processes.webp" width="1077" height="650" loading="lazy" alt="Cues et automations de paramètres de processus dans une timeline ossia score"/>
 
