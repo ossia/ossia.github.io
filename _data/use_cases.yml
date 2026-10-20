@@ -18,3 +18,12 @@
 - key: installations
   en: { url: /interactive-installations.html, title: "Interactive installations", blurb: "Sensors, cameras and tracking, sound and video, running unattended on a PC or a Raspberry Pi." }
   fr: { url: /fr/installations-interactives.html, title: "Installations interactives", blurb: "Capteurs, caméras et tracking, son et vidéo, en fonctionnement autonome sur un PC ou un Raspberry Pi." }
+- key: live-music
+  en: { url: /live-music.html, title: "Live electronic music", blurb: "Synths, drum machines, sampler, step sequencers and plug-ins, in sync with MIDI clock, timecode and visuals." }
+  fr: { url: /fr/musique-live.html, title: "Musique électronique live", blurb: "Synthés, boîtes à rythmes, sampler, séquenceurs pas à pas et plug-ins, synchronisés avec l'horloge MIDI, le timecode et les visuels." }
+- key: spatial-audio
+  en: { url: /spatial-audio.html, title: "Spatial audio", blurb: "DBAP, GBAP and trajectories over any loudspeaker layout, up to 1024 channels, and control of spatialisation renderers." }
+  fr: { url: /fr/spatialisation-sonore.html, title: "Spatialisation sonore", blurb: "DBAP, GBAP et trajectoires sur tout dispositif de haut-parleurs, jusqu'à 1024 canaux, et pilotage de moteurs de spatialisation." }
+- key: realtime-ai
+  en: { url: /realtime-ai.html, title: "Real-time AI", blurb: "Pose detection, depth from a webcam, real-time image generation, language models and machine learning by example, run locally." }
+  fr: { url: /fr/ia-temps-reel.html, title: "IA en temps réel", blurb: "Détection de pose, profondeur depuis une webcam, génération d'images en temps réel, modèles de langage et apprentissage par l'exemple, en local." }

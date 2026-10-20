@@ -23,6 +23,12 @@ enregistrer, transformer et écrire dans le temps. Il sert à piloter des patchs
 - **Toutes les entrées** : manettes de jeu, Wiimote, Leap Motion, contrôleurs MIDI, ports série et Arduino, capteurs Bluetooth LE, caméras de profondeur et protocoles de tracking (PosiStageNet, TUIO, RTTrP, OpenXR) ([capteurs vers OSC](https://ossia.io/score-docs/examples/devices/sensors2osc.html)).
 - **De nombreux protocoles** : OSC en UDP, TCP, WebSockets et série, OSCQuery, MIDI, DMX (Art-Net, sACN, DMX USB), MQTT, CoAP, HTTP, LSL, CAN.
 - **Temps musical** : tempo, mesures et quantification quand la partition doit suivre un tempo ([temps musical](https://ossia.io/score-docs/in-depth/musical.html)).
+- **Zéro configuration** : les appareils OSC sont découverts sur le réseau via Bonjour/Zeroconf, et vos propres paramètres peuvent être publiés de la même façon ou en OSCQuery.
+- **Tous les transports OSC** : UDP, TCP client et serveur, encapsulations SLIP et COBS, noms d'hôtes au lieu d'adresses IP.
+- **Des données de capteurs propres** : calibration, zones mortes, noise gate, hystérésis, anti-rebond et courbes d'easing ([filtre de valeurs](https://ossia.io/score-docs/processes/value-filter.html), [calibrateur](https://ossia.io/score-docs/processes/calibrator.html)).
+- **Motifs d'adresses** : combinez, appliquez et balayez des motifs d'adresses OSC pour piloter de nombreux appareils à la fois ([motifs](https://ossia.io/score-docs/in-depth/pattern-matching.html)).
+- **Outils MIDI** : ports MIDI virtuels et réseau, lecture de fichiers MIDI, filtres, gammes microtonales Scala, et le clavier de l'ordinateur comme entrée MIDI ([MIDI](https://ossia.io/score-docs/in-depth/midi.html)).
+- **Enregistrez et rejouez** n'importe quel appareil en CSV, y compris le DMX entrant ([enregistrement](https://ossia.io/score-docs/in-depth/recording.html)).
 
 <picture><source type="image/avif" srcset="/assets/feature-interaction.avif"><img src="/assets/feature-interaction.webp" width="580" height="452" loading="lazy" alt="Une timeline interactive où un déclencheur attend un événement externe dans ossia score"/></picture>
 

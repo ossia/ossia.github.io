@@ -21,6 +21,11 @@ where the patch itself can change over time. You can switch between both views a
 - **Host plug-ins**: VST, VST3, CLAP, LV2 and JSFX ([audio plug-ins](https://ossia.io/score-docs/processes/audio-plugins.html)).
 - **Computer vision and AI**: objects ported from cv.jit (blobs, optical flow, contours, homography), ONNX models for pose detection and recognition.
 - **Build interfaces** with QML and score's own widgets, and package a project as a standalone app ([custom UI](https://ossia.io/score-docs/custom-ui.html), [custom apps](https://ossia.io/score-docs/development/custom-apps.html)).
+- **Edit while it plays**: drop a process on a cable or a node to insert or replace it without stopping, and live-code JSFX effects.
+- **Interactive machine learning**: train a classifier or a regressor by example, and analyse gestures (PCA, clustering, correlation) ([classifier](https://ossia.io/score-docs/processes/classifier.html), [gestures](https://ossia.io/score-docs/processes/gestures.html)).
+- **Instruments and effects included**: synthesizers, drum machines, a sampler, a granulator and the Airwindows effects (see [live music](/live-music.html)).
+- **GPU programming**: compute shaders, raster pipelines with instancing, and your own render pipelines ([compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html)).
+- **About thirty skins**, including colour-blind-safe and high-contrast ones.
 
 <picture><source type="image/avif" srcset="/assets/feature-nodal.avif"><img src="/assets/feature-nodal.webp" width="624" height="340" loading="lazy" alt="Switching between the timeline and the nodal view in ossia score"/></picture>
 

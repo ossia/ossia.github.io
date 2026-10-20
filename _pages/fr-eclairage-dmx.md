@@ -22,6 +22,10 @@ Il convient au théâtre et à la danse, aux concerts, aux salles immersives, au
 - **Son vers lumière** : pilotez la lumière depuis l'analyse audio, la détection de tempo ou le MIDI.
 - **Interactivité** : déclenchez et modifiez la lumière depuis des capteurs, des caméras, de l'OSC ou des contrôleurs MIDI.
 - **En autonomie** : fonctionnement sans interface sur un petit ordinateur ou un Raspberry Pi, avec démarrage automatique ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)).
+- **Des projecteurs détaillés** : canaux 16 bits, noms des roues de couleurs et de gobos, projecteurs à matrices LED, et création rapide de gradateurs et de PAR RGB.
+- **Des shaders vers les LED** : transformez n'importe quel shader en valeurs RGB ou RGBW dans l'ordre des canaux de votre ruban, prévisualisez-le, et envoyez des tableaux de couleurs vers des univers Art-Net de toute taille ([LED view](https://ossia.io/score-docs/processes/led-view.html), [appareil LED](https://ossia.io/score-docs/devices/led-device.html)).
+- **Interfaces DMX** comme les Enttec DMX USB Pro et Pro Mk2.
+- **Entrée DMX** : recevez et enregistrez de l'Art-Net et du sACN, puis rejouez-le ou transformez-le.
 
 ## Les besoins de la lumière, et les réponses d'ossia score
 

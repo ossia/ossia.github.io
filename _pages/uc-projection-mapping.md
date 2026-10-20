@@ -19,9 +19,14 @@ fulldome shows and audio-reactive visuals, often in the same project as the soun
 - **Multi-projector mapping** with per-region perspective warping and edge blending, and fulldome fisheye output ([multi-projector mapping](https://ossia.io/score-docs/examples/video/video-mapping-multi-projector.html), [window device](https://ossia.io/score-docs/devices/window-device.html)).
 - **Generative visuals** with ISF shaders and compute shaders, Context Free Art and Structure Synth ([shaders](https://ossia.io/score-docs/processes/shaders.html)).
 - **3D scenes** since version 3.9: glTF, FBX, OBJ and other models with animations, PBR materials, instancing, point clouds and gaussian splats, all on the GPU ([3D pipeline](https://ossia.io/score-docs/in-depth/3d-scene-pipeline.html)).
-- **Video in and out**: NDI, Spout, Syphon, cameras and screen capture, RTSP and SRT streams, PipeWire and GStreamer, and capture and playout cards (AJA, Blackmagic DeckLink, Magewell); recording to MP4, ProRes, DNxHD or AV1.
+- **Video in and out**: NDI, Spout, Syphon, cameras and screen capture, RTSP and SRT streams, PipeWire and GStreamer, and capture and playout cards (AJA built in and tested at 8K60; Blackmagic DeckLink and Magewell with a custom build); recording to MP4, ProRes, DNxHD or AV1.
 - **Interaction**: audio-reactive visuals, computer vision (blobs, optical flow, contours), pose detection with ONNX models, depth cameras, MIDI and OSC control ([pose detection](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
 - **Timeline**: everything can be automated and cued, so a 20-minute show plays the same way every night, or reacts to the audience.
+- **HDR and cinema formats**: HDR window output on macOS and Windows (HLG, BT.2100, Display P3), 12-bit DCI X'Y'Z' and EXR half-float images ([video formats](https://ossia.io/score-docs/processes/video-formats-color.html)).
+- **Hardware decoding without copies**, through Vulkan Video, Direct3D 12 and VideoToolbox, with HAP, DXV, Cineform and H.265.
+- **Shaders from the web**: drop a Shadertoy link and it becomes an ISF shader; vertex shader art, video-bending effects, and any FFmpeg filter graph ([vertex shader art](https://ossia.io/score-docs/processes/vertex-shader-art.html)).
+- **Slides and text** for lecture-performances and conferences, with presentation and advanced text objects.
+- **Exact-frame offline rendering** to image files from a script, for previews or fixed-media pieces.
 
 <img src="/assets/blog/v3-9/feedback-cables.webp" width="1230" height="567" loading="lazy" alt="A reaction-diffusion visual effect patched with feedback cables in ossia score"/>
 
