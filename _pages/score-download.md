@@ -13,7 +13,7 @@ We sell score on the Microsoft store as a way to get financial support to ensure
 </div>
 <h1 class="download-title">Download ossia score v{{site.score_version}}</h1>
 <p class="download-date">Released on {{site.score_released_date}}</p>
-<p id="download-current" class="download-page-layout" align="center">
+<p id="download-current" class="download-page-layout" style="text-align: center">
 <a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
 <a data-os="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
 <a data-os="win-arm" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows on ARM</a>
@@ -25,8 +25,8 @@ We sell score on the Microsoft store as a way to get financial support to ensure
 <a data-os="web" href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt=""/>WebAssembly</a>
 </p>
 <div id="download-others-block" style="display: none;">
-<p class="download-others-title" align="center">Other platforms</p>
-<p id="download-others" class="download-page-layout" align="center"></p>
+<p class="download-others-title" style="text-align: center">Other platforms</p>
+<p id="download-others" class="download-page-layout" style="text-align: center"></p>
 </div>
 
 
@@ -128,25 +128,25 @@ The source code for the latest release can be downloaded from here:
 
 <h2 type="button" class="collapsible" > All downloads </h2>
 <div class="collapsible-content">
-<p class="download-page-layout" align="center">
+<p class="download-page-layout" style="text-align: center">
 <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows on ARM</a>
 </p>
-<p class="download-page-layout" align="center">
+<p class="download-page-layout" style="text-align: center">
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80" alt=""/>macOS (Intel)</a>
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80" alt=""/>macOS (AppleSilicon / M1 etc.)</a>
 </p>
-<p class="download-page-layout" align="center">
+<p class="download-page-layout" style="text-align: center">
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt=""/>Linux AppImage x86_64</a>
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt=""/>Linux AppImage AArch64</a>
 <a href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt=""/>Linux (Flatpak)</a>
 </p>
-<p class="download-page-layout" align="center">
+<p class="download-page-layout" style="text-align: center">
 <a href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt=""/>WebAssembly</a>
 </p>
 
-<p style="display: flex; justify-content: center;align-content:space-evenly;" align="center">
+<p style="display: flex; justify-content: center;align-content:space-evenly;">
 
 </p>
 </div>

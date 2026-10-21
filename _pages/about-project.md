@@ -19,7 +19,7 @@ Following the [ANR OSSIA research project](https://anr.fr/Projet-ANR-12-CORD-002
 The [source code](https://github.com/ossia/score){:target="_blank"} for score is hosted on GitHub.
 It is based on [libossia](https://github.com/ossia/libossia){:target="_blank"}.
 
-<img style="float: right;" src="/assets/contribution_oscar.png" width="40%" alt="Oscar, the cute ossia mascot" />
+<img style="float: right; width: 40%" src="/assets/contribution_oscar.png" alt="Oscar, the cute ossia mascot" />
 * Contributing to the user library
 * Extending the scripting API
 * Implementing new protocols
@@ -43,13 +43,13 @@ We can help you into making your first contributions to the project.
 Here is a video explaining how to contribute to the code of ossia score:
 
 <div class="videoWrapper">
-    <button type="button" class="video-facade" aria-label="Play the video: Project (loads YouTube)"><span class="video-facade-title">Project</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Project" loading="lazy" src="https://www.youtube-nocookie.com/embed/LSifHFbuky0" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
+    <button type="button" class="video-facade" aria-label="Play the video: Project (loads YouTube)"><span class="video-facade-title">Project</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Project" loading="lazy" src="https://www.youtube-nocookie.com/embed/LSifHFbuky0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
 </div>
 
 <!--- Roadmap !-->
 <h2 class="feature-title">Roadmap</h2>
 <br/>
-<p align="center">
+<p style="text-align: center">
 <a href="/score/download.html" class="page-button"  target="_blank" >Current stable version is {{site.score_version}}</a>
 </p>
 

@@ -13,7 +13,7 @@ description: "The interactive and intermedia sequencer ossia score reaches a sta
 ## Introducing ossia score 3
 
 <div class="videoWrapper">
-<button type="button" class="video-facade" aria-label="Play the video: Introducing ossia score 3 (loads YouTube)"><span class="video-facade-title">Introducing ossia score 3</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Introducing ossia score 3" loading="lazy" src="https://www.youtube-nocookie.com/embed/8-KpNaF2K8Q" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
+<button type="button" class="video-facade" aria-label="Play the video: Introducing ossia score 3 (loads YouTube)"><span class="video-facade-title">Introducing ossia score 3</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Introducing ossia score 3" loading="lazy" src="https://www.youtube-nocookie.com/embed/8-KpNaF2K8Q" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
 </div>
 
 <br/>
@@ -39,7 +39,7 @@ One last major feature was added during the v3 beta cycle: support for JSFX plug
 
 The [user library](https://github.com/ossia/score-user-library/) does not ship any JSFX plug-ins yet, but libraries such as provided by [Joep Vanlier](https://github.com/JoepVanlier/JSFX), [Geraint Luff](https://github.com/geraintluff/jsfx) or [Justin Johnson](https://github.com/Justin-Johnson/ReJJ) have been tested to work by putting them in the user library folder (score will look for .jsfx files).
 
-![JSFX plug-ins in ossia score]({{site.baseurl}}/assets/blog/v3-final/jsfx.webp){: width="85%" style="display:block; margin-left:auto; margin-right:auto" }
+![JSFX plug-ins in ossia score]({{site.baseurl}}/assets/blog/v3-final/jsfx.webp){: style="width: 85%; display:block; margin-left:auto; margin-right:auto" }
 
 ### Official Raspberry Pi builds
 A lot of work has been put in ensuring smooth experience with the [Raspberry Pi](https://ossia.io/score-docs/in-depth/embedded.html) build, which has now been promoted from experimental to officially supported. A plain ALSA audio back-end has been added to drive various audio shields with minimal performance overhead when score is the only software running on the system, which would generally be the case for art installations.

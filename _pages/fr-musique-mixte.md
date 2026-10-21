@@ -31,12 +31,14 @@ Il est fait pour les pièces où musiciens et électronique jouent ensemble : le
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Une électronique qui suit les musiciens, pas un clic</td><td>Déclencheurs et conditions sur la timeline attendent pédales, MIDI, OSC ou seuils audio.</td></tr>
 <tr><td>Une partie que les prochains interprètes pourront rejouer</td><td>Toute la partie électronique, avec ses cues, traitements et fichiers son, tient dans un seul projet, sur tous les systèmes.</td></tr>
 <tr><td>Répéter un passage</td><td>Reprenez depuis n'importe quel point avec <i>Play from here</i>.</td></tr>
 <tr><td>Traiter et spatialiser les instruments</td><td>Plug-ins, Faust, patchs Pure Data et spatialisation dans la même partition.</td></tr>
 <tr><td>De la vidéo ou de la lumière dans la pièce</td><td>Vidéo, shaders et lumière DMX suivent les mêmes cues.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -30,12 +30,14 @@ It is a good fit for theatre and dance, concerts, immersive rooms, installations
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Running the lights of a show or an installation, with no other lighting software</td><td>DMX straight from ossia score over Art-Net, sACN or DMX USB, with a fixture library, cues and curves.</td></tr>
 <tr><td>Lights precisely synchronised with sound and video</td><td>Lights, sound and video share one timeline and one clock.</td></tr>
 <tr><td>LED strips and pixel effects</td><td>LED patterns from shaders or arrays, and NeoPixel strips over SPI from a Raspberry Pi.</td></tr>
 <tr><td>Lights that react to music, sensors or performers</td><td>Audio analysis, beat tracking, sensors, cameras, OSC and MIDI can drive any fixture parameter.</td></tr>
 <tr><td>A permanent installation on small hardware</td><td>Headless mode with autostart, on a mini PC or a Raspberry Pi.</td></tr>
+</tbody>
 </table>
 </div>
 

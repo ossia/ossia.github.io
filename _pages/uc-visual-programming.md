@@ -33,11 +33,13 @@ where the patch itself can change over time. You can switch between both views a
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>A free patching environment on Windows, macOS and Linux</td><td>Open-source (GPLv3), with audio, video, 3D and control objects.</td></tr>
 <tr><td>Organising a patch in time: scenes, sections, show control</td><td>The patch lives inside a timeline, with scenes, cues, triggers and conditions.</td></tr>
 <tr><td>Reusing existing Pure Data patches</td><td>ossia score runs them directly, and adds a timeline, video and 3D around them.</td></tr>
 <tr><td>Generative visuals and interaction with little or no code</td><td>Shaders, computer vision and ONNX objects, with JavaScript, Faust or C++ when needed.</td></tr>
 <tr><td>Exposing your own programs and patches</td><td><a href="/site-libossia/about.html">libossia</a> makes Max and Pure Data patches, openFrameworks, Processing, Unity or Python programs controllable from score.</td></tr>
+</tbody>
 </table>
 </div>

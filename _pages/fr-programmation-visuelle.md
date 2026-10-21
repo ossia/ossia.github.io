@@ -34,11 +34,13 @@ où le patch lui-même évolue dans le temps. On passe de l'une à l'autre à to
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Un environnement de patch gratuit sous Windows, macOS et Linux</td><td>Libre (GPLv3), avec des objets audio, vidéo, 3D et de contrôle.</td></tr>
 <tr><td>Organiser un patch dans le temps : scènes, sections, régie</td><td>Le patch vit dans une timeline, avec scènes, cues, déclencheurs et conditions.</td></tr>
 <tr><td>Réutiliser des patchs Pure Data existants</td><td>ossia score les exécute directement, et ajoute autour une timeline, de la vidéo et de la 3D.</td></tr>
 <tr><td>Des visuels génératifs et de l'interaction avec peu ou pas de code</td><td>Shaders, vision par ordinateur et objets ONNX, avec JavaScript, Faust ou C++ si besoin.</td></tr>
 <tr><td>Exposer vos propres programmes et patchs</td><td><a href="/site-libossia/about.html">libossia</a> rend pilotables depuis score des patchs Max et Pure Data et des programmes openFrameworks, Processing, Unity ou Python.</td></tr>
+</tbody>
 </table>
 </div>

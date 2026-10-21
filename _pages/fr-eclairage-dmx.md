@@ -31,12 +31,14 @@ Il convient au théâtre et à la danse, aux concerts, aux salles immersives, au
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Conduire la lumière d'un spectacle ou d'une installation, sans autre logiciel lumière</td><td>Le DMX directement depuis ossia score en Art-Net, sACN ou DMX USB, avec bibliothèque de projecteurs, cues et courbes.</td></tr>
 <tr><td>Une lumière précisément synchronisée avec le son et la vidéo</td><td>Lumière, son et vidéo partagent une timeline et une horloge.</td></tr>
 <tr><td>Des rubans LED et des effets de pixels</td><td>Motifs LED depuis des shaders ou des tableaux, et rubans NeoPixel en SPI depuis un Raspberry Pi.</td></tr>
 <tr><td>Une lumière qui réagit à la musique, aux capteurs ou aux interprètes</td><td>Analyse audio, détection de tempo, capteurs, caméras, OSC et MIDI pilotent n'importe quel paramètre de projecteur.</td></tr>
 <tr><td>Une installation permanente sur du petit matériel</td><td>Mode sans interface avec démarrage automatique, sur un mini-PC ou un Raspberry Pi.</td></tr>
+</tbody>
 </table>
 </div>
 

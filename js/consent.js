@@ -5,40 +5,57 @@
 // - The choice (accept or refuse) is kept 6 months, in this browser only.
 // - Global Privacy Control counts as a refusal: no banner, settings still available.
 // - "Cookie settings" in the footer reopens the choices; withdrawing deletes the cookies.
-(function() {
+(function () {
   var KEY = 'ossia-consent';
   var VERSION = window.ossiaConsentVersion || 1;
 
   var fr = (document.documentElement.lang || '').indexOf('fr') === 0;
-  var T = fr ? {
-    lang: 'fr', policyUrl: '/fr/confidentialite.html',
-    title: 'Cookies et mesure d\'audience',
-    text: 'Avec votre accord, nous utilisons Google Analytics pour compter les visites et mesurer si les annonces gratuites que nous diffusons via Google Ad Grants, le programme de Google pour les organismes à but non lucratif, amènent des personnes vers ossia score. Des données sur votre visite sont alors transmises à Google. Rien n\'est chargé si vous n\'acceptez pas, et aucune publicité n\'est personnalisée pour vous. Vous pouvez changer d\'avis à tout moment via « Paramètres des cookies » en bas de chaque page.',
-    policy: 'Politique de confidentialité',
-    refuse: 'Tout refuser', accept: 'Tout accepter', customize: 'Personnaliser',
-    settings: 'Paramètres des cookies', save: 'Enregistrer mes choix', close: 'Fermer',
-    stats: 'Statistiques de visite',
-    statsDesc: 'Google Analytics compte les pages visitées, le pays approximatif, le navigateur et le type d\'appareil, ainsi que les clics sur les téléchargements.',
-    ads: 'Mesure des annonces',
-    adsDesc: 'Indique à Google Ads quand une personne ayant cliqué sur l\'une de nos annonces Ad Grants télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite.',
-    always: 'Toujours actif : la mémorisation de ce choix, stockée uniquement dans votre navigateur.',
-    who: 'Responsable : ossia.io, organisme à but non lucratif (France et Québec). Destinataire : Google (Irlande, États-Unis).',
-    saved: 'Choix enregistré.'
-  } : {
-    lang: 'en', policyUrl: '/privacy.html',
-    title: 'Cookies and measurement',
-    text: 'With your permission, we use Google Analytics to count visits and to measure whether the free ads we run through Google Ad Grants, Google\'s program for non-profits, bring people to ossia score. This sends data about your visit to Google. Nothing is loaded unless you accept, and we never personalise ads for you. You can change your mind at any time with "Cookie settings" at the bottom of every page.',
-    policy: 'Privacy policy',
-    refuse: 'Refuse all', accept: 'Accept all', customize: 'Customize',
-    settings: 'Cookie settings', save: 'Save my choices', close: 'Close',
-    stats: 'Audience statistics',
-    statsDesc: 'Google Analytics counts pages visited, approximate country, browser and device type, and clicks on downloads.',
-    ads: 'Ad measurement',
-    adsDesc: 'Lets Google Ads know when someone who clicked one of our Ad Grants ads downloads ossia score or visits a key page. Requires audience statistics.',
-    always: 'Always on: remembering this choice, stored only in your browser.',
-    who: 'Controller: ossia.io, a non-profit organisation (France and Québec). Recipient: Google (Ireland, USA).',
-    saved: 'Choice saved.'
-  };
+  var T = fr
+    ? {
+        lang: 'fr',
+        policyUrl: '/fr/confidentialite.html',
+        title: "Cookies et mesure d'audience",
+        text: "Avec votre accord, nous utilisons Google Analytics pour compter les visites et mesurer si les annonces gratuites que nous diffusons via Google Ad Grants, le programme de Google pour les organismes à but non lucratif, amènent des personnes vers ossia score. Des données sur votre visite sont alors transmises à Google. Rien n'est chargé si vous n'acceptez pas, et aucune publicité n'est personnalisée pour vous. Vous pouvez changer d'avis à tout moment via « Paramètres des cookies » en bas de chaque page.",
+        policy: 'Politique de confidentialité',
+        refuse: 'Tout refuser',
+        accept: 'Tout accepter',
+        customize: 'Personnaliser',
+        settings: 'Paramètres des cookies',
+        save: 'Enregistrer mes choix',
+        close: 'Fermer',
+        stats: 'Statistiques de visite',
+        statsDesc:
+          "Google Analytics compte les pages visitées, le pays approximatif, le navigateur et le type d'appareil, ainsi que les clics sur les téléchargements.",
+        ads: 'Mesure des annonces',
+        adsDesc:
+          "Indique à Google Ads quand une personne ayant cliqué sur l'une de nos annonces Ad Grants télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite.",
+        always:
+          'Toujours actif : la mémorisation de ce choix, stockée uniquement dans votre navigateur.',
+        who: 'Responsable : ossia.io, organisme à but non lucratif (France et Québec). Destinataire : Google (Irlande, États-Unis).',
+        saved: 'Choix enregistré.'
+      }
+    : {
+        lang: 'en',
+        policyUrl: '/privacy.html',
+        title: 'Cookies and measurement',
+        text: 'With your permission, we use Google Analytics to count visits and to measure whether the free ads we run through Google Ad Grants, Google\'s program for non-profits, bring people to ossia score. This sends data about your visit to Google. Nothing is loaded unless you accept, and we never personalise ads for you. You can change your mind at any time with "Cookie settings" at the bottom of every page.',
+        policy: 'Privacy policy',
+        refuse: 'Refuse all',
+        accept: 'Accept all',
+        customize: 'Customize',
+        settings: 'Cookie settings',
+        save: 'Save my choices',
+        close: 'Close',
+        stats: 'Audience statistics',
+        statsDesc:
+          'Google Analytics counts pages visited, approximate country, browser and device type, and clicks on downloads.',
+        ads: 'Ad measurement',
+        adsDesc:
+          'Lets Google Ads know when someone who clicked one of our Ad Grants ads downloads ossia score or visits a key page. Requires audience statistics.',
+        always: 'Always on: remembering this choice, stored only in your browser.',
+        who: 'Controller: ossia.io, a non-profit organisation (France and Québec). Recipient: Google (Ireland, USA).',
+        saved: 'Choice saved.'
+      };
 
   function el(tag, attrs, text) {
     var e = document.createElement(tag);
@@ -48,42 +65,62 @@
   }
 
   function store(c) {
-    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+    try {
+      localStorage.setItem(KEY, JSON.stringify(c));
+    } catch {
+      // Storage blocked (private mode, disabled site data): the choice is not remembered
+    }
   }
 
   function deleteGoogleCookies() {
     var host = location.hostname;
     var domains = ['', host, '.' + host, '.' + host.split('.').slice(-2).join('.')];
-    document.cookie.split(';').forEach(function(c) {
+    document.cookie.split(';').forEach(function (c) {
       var name = c.split('=')[0].trim();
       if (!/^(_ga|_gid|_gat|_gcl)/.test(name)) return;
-      domains.forEach(function(d) {
-        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
+      domains.forEach(function (d) {
+        document.cookie =
+          name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : '');
       });
     });
   }
 
-  var live = el('div', { 'class': 'consent-live', 'aria-live': 'polite' });
+  var live = el('div', { class: 'consent-live', 'aria-live': 'polite' });
   document.body.appendChild(live);
 
   function apply(analytics, ads) {
     var before = window.ossiaConsent;
-    var c = { v: VERSION, analytics: !!analytics, ads: !!(analytics && ads),
-              date: new Date().toISOString().slice(0, 10) };
+    var c = {
+      v: VERSION,
+      analytics: !!analytics,
+      ads: !!(analytics && ads),
+      date: new Date().toISOString().slice(0, 10)
+    };
     store(c);
     window.ossiaConsent = c;
     hideBanner();
     live.textContent = T.saved;
     if (c.analytics) {
       if (window.ossiaAnalyticsLoaded && before && before.ads !== c.ads) {
-        if (window.gtag) gtag('consent', 'update', { ad_storage: c.ads ? 'granted' : 'denied', ad_user_data: c.ads ? 'granted' : 'denied' });
+        if (window.gtag)
+          gtag('consent', 'update', {
+            ad_storage: c.ads ? 'granted' : 'denied',
+            ad_user_data: c.ads ? 'granted' : 'denied'
+          });
       }
       if (window.ossiaLoadAnalytics) window.ossiaLoadAnalytics(c, true);
     } else if (window.ossiaAnalyticsLoaded || (before && before.analytics)) {
       // Withdrawal: deny, delete Google's cookies and reload without gtag.js.
-      if (window.gtag) gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied' });
+      if (window.gtag)
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied'
+        });
       deleteGoogleCookies();
-      setTimeout(function() { location.reload(); }, 300);
+      setTimeout(function () {
+        location.reload();
+      }, 300);
     }
   }
 
@@ -91,23 +128,36 @@
   var banner = null;
   function showBanner() {
     if (banner) return;
-    banner = el('section', { 'class': 'consent-banner', role: 'region', 'aria-labelledby': 'consent-title', lang: T.lang });
+    banner = el('section', {
+      class: 'consent-banner',
+      role: 'region',
+      'aria-labelledby': 'consent-title',
+      lang: T.lang
+    });
     banner.appendChild(el('h2', { id: 'consent-title' }, T.title));
     var p = el('p', {}, T.text + ' ');
     p.appendChild(el('a', { href: T.policyUrl }, T.policy));
     banner.appendChild(p);
-    var row = el('div', { 'class': 'consent-buttons' });
+    var row = el('div', { class: 'consent-buttons' });
     var refuse = el('button', { type: 'button' }, T.refuse);
     var accept = el('button', { type: 'button' }, T.accept);
     var custom = el('button', { type: 'button' }, T.customize);
-    refuse.addEventListener('click', function() { apply(false, false); });
-    accept.addEventListener('click', function() { apply(true, true); });
-    custom.addEventListener('click', function() { openSettings(custom); });
-    row.appendChild(refuse); row.appendChild(accept); row.appendChild(custom);
+    refuse.addEventListener('click', function () {
+      apply(false, false);
+    });
+    accept.addEventListener('click', function () {
+      apply(true, true);
+    });
+    custom.addEventListener('click', function () {
+      openSettings(custom);
+    });
+    row.appendChild(refuse);
+    row.appendChild(accept);
+    row.appendChild(custom);
     banner.appendChild(row);
     document.body.appendChild(banner);
     // Never hide the focused element behind the banner (WCAG 2.4.11)
-    document.documentElement.style.scrollPaddingBottom = (banner.offsetHeight + 16) + 'px';
+    document.documentElement.style.scrollPaddingBottom = banner.offsetHeight + 16 + 'px';
   }
   function hideBanner() {
     if (!banner) return;
@@ -117,40 +167,66 @@
   }
 
   // --- Second layer: settings dialog ---------------------------------------
-  var dialog = null, statsBox, adsBox, opener = null;
+  var dialog = null,
+    statsBox,
+    adsBox,
+    opener = null;
   function buildDialog() {
-    dialog = el('dialog', { 'class': 'consent-dialog', 'aria-labelledby': 'consent-dialog-title', lang: T.lang });
+    dialog = el('dialog', {
+      class: 'consent-dialog',
+      'aria-labelledby': 'consent-dialog-title',
+      lang: T.lang
+    });
     dialog.appendChild(el('h2', { id: 'consent-dialog-title' }, T.settings));
     function option(id, label, desc) {
-      var wrap = el('div', { 'class': 'consent-option' });
-      var box = el('input', { type: 'checkbox', role: 'switch', id: id, 'aria-describedby': id + '-desc' });
-      var lab = el('label', { 'for': id }, label);
-      wrap.appendChild(box); wrap.appendChild(lab);
+      var wrap = el('div', { class: 'consent-option' });
+      var box = el('input', {
+        type: 'checkbox',
+        role: 'switch',
+        id: id,
+        'aria-describedby': id + '-desc'
+      });
+      var lab = el('label', { for: id }, label);
+      wrap.appendChild(box);
+      wrap.appendChild(lab);
       wrap.appendChild(el('p', { id: id + '-desc' }, desc));
       dialog.appendChild(wrap);
       return box;
     }
     statsBox = option('consent-stats', T.stats, T.statsDesc);
     adsBox = option('consent-ads', T.ads, T.adsDesc);
-    statsBox.addEventListener('change', function() {
+    statsBox.addEventListener('change', function () {
       adsBox.disabled = !statsBox.checked;
       if (!statsBox.checked) adsBox.checked = false;
     });
-    dialog.appendChild(el('p', { 'class': 'consent-note' }, T.always));
-    var who = el('p', { 'class': 'consent-note' }, T.who + ' ');
+    dialog.appendChild(el('p', { class: 'consent-note' }, T.always));
+    var who = el('p', { class: 'consent-note' }, T.who + ' ');
     who.appendChild(el('a', { href: T.policyUrl }, T.policy));
     dialog.appendChild(who);
-    var row = el('div', { 'class': 'consent-buttons' });
+    var row = el('div', { class: 'consent-buttons' });
     var refuse = el('button', { type: 'button' }, T.refuse);
     var save = el('button', { type: 'button' }, T.save);
     var accept = el('button', { type: 'button' }, T.accept);
-    refuse.addEventListener('click', function() { closeSettings(); apply(false, false); });
-    save.addEventListener('click', function() { closeSettings(); apply(statsBox.checked, adsBox.checked); });
-    accept.addEventListener('click', function() { closeSettings(); apply(true, true); });
-    row.appendChild(refuse); row.appendChild(save); row.appendChild(accept);
+    refuse.addEventListener('click', function () {
+      closeSettings();
+      apply(false, false);
+    });
+    save.addEventListener('click', function () {
+      closeSettings();
+      apply(statsBox.checked, adsBox.checked);
+    });
+    accept.addEventListener('click', function () {
+      closeSettings();
+      apply(true, true);
+    });
+    row.appendChild(refuse);
+    row.appendChild(save);
+    row.appendChild(accept);
     dialog.appendChild(row);
     // Esc closes without changing the stored choice; focus returns to the opener
-    dialog.addEventListener('close', function() { if (opener) opener.focus(); });
+    dialog.addEventListener('close', function () {
+      if (opener) opener.focus();
+    });
     document.body.appendChild(dialog);
   }
   function openSettings(from) {
@@ -160,21 +236,26 @@
     statsBox.checked = !!(c && c.analytics);
     adsBox.checked = !!(c && c.ads);
     adsBox.disabled = !statsBox.checked;
-    if (dialog.showModal) dialog.showModal(); else dialog.setAttribute('open', '');
+    if (dialog.showModal) dialog.showModal();
+    else dialog.setAttribute('open', '');
   }
   function closeSettings() {
-    if (dialog.close) dialog.close(); else dialog.removeAttribute('open');
+    if (dialog.close) dialog.close();
+    else dialog.removeAttribute('open');
   }
 
   // --- Footer button -------------------------------------------------------
-  document.querySelectorAll('[data-consent-settings]').forEach(function(b) {
+  document.querySelectorAll('[data-consent-settings]').forEach(function (b) {
     b.textContent = T.settings;
     b.hidden = false;
-    b.addEventListener('click', function() { openSettings(b); });
+    b.addEventListener('click', function () {
+      openSettings(b);
+    });
   });
 
   // Ask only when there is no valid choice, and never when the browser sends
   // Global Privacy Control: that already says no.
-  if (navigator.globalPrivacyControl && window.ossiaConsent && window.ossiaConsent.analytics) apply(false, false);
+  if (navigator.globalPrivacyControl && window.ossiaConsent && window.ossiaConsent.analytics)
+    apply(false, false);
   else if (!window.ossiaConsent && !navigator.globalPrivacyControl) showBanner();
 })();

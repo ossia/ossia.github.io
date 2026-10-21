@@ -1024,7 +1024,7 @@ h2.binding-title:after {
 
 
 /* Index page section */
-#index {
+.index {
     width: 100%;
     padding: 0;
     padding-top: 2em;
@@ -1032,24 +1032,24 @@ h2.binding-title:after {
 
     margin: 0;
 }
-#index.black {
+.index.black {
     background-color: black;
     text-align : center;
 }
 
-#index.white {
+.index.white {
     background-color: #FFFFFF;
 }
 
-#index.grey {
+.index.grey {
     background-color: #F5F5F5;
 }
 
-#index.white h2 a{
+.index.white h2 a{
     color: black;
 }
 
-#index.white h2 a:hover{
+.index.white h2 a:hover{
     color: var(--orange);
 }
 /* Banner */
@@ -1915,4 +1915,9 @@ p.download-date {
         padding-right: 0.5em;
         font-size: 0.9em;
     }
+}
+
+/* Embedded players have no border (replaces the obsolete frameborder attribute) */
+iframe {
+    border: 0;
 }

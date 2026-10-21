@@ -26,12 +26,14 @@ Sound sources, their positions and their movements are written on the same timel
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Spatialising on an irregular loudspeaker layout</td><td>DBAP and GBAP work with speakers placed anywhere, in 2D or 3D.</td></tr>
 <tr><td>Writing movements precisely in time</td><td>Trajectories and source positions are automations on the timeline.</td></tr>
 <tr><td>Sounds that follow performers or visitors</td><td>Tracking systems, depth cameras and sensors drive source positions directly.</td></tr>
 <tr><td>Keeping your spatialisation renderer</td><td>ossia score sends source positions and parameters over OSC and ADM-OSC.</td></tr>
 <tr><td>A permanent multichannel installation</td><td>Headless mode with autoplay, on a PC or a Raspberry Pi.</td></tr>
+</tbody>
 </table>
 </div>
 

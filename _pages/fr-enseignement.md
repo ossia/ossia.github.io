@@ -28,12 +28,14 @@ Les élèves gardent le même outil après le cours : il est gratuit, il fonctio
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Un outil que chaque élève peut utiliser, quel que soit son ordinateur</td><td>Libre et gratuit sous Windows, macOS et Linux, et dans le navigateur.</td></tr>
 <tr><td>Un atelier qui démarre en quelques minutes</td><td>La version web avec des exemples prêts à l'emploi, sans rien installer.</td></tr>
 <tr><td>Couvrir le son, la vidéo, la lumière et les capteurs dans un même cours</td><td>Une seule timeline et un seul patcher pour tous les médias et appareils.</td></tr>
 <tr><td>Introduire la programmation progressivement</td><td>Le patch visuel d'abord, puis JavaScript, Faust, shaders ou C++ à côté.</td></tr>
 <tr><td>Des élèves qui continuent après le cours</td><td>Aucune licence à renouveler ; leurs projets s'ouvrent sur n'importe quel ordinateur.</td></tr>
+</tbody>
 </table>
 </div>
 

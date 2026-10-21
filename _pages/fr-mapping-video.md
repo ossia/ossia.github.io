@@ -35,12 +35,14 @@ aux spectacles en fulldome et aux visuels réactifs au son, souvent dans le mêm
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Projeter sur plusieurs vidéoprojecteurs ou surfaces</td><td>Déformation par zone, fondu des bords et sortie fulldome en fisheye.</td></tr>
 <tr><td>Un spectacle écrit ou interactif, identique chaque soir ou qui réagit</td><td>Chaque paramètre de vidéo, de shader ou de 3D peut être mis en cue, automatisé ou déclenché depuis la timeline.</td></tr>
 <tr><td>Des visuels génératifs et 3D, à n'importe quelle résolution</td><td>Shaders ISF et compute, pipeline 3D sur GPU, sans limite de résolution ni filigrane.</td></tr>
 <tr><td>Du théâtre et de la danse interactifs avec caméras et capteurs</td><td>Détection de pose, caméras de profondeur, vision par ordinateur et protocoles de tracking.</td></tr>
 <tr><td>Échanger de la vidéo avec d'autres logiciels et matériels</td><td>NDI, Spout, Syphon, RTSP, SRT, et cartes de capture et de diffusion.</td></tr>
 <tr><td>Vidéo, son et lumière depuis un seul ordinateur, Linux compris</td><td>Un seul projet sur une seule machine, sous Windows, macOS ou Linux.</td></tr>
+</tbody>
 </table>
 </div>

@@ -31,12 +31,14 @@ ossia score runs the media and the interactive parts of an exhibit, from a singl
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Exhibits that start every morning without anyone</td><td>Autoplay on startup, headless mode, and no editor window on screen.</td></tr>
 <tr><td>Many exhibits on an affordable budget</td><td>Free software, and Raspberry Pi or mini PCs instead of dedicated media players.</td></tr>
 <tr><td>Knowing when something goes wrong</td><td>System monitoring and every parameter readable over the network.</td></tr>
 <tr><td>Staff who are not technicians</td><td>A browser control panel, or a custom touch interface with only the buttons they need.</td></tr>
 <tr><td>A project that outlives its author</td><td>Media collected into one folder, open file formats, and the same project on every operating system.</td></tr>
+</tbody>
 </table>
 </div>
 

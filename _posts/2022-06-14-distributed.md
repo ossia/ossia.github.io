@@ -16,7 +16,7 @@ description: "Collaborative features in score 3.0.11: edit and execute a score a
 that had been developed [a few years ago](https://github.com/ossia/iscore-addon-network) as part of my [thesis work](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=v1_52IMAAAAJ&citation_for_view=v1_52IMAAAAJ:4TOpqqG69KYC), 
 but had remained dormant since then (very precisely, since the presentation for the Journées d'Informatique Musicale 2017):
 
-![Contributions]({{site.baseurl}}/assets/blog/distributed/contribs.png){: width="100%" }
+![Contributions]({{site.baseurl}}/assets/blog/distributed/contribs.png){:  style="width: 100%" }
 
 Recent projects involving distributed performance, such as João Svidzinski's [HERMES v2](https://isidore.science/document/10670/1.7jax6r) distributed musical piece, an AFIM workgroup,
 a demo at SMC 2022, and a lot of great presentations at TENOR 2022, have reinvigorated the motivation for making this work correctly.

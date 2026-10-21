@@ -30,12 +30,14 @@ It is made for pieces where musicians and electronics play together: the timing 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Electronics that follow the musicians, not a click track</td><td>Triggers and conditions on the timeline wait for pedals, MIDI, OSC or audio thresholds.</td></tr>
 <tr><td>A part that the next performers can play again</td><td>The whole electronic part, with its cues, processing and sound files, is one project file, on every operating system.</td></tr>
 <tr><td>Rehearsing a passage</td><td>Start from any point with <i>Play from here</i>.</td></tr>
 <tr><td>Processing and spatialising the instruments</td><td>Plug-ins, Faust, Pure Data patches and spatialisation in the same score.</td></tr>
 <tr><td>Video or light in the piece</td><td>Video, shaders and DMX lights follow the same cues.</td></tr>
+</tbody>
 </table>
 </div>
 

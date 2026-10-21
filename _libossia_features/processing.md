@@ -18,5 +18,5 @@ visible: true
 
 # Video tutorial
 <div class="videoWrapper">
-    <button type="button" class="video-facade" aria-label="Play the video: Processing bindings (loads YouTube)"><span class="video-facade-title">Processing bindings</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Processing bindings" loading="lazy" src="https://www.youtube-nocookie.com/embed/geXzernb2vI" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
+    <button type="button" class="video-facade" aria-label="Play the video: Processing bindings (loads YouTube)"><span class="video-facade-title">Processing bindings</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Processing bindings" loading="lazy" src="https://www.youtube-nocookie.com/embed/geXzernb2vI" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
 </div>

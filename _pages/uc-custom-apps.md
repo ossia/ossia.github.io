@@ -27,12 +27,14 @@ your interface on top, your project and media inside, and the whole engine under
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>A kiosk with only the buttons visitors should touch</td><td>A full-screen QML interface on top of the project, without the editor.</td></tr>
 <tr><td>Distributing an interactive work to the public</td><td>Installable apps for each operating system, and a web version that runs in the browser.</td></tr>
 <tr><td>A simple tool for a team or a client</td><td>Your own name, icon and settings, with the complexity of the project hidden.</td></tr>
 <tr><td>Not maintaining a media engine yourself</td><td>Audio, video, 3D, devices and protocols come from ossia score.</td></tr>
 <tr><td>Reproducible builds</td><td>Packaging scripts and GitHub Actions from the template repository.</td></tr>
+</tbody>
 </table>
 </div>
 

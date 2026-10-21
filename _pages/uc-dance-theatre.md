@@ -29,12 +29,14 @@ The interactive parts live inside a written score, so the show can follow the re
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Following performers without putting sensors on them</td><td>Pose detection from a webcam, depth cameras and tracking systems.</td></tr>
 <tr><td>Interaction that stays the same from one night to the next</td><td>Interactive parts are written inside scenes and cues, with smoothing, calibration and thresholds.</td></tr>
 <tr><td>Movements that drive sound, video and light together</td><td>One project for spatial sound, video, 3D and DMX, all mapped from the same data.</td></tr>
 <tr><td>Rehearsing and adjusting quickly</td><td>Change mappings while the piece runs, and restart from any scene with <i>Play from here</i>.</td></tr>
 <tr><td>Touring with a light setup</td><td>A laptop or a Raspberry Pi, on Windows, macOS or Linux, with media collected into the project.</td></tr>
+</tbody>
 </table>
 </div>
 

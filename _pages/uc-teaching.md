@@ -27,12 +27,14 @@ Students keep the same tool after the course: it is free, it runs on their own c
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>A tool every student can use, whatever their computer</td><td>Free and open-source on Windows, macOS and Linux, and in the browser.</td></tr>
 <tr><td>A workshop that starts in minutes</td><td>The browser version with ready-made examples, nothing to install.</td></tr>
 <tr><td>Covering sound, video, light and sensors in one course</td><td>One timeline and one patcher for all media and devices.</td></tr>
 <tr><td>Introducing programming gradually</td><td>Visual patching first, then JavaScript, Faust, shaders or C++ next to it.</td></tr>
 <tr><td>Students who keep working after the course</td><td>No licence to renew; their projects open on any computer.</td></tr>
+</tbody>
 </table>
 </div>
 

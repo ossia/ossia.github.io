@@ -37,13 +37,15 @@ ou réagir aux capteurs et aux interprètes, dans la même conduite.
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Une suite de cues lancées chacune par un GO</td><td>Des scènes qui attendent chacune un GO depuis le clavier, un contrôleur MIDI, l'OSC ou un navigateur, et <i>Play from here</i> pour reprendre n'importe où.</td></tr>
 <tr><td>Travailler sous Windows, Linux ou sur un Raspberry Pi, sans licence à acheter</td><td>Libre et gratuit sur tous les systèmes, avec les mêmes fonctions partout, sauf les fonctions liées à un système ou à un matériel, comme Spout, Syphon ou CUDA.</td></tr>
 <tr><td>Un spectacle qui réagit aux interprètes ou au public</td><td>Déclencheurs, conditions et scènes à embranchements, alimentés par des capteurs, des caméras, du tracking ou n'importe quel message OSC ou MIDI.</td></tr>
 <tr><td>Son, vidéo et lumière dans une seule conduite</td><td>Son multicanal, vidéo, 3D, lumière DMX et appareils OSC/MIDI sur la même timeline.</td></tr>
 <tr><td>Piloter le matériel audiovisuel : vidéoprojecteurs, mélangeurs, caméras</td><td>Les modules Bitfocus Companion, installés depuis le gestionnaire de paquets, fonctionnent directement dans ossia score.</td></tr>
 <tr><td>Suivre un timecode</td><td>LTC en entrée et en sortie, horloge MIDI et MIDI timecode.</td></tr>
+</tbody>
 </table>
 </div>
 

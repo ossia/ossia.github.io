@@ -29,11 +29,13 @@ et repartent vers les écrans, des fichiers, d'autres logiciels et des services 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Diffuser un concert ou une performance avec ses visuels</td><td>Le même projet calcule les visuels, mixe le son et envoie les deux au service de streaming.</td></tr>
 <tr><td>Faire entrer de la vidéo distante ou réseau dans un spectacle</td><td>Entrées SRT, RTSP, NDI et cartes de capture, traitées comme n'importe quelle texture.</td></tr>
 <tr><td>Enregistrer le programme pour l'archive ou le montage</td><td>Enregistrement en ProRes, DNxHD, MP4 ou AV1, déclenché depuis la timeline.</td></tr>
 <tr><td>Envoyer les images au reste du dispositif</td><td>Sorties NDI, Spout, Syphon et PipeWire à côté des écrans.</td></tr>
 <tr><td>Un changement de caméra piloté par le spectacle</td><td>Cues, scènes et capteurs choisissent automatiquement caméras et graphismes.</td></tr>
+</tbody>
 </table>
 </div>

@@ -31,11 +31,13 @@ et ils pilotent le reste de l'œuvre. Les modèles tournent en local, sur votre 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Suivre le corps sans capteur spécial</td><td>Détection de pose et estimation de profondeur depuis une webcam ordinaire.</td></tr>
 <tr><td>Des images générées qui réagissent au public ou à la musique</td><td>Génération d'images en temps réel pilotée par caméras, capteurs et analyse audio, avec des prompts qui évoluent dans le temps.</td></tr>
 <tr><td>Garder les données sur place</td><td>Les modèles tournent sur votre ordinateur ; rien n'est envoyé à un service en ligne.</td></tr>
 <tr><td>Concevoir l'interaction par l'exemple, sans coder</td><td>Classifieurs et régresseurs entraînés à partir de quelques gestes enregistrés.</td></tr>
 <tr><td>Un spectacle identique chaque soir</td><td>Les objets d'IA font partie de la timeline, avec cues, scènes et conditions.</td></tr>
+</tbody>
 </table>
 </div>

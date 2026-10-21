@@ -28,12 +28,14 @@ improvised around loops and patterns, or anything in between, and the visuals an
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>A piece that is partly written and partly improvised</td><td>Fixed sections on the timeline, and loops, scenes and conditions that wait for the performer.</td></tr>
 <tr><td>Instruments and effects without buying plug-ins</td><td>Synths, drum machines, a sampler, a granulator and hundreds of effects included, plus your own plug-ins.</td></tr>
 <tr><td>Playing in sync with other musicians and machines</td><td>MIDI clock, MIDI timecode and LTC in and out, and a tempo follower.</td></tr>
 <tr><td>Visuals and lights that follow the music</td><td>Audio analysis, beat tracking and the same timeline for sound, video and DMX.</td></tr>
 <tr><td>A light setup on stage</td><td>A laptop, or a Raspberry Pi running the set headless.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -29,11 +29,13 @@ ossia score se place au milieu : chaque appareil devient un arbre de paramètres
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Un contrôleur MIDI qui pilote un logiciel qui ne parle qu'OSC, ou l'inverse</td><td>Glissez un paramètre MIDI sur un paramètre OSC, avec une courbe et une plage entre les deux.</td></tr>
 <tr><td>Des capteurs en série, MQTT ou Bluetooth LE qui pilotent la lumière ou le son</td><td>Ce sont tous des appareils du même arbre, reliés au DMX, à l'OSC ou à l'audio et la vidéo intégrés.</td></tr>
 <tr><td>Un appareil avec son propre protocole texte ou binaire</td><td>Un court script le décrit une fois, puis il se comporte comme n'importe quel autre appareil.</td></tr>
 <tr><td>Une passerelle qui tourne seule, en permanence</td><td>L'appareil mapper fonctionne sans jouer de partition, sans interface sur un Raspberry Pi.</td></tr>
 <tr><td>Du temps en plus de la traduction</td><td>Le même projet peut séquencer, retarder et automatiser les messages sur une timeline (voir la <a href="/fr/timeline-osc-midi-dmx.html">timeline OSC, MIDI et DMX</a>).</td></tr>
+</tbody>
 </table>
 </div>
