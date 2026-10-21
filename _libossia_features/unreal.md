@@ -13,7 +13,7 @@ visible: true
 
 # Important links
 
-* [Downloads](../download.html#unreal-binding)
+* [Downloads](../download.html#cpp-binding)
 * [API documentation](https://ossia.io/ossia-docs/?cpp)
 
 # Video tutorial

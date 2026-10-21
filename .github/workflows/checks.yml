@@ -32,7 +32,8 @@ jobs:
           bundle exec htmlproofer ./_site \
             --disable-external \
             --checks Links,Images,Scripts \
-            --ignore-urls "/^\/score-docs/,/^\/score-web/,/^\/libossia\//,/^https:\/\/ossia\.io\/(score-docs|score-web|libossia)\//" \
+            --no-enforce-https \
+            --ignore-urls "/^\/(score-docs|score-web|ossia-docs|libossia\/)/,/^https:\/\/ossia\.io\/(score-docs|score-web|ossia-docs|libossia\/)/" \
             --swap-urls "^https\://ossia\.io:"
 
       - name: Download links of the current release exist
@@ -78,5 +79,6 @@ jobs:
           bundle exec htmlproofer ./_site \
             --checks Links \
             --ignore-status-codes "403,429,999" \
-            --ignore-urls "/^\/score-web/,/^\/libossia\//,/^https:\/\/ossia\.io\/(score-web|libossia)\//,/web\.archive\.org/" \
-            --swap-urls "^https\://ossia\.io/(?!score-docs/|score-web|libossia/):/"
+            --no-enforce-https \
+            --ignore-urls "/^\/(score-web|ossia-docs|libossia\/)/,/^https:\/\/ossia\.io\/(score-web|ossia-docs|libossia\/)/,/web\.archive\.org/" \
+            --swap-urls "^https\://ossia\.io/(?!score-docs/|score-web|ossia-docs|libossia/):/"
