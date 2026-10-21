@@ -50,3 +50,4 @@ consent:
   always: Your choice is stored in this browser only.
   who: "Controller: ossia.io. Recipient: Google."
   saved: Choice saved.
+months: [January, February, March, April, May, June, July, August, September, October, November, December]
