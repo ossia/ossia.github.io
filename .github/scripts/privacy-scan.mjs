@@ -16,7 +16,7 @@ import { serve, pages, pool } from './lib/site.mjs';
 const root = process.argv[2] || '_site';
 // Contacted only after consent, by gtag.js (see _includes/consent-head.js)
 const ANALYTICS_HOSTS = [/(^|\.)googletagmanager\.com$/, /(^|\.)google-analytics\.com$/];
-// Pages where the "Accept all" path is tested
+// Pages where the "Accept" path is tested
 const ACCEPT_PAGES = ['/', '/score/download.html', '/fr/usages.html'];
 
 const isLocal = (u) => {
@@ -55,7 +55,7 @@ async function visit(browser, url, { gpc = false, accept = false } = {}) {
   const cookies = (await context.cookies()).map((c) => c.name);
   if (accept && banner) {
     accepted = true;
-    await page.getByRole('button', { name: /Accept all|Tout accepter/ }).click();
+    await page.getByRole('button', { name: /^(Accept|Accepter)$/ }).click();
     await page.waitForTimeout(1500);
   }
   await context.close();
@@ -78,7 +78,7 @@ for (const p of ACCEPT_PAGES) {
   const r = await visit(browser, site.url + p, { accept: true });
   const unexpected = r.after.filter((h) => !ANALYTICS_HOSTS.some((re) => re.test(h)));
   if (unexpected.length) problems.push(`${p}: after consent, contacts ${unexpected.join(', ')}`);
-  if (!r.after.length) problems.push(`${p}: "Accept all" did not load Google Analytics`);
+  if (!r.after.length) problems.push(`${p}: "Accept" did not load Google Analytics`);
 }
 
 for (const p of ACCEPT_PAGES) {

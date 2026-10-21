@@ -41,7 +41,7 @@ Avec votre accord, le site utilise **Google Analytics** (Google Ireland Limited 
 
 ### Votre choix, et changer d'avis
 
-* Le bandeau propose **Tout refuser**, **Tout accepter** et **Personnaliser**, avec la même visibilité. Fermer les paramètres sans enregistrer ne change rien.
+* Le bandeau propose **Refuser**, **Accepter** et **Personnaliser**, avec la même visibilité. **Accepter** n'active que les statistiques de visite ; la mesure des annonces ne peut être activée que dans les paramètres (**Personnaliser**). Fermer les paramètres sans enregistrer ne change rien.
 * Votre choix, que vous acceptiez ou refusiez, est conservé **6 mois** dans le stockage local de votre navigateur (`ossia-consent` : vos choix et la date). Il ne quitte jamais votre navigateur. Nous vous redemandons ensuite, ou plus tôt si les finalités changent.
 * Vous pouvez changer d'avis à tout moment via **Paramètres des cookies** en bas de chaque page. Si vous retirez votre consentement, les cookies Google sont supprimés et Google Analytics n'est plus chargé.
 * Si votre navigateur envoie le signal **Global Privacy Control**, nous le considérons comme un refus et n'affichons pas le bandeau.
