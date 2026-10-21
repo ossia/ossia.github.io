@@ -4,7 +4,9 @@ title: "Live electronic music software"
 headline: "Live electronic music"
 subtitle: "ossia score can be used to play electronic music live, with instruments, step sequencers and plug-ins on a timeline that follows a tempo, MIDI clock or a timecode vinyl."
 permalink: /live-music.html
-translation: /fr/musique-live.html
+ref: live-music
+nav_title: "Live electronic music"
+blurb: "Synths, drum machines, sampler, step sequencers and plug-ins, in sync with MIDI clock, timecode and visuals."
 category: site-score
 description: "Free, open-source software for live electronic music: synths, drum machines, sampler, step sequencer, looper, plug-ins, MIDI clock and timecode vinyl."
 image: /assets/social/ossia-score-og.jpg

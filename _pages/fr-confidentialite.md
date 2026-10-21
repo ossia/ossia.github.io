@@ -4,12 +4,12 @@ lang: fr
 title:  "Politique de confidentialité"
 
 permalink: /fr/confidentialite.html
-translation: /privacy.html
+ref: privacy
 category: "site-score"
 description: "Politique de confidentialité d'ossia.io et de nos logiciels libres, ossia score et libossia."
 ---
 
-*Dernière mise à jour : 18 octobre 2026* · [English version](/privacy.html)
+*Dernière mise à jour : 18 octobre 2026*
 
 ## Qui sommes-nous
 

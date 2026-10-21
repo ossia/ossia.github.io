@@ -639,6 +639,74 @@
 					color: white !important;
 				}
 
+/* Language menu (_includes/language-menu.html) */
+#header .lang-menu {
+    position: relative;
+    margin-right: 0.8em;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+#header .lang-menu summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0 0.35em;
+    border: 1px solid var(--pale-blue);
+    border-radius: 4px;
+    color: var(--pale-blue);
+}
+#header .lang-menu summary::-webkit-details-marker {
+    display: none;
+}
+#header .lang-menu summary::after {
+    content: " \25BE";
+}
+#header .lang-menu summary:hover, #header .lang-menu[open] summary {
+    color: var(--orange);
+    border-color: var(--orange);
+}
+#header .lang-menu ul {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin: 0.4em 0 0 0;
+    padding: 0.3em 0;
+    list-style: none;
+    background: #1c2021;
+    text-align: left;
+    text-transform: none;
+}
+#header .lang-menu li a {
+    display: block;
+    padding: 0.3em 1em;
+    white-space: nowrap;
+    color: var(--pale-blue);
+    text-decoration: none;
+}
+#header .lang-menu li a:hover, #header .lang-menu li a:focus-visible,
+#header .lang-menu li a[aria-current] {
+    color: var(--orange);
+}
+#topPanel .lang-links {
+    margin: 0.5em 0 0 0;
+    padding: 0.5em 0 0 0;
+    list-style: none;
+    border-top: solid 1px rgba(255, 255, 255, 0.05);
+    text-transform: none;
+}
+#topPanel .lang-links li {
+    display: inline-block;
+}
+#topPanel .lang-links a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: var(--pale-blue);
+    text-decoration: none;
+}
+#topPanel .lang-links a[aria-current], #topPanel .lang-links a:hover {
+    color: var(--orange);
+}
+
 			#header.alt nav {
 				right: 2.5em;
 				top: 1.75em;
@@ -1908,12 +1976,19 @@ p.download-date {
     background: #f00;
 }
 
-/* Keep the eight header links on one line until the mobile menu takes over (980px) */
-@media screen and (max-width: 1240px) {
+/* Keep the header on one line until the mobile menu takes over (840px) */
+@media screen and (max-width: 1320px) {
     #header nav div a {
         padding-left: 0.5em;
         padding-right: 0.5em;
         font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 1060px) {
+    #header nav div a {
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        font-size: 0.8em;
     }
 }
 

@@ -36,3 +36,10 @@ assets:
   compress:
     css: true
     js: uglifier
+
+# Pages are in English unless they say otherwise (see _data/languages.yml)
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en

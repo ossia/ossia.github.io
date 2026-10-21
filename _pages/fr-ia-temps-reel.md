@@ -5,7 +5,9 @@ title: "IA en temps réel pour l'image et le son"
 headline: "L'IA en temps réel pour les artistes"
 subtitle: "ossia score permet d'exécuter des modèles d'IA en temps réel, comme la détection de pose, la génération d'images ou les modèles de langage, sous forme d'objets d'un patch."
 permalink: /fr/ia-temps-reel.html
-translation: /realtime-ai.html
+ref: realtime-ai
+nav_title: "IA en temps réel"
+blurb: "Détection de pose, profondeur depuis une webcam, génération d'images en temps réel, modèles de langage et apprentissage par l'exemple, en local."
 category: site-score
 description: "IA en temps réel libre pour les artistes : détection de pose, segmentation, profondeur, images générées, LLM et apprentissage par l'exemple, en local."
 image: /assets/social/ossia-score-og.jpg

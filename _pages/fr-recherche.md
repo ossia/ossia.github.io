@@ -5,7 +5,9 @@ title: "Sonification de données et biosignaux"
 headline: "Recherche, sonification et biosignaux"
 subtitle: "ossia score permet de jouer en son, en lumière ou en images des données de matériel de laboratoire et des jeux de données, d'enregistrer et de rejouer des sessions, et d'écrire des protocoles sur une timeline."
 permalink: /fr/recherche-sonification.html
-translation: /research-sonification.html
+ref: research
+nav_title: "Recherche et sonification"
+blurb: "LSL, données HDF5 et CSV, sonification, biofeedback, et sessions enregistrées et rejouées sur une timeline."
 category: site-score
 description: "Logiciel libre pour la recherche : LSL, données HDF5 et CSV, sonification, biosignaux et biofeedback, enregistrement et relecture, scripts et extensions C++."
 image: /assets/social/ossia-score-og.jpg

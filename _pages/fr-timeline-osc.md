@@ -5,7 +5,9 @@ title: "Séquenceur et timeline OSC, MIDI et DMX gratuit"
 headline: "Une timeline OSC, MIDI et DMX"
 subtitle: "ossia score permet d'écrire des automations pour n'importe quel paramètre OSC, MIDI ou DMX sur une timeline, qui peut aussi attendre des événements extérieurs."
 permalink: /fr/timeline-osc-midi-dmx.html
-translation: /osc-midi-dmx-timeline.html
+ref: osc-timeline
+nav_title: "Timeline OSC, MIDI et DMX"
+blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, avec déclencheurs et conditions."
 category: site-score
 description: "Séquenceur OSC, MIDI et DMX libre pour Windows, macOS et Linux : courbes d'automation, OSCQuery, déclencheurs et conditions."
 image: /assets/social/ossia-score-og.jpg

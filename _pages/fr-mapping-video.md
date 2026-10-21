@@ -5,7 +5,9 @@ title: "Logiciel de mapping vidéo gratuit"
 headline: "Vidéo, mapping et VJing"
 subtitle: "ossia score permet de lire, projeter et générer de la vidéo sur plusieurs vidéoprojecteurs, dans le même projet que le son et la lumière d'un spectacle."
 permalink: /fr/mapping-video.html
-translation: /projection-mapping.html
+ref: projection-mapping
+nav_title: "Vidéo, mapping et VJing"
+blurb: "Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière."
 category: site-score
 description: "Logiciel libre de lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI pour Windows, macOS et Linux, synchronisé avec le son et la lumière."
 image: /assets/social/ossia-score-og.jpg

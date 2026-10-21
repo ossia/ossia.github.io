@@ -4,7 +4,9 @@ title: "Visual programming for audio and video"
 headline: "Visual programming with a timeline"
 subtitle: "ossia score can be used as a visual programming environment for audio, video, 3D and sensors, where the patch itself is organized in time."
 permalink: /visual-programming.html
-translation: /fr/programmation-visuelle.html
+ref: visual-programming
+nav_title: "Visual programming"
+blurb: "Patch audio, video and interaction with nodes and a timeline, and run your Pure Data patches."
 category: site-score
 description: "Free, open-source visual programming for audio, video and interaction, with nodes and a timeline. Runs Pure Data patches."
 image: /assets/social/ossia-score-og.jpg

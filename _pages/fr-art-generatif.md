@@ -5,7 +5,9 @@ title: "Art génératif et creative coding"
 headline: "Art génératif et creative coding"
 subtitle: "ossia score permet de créer des images et du son génératifs avec des shaders, des scènes 3D et du code, joués en direct ou calculés image par image."
 permalink: /fr/art-generatif.html
-translation: /generative-art.html
+ref: generative-art
+nav_title: "Art génératif"
+blurb: "Shaders, 3D, gaussian splats et live coding, joués en direct ou rendus image par image."
 category: site-score
 description: "Logiciel libre d'art génératif : shaders ISF et compute, import Shadertoy, scènes 3D, gaussian splats, live coding et rendus hors temps réel."
 image: /assets/social/ossia-score-og.jpg

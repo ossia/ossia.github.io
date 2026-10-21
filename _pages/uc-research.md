@@ -4,7 +4,9 @@ title: "Data sonification and biosignal software"
 headline: "Research, sonification and biosignals"
 subtitle: "ossia score can be used to play data from lab hardware and datasets as sound, light or images, record and replay sessions, and write experiments on a timeline."
 permalink: /research-sonification.html
-translation: /fr/recherche-sonification.html
+ref: research
+nav_title: "Research, sonification and biosignals"
+blurb: "LSL, HDF5 and CSV data, sonification, biofeedback, and sessions recorded and replayed on a timeline."
 category: site-score
 description: "Free, open-source software for research: LSL, HDF5 and CSV data, sonification, biosignals and biofeedback, recording and replay, scripting and C++ extensions."
 image: /assets/social/ossia-score-og.jpg

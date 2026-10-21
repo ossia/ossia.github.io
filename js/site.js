@@ -24,6 +24,20 @@
     });
   }
 
+  // Language menu: closes on Escape and on a click elsewhere
+  var langMenu = document.querySelector('#header .lang-menu');
+  if (langMenu) {
+    document.addEventListener('click', function (e) {
+      if (langMenu.open && !langMenu.contains(e.target)) langMenu.open = false;
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && langMenu.open) {
+        langMenu.open = false;
+        langMenu.querySelector('summary').focus();
+      }
+    });
+  }
+
   // Code blocks that scroll horizontally can be scrolled with the keyboard
   document.querySelectorAll('pre').forEach(function (pre) {
     if (pre.scrollWidth > pre.clientWidth) pre.tabIndex = 0;

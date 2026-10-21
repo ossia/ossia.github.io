@@ -4,7 +4,9 @@ title: "Record, stream and route live video"
 headline: "Video recording, streaming and routing"
 subtitle: "ossia score can be used to receive, process, record and stream video live, in sync with the sound and the rest of a show."
 permalink: /recording-streaming.html
-translation: /fr/enregistrement-streaming.html
+ref: recording-streaming
+nav_title: "Recording and streaming"
+blurb: "Cameras, SDI, NDI and SRT in; ProRes or MP4 recording, RTMP streaming and NDI or Spout out."
 category: site-score
 description: "Free, open-source live video software: cameras, SDI capture, NDI, SRT and RTSP inputs, GPU processing, recording to ProRes or MP4, and RTMP streaming."
 image: /assets/social/ossia-score-og.jpg

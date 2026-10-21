@@ -5,7 +5,9 @@ title: "Logiciel pour escape games et attractions"
 headline: "Escape games et attractions interactives"
 subtitle: "ossia score permet d'écrire la logique de jeu d'un escape game ou d'une attraction, les énigmes, les accessoires et les capteurs pilotant le son, la vidéo et la lumière."
 permalink: /fr/escape-games.html
-translation: /escape-rooms.html
+ref: escape-rooms
+nav_title: "Escape games et attractions"
+blurb: "Énigmes, accessoires et capteurs qui pilotent son, vidéo et lumière, avec logique de jeu et panneau maître du jeu."
 category: site-score
 description: "Logiciel libre pour escape games et attractions : capteurs et accessoires, logique de jeu avec déclencheurs et conditions, son, vidéo et DMX, en autonomie."
 image: /assets/social/ossia-score-og.jpg

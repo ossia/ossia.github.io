@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer id="footer">
 
-    <h2 class="follow-us">Follow us !</h2>
+    <h2 class="follow-us">{{ t.footer.follow | default: t_en.footer.follow }}</h2>
     <ul class="icons">
 	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
 	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
@@ -14,12 +14,12 @@
         <li>&copy; ossia {{ site.time | date: "%Y" }}</li><li>Design: HTML5 UP</li>
     </ul>
     <ul class="copyright">
-	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/fr/usages.html" hreflang="fr">Usages (FR)</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+	<li><a href="{% include translated-url.html ref="use-cases" %}">{{ t.footer.use_cases | default: t_en.footer.use_cases }}</a></li><li><a href="{% include translated-url.html ref="privacy" %}">{{ t.footer.privacy | default: t_en.footer.privacy }}</a></li><li><button type="button" data-consent-settings hidden>{{ t.consent.settings | default: t_en.consent.settings }}</button></li>
     </ul>
 </footer>
 
 <script>
-for (const a of document.querySelectorAll('.cat a')) {
-    if ("site-" + a.textContent === {{ page.category | jsonify }}) { a.classList.add('active'); break; }
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === {{ page.category | jsonify }}) { a.classList.add('active'); break; }
 }
 </script>

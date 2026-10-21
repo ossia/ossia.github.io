@@ -5,7 +5,9 @@ title: "Logiciel de régie de spectacle libre et gratuit"
 headline: "Régie de spectacle"
 subtitle: "ossia score permet d'écrire la conduite d'un spectacle sur une timeline, dont certaines parties attendent le top du régisseur ou un événement sur le plateau."
 permalink: /fr/regie-spectacle.html
-translation: /show-control.html
+ref: show-control
+nav_title: "Régie de spectacle"
+blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel."
 category: site-score
 description: "Régie de spectacle libre et gratuite pour Windows, macOS et Linux : cues son, vidéo, lumière DMX, OSC et MIDI sur une timeline interactive."
 image: /assets/social/ossia-score-og.jpg

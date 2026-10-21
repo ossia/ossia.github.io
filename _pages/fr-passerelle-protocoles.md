@@ -5,7 +5,9 @@ title: "Passerelle libre OSC, MIDI, DMX et MQTT"
 headline: "Une passerelle entre protocoles"
 subtitle: "ossia score permet de convertir des messages entre appareils MIDI, OSC, DMX, MQTT, série, HTTP, WebSocket et Bluetooth LE, de les filtrer, et de laisser la passerelle tourner en permanence."
 permalink: /fr/passerelle-protocoles.html
-translation: /protocol-bridge.html
+ref: protocol-bridge
+nav_title: "Passerelle entre protocoles"
+blurb: "Convertissez entre MIDI, OSC, DMX, MQTT, série, HTTP et Bluetooth LE, avec mapping et filtrage, en permanence."
 category: site-score
 description: "Passerelle et convertisseur libre : MIDI vers OSC, OSC vers DMX, MQTT, série, HTTP, WebSocket et Bluetooth LE, avec mapping, filtrage et OSCQuery."
 image: /assets/social/ossia-score-og.jpg

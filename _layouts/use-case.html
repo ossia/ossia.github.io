@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{%- assign lang = page.lang | default: "en" -%}
+{%- include i18n.html -%}
 <link rel="stylesheet" href="/css/use-cases.css" />
 <article id="main" class="use-case">
   <header class="container use-case-header">
@@ -16,13 +16,10 @@ layout: default
     {% include use-case-cta.html %}
 
     {% unless page.hub %}
-    <nav class="use-case-others" aria-label="{% if lang == 'fr' %}Autres usages{% else %}Other uses{% endif %}">
-      <h2>{% if lang == 'fr' %}Autres usages d'ossia score{% else %}More ways to use ossia score{% endif %}</h2>
-      {% include use-case-list.html lang=lang exclude=page.url %}
+    <nav class="use-case-others" aria-label="{{ t.use_case.others_label | default: t_en.use_case.others_label }}">
+      <h2>{{ t.use_case.others_title | default: t_en.use_case.others_title }}</h2>
+      {% include use-case-list.html exclude=page.ref %}
     </nav>
     {% endunless %}
-    {% if page.translation %}
-    <p class="use-case-translation">{% if lang == 'fr' %}<a href="{{ page.translation }}" hreflang="en">Read this page in English</a>{% else %}<a href="{{ page.translation }}" hreflang="fr">Lire cette page en français</a>{% endif %}</p>
-    {% endif %}
   </section>
 </article>

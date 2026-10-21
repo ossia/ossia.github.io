@@ -4,7 +4,9 @@ title: "Software for interactive dance and theater"
 headline: "Interactive dance and theater"
 subtitle: "ossia score can be used to make the performers' movements drive sound, video and light, within a written show that can be played again every night."
 permalink: /dance-theatre.html
-translation: /fr/danse-theatre.html
+ref: dance-theatre
+nav_title: "Dance and interactive theater"
+blurb: "Pose detection, depth cameras, sensors and tracking drive sound, video and light, inside cues and scenes."
 category: site-score
 description: "Free, open-source software for interactive dance and theater: pose detection, depth cameras, motion sensors and tracking drive sound, video and light."
 image: /assets/social/ossia-score-og.jpg

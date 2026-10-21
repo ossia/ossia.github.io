@@ -4,7 +4,9 @@ title: "Software for interactive and sound installations"
 headline: "Interactive and sound installations"
 subtitle: "ossia score can be used to run interactive and sound installations, from sensors and cameras to sound, video and lights, on a PC or a Raspberry Pi."
 permalink: /interactive-installations.html
-translation: /fr/installations-interactives.html
+ref: installations
+nav_title: "Interactive installations"
+blurb: "Sensors, cameras and tracking, sound and video, running unattended on a PC or a Raspberry Pi."
 category: site-score
 description: "Free, open-source software for interactive and sound installations: sensors, depth cameras, spatial audio and video, unattended on PC or Raspberry Pi."
 image: /assets/social/ossia-score-og.jpg

@@ -5,7 +5,9 @@ title: "Programmation visuelle pour l'audio et la vidéo"
 headline: "La programmation visuelle, avec une timeline"
 subtitle: "ossia score permet de programmer visuellement l'audio, la vidéo, la 3D et les capteurs, le patch lui-même étant organisé dans le temps."
 permalink: /fr/programmation-visuelle.html
-translation: /visual-programming.html
+ref: visual-programming
+nav_title: "Programmation visuelle"
+blurb: "Patchez audio, vidéo et interaction avec des nœuds et une timeline, et exécutez vos patchs Pure Data."
 category: site-score
 description: "Programmation visuelle libre pour l'audio, la vidéo et l'interaction, avec nœuds et timeline. Exécute Pure Data, Faust et JavaScript."
 image: /assets/social/ossia-score-og.jpg

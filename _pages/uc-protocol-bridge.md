@@ -4,7 +4,9 @@ title: "OSC, MIDI, DMX and MQTT protocol bridge"
 headline: "A protocol bridge and control hub"
 subtitle: "ossia score can be used to convert messages between MIDI, OSC, DMX, MQTT, serial, HTTP, WebSocket and Bluetooth LE devices, filter them, and keep the bridge running."
 permalink: /protocol-bridge.html
-translation: /fr/passerelle-protocoles.html
+ref: protocol-bridge
+nav_title: "Protocol bridge"
+blurb: "Convert between MIDI, OSC, DMX, MQTT, serial, HTTP and Bluetooth LE, with mapping and filtering, always on."
 category: site-score
 description: "Free protocol converter and control hub: MIDI to OSC, OSC to DMX, MQTT, serial, HTTP, WebSocket and Bluetooth LE, with mapping, filtering and OSCQuery."
 image: /assets/social/ossia-score-og.jpg

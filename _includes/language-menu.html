@@ -1,0 +1,27 @@
+{%- comment -%}
+Links to this page in every language of _data/languages.yml. For a language
+the page is not translated in, the link leads to that language's home page.
+Needs _includes/i18n.html. include.mobile: true for the mobile panel.
+{%- endcomment -%}
+{%- capture lang_links -%}
+{%- for l in site.data.languages -%}
+  {%- assign v = versions | where: "lang", l.code | first -%}
+  {%- if l.code == lang -%}
+<li><a href="{{ page.url | replace: 'index.html', '' }}" lang="{{ l.code }}" aria-current="page">{{ l.name }}</a></li>
+  {%- elsif v -%}
+<li><a href="{{ v.url }}" lang="{{ l.code }}" hreflang="{{ l.code }}">{{ l.name }}</a></li>
+  {%- else -%}
+<li class="untranslated"><a href="{{ l.home }}" lang="{{ l.code }}" hreflang="{{ l.code }}">{{ l.name }}</a></li>
+  {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- if include.mobile -%}
+<ul class="lang-links" aria-label="{{ t.nav.language | default: t_en.nav.language }}">{{ lang_links }}</ul>
+{%- else -%}
+<details class="lang-menu">
+  {%- assign lang_name = site.data.languages | where: "code", lang | map: "name" | first -%}
+  {%- assign current_language = t.nav.current_language | default: t_en.nav.current_language | replace: "%s", lang_name %}
+  <summary><span class="visually-hidden">{{ current_language }}</span><span aria-hidden="true">{{ lang | upcase }}</span></summary>
+  <ul>{{ lang_links }}</ul>
+</details>
+{%- endif -%}

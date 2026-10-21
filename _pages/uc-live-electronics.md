@@ -4,7 +4,9 @@ title: "Live electronics for contemporary music"
 headline: "Contemporary music and live electronics"
 subtitle: "ossia score can be used to write the electronic part of a piece for instruments, with cues from a pedal, live processing, spatialization, and a score that waits for the musicians."
 permalink: /live-electronics.html
-translation: /fr/musique-mixte.html
+ref: live-electronics
+nav_title: "Contemporary music and live electronics"
+blurb: "Interactive scores that wait for the performers, cues from pedals, live processing and spatial sound."
 category: site-score
 description: "Free, open-source software for mixed music and live electronics: interactive scores, cues from pedals or MIDI, live processing and spatial sound."
 image: /assets/social/ossia-score-og.jpg

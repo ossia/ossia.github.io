@@ -4,7 +4,9 @@ title: "Free show control software for any OS"
 headline: "Show control"
 subtitle: "ossia score can be used to write the cue sheet of a show on a timeline, where some parts wait for the stage manager or for something happening on stage."
 permalink: /show-control.html
-translation: /fr/regie-spectacle.html
+ref: show-control
+nav_title: "Show control"
+blurb: "Cues, scenes and timecode for theater, concerts and events."
 category: site-score
 description: "Free, open-source show control software for Windows, macOS and Linux: cue sound, video, DMX lights, OSC and MIDI on an interactive timeline."
 image: /assets/social/ossia-score-og.jpg

@@ -5,7 +5,9 @@ title: "Enregistrer, diffuser et router la vidéo"
 headline: "Enregistrement, streaming et routage vidéo"
 subtitle: "ossia score permet de recevoir, traiter, enregistrer et diffuser de la vidéo en direct, en synchronisation avec le son et le reste d'un spectacle."
 permalink: /fr/enregistrement-streaming.html
-translation: /recording-streaming.html
+ref: recording-streaming
+nav_title: "Enregistrement et streaming"
+blurb: "Caméras, SDI, NDI et SRT en entrée ; enregistrement ProRes ou MP4, streaming RTMP et NDI ou Spout en sortie."
 category: site-score
 description: "Logiciel libre de vidéo en direct : caméras, capture SDI, entrées NDI, SRT et RTSP, traitement GPU, enregistrement en ProRes ou MP4, et streaming RTMP."
 image: /assets/social/ossia-score-og.jpg

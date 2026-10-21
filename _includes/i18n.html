@@ -1,0 +1,19 @@
+{%- comment -%}
+Sets, for the current page:
+- lang: its language code
+- t, t_en: its interface strings (_data/i18n) and the English ones, used as
+  fallback: {{ t.nav.gallery | default: t_en.nav.gallery }}
+- versions: the page and its translations (pages with the same `ref`), in
+  the order of _data/languages.yml; empty when the page is not translated
+{%- endcomment -%}
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign t = site.data.i18n[lang] -%}
+{%- assign t_en = site.data.i18n.en -%}
+{%- assign versions = "" | split: "" -%}
+{%- if page.ref -%}
+  {%- assign same_ref = site.pages | where: "ref", page.ref -%}
+  {%- for l in site.data.languages -%}
+    {%- assign v = same_ref | where: "lang", l.code | first -%}
+    {%- if v -%}{%- assign versions = versions | push: v -%}{%- endif -%}
+  {%- endfor -%}
+{%- endif -%}

@@ -5,7 +5,9 @@ title: "Logiciel pour la musique électronique live"
 headline: "Musique électronique live"
 subtitle: "ossia score permet de jouer de la musique électronique en direct, avec des instruments, des séquenceurs pas à pas et des plug-ins sur une timeline qui suit un tempo, l'horloge MIDI ou un vinyle timecode."
 permalink: /fr/musique-live.html
-translation: /live-music.html
+ref: live-music
+nav_title: "Musique électronique live"
+blurb: "Synthés, boîtes à rythmes, sampler, séquenceurs pas à pas et plug-ins, synchronisés avec l'horloge MIDI, le timecode et les visuels."
 category: site-score
 description: "Logiciel libre pour la musique électronique live : synthés, boîtes à rythmes, sampler, séquenceur, looper, plug-ins, horloge MIDI et vinyle timecode."
 image: /assets/social/ossia-score-og.jpg

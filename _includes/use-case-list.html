@@ -1,9 +1,19 @@
-{%- comment -%} Use-case pages grouped by family. include.lang: en or fr; include.exclude: URL to leave out; include.cards: true for the hub grid. {%- endcomment -%}
-{%- for g in site.data.use_case_groups %}
-<h3 class="use-case-group">{{ g[include.lang] }}</h3>
+{%- comment -%}
+Use-case pages grouped by family (_data/use_cases.yml), in the current
+language, or in English for those not translated yet.
+include.exclude: ref to leave out; include.cards: true for the hub grid.
+{%- endcomment -%}
+{%- include i18n.html -%}
+{%- assign uc_pages = site.pages | where_exp: "p", "p.ref" -%}
+{%- comment -%} Groups in the order of use_case.groups in _data/i18n/en.yml {%- endcomment -%}
+{%- for group in t_en.use_case.groups %}{% assign g = group[0] %}
+<h3 class="use-case-group">{{ t.use_case.groups[g] | default: t_en.use_case.groups[g] }}</h3>
 <ul class="{% if include.cards %}use-case-hub{% else %}use-case-links{% endif %}">
-{%- for uc in site.data.use_cases %}{% if uc.group == g.key %}{% assign item = uc[include.lang] %}{% unless item.url == include.exclude %}
-  {% if include.cards %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/>{{ item.blurb }}</li>{% else %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/><span class="use-case-blurb">{{ item.blurb }}</span></li>{% endif %}
-{%- endunless %}{% endif %}{% endfor %}
+{%- for uc in site.data.use_cases %}{% if uc.group == g and uc.key != include.exclude %}
+  {%- assign same = uc_pages | where: "ref", uc.key -%}
+  {%- assign item = same | where: "lang", lang | first -%}
+  {%- unless item %}{% assign item = same | where: "lang", "en" | first %}{% endunless %}
+  <li{% if item.lang != lang %} lang="{{ item.lang }}"{% endif %}><a href="{{ item.url }}"{% if item.lang != lang %} hreflang="{{ item.lang }}"{% endif %}>{{ item.nav_title }}</a><br/>{% if include.cards %}{{ item.blurb }}{% else %}<span class="use-case-blurb">{{ item.blurb }}</span>{% endif %}</li>
+{%- endif %}{% endfor %}
 </ul>
 {%- endfor %}

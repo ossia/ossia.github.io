@@ -13,6 +13,7 @@ export default [
       'js/jquery.min.js',
       'js/collapsible.js',
       'js/consent-head.js', // Jekyll front matter + include of _includes/consent-head.js
+      'js/consent.js', // Jekyll front matter: strings + include of _includes/consent.js
       'assets/**'
     ]
   },

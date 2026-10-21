@@ -5,7 +5,7 @@ title: "Ce que vous pouvez faire avec ossia score"
 headline: "Les usages d'ossia score"
 subtitle: "ossia score sert pour des spectacles, des concerts, des installations, des expositions et de la recherche ; chacune des pages ci-dessous décrit l'un de ces usages."
 permalink: /fr/usages.html
-translation: /use-cases.html
+ref: use-cases
 category: site-score
 hub: true
 description: "Régie de spectacle, timeline OSC, MIDI et DMX, mapping vidéo, lumière, programmation visuelle et installations interactives : les usages d'ossia score."
@@ -17,7 +17,7 @@ Beaucoup de projets n'ont besoin que de score, des premières esquisses jusqu'au
 
 ## Usages
 
-{% include use-case-list.html lang="fr" cards=true %}
+{% include use-case-list.html cards=true %}
 
 ## À propos d'ossia score
 

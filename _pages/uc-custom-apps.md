@@ -4,7 +4,9 @@ title: "Turn a project into a standalone app"
 headline: "Custom apps built on ossia score"
 subtitle: "ossia score can be used to package a project with its own interface, name and icon as an application for Windows, macOS, Linux or the web."
 permalink: /custom-apps.html
-translation: /fr/applications-sur-mesure.html
+ref: custom-apps
+nav_title: "Custom apps"
+blurb: "Package a project with your own interface as an app for Windows, macOS, Linux or the web."
 category: site-score
 description: "Package an ossia score project with a custom QML interface as a standalone, branded app for Windows, macOS, Linux, ARM or the web. Free and open-source."
 image: /assets/social/ossia-score-og.jpg

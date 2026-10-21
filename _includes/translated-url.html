@@ -1,0 +1,5 @@
+{%- comment -%} URL of the page with `ref` include.ref in the current language, or else in English {%- endcomment -%}
+{%- assign tr_pages = site.pages | where: "ref", include.ref -%}
+{%- assign tr_page = tr_pages | where: "lang", lang | first -%}
+{%- unless tr_page -%}{%- assign tr_page = tr_pages | where: "lang", "en" | first -%}{%- endunless -%}
+{{- tr_page.url -}}

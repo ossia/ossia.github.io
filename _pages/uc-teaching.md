@@ -4,7 +4,9 @@ title: "Teaching interactive media with ossia score"
 headline: "Teaching and workshops"
 subtitle: "ossia score can be used to teach interactive sound, video, lighting and installation, on the students' own computers, in a web browser, or on a Raspberry Pi."
 permalink: /teaching.html
-translation: /fr/enseignement.html
+ref: teaching
+nav_title: "Teaching and workshops"
+blurb: "One free tool for sound, video, light, sensors and code, on every OS, in the browser and on Raspberry Pi."
 category: site-score
 description: "Free, open-source software for teaching interactive media: runs on every OS and in the browser, with examples for sound, video, sensors, AI and code."
 image: /assets/social/ossia-score-og.jpg

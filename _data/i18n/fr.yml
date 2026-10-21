@@ -1,0 +1,49 @@
+nav:
+  main: Principal
+  main_mobile: Principal (mobile)
+  menu: Menu
+  language: Langue
+  current_language: "Langue : %s"
+  score: score
+  libossia: libossia
+  docs: docs
+  gallery: galerie
+  use_cases: usages
+  about: à propos
+  download: télécharger
+  donate: don
+footer:
+  follow: Suivez-nous !
+  use_cases: Usages
+  privacy: Politique de confidentialité
+cta:
+  download: Télécharger ossia score
+  try: Essayer dans le navigateur
+  docs: Documentation (en anglais)
+  note: Gratuit et open source (GPLv3) · Windows, macOS, Linux, Raspberry Pi et navigateur web
+use_case:
+  others_label: Autres usages
+  others_title: Autres usages d'ossia score
+  groups:
+    stage: Scène et musique
+    visuals: Vidéo et lumière
+    spaces: Lieux et expériences
+    tools: Outils et recherche
+consent:
+  title: Cookies
+  text: Avec votre accord, nous comptons les visites avec Google Analytics ; sinon, rien n'est chargé.
+  policy: Politique de confidentialité
+  refuse: Refuser
+  accept: Accepter
+  customize: Personnaliser
+  refuseAll: Tout refuser
+  acceptAll: Tout accepter
+  settings: Paramètres des cookies
+  save: Enregistrer
+  stats: Statistiques de visite
+  statsDesc: "Google Analytics : pages visitées, pays approximatif, navigateur, type d'appareil, clics sur les téléchargements."
+  ads: Mesure des annonces
+  adsDesc: Indique à Google Ads quand une personne venue d'une de nos annonces télécharge ossia score. Nécessite les statistiques.
+  always: Votre choix est conservé dans ce navigateur uniquement.
+  who: "Responsable : ossia.io. Destinataire : Google."
+  saved: Choix enregistré.
