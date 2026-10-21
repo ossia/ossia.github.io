@@ -1,5 +1,6 @@
 {%- comment -%} Labels from _data/i18n (lang, t and t_en are set by _includes/i18n.html, in head.html) {%- endcomment -%}
 {%- capture use_cases_url -%}{% include translated-url.html ref="use-cases" %}{%- endcapture -%}
+{%- capture download_url -%}{% include translated-url.html ref="download" %}{%- endcapture -%}
 <header id="header">
 	<nav id="nav" aria-label="{{ t.nav.main | default: t_en.nav.main }}" style="vertical-align: middle; ">
         <div id="ossia-logo-header" style="margin-left: 1em;" >
@@ -17,7 +18,7 @@
 			<a href="/about.html" data-cat="site-about">{{ t.nav.about | default: t_en.nav.about }}</a>
         </div>
         <div>
-             <a href="/score/download.html">{{ t.nav.download | default: t_en.nav.download }}</a>
+             <a href="{{ download_url }}">{{ t.nav.download | default: t_en.nav.download }}</a>
              <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">{{ t.nav.donate | default: t_en.nav.donate }}</a>
         </div>
         {% include language-menu.html %}
@@ -37,7 +38,7 @@
         <a class="link" href="/gallery.html">{{ t.nav.gallery | default: t_en.nav.gallery }}</a>
         <a class="link" href="{{ use_cases_url }}">{{ t.nav.use_cases | default: t_en.nav.use_cases }}</a>
         <a class="link" href="/about.html">{{ t.nav.about | default: t_en.nav.about }}</a>
-        <a class="link" href="/score/download.html">{{ t.nav.download | default: t_en.nav.download }}</a>
+        <a class="link" href="{{ download_url }}">{{ t.nav.download | default: t_en.nav.download }}</a>
         <a class="link" href="https://opencollective.com/ossia" target="_blank">{{ t.nav.donate | default: t_en.nav.donate }}</a>
         {% include language-menu.html mobile=true %}
     </nav>

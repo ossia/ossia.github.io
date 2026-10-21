@@ -3,6 +3,7 @@ layout: download-page
 title:  "Download ossia score"
 
 permalink: /score/download.html
+ref: download
 category: site-score
 description: "Download ossia score %VERSION% for Windows, macOS and Linux. Free and open-source; also on the Microsoft Store, Flathub, Homebrew and AUR."
 ---
