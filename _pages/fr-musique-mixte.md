@@ -12,7 +12,7 @@ image: /assets/social/ossia-score-og.jpg
 ---
 
 ossia score est issu des recherches sur les partitions interactives pour la musique menées au LaBRI et au SCRIME, à Bordeaux, avec le projet *i-score* ([historique du projet](/project.html)) ; il a été conçu pour les pièces où musiciens et électronique jouent ensemble, le déroulement temporel étant écrit tandis que les interprètes décident du moment où chaque section commence.
-*The Ripples of Consequence* de Pía Baltazar (Le Vivier, Montréal, 2025), interprétée par Audréanne Filion, est par exemple une composition pour la Table de Babel, et *On the Edge* de Kasey Pocius (Sound Symposium XXI, St. John's, 2024) une œuvre audiovisuelle pour vidéo, T-Stick et son surround.
+Dans *The Ripples of Consequence* de Pía Baltazar (Le Vivier, Montréal, 2025), une composition pour la Table de Babel interprétée par Audréanne Filion, l'électronique est par exemple conduite par score.
 
 ## Partition interactive
 
@@ -27,9 +27,6 @@ Le traitement en direct utilise des effets Faust, VST, VST3, CLAP, LV2 et JSFX o
 Le suivi d'enveloppe, la détection de tempo et les descripteurs audio analysent les instruments et pilotent le traitement, les fichiers son, la vidéo et la lumière ([suiveur d'enveloppe](https://ossia.io/score-docs/processes/envelope-follower.html), [analyse](https://ossia.io/score-docs/processes/analysis.html)).
 
 Les patchs Pure Data existants s'exécutent à l'intérieur de la partition, ou sont pilotés depuis celle-ci en OSC avec libossia ([Pure Data](https://ossia.io/score-docs/processes/puredata.html)) ; la spatialisation dans la salle (DBAP, GBAP, trajectoires, moteurs externes) est décrite sur la page [spatialisation sonore](/fr/spatialisation-sonore.html).
-
-<picture><img src="/assets/gallery/pocius-on-the-edge.webp" width="540" height="304" loading="lazy" alt="Une personne assise à une table sur une scène sombre, sous une grande image projetée"/></picture>
-<p class="figure-caption"><i>On the Edge</i>, Kasey Pocius, Sound Symposium XXI, St. John's : œuvre audiovisuelle pour vidéo, T-Stick et son surround.</p>
 
 ## Répétitions et reprises
 

@@ -11,7 +11,7 @@ image: /assets/social/ossia-score-og.jpg
 ---
 
 ossia score comes from the research on interactive scores for music started at LaBRI and SCRIME in Bordeaux with the *i-score* project ([project history](/project.html)); it was designed for pieces where musicians and electronics play together, the timing being written while the performers decide when each section starts.
-For instance, Pía Baltazar's *The Ripples of Consequence* (Le Vivier, Montréal, 2025), performed by Audréanne Filion, is a composition for the Table de Babel, and Kasey Pocius's *On the Edge* (Sound Symposium XXI, St. John's, 2024) is an audiovisual work for video, T-Stick and surround sound.
+For instance, in Pía Baltazar's *The Ripples of Consequence* (Le Vivier, Montréal, 2025), a composition for the Table de Babel performed by Audréanne Filion, the electronics are run by score.
 
 ## Interactive score
 
@@ -26,9 +26,6 @@ Live processing uses Faust, VST, VST3, CLAP, LV2 and JSFX effects or the effects
 Envelope following, beat tracking and audio descriptors analyze the instruments and drive the processing, sound files, video and lights ([envelope follower](https://ossia.io/score-docs/processes/envelope-follower.html), [analysis](https://ossia.io/score-docs/processes/analysis.html)).
 
 Existing Pure Data patches run inside the score, or are controlled from it over OSC with libossia ([Pure Data](https://ossia.io/score-docs/processes/puredata.html)); the spatialization in the hall (DBAP, GBAP, trajectories, external renderers) is described on the [spatial audio](/spatial-audio.html) page.
-
-<picture><img src="/assets/gallery/pocius-on-the-edge.webp" width="540" height="304" loading="lazy" alt="A performer seated at a table on a dark stage, under a large projected image"/></picture>
-<p class="figure-caption"><i>On the Edge</i>, Kasey Pocius, Sound Symposium XXI, St. John's: an audiovisual work for video, T-Stick and surround sound.</p>
 
 ## Rehearsals and later performances
 
