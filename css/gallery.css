@@ -109,7 +109,7 @@
   top: 0;
   max-width: 75%;
   padding: 0.4em 0.75em;
-  background: var(--orange);
+  background: #b04f00;
   color: #fff;
   font-size: 0.8em;
   font-weight: 600;
@@ -181,7 +181,7 @@
 }
 .g2-table-sat {
   font-size: 0.85em;
-  color: #777;
+  color: #595959;
 }
 
 /* Featured works take two columns on wide screens */
@@ -230,7 +230,7 @@
 }
 .g2-table td[data-label='Year'] {
   white-space: nowrap;
-  color: #777;
+  color: #595959;
 }
 .g2-table-title {
   font-style: italic;

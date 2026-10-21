@@ -43,7 +43,7 @@ We can help you into making your first contributions to the project.
 Here is a video explaining how to contribute to the code of ossia score:
 
 <div class="videoWrapper">
-    <button type="button" class="video-facade" aria-label="Play the video: Project (loads YouTube)"><span class="video-facade-title">Project</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Project" loading="lazy" src="https://www.youtube-nocookie.com/embed/LSifHFbuky0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
+    <button type="button" class="video-facade"><span class="video-facade-title">Project</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Project" loading="lazy" src="https://www.youtube-nocookie.com/embed/LSifHFbuky0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
 </div>
 
 <!--- Roadmap !-->

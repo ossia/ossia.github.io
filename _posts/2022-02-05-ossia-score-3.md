@@ -13,7 +13,7 @@ description: "The interactive and intermedia sequencer ossia score reaches a sta
 ## Introducing ossia score 3
 
 <div class="videoWrapper">
-<button type="button" class="video-facade" aria-label="Play the video: Introducing ossia score 3 (loads YouTube)"><span class="video-facade-title">Introducing ossia score 3</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Introducing ossia score 3" loading="lazy" src="https://www.youtube-nocookie.com/embed/8-KpNaF2K8Q" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
+<button type="button" class="video-facade"><span class="video-facade-title">Introducing ossia score 3</span><span class="video-facade-note">Play · loads YouTube</span></button><template class="video-facade-embed"><iframe title="Video: Introducing ossia score 3" loading="lazy" src="https://www.youtube-nocookie.com/embed/8-KpNaF2K8Q" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></template>
 </div>
 
 <br/>

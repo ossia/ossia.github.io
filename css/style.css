@@ -1627,22 +1627,22 @@ pre.highlight {
 }
 .highlight pre { background-color: #272822; color: #f8f8f2; }
 .highlight .hll { background-color: #272822; }
-.highlight .c { color: #75715e } /* Comment */
-.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .c { color: #a8a28c } /* Comment */
+.highlight .err { color: #ff8fa3; background-color: #1e0010 } /* Error */
 .highlight .k { color: #66d9ef } /* Keyword */
 .highlight .l { color: #ae81ff } /* Literal */
 .highlight .n { color: #f8f8f2 } /* Name */
-.highlight .o { color: #f92672 } /* Operator */
+.highlight .o { color: #ff6a9a } /* Operator */
 .highlight .p { color: #f8f8f2 } /* Punctuation */
-.highlight .cm { color: #75715e } /* Comment.Multiline */
-.highlight .cp { color: #75715e } /* Comment.Preproc */
-.highlight .c1 { color: #75715e } /* Comment.Single */
-.highlight .cs { color: #75715e } /* Comment.Special */
+.highlight .cm { color: #a8a28c } /* Comment.Multiline */
+.highlight .cp { color: #a8a28c } /* Comment.Preproc */
+.highlight .c1 { color: #a8a28c } /* Comment.Single */
+.highlight .cs { color: #a8a28c } /* Comment.Special */
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 .highlight .kc { color: #66d9ef } /* Keyword.Constant */
 .highlight .kd { color: #66d9ef } /* Keyword.Declaration */
-.highlight .kn { color: #f92672 } /* Keyword.Namespace */
+.highlight .kn { color: #ff6a9a } /* Keyword.Namespace */
 .highlight .kp { color: #66d9ef } /* Keyword.Pseudo */
 .highlight .kr { color: #66d9ef } /* Keyword.Reserved */
 .highlight .kt { color: #66d9ef } /* Keyword.Type */
@@ -1661,9 +1661,9 @@ pre.highlight {
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
 .highlight .nx { color: #a6e22e } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
-.highlight .nt { color: #f92672 } /* Name.Tag */
+.highlight .nt { color: #ff6a9a } /* Name.Tag */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */
-.highlight .ow { color: #f92672 } /* Operator.Word */
+.highlight .ow { color: #ff6a9a } /* Operator.Word */
 .highlight .w { color: #f8f8f2 } /* Text.Whitespace */
 .highlight .mf { color: #ae81ff } /* Literal.Number.Float */
 .highlight .mh { color: #ae81ff } /* Literal.Number.Hex */
@@ -1920,4 +1920,19 @@ p.download-date {
 /* Embedded players have no border (replaces the obsolete frameborder attribute) */
 iframe {
     border: 0;
+}
+
+/* Side menus (about, libossia and score feature pages) sit on the light page
+   background: darker text so that it stays readable (WCAG AA) */
+.menu > a.menu-item:not(.panel) {
+    color: #006b78;
+}
+.menu > a.menu-item:not(.panel):hover, .menu > a.menu-item.active:not(.panel) {
+    color: #9c4600 !important;
+}
+
+/* Links inside text are underlined, not told apart by colour alone */
+:is(p, td, dd, blockquote, .bubble-description, .support) a:not([class]) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }

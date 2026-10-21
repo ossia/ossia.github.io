@@ -24,6 +24,11 @@
     });
   }
 
+  // Code blocks that scroll horizontally can be scrolled with the keyboard
+  document.querySelectorAll('pre').forEach(function (pre) {
+    if (pre.scrollWidth > pre.clientWidth) pre.tabIndex = 0;
+  });
+
   // YouTube embeds that only load the player when clicked:
   // <button class="yt-facade" data-id="VIDEO_ID" data-title="..."><img ...></button>
   document.querySelectorAll('.yt-facade').forEach(function (btn) {
