@@ -1,5 +1,5 @@
 <header id="header">
-	<nav id="nav" style="vertical-align: middle; ">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
         <div id="ossia-logo-header" style="margin-left: 1em;" >
             <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
                 <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
@@ -26,7 +26,7 @@
     <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
 </div>
 <div id="topPanel">
-    <nav aria-label="Main">
+    <nav aria-label="Main (mobile)">
         <a class="link" href="/">ossia</a>
         <a class="link" href="/score/about.html">score</a>
 <a class="link" href="{% if page.lang == 'fr' %}/fr/usages.html{% else %}/use-cases.html{% endif %}">{% if page.lang == 'fr' %}usages{% else %}use cases{% endif %}</a>

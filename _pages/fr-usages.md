@@ -23,7 +23,8 @@ Pour beaucoup de projets, il suffit à lui seul, de la première esquisse au spe
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Si vous devez…</th><th>ossia score vous offre</th></tr>
+<thead><tr><th>Si vous devez…</th><th>ossia score vous offre</th></tr></thead>
+<tbody>
 <tr><td>conduire un spectacle de théâtre, de danse ou un concert</td><td>une <a href="/fr/regie-spectacle.html">régie</a> avec cues, scènes, timecode, et de l'interactivité quand le spectacle en a besoin.</td></tr>
 <tr><td>automatiser des paramètres OSC, MIDI ou DMX dans le temps</td><td>une <a href="/fr/timeline-osc-midi-dmx.html">timeline OSC, MIDI et DMX</a> avec déclencheurs, conditions et OSCQuery.</td></tr>
 <tr><td>lire, projeter ou générer de la vidéo</td><td><a href="/fr/mapping-video.html">vidéo, mapping et visuels génératifs</a>, avec shaders et 3D, pour des spectacles écrits ou interactifs.</td></tr>
@@ -44,6 +45,7 @@ Pour beaucoup de projets, il suffit à lui seul, de la première esquisse au spe
 <tr><td>sonifier des données ou travailler avec des biosignaux</td><td>des données <a href="/fr/recherche-sonification.html">LSL, HDF5 et CSV</a> associées au son, à l'image et à la lumière, enregistrées et rejouées.</td></tr>
 <tr><td>enseigner les médias interactifs</td><td><a href="/fr/enseignement.html">un outil gratuit</a> pour le son, la vidéo, la lumière, les capteurs et le code, aussi dans le navigateur.</td></tr>
 <tr><td>diffuser un projet comme application</td><td>des <a href="/fr/applications-sur-mesure.html">applications sur mesure</a> à votre interface, votre nom et votre icône.</td></tr>
+</tbody>
 </table>
 </div>
 

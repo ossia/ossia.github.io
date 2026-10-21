@@ -1,123 +1,124 @@
 /* Use-case landing pages */
 .use-case-header {
-    padding-top: 4em;
-    text-align: center;
+  padding-top: 4em;
+  text-align: center;
 }
 .use-case-subtitle {
-    font-size: 1.25em;
-    max-width: 50em;
-    margin: 0 auto 1em auto;
+  font-size: 1.25em;
+  max-width: 50em;
+  margin: 0 auto 1em auto;
 }
 .use-case-cta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75em;
-    margin: 1.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+  margin: 1.5em 0;
 }
 .use-case-cta .page-button {
-    padding: 0.5em 1.2em;
-    border-radius: 6px;
+  padding: 0.5em 1.2em;
+  border-radius: 6px;
 }
 .use-case-cta .cta-primary {
-    background: var(--pale-blue);
-    font-weight: 700;
+  background: var(--pale-blue);
+  font-weight: 700;
 }
 .use-case-cta .cta-note {
-    flex-basis: 100%;
-    text-align: center;
-    margin: 0;
-    font-size: 0.9em;
-    color: #595959;
+  flex-basis: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 0.9em;
+  color: #595959;
 }
 .use-case-body h2 {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 .use-case-body ul {
-    list-style: disc;
-    padding-left: 1.5em;
+  list-style: disc;
+  padding-left: 1.5em;
 }
 .use-case-body li {
-    margin-bottom: 0.3em;
+  margin-bottom: 0.3em;
 }
 .use-case-body img {
-    display: block;
-    margin: 1em auto;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  height: auto;
 }
 .use-case-body .figure-caption {
-    text-align: center;
-    font-size: 0.9em;
-    color: #595959;
-    margin-top: -0.5em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #595959;
+  margin-top: -0.5em;
 }
 .comparison {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1em 0 1.5em 0;
-    font-size: 0.95em;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0 1.5em 0;
+  font-size: 0.95em;
 }
-.comparison th, .comparison td {
-    border: 1px solid #d6d6d6;
-    padding: 0.6em 0.8em;
-    text-align: left;
-    vertical-align: top;
+.comparison th,
+.comparison td {
+  border: 1px solid #d6d6d6;
+  padding: 0.6em 0.8em;
+  text-align: left;
+  vertical-align: top;
 }
 .comparison th {
-    background: rgba(88, 184, 197, 0.15);
+  background: rgba(88, 184, 197, 0.15);
 }
 .comparison td:first-child {
-    width: 40%;
-    font-weight: 700;
+  width: 40%;
+  font-weight: 700;
 }
 .comparison-scroll {
-    overflow-x: auto;
+  overflow-x: auto;
 }
 .use-case-others {
-    margin-top: 2em;
-    padding-top: 1em;
-    border-top: 1px solid #d6d6d6;
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #d6d6d6;
 }
 .use-case-group {
-    margin: 1.2em 0 0.5em 0;
-    font-size: 1.15em;
+  margin: 1.2em 0 0.5em 0;
+  font-size: 1.15em;
 }
 .use-case-links {
-    margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
 .use-case-hub {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-    gap: 1em;
-    padding: 0 !important;
-    list-style: none !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  gap: 1em;
+  padding: 0 !important;
+  list-style: none !important;
 }
 .use-case-hub li {
-    border: 1px solid #d6d6d6;
-    border-radius: 8px;
-    padding: 1em;
+  border: 1px solid #d6d6d6;
+  border-radius: 8px;
+  padding: 1em;
 }
 .use-case-hub a {
-    font-weight: 700;
-    font-size: 1.1em;
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 @media screen and (max-width: 736px) {
-    .use-case-header {
-        padding: 3.5em 1em 0 1em;
-    }
-    .use-case-header h1.page-title {
-        font-size: 1.6em;
-        line-height: 1.3em;
-        margin-top: 0.5em;
-    }
-    .use-case-subtitle {
-        font-size: 1.05em;
-    }
-    .use-case-cta .page-button {
-        width: 100%;
-        text-align: center;
-    }
+  .use-case-header {
+    padding: 3.5em 1em 0 1em;
+  }
+  .use-case-header h1.page-title {
+    font-size: 1.6em;
+    line-height: 1.3em;
+    margin-top: 0.5em;
+  }
+  .use-case-subtitle {
+    font-size: 1.05em;
+  }
+  .use-case-cta .page-button {
+    width: 100%;
+    text-align: center;
+  }
 }

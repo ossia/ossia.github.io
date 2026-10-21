@@ -152,7 +152,7 @@ Development has been supported over the years by many organizations and grants:
 <a href="https://www.labri.fr/"><img src="/assets/logo/LABRI_BIG.png" alt="LaBRI" /></a>
 <a href="https://scrime.u-bordeaux.fr/"><img src="/assets/logo/logo-SCRIME-2018-Light.jpg" alt="SCRIME"/></a>
 <a href="https://www.blueyeti.fr/"><img src="/assets/logo/blueyeti.png" alt="Blue Yeti"/></a>
-<a href="https://www.unrealengine.com/"><img src="/assets/logo/unreal_engine.png" width="80" height="auto" alt="Unreal Engine"/></a>
+<a href="https://www.unrealengine.com/"><img src="/assets/logo/unreal_engine.png" width="80" alt="Unreal Engine"/></a>
 <a href="https://www.mozilla.org/" ><img src="/assets/logo/mozilla-logo.png" alt="Mozilla"/></a>
 <a href="https://opencollective.com/"><img src="/assets/logo/opencollectivelogo.png" alt="OpenCollective" /></a>
 <a href="https://anr.fr/" ><img src="/assets/logo/anr-logo.png" alt="ANR"/></a>

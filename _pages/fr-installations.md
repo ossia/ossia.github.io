@@ -35,12 +35,14 @@ ossia score est utilisé pour cela dans des musées, des expositions, des résid
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Une œuvre sonore ou vidéo qui réagit aux visiteurs</td><td>Capteurs, caméras de profondeur et vision par ordinateur pilotent états, conditions et boucles au lieu d'une playlist.</td></tr>
 <tr><td>Vidéo, lumière et son spatialisé dans une même œuvre</td><td>Un seul projet pour l'audio multicanal et spatialisé, la vidéo, la 3D et le DMX.</td></tr>
 <tr><td>Tourner des mois sur du matériel abordable</td><td>Mode sans interface avec lecture automatique, Raspberry Pi et Linux embarqué, applications autonomes pour bornes.</td></tr>
 <tr><td>Laisser artistes et techniciens ajuster l'œuvre sans programmer</td><td>Une timeline et un patcher visuels, avec JavaScript, Faust, shaders ou C++ pour les parties spécifiques.</td></tr>
 <tr><td>Intégrer une application sur mesure</td><td><a href="/site-libossia/about.html">libossia</a> expose ses paramètres à score.</td></tr>
+</tbody>
 </table>
 </div>
 

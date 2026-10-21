@@ -8,7 +8,8 @@ url: "https://ossia.io" # the base hostname & protocol for your site
 image: "/assets/score-logo.png"
 social_image: "/assets/social/ossia-score-og.jpg"
 include: ["_pages", "CNAME", ".nojekyll", "score-last-version.txt", "download-stats.json", ".well-known"]
-# exclude: ["vendor"]
+# Tooling for the checks (npm, linters): not part of the site
+exclude: ["vendor", "node_modules", "package.json", "package-lock.json", "eslint.config.mjs", "renovate.json5", "README.md", "Gemfile", "Gemfile.lock"]
 permalink: /posts/:title/
 score_version: 3.9.0
 libossia_version: 2.1.0

@@ -32,12 +32,14 @@ ossia score traite chaque moteur ou actionneur comme un paramètre à automatise
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Des mouvements écrits précisément dans le temps</td><td>Courbes d'automation, trajectoires et LFO sur une timeline, en temps musical ou absolu.</td></tr>
 <tr><td>Un mouvement fluide que la mécanique peut suivre</td><td>Lissage, easing et limitation de variation avant que les valeurs n'atteignent les moteurs.</td></tr>
 <tr><td>Des mécanismes qui réagissent aux visiteurs ou à leur propre état</td><td>Capteurs, caméras et données machine alimentent déclencheurs, conditions et correspondances.</td></tr>
 <tr><td>Moteurs, son, vidéo et lumière ensemble</td><td>Un seul projet pour tout, depuis un seul ordinateur.</td></tr>
 <tr><td>Un petit contrôleur caché</td><td>Sans interface sur un Raspberry Pi, en lien avec les microcontrôleurs du mécanisme.</td></tr>
+</tbody>
 </table>
 </div>
 

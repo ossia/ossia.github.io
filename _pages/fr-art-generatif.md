@@ -31,12 +31,14 @@ et organisez le résultat dans le temps, en performance, en installation ou en v
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Essayer des idées vite, sans code d'infrastructure</td><td>Shaders, objets 3D et générateurs reliés par des câbles, avec des paramètres modifiables en direct.</td></tr>
 <tr><td>Écrire du code quand c'est le meilleur outil</td><td>JavaScript, GLSL, Faust et C++ dans le même patch.</td></tr>
 <tr><td>Réutiliser les shaders de la communauté</td><td>Shaders ISF, bibliothèque Lygia du gestionnaire de paquets, et liens Shadertoy convertis automatiquement.</td></tr>
 <tr><td>Transformer une esquisse en œuvre</td><td>Une timeline avec scènes, automations et cues autour du patch génératif.</td></tr>
 <tr><td>Une vidéo rendue en pleine qualité</td><td>Rendu hors temps réel image par image, indépendant des performances en temps réel.</td></tr>
+</tbody>
 </table>
 </div>
 

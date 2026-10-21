@@ -31,12 +31,14 @@ Il relie le matériel scientifique et les jeux de données au son, à la vidéo 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Recevoir en temps réel les données du matériel de laboratoire</td><td>Appareils LSL, CAN, série, Bluetooth LE, OSC et MQTT.</td></tr>
 <tr><td>Entendre ou voir un jeu de données</td><td>Fichiers HDF5 et CSV joués comme courbes, tableaux ou textures, associés au son, à l'image et à la lumière.</td></tr>
 <tr><td>Répéter une session à l'identique</td><td>Enregistrez les appareils en CSV et rejouez-les, avec le protocole écrit comme une timeline.</td></tr>
 <tr><td>Un logiciel que relecteurs et autres laboratoires peuvent utiliser</td><td>Libre (GPLv3), sous Windows, macOS et Linux, avec des projets qui s'ouvrent partout.</td></tr>
 <tr><td>Ajouter votre propre algorithme</td><td>JavaScript, Faust, shaders et extensions C++, ou libossia dans votre propre programme.</td></tr>
+</tbody>
 </table>
 </div>
 

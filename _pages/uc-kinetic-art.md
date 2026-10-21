@@ -31,12 +31,14 @@ ossia score treats each motor or actuator as a parameter to automate, next to th
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Movements written precisely in time</td><td>Automation curves, trajectories and LFOs on a timeline, with musical or absolute time.</td></tr>
 <tr><td>Smooth motion that the mechanics can follow</td><td>Smoothing, easing and rate limiting before the values reach the motors.</td></tr>
 <tr><td>Mechanisms that react to visitors or to their own state</td><td>Sensors, cameras and machine data feed triggers, conditions and mappings.</td></tr>
 <tr><td>Motors, sound, video and lights together</td><td>One project for all of them, from a single computer.</td></tr>
 <tr><td>A small, hidden controller</td><td>Headless on a Raspberry Pi, talking to microcontrollers in the mechanism.</td></tr>
+</tbody>
 </table>
 </div>
 

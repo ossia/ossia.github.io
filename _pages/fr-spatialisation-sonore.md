@@ -27,12 +27,14 @@ Les sources sonores, leurs positions et leurs mouvements s'écrivent sur la mêm
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Spatialiser sur un dispositif de haut-parleurs irrégulier</td><td>DBAP et GBAP fonctionnent avec des haut-parleurs placés n'importe où, en 2D ou en 3D.</td></tr>
 <tr><td>Écrire des mouvements précisément dans le temps</td><td>Trajectoires et positions des sources sont des automations sur la timeline.</td></tr>
 <tr><td>Des sons qui suivent interprètes ou visiteurs</td><td>Systèmes de tracking, caméras de profondeur et capteurs pilotent directement la position des sources.</td></tr>
 <tr><td>Garder votre moteur de spatialisation</td><td>ossia score envoie positions et paramètres des sources en OSC et en ADM-OSC.</td></tr>
 <tr><td>Une installation multicanale permanente</td><td>Mode sans interface avec lecture automatique, sur PC ou Raspberry Pi.</td></tr>
+</tbody>
 </table>
 </div>
 

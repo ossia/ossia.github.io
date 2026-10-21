@@ -29,11 +29,13 @@ ossia score décrit cette logique sur une timeline : chaque scène attend qu'une
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Un jeu qui suit les joueurs, pas une séquence fixe</td><td>Les scènes attendent des déclencheurs, et des conditions choisissent entre plusieurs branches.</td></tr>
 <tr><td>Des accessoires, serrures et capteurs de fabricants variés</td><td>Série, MQTT, HTTP, WebSocket, Bluetooth LE, MIDI, OSC et GPIO dans le même projet.</td></tr>
 <tr><td>Un maître du jeu qui peut aider ou réinitialiser la salle</td><td>Un panneau web pour déclencher les scènes, y compris les indices préparés, et reprendre depuis n'importe quel point.</td></tr>
 <tr><td>Un son, une vidéo et une lumière immersifs</td><td>Son multicanal, vidéo, 3D et DMX sur la même timeline que la logique du jeu.</td></tr>
 <tr><td>Fonctionner tous les jours sans technicien</td><td>Lecture automatique sans interface sur PC ou Raspberry Pi, avec supervision du système.</td></tr>
+</tbody>
 </table>
 </div>

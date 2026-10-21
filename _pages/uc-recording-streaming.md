@@ -28,11 +28,13 @@ and go out to screens, files, other software and streaming services, in sync wit
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Streaming a concert or a performance with its visuals</td><td>The same project renders the visuals, mixes the sound and sends both to the streaming service.</td></tr>
 <tr><td>Bringing remote or network video into a show</td><td>SRT, RTSP, NDI and capture card inputs, processed like any other texture.</td></tr>
 <tr><td>Recording the program for archive or editing</td><td>Recording to ProRes, DNxHD, MP4 or AV1, triggered from the timeline.</td></tr>
 <tr><td>Sending images to the rest of the setup</td><td>NDI, Spout, Syphon and PipeWire outputs alongside the screens.</td></tr>
 <tr><td>Camera switching driven by the show</td><td>Cues, scenes and sensors choose cameras and graphics automatically.</td></tr>
+</tbody>
 </table>
 </div>

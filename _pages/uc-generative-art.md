@@ -30,12 +30,14 @@ and organise the result in time, as a live performance, an installation or a ren
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Trying ideas quickly without boilerplate code</td><td>Shaders, 3D objects and generators connected with cables, with live parameters.</td></tr>
 <tr><td>Writing code when it is the best tool</td><td>JavaScript, GLSL, Faust and C++ inside the same patch.</td></tr>
 <tr><td>Reusing shaders from the community</td><td>ISF shaders, the Lygia library from the package manager, and Shadertoy links converted automatically.</td></tr>
 <tr><td>Turning a sketch into a piece</td><td>A timeline with scenes, automations and cues around the generative patch.</td></tr>
 <tr><td>A rendered video at full quality</td><td>Frame-exact offline rendering, independent of real-time performance.</td></tr>
+</tbody>
 </table>
 </div>
 

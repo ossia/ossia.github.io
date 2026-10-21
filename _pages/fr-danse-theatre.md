@@ -30,12 +30,14 @@ Les parties interactives vivent dans une partition écrite : le spectacle suit l
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Suivre les interprètes sans leur poser de capteurs</td><td>Détection de pose avec une webcam, caméras de profondeur et systèmes de tracking.</td></tr>
 <tr><td>Une interaction identique d'un soir à l'autre</td><td>Les parties interactives sont écrites dans des scènes et des cues, avec lissage, calibration et seuils.</td></tr>
 <tr><td>Des mouvements qui pilotent ensemble son, vidéo et lumière</td><td>Un seul projet pour le son spatialisé, la vidéo, la 3D et le DMX, tous pilotés par les mêmes données.</td></tr>
 <tr><td>Répéter et ajuster rapidement</td><td>Modifiez les correspondances pendant l'exécution, et reprenez depuis n'importe quelle scène avec <i>Play from here</i>.</td></tr>
 <tr><td>Partir en tournée avec un dispositif léger</td><td>Un ordinateur portable ou un Raspberry Pi, sous Windows, macOS ou Linux, avec les médias rassemblés dans le projet.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -35,13 +35,15 @@ record, map and score over time. It is used to control patches, game engines, me
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Automating the parameters of another program over time</td><td>Curves on any OSC, MIDI or DMX address, and OSCQuery to browse parameters instead of typing them.</td></tr>
 <tr><td>The same tool on Windows, macOS and Linux</td><td>The same features on all three and on Raspberry Pi, except for features tied to an operating system or to hardware, such as Spout, Syphon or CUDA.</td></tr>
 <tr><td>A timeline that waits for events, branches and loops</td><td>Triggers, conditions and loops are part of the timeline, not an add-on.</td></tr>
 <tr><td>Turning controllers and sensors into OSC</td><td>Gamepads, MIDI controllers, Arduino, depth cameras and tracking systems, mapped with curves, JavaScript or expressions.</td></tr>
 <tr><td>Sound and video next to the control data</td><td>Audio, video, 3D and shaders in the same timeline as your OSC, MIDI and DMX automation.</td></tr>
 <tr><td>A simple control surface on a phone or a tablet</td><td>The browser remote, without installing an app.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -30,12 +30,14 @@ It connects scientific hardware and datasets to sound, video and light, for expe
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Getting data from lab hardware in real time</td><td>LSL, CAN, serial, Bluetooth LE, OSC and MQTT devices.</td></tr>
 <tr><td>Hearing or seeing a dataset</td><td>HDF5 and CSV files played as curves, arrays or textures, mapped to sound, image and light.</td></tr>
 <tr><td>Repeating a session exactly</td><td>Record devices to CSV and replay them, with the protocol written as a timeline.</td></tr>
 <tr><td>Software that reviewers and other labs can use</td><td>Free, open-source (GPLv3), on Windows, macOS and Linux, with project files that open everywhere.</td></tr>
 <tr><td>Adding your own algorithm</td><td>JavaScript, Faust, shaders and C++ extensions, or libossia in your own program.</td></tr>
+</tbody>
 </table>
 </div>
 

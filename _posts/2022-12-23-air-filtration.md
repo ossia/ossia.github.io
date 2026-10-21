@@ -18,7 +18,7 @@ description: "Residency for the use of ossia score for Air Filtration"
 This post presents a case study on the writing of a score with ossia score for such a complete artwork involving
 a wealth of interesting behaviours, sensors, actuators and protocols. 
 
-![[re]capture]({{site.baseurl}}/assets/blog/airfiltration/airfiltration.webp){: width="90%" style="display:block; margin-left:auto; margin-right:auto" }
+![[re]capture]({{site.baseurl}}/assets/blog/airfiltration/airfiltration.webp){: style="width: 90%; display:block; margin-left:auto; margin-right:auto" }
 
 ## The [re]capture project
 
@@ -279,7 +279,7 @@ Finally, the last part of our tryptich focuses on mapping averages of our sensor
 For this, we used for instance the Sweeper object described below, which makes a specific behaviour "run" across all the serial modules in a rhythm defined by one of the sensor data.
 Multiple mappings succeed one another. Below, one is pictured: it maps the CO² average of our sensors to both light intensity and circulation speed of the LEDs and fans.
 
-![Global mappings]({{site.baseurl}}/assets/blog/airfiltration/tableau3.module.webp){: width="100%" style="display:block; margin-left:auto; margin-right:auto" }
+![Global mappings]({{site.baseurl}}/assets/blog/airfiltration/tableau3.module.webp){: style="width: 100%; display:block; margin-left:auto; margin-right:auto" }
 
 ### Video mapping
 
@@ -290,7 +290,7 @@ The video feed, captured with a 360° fisheye camera, is re-projected on the art
 
 The video projection used made the video too wide: we used a very quick and dirty Video Mapper object to make it more round to fit the artwork. Likewise, some exposure adjust was needed as the video projector we had really wasn't bright enough. Thankfully, ossia score's user library comes with objects for handling this built-in, thanks to the great [ISF library shared by Vidvox](https://github.com/Vidvox/ISF-Files)!
 
-![Video mappings]({{site.baseurl}}/assets/blog/airfiltration/video-map.png){: width="40%" style="display:block; margin-left:auto; margin-right:auto" }
+![Video mappings]({{site.baseurl}}/assets/blog/airfiltration/video-map.png){: style="width: 40%; display:block; margin-left:auto; margin-right:auto" }
 
 #### Mapping parameters to real-time video filters
 

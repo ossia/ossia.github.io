@@ -36,13 +36,15 @@ or react to sensors and performers — all in the same score.
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>A sequence of cues, each started with GO</td><td>Scenes that each wait for a GO from the keyboard, a MIDI controller, OSC or a browser, and <i>Play from here</i> to restart anywhere.</td></tr>
 <tr><td>Running on Windows, Linux or a Raspberry Pi, with no licence to buy</td><td>Free and open-source on every operating system, with the same features everywhere except for features tied to an operating system or to hardware, such as Spout, Syphon or CUDA.</td></tr>
 <tr><td>Shows that react to performers or the audience</td><td>Triggers, conditions and branching scenes, fed by sensors, cameras, tracking systems or any OSC or MIDI message.</td></tr>
 <tr><td>Sound, video and lights in one show file</td><td>Multichannel sound, video, 3D, DMX lights and OSC/MIDI devices on the same timeline.</td></tr>
 <tr><td>Controlling AV equipment: projectors, video switchers, cameras</td><td>Bitfocus Companion modules, installed from the package manager, run directly inside ossia score.</td></tr>
 <tr><td>Following timecode</td><td>LTC in and out, MIDI clock and MIDI timecode.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -22,7 +22,8 @@ For many projects it is all you need, from the first sketch to the show; and whe
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>If you need to…</th><th>ossia score gives you</th></tr>
+<thead><tr><th>If you need to…</th><th>ossia score gives you</th></tr></thead>
+<tbody>
 <tr><td>run a theatre, dance or concert show</td><td><a href="/show-control.html">show control</a> with cues, scenes, timecode, and interactivity when the show needs it.</td></tr>
 <tr><td>automate OSC, MIDI or DMX parameters over time</td><td>an <a href="/osc-midi-dmx-timeline.html">OSC, MIDI and DMX timeline</a> with triggers, conditions and OSCQuery.</td></tr>
 <tr><td>play, map or generate video</td><td><a href="/projection-mapping.html">video, mapping and generative visuals</a>, with shaders and 3D, for timed or interactive shows.</td></tr>
@@ -43,6 +44,7 @@ For many projects it is all you need, from the first sketch to the show; and whe
 <tr><td>sonify data or work with biosignals</td><td><a href="/research-sonification.html">LSL, HDF5 and CSV</a> data mapped to sound, image and light, recorded and replayed.</td></tr>
 <tr><td>teach interactive media</td><td><a href="/teaching.html">one free tool</a> for sound, video, light, sensors and code, also in the browser.</td></tr>
 <tr><td>ship a project as an application</td><td><a href="/custom-apps.html">custom apps</a> with your own interface, name and icon.</td></tr>
+</tbody>
 </table>
 </div>
 

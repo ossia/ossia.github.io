@@ -285,7 +285,7 @@ See the <a href="/project.html">Contributing</a> page for more information.
 
 <br/>
 
-<p align="center">
+<p style="text-align: center">
 <a href="https://forum.ossia.io/" class="page-button"  target="_blank" >If your question is not here, ask us in the forum! </a>
 </p>
 

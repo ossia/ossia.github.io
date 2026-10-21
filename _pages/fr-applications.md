@@ -28,12 +28,14 @@ votre interface au-dessus, votre projet et vos médias à l'intérieur, et tout 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Une borne avec seulement les boutons que les visiteurs doivent toucher</td><td>Une interface QML plein écran au-dessus du projet, sans l'éditeur.</td></tr>
 <tr><td>Diffuser une œuvre interactive au public</td><td>Des applications installables pour chaque système, et une version web qui tourne dans le navigateur.</td></tr>
 <tr><td>Un outil simple pour une équipe ou un client</td><td>Votre nom, votre icône et vos réglages, avec la complexité du projet cachée.</td></tr>
 <tr><td>Ne pas maintenir soi-même un moteur multimédia</td><td>Audio, vidéo, 3D, appareils et protocoles viennent d'ossia score.</td></tr>
 <tr><td>Des versions reproductibles</td><td>Scripts d'empaquetage et GitHub Actions du dépôt modèle.</td></tr>
+</tbody>
 </table>
 </div>
 

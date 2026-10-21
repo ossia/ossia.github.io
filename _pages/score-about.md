@@ -22,7 +22,7 @@ It leverages [libossia](../site-libossia/about.html) for its implementation, as 
 See how it is used for [show control](/show-control.html), [OSC, MIDI and DMX sequencing](/osc-midi-dmx-timeline.html), [video and projection mapping](/projection-mapping.html), [visual programming](/visual-programming.html), [DMX lighting](/dmx-lighting.html), [interactive installations](/interactive-installations.html), [live electronic music](/live-music.html), [spatial audio](/spatial-audio.html) and [real-time AI](/realtime-ai.html), or [all its uses](/use-cases.html).
 
 <br/>
-<p align="center">
+<p style="text-align: center">
 <a href="/score/download.html" class="page-button" style="padding-left:4em;padding-right:4em;font-size: 27px;" >Download score !</a>
 </p>
 

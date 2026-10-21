@@ -32,12 +32,14 @@ ossia score fait fonctionner les médias et les parties interactives d'un dispos
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Des dispositifs qui démarrent chaque matin sans personne</td><td>Lecture automatique au démarrage, mode sans interface, et aucune fenêtre d'éditeur à l'écran.</td></tr>
 <tr><td>De nombreux dispositifs avec un budget limité</td><td>Un logiciel gratuit, et des Raspberry Pi ou des mini-PC au lieu de lecteurs média dédiés.</td></tr>
 <tr><td>Savoir quand quelque chose ne va pas</td><td>Supervision du système et chaque paramètre lisible sur le réseau.</td></tr>
 <tr><td>Une équipe qui n'est pas technicienne</td><td>Un panneau de contrôle dans le navigateur, ou une interface tactile sur mesure avec seulement les boutons utiles.</td></tr>
 <tr><td>Un projet qui survit à son auteur</td><td>Médias rassemblés dans un seul dossier, formats de fichiers ouverts, et le même projet sur tous les systèmes.</td></tr>
+</tbody>
 </table>
 </div>
 

@@ -29,12 +29,14 @@ improvisée autour de boucles et de motifs, ou entre les deux, et les visuels et
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
+<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<tbody>
 <tr><td>Une pièce en partie écrite et en partie improvisée</td><td>Des sections fixes sur la timeline, et des boucles, scènes et conditions qui attendent l'interprète.</td></tr>
 <tr><td>Des instruments et des effets sans acheter de plug-ins</td><td>Synthés, boîtes à rythmes, sampler, granulateur et des centaines d'effets inclus, en plus de vos propres plug-ins.</td></tr>
 <tr><td>Jouer en synchronisation avec d'autres musiciens et machines</td><td>Horloge MIDI, MIDI timecode et LTC en entrée et en sortie, et un suiveur de tempo.</td></tr>
 <tr><td>Des visuels et une lumière qui suivent la musique</td><td>Analyse audio, détection de tempo et une même timeline pour le son, la vidéo et le DMX.</td></tr>
 <tr><td>Un dispositif léger sur scène</td><td>Un ordinateur portable, ou un Raspberry Pi qui joue le set sans écran.</td></tr>
+</tbody>
 </table>
 </div>
 

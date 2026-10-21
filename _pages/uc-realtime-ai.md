@@ -30,11 +30,13 @@ and they drive the rest of the piece. Models run locally, on your computer, not 
 
 <div class="comparison-scroll">
 <table class="comparison">
-<tr><th>What you need</th><th>How ossia score does it</th></tr>
+<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<tbody>
 <tr><td>Body tracking without special sensors</td><td>Pose detection and depth estimation from an ordinary webcam.</td></tr>
 <tr><td>AI imagery that reacts to the audience or the music</td><td>Real-time image generation driven by cameras, sensors and audio analysis, with prompts that change over time.</td></tr>
 <tr><td>Keeping data on site</td><td>Models run on your computer; nothing is sent to a cloud service.</td></tr>
 <tr><td>Interaction designed by example, without coding</td><td>Classifiers and regressors trained from a few recorded gestures.</td></tr>
 <tr><td>A show that plays the same every night</td><td>AI objects are part of the timeline, with cues, scenes and conditions.</td></tr>
+</tbody>
 </table>
 </div>

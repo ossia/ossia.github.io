@@ -8,7 +8,7 @@ description: "Report from the 2014 user experience workshop where artists and de
 ---
 
 <div class="videoWrapper">
-    <button type="button" class="video-facade" aria-label="Play the video: User experience workshop (loads Vimeo)"><span class="video-facade-title">User experience workshop</span><span class="video-facade-note">Play · loads Vimeo</span></button><template class="video-facade-embed"><iframe title="Video: User experience workshop" loading="lazy" src="https://player.vimeo.com/video/83989990?dnt=1"  frameborder="0" allow="fullscreen" allowfullscreen></iframe></template>
+    <button type="button" class="video-facade" aria-label="Play the video: User experience workshop (loads Vimeo)"><span class="video-facade-title">User experience workshop</span><span class="video-facade-note">Play · loads Vimeo</span></button><template class="video-facade-embed"><iframe title="Video: User experience workshop" loading="lazy" src="https://player.vimeo.com/video/83989990?dnt=1"  allow="fullscreen" allowfullscreen></iframe></template>
 </div>
 <p>
 <a href="https://vimeo.com/83989990">Le chant du filament</a> from <a href="https://vimeo.com/user24205756">NICOLAS VILLENAVE</a> on <a href="https://vimeo.com">Vimeo</a>.

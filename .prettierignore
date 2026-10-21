@@ -1,0 +1,21 @@
+# Only the code we write is formatted. Pages and posts (Markdown with Liquid),
+# vendored libraries and the legacy theme CSS are left alone.
+*
+!*/
+!js/site.js
+!js/consent.js
+!_includes/consent-head.js
+!css/consent.css
+!css/use-cases.css
+!css/gallery.css
+!.github/**/*.mjs
+!.github/**/*.json
+!.github/**/*.yml
+!package.json
+!eslint.config.mjs
+!renovate.json5
+!.htmlvalidate.json
+!.prettierrc.json
+_site/
+node_modules/
+vendor/
