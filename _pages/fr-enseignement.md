@@ -11,7 +11,7 @@ description: "Logiciel libre pour enseigner les médias interactifs : tous les s
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score est utilisé en cours et en ateliers pour enseigner le son, la vidéo, la lumière et l'installation interactifs, par exemple à l'Université Concordia, à l'UQAM, à l'Université d'Ottawa, à l'Université de Maynooth et à l'Université de Bordeaux.
+ossia score est utilisé en cours et en ateliers pour enseigner le son, la vidéo, la lumière et l'installation interactifs, par exemple à l'Université Concordia, à l'UQAM, à l'Université d'Ottawa, à l'Université Queen's (Kingston, Ontario), à l'Université de Maynooth et à l'Université de Bordeaux.
 Les élèves gardent le même outil après le cours : il est gratuit, il fonctionne sur leur propre ordinateur, et les projets s'ouvrent sur tous les systèmes.
 
 ## Ce que vous pouvez faire
