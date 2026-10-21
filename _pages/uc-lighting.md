@@ -4,7 +4,9 @@ title: "Free DMX software: lights in sync with media"
 headline: "DMX lighting and LEDs"
 subtitle: "ossia score can be used to control DMX fixtures and LED strips from the same timeline as the sound and the video of a show or an installation."
 permalink: /dmx-lighting.html
-translation: /fr/eclairage-dmx.html
+ref: lighting
+nav_title: "DMX lighting and LEDs"
+blurb: "Art-Net, sACN and DMX USB with a fixture library, LED pixel mapping, all in sync with sound and video."
 category: site-score
 description: "Free DMX software for Windows, macOS, Linux and Raspberry Pi: Art-Net, sACN, DMX USB, fixture library and LED pixel mapping, synchronized with sound and video."
 image: /assets/social/ossia-score-og.jpg

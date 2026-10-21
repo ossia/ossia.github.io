@@ -5,7 +5,9 @@ title: "Logiciel pour installations interactives et sonores"
 headline: "Installations interactives et sonores"
 subtitle: "ossia score permet de faire fonctionner des installations interactives et sonores, des capteurs et caméras jusqu'au son, à la vidéo et à la lumière, sur un PC ou un Raspberry Pi."
 permalink: /fr/installations-interactives.html
-translation: /interactive-installations.html
+ref: installations
+nav_title: "Installations interactives"
+blurb: "Capteurs, caméras et tracking, son et vidéo, en fonctionnement autonome sur un PC ou un Raspberry Pi."
 category: site-score
 description: "Logiciel libre pour installations interactives et sonores : capteurs, caméras de profondeur, son spatialisé et vidéo, en autonomie sur PC ou Raspberry Pi."
 image: /assets/social/ossia-score-og.jpg

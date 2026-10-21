@@ -59,7 +59,7 @@ jobs:
           retention-days: 3
 
   lint:
-    name: Prettier, ESLint
+    name: Prettier, ESLint, translations
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -70,6 +70,7 @@ jobs:
       - run: npm ci
       - run: npm run format:check
       - run: npm run lint
+      - run: npm run check:i18n
 
   browser-checks:
     name: Privacy scan, accessibility audit

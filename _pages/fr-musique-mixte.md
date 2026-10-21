@@ -5,7 +5,9 @@ title: "Musique mixte et électronique en temps réel"
 headline: "Musique mixte et électronique en temps réel"
 subtitle: "ossia score permet d'écrire la partie électronique d'une pièce pour instruments, avec des cues à la pédale, du traitement en direct, de la spatialisation, et une partition qui attend les musiciens."
 permalink: /fr/musique-mixte.html
-translation: /live-electronics.html
+ref: live-electronics
+nav_title: "Musique mixte"
+blurb: "Des partitions interactives qui attendent les interprètes, cues aux pédales, traitement en direct et son spatialisé."
 category: site-score
 description: "Logiciel libre pour la musique mixte : partitions interactives, cues depuis pédales ou MIDI, traitement en direct, Pure Data et son spatialisé."
 image: /assets/social/ossia-score-og.jpg

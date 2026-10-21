@@ -1,15 +1,6 @@
-{%- if page.lang == "fr" -%}
 <div class="use-case-cta">
-  <a class="page-button cta-primary" href="/score/download.html">Télécharger ossia score {{ site.score_version }}</a>
-  <a class="page-button" href="https://ossia.io/score-web/" target="_blank" rel="noopener">Essayer dans le navigateur</a>
-  <a class="page-button" href="https://ossia.io/score-docs/">Documentation (en anglais)</a>
-  <p class="cta-note">Gratuit et open source (GPLv3) · Windows, macOS, Linux, Raspberry Pi et navigateur web</p>
+  <a class="page-button cta-primary" href="/score/download.html">{{ t.cta.download | default: t_en.cta.download }} {{ site.score_version }}</a>
+  <a class="page-button" href="https://ossia.io/score-web/" target="_blank" rel="noopener">{{ t.cta.try | default: t_en.cta.try }}</a>
+  <a class="page-button" href="https://ossia.io/score-docs/">{{ t.cta.docs | default: t_en.cta.docs }}</a>
+  <p class="cta-note">{{ t.cta.note | default: t_en.cta.note }}</p>
 </div>
-{%- else -%}
-<div class="use-case-cta">
-  <a class="page-button cta-primary" href="/score/download.html">Download ossia score {{ site.score_version }}</a>
-  <a class="page-button" href="https://ossia.io/score-web/" target="_blank" rel="noopener">Try it in your browser</a>
-  <a class="page-button" href="https://ossia.io/score-docs/">Read the documentation</a>
-  <p class="cta-note">Free and open-source (GPLv3) · Windows, macOS, Linux, Raspberry Pi and web browser</p>
-</div>
-{%- endif -%}

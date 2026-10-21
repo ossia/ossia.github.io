@@ -4,7 +4,9 @@ title: "Real-time AI for visuals, sound and interaction"
 headline: "Real-time AI for artists"
 subtitle: "ossia score can be used to run AI models in real time, such as pose detection, image generation or language models, as objects in a patch."
 permalink: /realtime-ai.html
-translation: /fr/ia-temps-reel.html
+ref: realtime-ai
+nav_title: "Real-time AI"
+blurb: "Pose detection, depth from a webcam, real-time image generation, language models and machine learning by example, run locally."
 category: site-score
 description: "Free, open-source real-time AI for artists: pose detection, segmentation, depth, image generation, LLMs and machine learning by example, run locally."
 image: /assets/social/ossia-score-og.jpg

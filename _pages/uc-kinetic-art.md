@@ -4,7 +4,9 @@ title: "Software for kinetic art, motors and robotics"
 headline: "Kinetic art and robotics"
 subtitle: "ossia score can be used to write the movements of motors, pumps and mechanisms on a timeline, reacting to sensors and in sync with sound, video and lights."
 permalink: /kinetic-art-robotics.html
-translation: /fr/art-cinetique-robotique.html
+ref: kinetic-art
+nav_title: "Kinetic art and robotics"
+blurb: "Motors, pumps and robots written on a timeline, reacting to sensors, in sync with sound, video and lights."
 category: site-score
 description: "Free, open-source software for kinetic art and robotics: motors, pumps and actuators over serial, DMX, OSC and GPIO, synced with sensors, sound and lights."
 image: /assets/social/ossia-score-og.jpg

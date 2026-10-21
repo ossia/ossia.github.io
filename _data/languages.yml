@@ -1,0 +1,14 @@
+# Languages of the website, in the order of the language menu.
+# - code: value of `lang` in the pages' front matter (English is the default,
+#   set in _config.yml), and name of the strings file in _data/i18n/
+# - locale: Open Graph locale
+# - home: where the language menu leads from a page that is not translated
+# A page and its translations share the same `ref` in their front matter.
+- code: en
+  name: English
+  locale: en_US
+  home: /
+- code: fr
+  name: Français
+  locale: fr_FR
+  home: /fr/usages.html

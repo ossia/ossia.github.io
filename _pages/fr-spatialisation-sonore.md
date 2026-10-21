@@ -5,7 +5,9 @@ title: "Spatialisation sonore multicanale"
 headline: "Spatialisation sonore et son multicanal"
 subtitle: "ossia score permet de placer et de déplacer des sons sur n'importe quel dispositif de haut-parleurs, les trajectoires étant écrites sur la même timeline que le reste de l'œuvre."
 permalink: /fr/spatialisation-sonore.html
-translation: /spatial-audio.html
+ref: spatial-audio
+nav_title: "Spatialisation sonore"
+blurb: "DBAP, GBAP et trajectoires sur tout dispositif de haut-parleurs, jusqu'à 1024 canaux, et pilotage de moteurs de spatialisation."
 category: site-score
 description: "Spatialisation sonore libre : DBAP, GBAP, trajectoires, jusqu'à 1024 canaux, pilotage de SpatGRIS et ADM-OSC, pour concerts et installations."
 image: /assets/social/ossia-score-og.jpg

@@ -1,0 +1,52 @@
+# Interface strings. Other languages have the same keys in _data/i18n/<code>.yml;
+# a key missing there falls back to the English one.
+nav:
+  main: Main
+  main_mobile: Main (mobile)
+  menu: Menu
+  language: Language
+  current_language: "Language: %s"
+  score: score
+  libossia: libossia
+  docs: docs
+  gallery: gallery
+  use_cases: use cases
+  about: about
+  download: download
+  donate: donate
+footer:
+  follow: Follow us !
+  use_cases: Use cases
+  privacy: Privacy policy
+cta:
+  download: Download ossia score
+  try: Try it in your browser
+  docs: Read the documentation
+  note: Free and open-source (GPLv3) · Windows, macOS, Linux, Raspberry Pi and web browser
+use_case:
+  others_label: Other uses
+  others_title: More ways to use ossia score
+  groups:
+    stage: Stage and music
+    visuals: Video and light
+    spaces: Spaces and experiences
+    tools: Tools and research
+# Cookie banner and settings (js/consent.js)
+consent:
+  title: Cookies
+  text: With your consent, we count visits with Google Analytics. Nothing is loaded otherwise.
+  policy: Privacy policy
+  refuse: Refuse
+  accept: Accept
+  customize: Customize
+  refuseAll: Refuse all
+  acceptAll: Accept all
+  settings: Cookie settings
+  save: Save
+  stats: Audience statistics
+  statsDesc: "Google Analytics: pages visited, approximate country, browser, device type, download clicks."
+  ads: Ad measurement
+  adsDesc: Tells Google Ads when someone coming from one of our ads downloads ossia score. Requires audience statistics.
+  always: Your choice is stored in this browser only.
+  who: "Controller: ossia.io. Recipient: Google."
+  saved: Choice saved.

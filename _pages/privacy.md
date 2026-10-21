@@ -3,12 +3,12 @@ layout: page
 title:  "Privacy policy"
 
 permalink: /privacy.html
-translation: /fr/confidentialite.html
+ref: privacy
 category: "site-score"
 description: "Privacy policy for ossia.io and our open-source software, ossia score and libossia."
 ---
 
-*Last updated: October 18, 2026* · [Version française](/fr/confidentialite.html)
+*Last updated: October 18, 2026*
 
 ## Who we are
 

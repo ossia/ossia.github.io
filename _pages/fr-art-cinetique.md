@@ -5,7 +5,9 @@ title: "Logiciel pour l'art cinétique et la robotique"
 headline: "Art cinétique et robotique"
 subtitle: "ossia score permet d'écrire les mouvements de moteurs, de pompes et de mécanismes sur une timeline, en réaction à des capteurs et en synchronisation avec le son, la vidéo et la lumière."
 permalink: /fr/art-cinetique-robotique.html
-translation: /kinetic-art-robotics.html
+ref: kinetic-art
+nav_title: "Art cinétique et robotique"
+blurb: "Moteurs, pompes et robots écrits sur une timeline, réactifs aux capteurs, synchronisés avec son, vidéo et lumière."
 category: site-score
 description: "Logiciel libre pour l'art cinétique et la robotique : moteurs, pompes et actionneurs en série, DMX, OSC et GPIO, avec courbes, capteurs, son, vidéo et lumière."
 image: /assets/social/ossia-score-og.jpg

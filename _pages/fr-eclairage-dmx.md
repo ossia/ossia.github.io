@@ -5,7 +5,9 @@ title: "Logiciel DMX gratuit : lumière et médias en phase"
 headline: "Éclairage DMX et LED"
 subtitle: "ossia score permet de piloter des projecteurs DMX et des rubans LED depuis la même timeline que le son et la vidéo d'un spectacle ou d'une installation."
 permalink: /fr/eclairage-dmx.html
-translation: /dmx-lighting.html
+ref: lighting
+nav_title: "Éclairage DMX et LED"
+blurb: "Art-Net, sACN et DMX USB avec une bibliothèque de projecteurs et le pixel mapping LED, synchronisés avec le son et la vidéo."
 category: site-score
 description: "Logiciel DMX libre pour Windows, macOS, Linux et Raspberry Pi : Art-Net, sACN, DMX USB et pixel mapping LED, synchronisés avec le son et la vidéo."
 image: /assets/social/ossia-score-og.jpg

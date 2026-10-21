@@ -5,7 +5,9 @@ title: "Enseigner les médias interactifs avec ossia score"
 headline: "Enseignement et ateliers"
 subtitle: "ossia score permet d'enseigner le son, la vidéo, la lumière et l'installation interactifs, sur l'ordinateur des étudiants, dans un navigateur web, ou sur un Raspberry Pi."
 permalink: /fr/enseignement.html
-translation: /teaching.html
+ref: teaching
+nav_title: "Enseignement et ateliers"
+blurb: "Un outil gratuit pour le son, la vidéo, la lumière, les capteurs et le code, sur tous les systèmes et dans le navigateur."
 category: site-score
 description: "Logiciel libre pour enseigner les médias interactifs : tous les systèmes et le navigateur, avec des exemples pour le son, la vidéo, l'IA et le code."
 image: /assets/social/ossia-score-og.jpg

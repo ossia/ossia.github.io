@@ -5,7 +5,9 @@ title: "Logiciel pour la danse et le théâtre interactifs"
 headline: "Danse et théâtre interactifs"
 subtitle: "ossia score permet de faire piloter le son, la vidéo et la lumière par les mouvements des interprètes, au sein d'une conduite écrite qui peut être rejouée chaque soir."
 permalink: /fr/danse-theatre.html
-translation: /dance-theatre.html
+ref: dance-theatre
+nav_title: "Danse et théâtre interactifs"
+blurb: "Détection de pose, caméras de profondeur, capteurs et tracking pilotent son, vidéo et lumière, dans des cues et des scènes."
 category: site-score
 description: "Logiciel libre pour la danse et le théâtre interactifs : détection de pose, caméras de profondeur, capteurs et tracking pilotent son, vidéo et lumière."
 image: /assets/social/ossia-score-og.jpg

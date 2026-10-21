@@ -4,7 +4,9 @@ title: "Free projection mapping and video software"
 headline: "Video, projection mapping and VJing"
 subtitle: "ossia score can be used to play, map and generate video over several projectors, in the same project as the sound and the lights of a show."
 permalink: /projection-mapping.html
-translation: /fr/mapping-video.html
+ref: projection-mapping
+nav_title: "Video, mapping and VJing"
+blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronized with sound and light."
 category: site-score
 description: "Free, open-source software for video playback, multi-projector mapping, shaders, 3D and NDI on Windows, macOS and Linux, synchronized with sound and light."
 image: /assets/social/ossia-score-og.jpg

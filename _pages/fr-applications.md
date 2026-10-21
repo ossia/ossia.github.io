@@ -5,7 +5,9 @@ title: "Faire d'un projet une application autonome"
 headline: "Applications sur mesure avec ossia score"
 subtitle: "ossia score permet d'empaqueter un projet avec sa propre interface, son nom et son icône en application pour Windows, macOS, Linux ou le web."
 permalink: /fr/applications-sur-mesure.html
-translation: /custom-apps.html
+ref: custom-apps
+nav_title: "Applications sur mesure"
+blurb: "Empaquetez un projet avec votre interface en application pour Windows, macOS, Linux ou le web."
 category: site-score
 description: "Empaquetez un projet ossia score avec une interface QML en application autonome à votre nom, pour Windows, macOS, Linux, ARM ou le web. Libre et gratuit."
 image: /assets/social/ossia-score-og.jpg

@@ -3,7 +3,7 @@
 *
 !*/
 !js/site.js
-!js/consent.js
+!_includes/consent.js
 !_includes/consent-head.js
 !css/consent.css
 !css/use-cases.css

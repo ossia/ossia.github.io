@@ -4,7 +4,9 @@ title: "Escape room and attraction control software"
 headline: "Escape rooms and interactive attractions"
 subtitle: "ossia score can be used to write the game logic of an escape room or an attraction, with puzzles, props and sensors driving sound, video and lights."
 permalink: /escape-rooms.html
-translation: /fr/escape-games.html
+ref: escape-rooms
+nav_title: "Escape rooms and attractions"
+blurb: "Puzzles, props and sensors driving sound, video and lights, with game logic and a game master panel."
 category: site-score
 description: "Free, open-source software for escape rooms and attractions: sensors and props, game logic with triggers and conditions, sound, video and DMX, unattended."
 image: /assets/social/ossia-score-og.jpg

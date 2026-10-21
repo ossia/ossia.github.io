@@ -4,7 +4,9 @@ title: "Museum and exhibition AV software"
 headline: "Museums and permanent exhibitions"
 subtitle: "ossia score can be used to run the media of permanent exhibits, which start by themselves, can be monitored remotely, and can be handled by staff who did not build them."
 permalink: /museums-exhibitions.html
-translation: /fr/musees-expositions.html
+ref: museums
+nav_title: "Museums and exhibitions"
+blurb: "Exhibits that run all day without staff, with monitoring, a staff control panel and kiosk apps."
 category: site-score
 description: "Free, open-source software to run museum and exhibition AV: unattended playback, monitoring, staff remote panels, kiosk apps, on PC or Raspberry Pi."
 image: /assets/social/ossia-score-og.jpg

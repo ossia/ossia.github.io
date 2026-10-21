@@ -4,7 +4,9 @@ title: "Spatial audio for multichannel sound"
 headline: "Spatial audio and multichannel sound"
 subtitle: "ossia score can be used to place and move sounds over any loudspeaker layout, with the trajectories written on the same timeline as the rest of the piece."
 permalink: /spatial-audio.html
-translation: /fr/spatialisation-sonore.html
+ref: spatial-audio
+nav_title: "Spatial audio"
+blurb: "DBAP, GBAP and trajectories over any loudspeaker layout, up to 1024 channels, and control of spatialization renderers."
 category: site-score
 description: "Free, open-source spatial audio: DBAP, GBAP, trajectories, up to 1024 channels, SpatGRIS and ADM-OSC control, for concerts and installations."
 image: /assets/social/ossia-score-og.jpg

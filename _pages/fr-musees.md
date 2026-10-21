@@ -5,7 +5,9 @@ title: "Logiciel audiovisuel pour musées et expositions"
 headline: "Musées et expositions permanentes"
 subtitle: "ossia score permet de faire fonctionner les médias d'une exposition permanente, qui démarrent seuls, se supervisent à distance et peuvent être pris en main par une équipe qui ne les a pas construits."
 permalink: /fr/musees-expositions.html
-translation: /museums-exhibitions.html
+ref: museums
+nav_title: "Musées et expositions"
+blurb: "Des dispositifs qui tournent toute la journée sans personnel, supervisés, avec panneau de contrôle et bornes."
 category: site-score
 description: "Logiciel libre pour l'audiovisuel des musées et expositions : lecture autonome, supervision, télécommande pour l'équipe, bornes, sur PC ou Raspberry Pi."
 image: /assets/social/ossia-score-og.jpg
