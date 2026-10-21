@@ -44,7 +44,7 @@ He gives workshops, conduct residencies and collect user experiences focused on 
 </div>
 <div class="bubble-item">
     <img alt="Portrait of Julien Rabin" class="bubble-image" src="assets/association/julien.png"/>
-    <a href="" target="_blank"  class="bubble-title">Julien Rabin</a>
+    <span class="bubble-title">Julien Rabin</span>
     <div class="bubble-description">Musician, composer, involved with ossia since the very beginnings of the project. Julien is currently involved with writing the documentation for score and is an ossia-max expert.</div>
 </div>
 <div class="bubble-item">
@@ -59,7 +59,7 @@ He gives workshops, conduct residencies and collect user experiences focused on 
 </div>
 <div class="bubble-item">
     <img alt="" class="bubble-image" src="assets/association/nani.png"/>
-    <a href="" target="_blank"  class="bubble-title">Pierre Cochard</a>
+    <span class="bubble-title">Pierre Cochard</span>
     <div class="bubble-description">Intermedia creator and musician, he has helped creating multiple artworks and pieces with i-score and ossia score.</div>
 </div>
 <div class="bubble-item">

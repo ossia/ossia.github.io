@@ -13,7 +13,7 @@ visible: true
 
 # Important links
 
-* [Downloads](../download.html#qml-binding)
+* [Downloads](../download.html#qt-binding)
 * [API documentation](https://ossia.io/ossia-docs/?qml)
 
 # Video tutorial
