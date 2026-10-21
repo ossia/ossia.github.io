@@ -3,7 +3,7 @@
 <h3 class="use-case-group">{{ g[include.lang] }}</h3>
 <ul class="{% if include.cards %}use-case-hub{% else %}use-case-links{% endif %}">
 {%- for uc in site.data.use_cases %}{% if uc.group == g.key %}{% assign item = uc[include.lang] %}{% unless item.url == include.exclude %}
-  {% if include.cards %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/>{{ item.blurb }}</li>{% else %}<li><a href="{{ item.url }}">{{ item.title }}</a> — {{ item.blurb }}</li>{% endif %}
+  {% if include.cards %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/>{{ item.blurb }}</li>{% else %}<li><a href="{{ item.url }}">{{ item.title }}</a><br/><span class="use-case-blurb">{{ item.blurb }}</span></li>{% endif %}
 {%- endunless %}{% endif %}{% endfor %}
 </ul>
 {%- endfor %}

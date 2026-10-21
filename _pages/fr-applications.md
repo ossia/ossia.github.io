@@ -14,7 +14,7 @@ image: /assets/social/ossia-score-og.jpg
 Parfois, les personnes qui utilisent un projet ne doivent jamais voir l'éditeur. ossia score peut devenir votre propre application : votre interface au-dessus, votre projet et vos médias à l'intérieur, et le moteur de score en dessous.
 LivePose et Koaia ont été réalisés ainsi.
 
-<picture><source type="image/avif" srcset="/assets/use-cases/custom-ui.avif"><img src="/assets/use-cases/custom-ui.webp" width="640" height="245" loading="lazy" alt="Une interface sur mesure avec des potentiomètres à côté d'un visuel génératif noir et blanc, et une console qui affiche les valeurs envoyées"/></picture>
+<img src="/assets/use-cases/custom-ui.webp" width="640" height="245" loading="lazy" alt="Une interface sur mesure avec des potentiomètres à côté d'un visuel génératif noir et blanc, et une console qui affiche les valeurs envoyées"/>
 
 ## L'interface
 

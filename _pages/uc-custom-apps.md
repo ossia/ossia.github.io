@@ -13,7 +13,7 @@ image: /assets/social/ossia-score-og.jpg
 Sometimes the people using a project should never see the editor. ossia score can be packaged as your own application: your interface on top, your project and media inside, and the score engine underneath.
 LivePose and Koaia were made this way.
 
-<picture><source type="image/avif" srcset="/assets/use-cases/custom-ui.avif"><img src="/assets/use-cases/custom-ui.webp" width="640" height="245" loading="lazy" alt="A custom interface with dials next to a generative black and white visual, and a console printing the values it sends"/></picture>
+<img src="/assets/use-cases/custom-ui.webp" width="640" height="245" loading="lazy" alt="A custom interface with dials next to a generative black and white visual, and a console printing the values it sends"/>
 
 ## The interface
 
