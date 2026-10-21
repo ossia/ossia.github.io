@@ -10,7 +10,7 @@ description: "Free, open-source software for teaching interactive media: runs on
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score is used in classes and workshops to teach interactive sound, video, lighting and installation, for instance at Concordia University, UQAM, the University of Ottawa, Maynooth University and the Université de Bordeaux.
+ossia score is used in classes and workshops to teach interactive sound, video, lighting and installation, for instance at Concordia University, UQAM, the University of Ottawa, Queen's University (Kingston, Ontario), Maynooth University and the Université de Bordeaux.
 Students keep the same tool after the course: it is free, it runs on their own computer, and projects open on every operating system.
 
 ## What you can do
