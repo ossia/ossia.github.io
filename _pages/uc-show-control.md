@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free show control software for Windows, macOS and Linux"
+title: "Free show control software for any OS"
 headline: "Show control software, free and open-source"
 subtitle: "Cue sound, video, lights and any OSC or MIDI device from one interactive timeline. ossia score runs on Windows, macOS, Linux and Raspberry Pi."
 permalink: /show-control.html
@@ -21,7 +21,7 @@ or react to sensors and performers — all in the same score.
 - **Sound and video playback**: multichannel sound files with time-stretching, video with HAP and H.264, effects and plug-ins (VST, VST3, CLAP, LV2) ([sound files](https://ossia.io/score-docs/processes/soundfile.html), [video](https://ossia.io/score-docs/processes/video.html)).
 - **Lights**: DMX over Art-Net, sACN and DMX USB, with a fixture library ([DMX](https://ossia.io/score-docs/devices/artnet-device.html)).
 - **Timecode**: LTC input and output, MIDI clock and MIDI timecode ([LTC](https://ossia.io/score-docs/processes/ltc-input.html)).
-- **Control anything**: OSC, OSCQuery, MIDI, HTTP, WebSockets, MQTT, serial ports, and Bitfocus Companion modules to drive AV equipment ([Companion](https://ossia.io/score-docs/devices/companion-device.html)).
+- **Control anything**: OSC, OSCQuery, MIDI, HTTP, WebSockets, MQTT, serial ports, and Bitfocus Companion modules from the package manager to drive AV equipment ([Companion](https://ossia.io/score-docs/devices/companion-device.html)).
 - **Cue any parameter**: since version 3.9, the parameters of every process (an effect, a shader, a synthesizer…) can be cued and automated like those of an external device.
 - **Remote control**: start and stop the show from a browser, a phone or any OSC controller ([remote control](https://ossia.io/score-docs/in-depth/remote.html)).
 - **Hardware control surfaces**: MCU-compatible fader banks follow the process you select, and MIDI controllers can be described once so that their knobs and faders have names ([MIDI controllers](https://ossia.io/score-docs/devices/midi-controller-device.html)).
@@ -38,10 +38,10 @@ or react to sensors and performers — all in the same score.
 <table class="comparison">
 <tr><th>What you need</th><th>How ossia score does it</th></tr>
 <tr><td>A sequence of cues, each started with GO</td><td>Scenes that each wait for a GO from the keyboard, a MIDI controller, OSC or a browser, and <i>Play from here</i> to restart anywhere.</td></tr>
-<tr><td>Running on Windows, Linux or a Raspberry Pi, with no licence to buy</td><td>Free and open-source on every operating system, with the same features everywhere.</td></tr>
+<tr><td>Running on Windows, Linux or a Raspberry Pi, with no licence to buy</td><td>Free and open-source on every operating system, with the same features everywhere except for features tied to an operating system or to hardware, such as Spout, Syphon or CUDA.</td></tr>
 <tr><td>Shows that react to performers or the audience</td><td>Triggers, conditions and branching scenes, fed by sensors, cameras, tracking systems or any OSC or MIDI message.</td></tr>
 <tr><td>Sound, video and lights in one show file</td><td>Multichannel sound, video, 3D, DMX lights and OSC/MIDI devices on the same timeline.</td></tr>
-<tr><td>Controlling AV equipment: projectors, video switchers, cameras</td><td>Bitfocus Companion modules run directly inside ossia score.</td></tr>
+<tr><td>Controlling AV equipment: projectors, video switchers, cameras</td><td>Bitfocus Companion modules, installed from the package manager, run directly inside ossia score.</td></tr>
 <tr><td>Following timecode</td><td>LTC in and out, MIDI clock and MIDI timecode.</td></tr>
 </table>
 </div>

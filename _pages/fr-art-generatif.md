@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre pour l'art génératif et le creative coding"
+title: "Art génératif et creative coding"
 headline: "Art génératif et creative coding"
 subtitle: "Shaders, scènes 3D, nuages de points, gaussian splats et grammaires génératives, patchés avec des nœuds ou écrits en code, en direct ou rendus image par image. Libre et gratuit, sous Windows, macOS, Linux et dans le navigateur."
 permalink: /fr/art-generatif.html
@@ -16,7 +16,7 @@ et organisez le résultat dans le temps, en performance, en installation ou en v
 
 ## Ce que vous pouvez faire
 
-- **Shaders** : shaders de fragments ISF, compute shaders et pipelines de rendu bruts, avec la bibliothèque Lygia ; déposez un lien Shadertoy et il devient un shader ISF ([shaders](https://ossia.io/score-docs/processes/shaders.html), [compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html), [recettes de shaders](https://ossia.io/score-docs/in-depth/shader-cookbook.html)).
+- **Shaders** : shaders de fragments ISF, compute shaders et pipelines de rendu bruts, avec la bibliothèque Lygia du gestionnaire de paquets ; déposez un lien Shadertoy et il devient un shader ISF ([shaders](https://ossia.io/score-docs/processes/shaders.html), [compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html), [recettes de shaders](https://ossia.io/score-docs/in-depth/shader-cookbook.html)).
 - **3D** : un pipeline de scène sur GPU avec modèles glTF, FBX, OBJ, PLY et voxels, matériaux PBR, lumières, caméras, instanciation, nuages de points, textures volumétriques et gaussian splats ([pipeline 3D](https://ossia.io/score-docs/in-depth/3d-scene-pipeline.html), [gaussian splats](https://ossia.io/score-docs/examples/3d/3dgs.html), [3D générative](https://ossia.io/score-docs/examples/3d/generative-3d.html)).
 - **Grammaires génératives** : Context Free Art et Structure Synth, vertex shader art, texte vers maillage ([Context Free Art](https://ossia.io/score-docs/processes/context-free-art.html), [Structure Synth](https://ossia.io/score-docs/processes/structure-synth.html)).
 - **Rétroaction** : des câbles retardés partout, pour la réaction-diffusion, les traînées et autres rétroactions d'image ([réaction-diffusion](https://ossia.io/score-docs/examples/video/2d-geometry-feedback-reaction-diffusion.html)).
@@ -34,7 +34,7 @@ et organisez le résultat dans le temps, en performance, en installation ou en v
 <tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr>
 <tr><td>Essayer des idées vite, sans code d'infrastructure</td><td>Shaders, objets 3D et générateurs reliés par des câbles, avec des paramètres modifiables en direct.</td></tr>
 <tr><td>Écrire du code quand c'est le meilleur outil</td><td>JavaScript, GLSL, Faust et C++ dans le même patch.</td></tr>
-<tr><td>Réutiliser les shaders de la communauté</td><td>Shaders ISF, bibliothèque Lygia, et liens Shadertoy convertis automatiquement.</td></tr>
+<tr><td>Réutiliser les shaders de la communauté</td><td>Shaders ISF, bibliothèque Lygia du gestionnaire de paquets, et liens Shadertoy convertis automatiquement.</td></tr>
 <tr><td>Transformer une esquisse en œuvre</td><td>Une timeline avec scènes, automations et cues autour du patch génératif.</td></tr>
 <tr><td>Une vidéo rendue en pleine qualité</td><td>Rendu hors temps réel image par image, indépendant des performances en temps réel.</td></tr>
 </table>

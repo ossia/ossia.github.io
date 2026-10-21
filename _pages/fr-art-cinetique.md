@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel pour l'art cinétique, les moteurs et la robotique"
+title: "Logiciel pour l'art cinétique et la robotique"
 headline: "Art cinétique et robotique"
 subtitle: "Écrivez les mouvements de moteurs, pompes, robots et mécanismes sur une timeline, faites-les réagir aux capteurs, et synchronisez-les avec le son, la vidéo et la lumière, depuis un ordinateur ou un Raspberry Pi. Libre et gratuit."
 permalink: /fr/art-cinetique-robotique.html
@@ -17,13 +17,13 @@ ossia score traite chaque moteur ou actionneur comme un paramètre à automatise
 ## Ce que vous pouvez faire
 
 - **Parler au matériel** : microcontrôleurs comme Arduino et ESP32 en série, OSC ou MQTT, moteurs et effets pilotés en DMX, et tout appareil à protocole propre grâce à un court script ([série](https://ossia.io/score-docs/devices/serial-device.html), [protocoles QML](https://ossia.io/score-docs/in-depth/qml-protocols.html)).
-- **Piloter directement les broches** : GPIO, PWM, ADC et DAC sur des cartes Linux comme le Raspberry Pi et l'Orange Pi (expérimental) ([entrées-sorties brutes](https://ossia.io/score-docs/devices/rawio-device.html)).
+- **Piloter directement les broches** : GPIO, PWM, ADC et DAC sur des cartes Linux comme le Raspberry Pi et l'Orange Pi ([entrées-sorties brutes](https://ossia.io/score-docs/devices/rawio-device.html)).
 - **Écrire des mouvements** : courbes d'automation en temps musical ou absolu, LFO, courbes d'easing et trajectoires dessinées, en boucle ou variées dans le temps ([automations](https://ossia.io/score-docs/quick-start/writing-automations.html), [générateur de chemins](https://ossia.io/score-docs/processes/pathgenerator.html)).
 - **Ménager la mécanique** : lissage, limitation de vitesse de variation et bornage des valeurs entre la partition et les moteurs ([lissage](https://ossia.io/score-docs/processes/smooth.html), [limiteur de débit](https://ossia.io/score-docs/processes/rate-limiter.html)).
 - **Réagir au monde** : centrales inertielles, caméras de profondeur, vision par ordinateur avec suivi de blobs et de points, capteurs de distance et de toucher sur microcontrôleurs, systèmes de tracking ([capteurs vers OSC](https://ossia.io/score-docs/examples/devices/sensors2osc.html), [suivi de points](https://ossia.io/score-docs/processes/point-tracker.html)).
 - **Lire les données d'une machine** : recevez des signaux de bus CAN via une base DBC sous Linux ([CAN](https://ossia.io/score-docs/devices/can-device.html)).
 - **Son, vidéo et lumière synchronisés** avec la mécanique, sur une seule timeline.
-- **Embarqué** : faites tourner toute l'œuvre sans interface sur un Raspberry Pi ; libossia se compile aussi pour les microcontrôleurs ESP32 ([embarqué](https://ossia.io/score-docs/in-depth/embedded.html), [libossia](/site-libossia/about.html)).
+- **Embarqué** : faites tourner toute l'œuvre sans interface sur un Raspberry Pi ([embarqué](https://ossia.io/score-docs/in-depth/embedded.html)).
 
 <picture><img src="/assets/gallery/recapture.webp" width="540" height="369" loading="lazy" alt="Des tubes transparents suspendus dans l'obscurité, éclairés à leurs extrémités, devant une projection circulaire d'arbres"/></picture>
 <p class="figure-caption"><i>[re]capture</i>, Alice Jarry, Brice Ammar-Khodja, Jacqueline Beaumont, Jean-Michaël Celerier, Matthew Halpenny, Asa Perlman, Philippe Vandal : caméras, traitement vidéo, lumière, pompes et moteurs, entièrement pilotés par ossia score sur un Raspberry Pi. © Alice Jarry</p>

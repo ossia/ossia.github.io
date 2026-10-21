@@ -36,6 +36,22 @@
       btn.replaceWith(iframe);
     });
   });
+
+  // Other YouTube and Vimeo embeds: the player waits in an inert <template>
+  // next to a button, and only loads (and contacts the video site) on click.
+  document.querySelectorAll('.video-facade').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var tpl = btn.nextElementSibling;
+      if (!tpl || tpl.tagName !== 'TEMPLATE') return;
+      var iframe = tpl.content.querySelector('iframe').cloneNode(true);
+      var src = iframe.getAttribute('src');
+      iframe.setAttribute('src', src + (src.indexOf('?') < 0 ? '?' : '&') + 'autoplay=1');
+      iframe.removeAttribute('loading');
+      if (btn.getAttribute('style')) iframe.setAttribute('style', btn.getAttribute('style') + '; width: 100%; height: auto');
+      tpl.remove();
+      btn.replaceWith(iframe);
+    });
+  });
 })();
 
 

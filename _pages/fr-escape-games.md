@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre pour escape games et attractions interactives"
+title: "Logiciel pour escape games et attractions"
 headline: "Escape games et attractions interactives"
 subtitle: "Reliez énigmes, capteurs et accessoires au son, à la vidéo et à la lumière, décrivez la logique du jeu avec des déclencheurs et des conditions, et faites tourner la salle toute la journée sur un PC ou un Raspberry Pi, avec un panneau maître du jeu dans le navigateur. Libre et gratuit."
 permalink: /fr/escape-games.html
@@ -18,7 +18,7 @@ ossia score décrit cette logique sur une timeline : chaque scène attend qu'une
 
 - **Une logique de jeu sans code** : les déclencheurs attendent un bouton, un capteur ou un message ; les conditions choisissent la suite ; les boucles répètent une ambiance jusqu'à la résolution d'une énigme ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html), [aiguillages](https://ossia.io/score-docs/common-practices/2-switches.html), [déclenchement hors timeline](https://ossia.io/score-docs/common-practices/3-out-of-time.html)).
 - **Énigmes et accessoires** : Arduino et microcontrôleurs en série, accessoires en réseau en MQTT, HTTP ou WebSocket, capteurs Bluetooth LE, manettes et pads MIDI ([série](https://ossia.io/score-docs/devices/serial-device.html), [MQTT](https://ossia.io/score-docs/devices/mqtt-device.html), [BLE](https://ossia.io/score-docs/devices/ble-device.html)).
-- **L'électronique sur l'ordinateur lui-même** : GPIO, PWM, ADC et DAC sur des cartes Linux comme le Raspberry Pi, pour des boutons, des relais et des ventouses magnétiques (expérimental) ([entrées-sorties brutes](https://ossia.io/score-docs/devices/rawio-device.html)).
+- **L'électronique sur l'ordinateur lui-même** : GPIO, PWM, ADC et DAC sur des cartes Linux comme le Raspberry Pi, pour des boutons, des relais et des ventouses magnétiques ([entrées-sorties brutes](https://ossia.io/score-docs/devices/rawio-device.html)).
 - **Son, vidéo et lumière** : ambiances et effets multicanaux, vidéo et texte sur écrans, lumière DMX, tous modifiés par le jeu.
 - **Panneau maître du jeu** : suivez et pilotez la partie depuis un navigateur sur téléphone ou tablette : déclenchez les scènes d'indices que vous avez préparées, passez une énigme ou relancez une scène avec *Play from here* ([contrôle à distance](https://ossia.io/score-docs/in-depth/remote.html)).
 - **Caméras** : détectez les joueurs, leurs poses et des objets avec une webcam (voir [IA en temps réel](/fr/ia-temps-reel.html)).

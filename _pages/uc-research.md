@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Software for research, data sonification and biosignals"
+title: "Data sonification and biosignal software"
 headline: "Research, sonification and biosignals"
 subtitle: "Receive data from lab hardware and sensors, play datasets as sound, light or images, record and replay sessions, and build experiments and biofeedback pieces on a timeline. Free and open-source, developed with research labs."
 permalink: /research-sonification.html

@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free projection mapping and interactive video software"
+title: "Free projection mapping and video software"
 headline: "Video, projection mapping and VJing"
 subtitle: "Play video, map it on several projectors, generate visuals with shaders and 3D, and share them over NDI, Spout and Syphon — synchronised with sound, lights and sensors. Free and open-source, on Windows, macOS and Linux."
 permalink: /projection-mapping.html
@@ -23,7 +23,7 @@ fulldome shows and audio-reactive visuals, often in the same project as the soun
 - **Interaction**: audio-reactive visuals, computer vision (blobs, optical flow, contours), pose detection with ONNX models, depth cameras, MIDI and OSC control ([pose detection](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
 - **Timeline**: everything can be automated and cued, so a 20-minute show plays the same way every night, or reacts to the audience.
 - **HDR and cinema formats**: HDR window output on macOS and Windows (HLG, BT.2100, Display P3), 12-bit DCI X'Y'Z' and EXR half-float images ([video formats](https://ossia.io/score-docs/processes/video-formats-color.html)).
-- **Hardware decoding without copies**, through Vulkan Video, Direct3D 12 and VideoToolbox, with HAP, DXV, Cineform and H.265.
+- **Hardware decoding** through Vulkan Video, Direct3D 12 and VideoToolbox, without copies whenever the graphics backend allows it, with HAP, DXV, Cineform and H.265.
 - **Shaders from the web**: drop a Shadertoy link and it becomes an ISF shader; vertex shader art, video-bending effects, and any FFmpeg filter graph ([vertex shader art](https://ossia.io/score-docs/processes/vertex-shader-art.html)).
 - **Slides and text** for lecture-performances and conferences, with presentation and advanced text objects.
 - **Exact-frame offline rendering** to image files from a script, for previews or fixed-media pieces.

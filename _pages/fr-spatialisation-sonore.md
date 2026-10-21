@@ -1,13 +1,13 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre de spatialisation sonore multicanale"
+title: "Spatialisation sonore multicanale"
 headline: "Spatialisation sonore et son multicanal"
 subtitle: "Placez et déplacez les sons sur n'importe quel dispositif de haut-parleurs, d'une quadriphonie à des centaines de canaux, écrivez des trajectoires sur une timeline, et pilotez des moteurs de spatialisation en OSC et ADM-OSC. Libre et gratuit, sous Windows, macOS, Linux et Raspberry Pi."
 permalink: /fr/spatialisation-sonore.html
 translation: /spatial-audio.html
 category: site-score
-description: "Logiciel libre de spatialisation sonore : DBAP, GBAP et matrice, trajectoires, jusqu'à 1024 canaux, pilotage de SpatGRIS et ADM-OSC, pour les concerts et les installations."
+description: "Spatialisation sonore libre : DBAP, GBAP, trajectoires, jusqu'à 1024 canaux, pilotage de SpatGRIS et ADM-OSC, pour concerts et installations."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -36,4 +36,4 @@ Les sources sonores, leurs positions et leurs mouvements s'écrivent sur la mêm
 </table>
 </div>
 
-Voyez la [galerie](/gallery.html), par exemple *METAscène*, avec plus de cinquante canaux de son spatialisé, de la vidéo et de la lumière pilotés par ossia score.
+Voyez la [galerie](/gallery.html), par exemple *METAscène*, avec cinquante haut-parleurs de son spatialisé, trois écrans vidéo et la lumière pilotés par ossia score.

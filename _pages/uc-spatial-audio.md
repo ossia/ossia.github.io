@@ -1,12 +1,12 @@
 ---
 layout: use-case
-title: "Free spatial audio software for multichannel sound"
+title: "Spatial audio for multichannel sound"
 headline: "Spatial audio and multichannel sound"
 subtitle: "Place and move sounds over any loudspeaker layout, from a quad to hundreds of channels, write trajectories on a timeline, and drive spatialisation renderers over OSC and ADM-OSC. Free and open-source, on Windows, macOS, Linux and Raspberry Pi."
 permalink: /spatial-audio.html
 translation: /fr/spatialisation-sonore.html
 category: site-score
-description: "Free, open-source spatial audio software: DBAP, GBAP and matrix spatialisation, trajectories, up to 1024 channels, SpatGRIS and ADM-OSC control, for concerts and installations."
+description: "Free, open-source spatial audio: DBAP, GBAP, trajectories, up to 1024 channels, SpatGRIS and ADM-OSC control, for concerts and installations."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -35,4 +35,4 @@ Sound sources, their positions and their movements are written on the same timel
 </table>
 </div>
 
-See the [gallery](/gallery.html), for instance *METAscène*, with more than fifty channels of spatialised sound, video and lights run from ossia score.
+See the [gallery](/gallery.html), for instance *METAscène*, with fifty loudspeakers of spatialised sound, three video screens and lighting run from ossia score.

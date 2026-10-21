@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Software for contemporary music and live electronics"
+title: "Live electronics for contemporary music"
 headline: "Contemporary music and live electronics"
 subtitle: "Write the electronic part of a piece for instruments: cues triggered from a pedal or a MIDI controller, live processing of the instruments, spatialisation, and a score that waits for the performers. Free and open-source, on Windows, macOS and Linux."
 permalink: /live-electronics.html

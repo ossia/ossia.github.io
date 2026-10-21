@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel pour la musique mixte et l'électronique en temps réel"
+title: "Musique mixte et électronique en temps réel"
 headline: "Musique mixte et électronique en temps réel"
 subtitle: "Écrivez la partie électronique d'une pièce pour instruments : cues déclenchées depuis une pédale ou un contrôleur MIDI, traitement des instruments en direct, spatialisation, et une partition qui attend les interprètes. Libre et gratuit, sous Windows, macOS et Linux."
 permalink: /fr/musique-mixte.html

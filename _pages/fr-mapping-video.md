@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel de mapping vidéo et de vidéo interactive gratuit"
+title: "Logiciel de mapping vidéo gratuit"
 headline: "Vidéo, mapping et VJing"
 subtitle: "Lisez de la vidéo, projetez-la sur plusieurs vidéoprojecteurs, générez des visuels avec des shaders et de la 3D, et partagez-les en NDI, Spout et Syphon, en synchronisation avec le son, la lumière et les capteurs. Libre et gratuit, sous Windows, macOS et Linux."
 permalink: /fr/mapping-video.html
@@ -24,7 +24,7 @@ aux spectacles en fulldome et aux visuels réactifs au son, souvent dans le mêm
 - **Interaction** : visuels réactifs au son, vision par ordinateur (blobs, flux optique, contours), détection de pose avec des modèles ONNX, caméras de profondeur, contrôle MIDI et OSC ([détection de pose](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
 - **Timeline** : tout peut être automatisé et mis en cue, pour qu'un spectacle de 20 minutes soit identique chaque soir, ou réagisse au public.
 - **HDR et formats cinéma** : sortie HDR sous macOS et Windows (HLG, BT.2100, Display P3), images DCI X'Y'Z' 12 bits et EXR en demi-flottants ([formats vidéo](https://ossia.io/score-docs/processes/video-formats-color.html)).
-- **Décodage matériel sans copie**, via Vulkan Video, Direct3D 12 et VideoToolbox, avec HAP, DXV, Cineform et H.265.
+- **Décodage matériel** via Vulkan Video, Direct3D 12 et VideoToolbox, sans copie dès que le backend graphique le permet, avec HAP, DXV, Cineform et H.265.
 - **Des shaders du web** : déposez un lien Shadertoy et il devient un shader ISF ; vertex shader art, effets de video-bending, et n'importe quel graphe de filtres FFmpeg ([vertex shader art](https://ossia.io/score-docs/processes/vertex-shader-art.html)).
 - **Diapositives et texte** pour les conférences-performances, avec les objets de présentation et de texte avancé.
 - **Rendu image par image hors temps réel** vers des fichiers, depuis un script, pour des prévisualisations ou des œuvres sur support fixe.

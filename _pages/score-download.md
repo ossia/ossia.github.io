@@ -16,8 +16,9 @@ We sell score on the Microsoft store as a way to get financial support to ensure
 <p id="download-current" class="download-page-layout" align="center">
 <a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
 <a data-os="win" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
-<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 13 and later (AppleSilicon / M1 etc.)</a>
-<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 13 and later (Intel)</a>
+<a data-os="win-arm" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows on ARM</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 12 and later (Apple Silicon)</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt=""/>macOS 12 and later (Intel)</a>
 <a data-os="linux linux-x86_64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt=""/>Linux AppImage x86_64</a>
 <a data-os="linux linux-aarch64" href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt=""/>Linux AppImage AArch64</a>
 <a data-os="linux linux-x86_64 linux-aarch64" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt=""/>Linux Flatpak</a>
@@ -35,7 +36,7 @@ Take a look at the <a href="https://github.com/ossia/score/releases/latest" targ
 
 ## Minimal requirements
 - <i>score</i> requires a 64-bit operating system and CPU, both on desktop and embedded platforms. <br/> 
-- The official releases are built with AVX2 on Windows and Linux. If your CPU does not support AVX2 please use a distribution package such as provided by MSYS2 or Arch Linux AUR.
+- On x86_64, the official releases for Windows and Linux require a CPU with AVX2. If your CPU does not support AVX2, use a distribution package such as those provided by MSYS2 or the Arch Linux AUR.
 - 800 MHz CPU, 512MB of RAM. For instance, <i>score</i> runs on a Raspberry Pi Zero 2W.
 - For graphics, a GPU which supports at least OpenGL 3.2, Vulkan, Direct3D 11 or Metal.
 - [NDI Runtime](https://github.com/DistroAV/DistroAV/discussions/831) (at least v5) may be necessary to use NDI.
@@ -52,11 +53,11 @@ Take a look at the <a href="https://github.com/ossia/score/releases/latest" targ
 
 <h3 type="button" class="collapsible" > macOS </h3>
 <div class="collapsible-content">
-Must be at least macOS Ventura 13.0.
+Must be at least macOS 12 Monterey. The AI features need macOS 13 Ventura or later.
 <br/><br/>
-The latest version to support back to macOS 10.15 Catalina is 3.3.2, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.3.2">ossia score 3.3.2 release page</a>.
+The latest version for macOS 10.15 Catalina and macOS 11 Big Sur is 3.4.1, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.4.1">ossia score 3.4.1 release page</a>.
 <br/>
-The latest version to support back to macOS 10.13 High Sierra is 3.4.1, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.4.1">ossia score 3.4.1 release page</a>.
+The latest version for macOS 10.13 High Sierra is 3.1.8, downloadable from the <a href="https://github.com/ossia/score/releases/tag/v3.1.8">ossia score 3.1.8 release page</a>.
 </div>
 
 <h3 type="button" class="collapsible" > Linux (Desktop) </h3>
@@ -70,7 +71,7 @@ Important: AppImageLauncher below version 3.0.0 does not support the score AppIm
 
 All Linux distributions from at least 2022 should be supported:
 <ul>
-<li>The packages are built on CentOS 9.</li>
+<li>The packages are built on AlmaLinux 9.</li>
 <li>Ubuntu 22.04+</li>
 <li>Debian Bookworm ...  </li>
 <li>Fedora 36+</li>
@@ -109,7 +110,7 @@ The Flatpak and Nix versions are also available as AArch64.
 <li><a href="https://aur.archlinux.org/packages/ossia-score">ArchLinux (AUR)</a>: paru -S ossia-score</li>
 <li><a href="https://search.nixos.org/packages?channel=unstable&amp;show=ossia-score">Nix</a>: nix-shell -p ossia-score</li>
 <li><a href="https://www.freshports.org/multimedia/ossia-score">FreeBSD</a>: pkg install ossia-score</li>
-<li><a href="https://packages.msys2.org/base/mingw-w64-ossia-score">MSYS2</a>: pacman -S mingw-w64-x86_64-ossia-score</li>
+<li><a href="https://packages.msys2.org/base/mingw-w64-ossia-score">MSYS2</a>: pacman -S mingw-w64-ucrt-x86_64-ossia-score (UCRT64), mingw-w64-clang-x86_64-ossia-score (CLANG64) or mingw-w64-clang-aarch64-ossia-score (CLANGARM64)</li>
 <li><a href="https://winget.run/pkg/ossia/score">WinGet</a>: winget install -e --id ossia.score</li>
 <li><a href="https://formulae.brew.sh/cask/ossia-score">Homebrew</a>: brew install --cask ossia-score</li>
 </ul>
@@ -130,6 +131,7 @@ The source code for the latest release can be downloaded from here:
 <p class="download-page-layout" align="center">
 <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt=""/>Microsoft Store</a>
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows</a>
+<a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt=""/>Windows on ARM</a>
 </p>
 <p class="download-page-layout" align="center">
 <a href="https://github.com/ossia/score/releases/download/v{{site.score_version}}/ossia.score-{{site.score_version}}-macOS-Intel.dmg" class="page-button download-page" ><img src="../assets/apple_logo_black.svg" height="80" alt=""/>macOS (Intel)</a>

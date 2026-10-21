@@ -1,13 +1,13 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre pour la musique électronique live"
+title: "Logiciel pour la musique électronique live"
 headline: "Musique électronique live"
 subtitle: "Synthétiseurs, boîtes à rythmes, samplers, séquenceurs pas à pas et plug-ins sur une timeline qui suit le tempo, l'horloge MIDI ou un vinyle timecode, avec visuels et lumière dans le même projet. Libre et gratuit, sous Windows, macOS, Linux et Raspberry Pi."
 permalink: /fr/musique-live.html
 translation: /live-music.html
 category: site-score
-description: "Logiciel libre pour la musique électronique live : synthés, boîtes à rythmes, sampler, séquenceur pas à pas, arpégiateur, looper, plug-ins VST et CLAP, horloge MIDI et vinyle timecode."
+description: "Logiciel libre pour la musique électronique live : synthés, boîtes à rythmes, sampler, séquenceur, looper, plug-ins, horloge MIDI et vinyle timecode."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -22,7 +22,7 @@ improvisée autour de boucles et de motifs, ou entre les deux, et les visuels et
 - **Synchronisation** : générez ou suivez l'horloge MIDI et le MIDI timecode, suivez le LTC, et pilotez la timeline avec un vinyle timecode sur une platine ([synchro MIDI](https://ossia.io/score-docs/processes/midi-sync.html), [vinyle timecode](https://ossia.io/score-docs/processes/xwax-dvs.html)).
 - **Plug-ins et effets** : VST, VST3, CLAP (avec automation à l'échantillon près), LV2 et JSFX ; les effets Airwindows, Faust, et compresseur, limiteur, réverbes, filtres et délais intégrés ([plug-ins audio](https://ossia.io/score-docs/processes/audio-plugins.html), [effets audio](https://ossia.io/score-docs/processes/audio-effects.html)).
 - **Musique microtonale** avec les gammes et correspondances de clavier Scala ([gammes](https://ossia.io/score-docs/examples/audio/scales.html)).
-- **Contrôleurs** : contrôleurs MIDI aux boutons et faders nommés, surfaces de contrôle compatibles MCU, MIDI réseau, MIDI 2, contrôleurs à vent, tablettes et manettes.
+- **Contrôleurs** : contrôleurs MIDI aux boutons et faders nommés, surfaces de contrôle compatibles MCU, ports MIDI réseau fournis par le système d'exploitation, contrôleurs à vent, tablettes et manettes.
 - **Audiovisuel** : shaders, 3D et vidéo réactifs au son, et lumière DMX pilotée par la musique (voir [vidéo](/fr/mapping-video.html) et [lumière](/fr/eclairage-dmx.html)).
 
 ## Les besoins de la musique live, et les réponses d'ossia score

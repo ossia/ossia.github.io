@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Turn an interactive project into a standalone app"
+title: "Turn a project into a standalone app"
 headline: "Custom apps built on ossia score"
 subtitle: "Package a project with its own interface, name and icon as an application for Windows, macOS, Linux or the web — for an installation kiosk, a tool for your team, or an interactive work you distribute. Free and open-source."
 permalink: /custom-apps.html

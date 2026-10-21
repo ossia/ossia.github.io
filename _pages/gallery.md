@@ -27,7 +27,7 @@ description: "Artworks, installations, concerts and shows created with ossia sco
 {%- for w in with_image %}
     <article class="g2-card{% if w.featured %} g2-card--wide{% endif %}" data-kind="{{ w.kind | join: ' ' }}">
         {%- if w.url %}<a class="g2-media" href="{{ w.url }}" tabindex="-1" aria-hidden="true">{% else %}<div class="g2-media">{% endif %}
-            <img src="/assets/gallery/{{ w.image | uri_escape }}" alt="{{ w.title | escape }} by {{ w.artists | escape }}" loading="lazy" decoding="async" />
+            <img src="/assets/gallery/{{ w.image | uri_escape }}" alt="{{ w.title | escape }} by {{ w.artists | escape }}" {% if forloop.index <= 4 %}{% if forloop.first %}fetchpriority="high" {% endif %}{% else %}loading="lazy" {% endif %}decoding="async" />
             {%- if w.award %}<span class="g2-award">{{ w.award }}</span>{% endif %}
             {%- if w.credit %}<span class="g2-credit">&copy; {{ w.credit }}</span>{% endif %}
         {%- if w.url %}</a>{% else %}</div>{% endif %}

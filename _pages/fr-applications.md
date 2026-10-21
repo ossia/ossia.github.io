@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Transformer un projet interactif en application autonome"
+title: "Faire d'un projet une application autonome"
 headline: "Applications sur mesure avec ossia score"
 subtitle: "Empaquetez un projet avec sa propre interface, son nom et son icône en application pour Windows, macOS, Linux ou le web : une borne d'installation, un outil pour votre équipe, ou une œuvre interactive que vous diffusez. Libre et gratuit."
 permalink: /fr/applications-sur-mesure.html

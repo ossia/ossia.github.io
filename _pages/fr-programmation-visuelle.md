@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Programmation visuelle gratuite : audio, vidéo, interaction"
+title: "Programmation visuelle pour l'audio et la vidéo"
 headline: "La programmation visuelle, avec une timeline"
 subtitle: "Patchez audio, vidéo, 3D et capteurs avec des nœuds, puis organisez-les dans le temps. ossia score est libre et gratuit, et il exécute vos patchs Pure Data."
 permalink: /fr/programmation-visuelle.html

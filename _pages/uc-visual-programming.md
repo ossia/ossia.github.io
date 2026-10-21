@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free visual programming for audio, video and interaction"
+title: "Visual programming for audio and video"
 headline: "Visual programming with a timeline"
 subtitle: "Patch audio, video, 3D and sensors with nodes, then organise them in time. ossia score is free and open-source, and it runs your Pure Data patches."
 permalink: /visual-programming.html

@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free software for escape rooms and interactive attractions"
+title: "Escape room and attraction control software"
 headline: "Escape rooms and interactive attractions"
 subtitle: "Wire puzzles, sensors and props to sound, video and lights, describe the game logic with triggers and conditions, and run the room all day on a PC or a Raspberry Pi, with a game master panel in the browser. Free and open-source."
 permalink: /escape-rooms.html
@@ -17,7 +17,7 @@ ossia score describes that logic on a timeline: each scene waits for a puzzle to
 
 - **Game logic without code**: triggers wait for a button, a sensor or a message; conditions choose what happens next; loops repeat an ambience until a puzzle is solved ([breaking the timeline](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html), [switches](https://ossia.io/score-docs/common-practices/2-switches.html), [out-of-time triggering](https://ossia.io/score-docs/common-practices/3-out-of-time.html)).
 - **Puzzles and props**: Arduino and microcontrollers over serial, networked props over MQTT, HTTP or WebSocket, Bluetooth LE sensors, gamepads and MIDI pads ([serial](https://ossia.io/score-docs/devices/serial-device.html), [MQTT](https://ossia.io/score-docs/devices/mqtt-device.html), [BLE](https://ossia.io/score-docs/devices/ble-device.html)).
-- **Electronics on the computer itself**: GPIO, PWM, ADC and DAC on Linux boards such as the Raspberry Pi, for buttons, relays and magnetic locks (experimental) ([raw I/O](https://ossia.io/score-docs/devices/rawio-device.html)).
+- **Electronics on the computer itself**: GPIO, PWM, ADC and DAC on Linux boards such as the Raspberry Pi, for buttons, relays and magnetic locks ([raw I/O](https://ossia.io/score-docs/devices/rawio-device.html)).
 - **Sound, video and lights**: multichannel ambiences and effects, video and text on screens, DMX lights, all changed by the game.
 - **Game master panel**: follow and drive the game from a browser on a phone or a tablet: trigger the hint scenes you prepared, skip a puzzle, or restart a scene with *Play from here* ([remote control](https://ossia.io/score-docs/in-depth/remote.html)).
 - **Cameras**: detect players, poses and objects with a webcam (see [real-time AI](/realtime-ai.html)).

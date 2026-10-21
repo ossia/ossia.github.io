@@ -18,6 +18,8 @@
     font-size: 15px;
     line-height: 1.5;
     text-align: left;
+    /* System font: no size change when the web fonts arrive (layout shift) */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 .consent-banner h2, .consent-dialog h2 {
     font-size: 1.15em;
@@ -70,6 +72,7 @@
     font-size: 15px;
     line-height: 1.5;
     text-align: left;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 .consent-dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);

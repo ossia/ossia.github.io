@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free software to record, stream and route live video"
+title: "Record, stream and route live video"
 headline: "Video recording, streaming and routing"
 subtitle: "Bring in cameras, capture cards and network streams, process them on the GPU with sound, 3D and graphics, then record to file, stream online or send the image to other software. Free and open-source, on Windows, macOS and Linux."
 permalink: /recording-streaming.html

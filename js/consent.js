@@ -9,8 +9,7 @@
   var KEY = 'ossia-consent';
   var VERSION = window.ossiaConsentVersion || 1;
 
-  var fr = (document.documentElement.lang || '').indexOf('fr') === 0 ||
-           (navigator.language || '').toLowerCase().indexOf('fr') === 0;
+  var fr = (document.documentElement.lang || '').indexOf('fr') === 0;
   var T = fr ? {
     lang: 'fr', policyUrl: '/fr/confidentialite.html',
     title: 'Cookies et mesure d\'audience',
@@ -23,7 +22,7 @@
     ads: 'Mesure des annonces',
     adsDesc: 'Indique à Google Ads quand une personne ayant cliqué sur l\'une de nos annonces Ad Grants télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite.',
     always: 'Toujours actif : la mémorisation de ce choix, stockée uniquement dans votre navigateur.',
-    who: 'Responsables : l\'association ossia (France) et ossia.io, organisme à but non lucratif (Montréal). Destinataire : Google (Irlande, États-Unis).',
+    who: 'Responsable : ossia.io, organisme à but non lucratif (France et Québec). Destinataire : Google (Irlande, États-Unis).',
     saved: 'Choix enregistré.'
   } : {
     lang: 'en', policyUrl: '/privacy.html',
@@ -37,7 +36,7 @@
     ads: 'Ad measurement',
     adsDesc: 'Lets Google Ads know when someone who clicked one of our Ad Grants ads downloads ossia score or visits a key page. Requires audience statistics.',
     always: 'Always on: remembering this choice, stored only in your browser.',
-    who: 'Controllers: the ossia association (France) and ossia.io, a non-profit in Montréal. Recipient: Google (Ireland, USA).',
+    who: 'Controller: ossia.io, a non-profit organisation (France and Québec). Recipient: Google (Ireland, USA).',
     saved: 'Choice saved.'
   };
 
@@ -77,12 +76,12 @@
     live.textContent = T.saved;
     if (c.analytics) {
       if (window.ossiaAnalyticsLoaded && before && before.ads !== c.ads) {
-        gtag('consent', 'update', { ad_storage: c.ads ? 'granted' : 'denied', ad_user_data: c.ads ? 'granted' : 'denied' });
+        if (window.gtag) gtag('consent', 'update', { ad_storage: c.ads ? 'granted' : 'denied', ad_user_data: c.ads ? 'granted' : 'denied' });
       }
-      window.ossiaLoadAnalytics(c, true);
+      if (window.ossiaLoadAnalytics) window.ossiaLoadAnalytics(c, true);
     } else if (window.ossiaAnalyticsLoaded || (before && before.analytics)) {
       // Withdrawal: deny, delete Google's cookies and reload without gtag.js.
-      gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied' });
+      if (window.gtag) gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied' });
       deleteGoogleCookies();
       setTimeout(function() { location.reload(); }, 300);
     }
@@ -176,5 +175,6 @@
 
   // Ask only when there is no valid choice, and never when the browser sends
   // Global Privacy Control: that already says no.
-  if (!window.ossiaConsent && !navigator.globalPrivacyControl) showBanner();
+  if (navigator.globalPrivacyControl && window.ossiaConsent && window.ossiaConsent.analytics) apply(false, false);
+  else if (!window.ossiaConsent && !navigator.globalPrivacyControl) showBanner();
 })();

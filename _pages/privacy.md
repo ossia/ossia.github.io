@@ -12,9 +12,9 @@ description: "Privacy policy for ossia.io and our open-source software, ossia sc
 
 ## Who we are
 
-This website is published by the **ossia association** (France) and by **ossia.io**, a non-profit organisation based in Montréal (Québec). Both develop ossia score and libossia.
+This website is published by **ossia.io**, the non-profit organisation that develops ossia score and libossia, in France and in Québec.
 
-Person in charge of the protection of personal information: **Myriam Desainte-Catherine**, Président.e. de l'association ossia.io, reachable at [contact@ossia.io](mailto:contact@ossia.io).
+Person in charge of the protection of personal information: **Myriam Desainte-Catherine**, President of ossia.io, reachable at [contact@ossia.io](mailto:contact@ossia.io).
 
 ## ossia score and libossia
 
@@ -31,7 +31,7 @@ With your consent, the website uses **Google Analytics** (Google Ireland Limited
 | Purpose | What it does | Cookies |
 |---|---|---|
 | **Audience statistics** | Counts pages visited, the approximate country of visitors, the browser and device type, and clicks on download, community and donation links, so that we can improve the website. | `_ga`, `_ga_GCNDFW0NH6` |
-| **Ad measurement** | Lets Google Ads know when someone who clicked one of the free ads we run through Google Ad Grants, Google's program for non-profits, downloads ossia score or visits a key page. Requires audience statistics. | `_gcl_au` and the Google Analytics cookies above |
+| **Ad measurement** | Lets Google Ads know when someone who clicked one of the free ads we run through Google Ad Grants, Google's program for non-profits, downloads ossia score or visits a key page. Requires audience statistics. | `_gcl_au` (once the website is linked to Google Ads) and the Google Analytics cookies above |
 
 * **Legal basis:** your consent (article 6(1)(a) of the GDPR; article 82 of the French *Loi Informatique et Libertés*; sections 8.1 and 14 of Québec's *Act respecting the protection of personal information in the private sector*).
 * **What we never do:** ads personalised for you, Google Signals, remarketing, selling data, or combining it with other information to identify you.
@@ -47,7 +47,7 @@ With your consent, the website uses **Google Analytics** (Google Ireland Limited
 
 ### Videos and hosting
 
-* Embedded videos from YouTube and Vimeo use their privacy-enhanced modes (`youtube-nocookie.com`, Vimeo's "do not track"). On the home page, the YouTube video is only loaded when you click it.
+* Embedded videos from YouTube and Vimeo are only loaded when you click them, and then use their privacy-enhanced modes (`youtube-nocookie.com`, Vimeo's "do not track").
 * The website is hosted by GitHub Pages, which may log the IP addresses of visitors for security purposes; see the [GitHub privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 * Fonts and all other resources are served from ossia.io itself.
 
