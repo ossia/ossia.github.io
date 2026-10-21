@@ -2,7 +2,7 @@
 # Used by the use-case layout (links to the other pages) and the hub pages.
 - key: show-control
   group: stage
-  en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theatre, concerts and events." }
+  en: { url: /show-control.html, title: "Show control", blurb: "Cues, scenes and timecode for theater, concerts and events." }
   fr: { url: /fr/regie-spectacle.html, title: "Régie de spectacle", blurb: "Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel." }
 - key: osc-timeline
   group: tools
@@ -10,7 +10,7 @@
   fr: { url: /fr/timeline-osc-midi-dmx.html, title: "Timeline OSC, MIDI et DMX", blurb: "Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, avec déclencheurs et conditions." }
 - key: projection-mapping
   group: visuals
-  en: { url: /projection-mapping.html, title: "Video, mapping and VJing", blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronised with sound and light." }
+  en: { url: /projection-mapping.html, title: "Video, mapping and VJing", blurb: "Video playback, multi-projector mapping, shaders, 3D and NDI, synchronized with sound and light." }
   fr: { url: /fr/mapping-video.html, title: "Vidéo, mapping et VJing", blurb: "Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière." }
 - key: visual-programming
   group: tools
@@ -30,7 +30,7 @@
   fr: { url: /fr/musique-live.html, title: "Musique électronique live", blurb: "Synthés, boîtes à rythmes, sampler, séquenceurs pas à pas et plug-ins, synchronisés avec l'horloge MIDI, le timecode et les visuels." }
 - key: spatial-audio
   group: stage
-  en: { url: /spatial-audio.html, title: "Spatial audio", blurb: "DBAP, GBAP and trajectories over any loudspeaker layout, up to 1024 channels, and control of spatialisation renderers." }
+  en: { url: /spatial-audio.html, title: "Spatial audio", blurb: "DBAP, GBAP and trajectories over any loudspeaker layout, up to 1024 channels, and control of spatialization renderers." }
   fr: { url: /fr/spatialisation-sonore.html, title: "Spatialisation sonore", blurb: "DBAP, GBAP et trajectoires sur tout dispositif de haut-parleurs, jusqu'à 1024 canaux, et pilotage de moteurs de spatialisation." }
 - key: realtime-ai
   group: tools
@@ -38,7 +38,7 @@
   fr: { url: /fr/ia-temps-reel.html, title: "IA en temps réel", blurb: "Détection de pose, profondeur depuis une webcam, génération d'images en temps réel, modèles de langage et apprentissage par l'exemple, en local." }
 - key: dance-theatre
   group: stage
-  en: { url: /dance-theatre.html, title: "Dance and interactive theatre", blurb: "Pose detection, depth cameras, sensors and tracking drive sound, video and light, inside cues and scenes." }
+  en: { url: /dance-theatre.html, title: "Dance and interactive theater", blurb: "Pose detection, depth cameras, sensors and tracking drive sound, video and light, inside cues and scenes." }
   fr: { url: /fr/danse-theatre.html, title: "Danse et théâtre interactifs", blurb: "Détection de pose, caméras de profondeur, capteurs et tracking pilotent son, vidéo et lumière, dans des cues et des scènes." }
 - key: live-electronics
   group: stage
