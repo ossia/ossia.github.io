@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel DMX gratuit : lumière, son et vidéo synchronisés"
+title: "Logiciel DMX gratuit : lumière et médias en phase"
 headline: "Éclairage DMX et LED, synchronisés avec le son et la vidéo"
 subtitle: "Pilotez vos projecteurs en Art-Net, sACN et DMX USB, créez des effets de pixel mapping LED avec des shaders, et synchronisez le tout avec la musique, la vidéo et les capteurs sur une seule timeline. Libre et gratuit, sous Windows, macOS, Linux et Raspberry Pi."
 permalink: /fr/eclairage-dmx.html
@@ -40,4 +40,4 @@ Il convient au théâtre et à la danse, aux concerts, aux salles immersives, au
 </table>
 </div>
 
-Deux logiciels ne peuvent pas partager le même port Art-Net sur un même ordinateur : si vous utilisez aussi un autre logiciel DMX, utilisez des interfaces réseau ou des machines différentes.
+Pour recevoir de l'Art-Net, un seul logiciel par ordinateur peut écouter son port : si un autre logiciel reçoit aussi de l'Art-Net, utilisez des interfaces réseau ou des machines différentes. L'envoi n'est pas concerné.

@@ -17,9 +17,11 @@
 
 - title: "EarthBound Futures"
   artists: "EarthBound Futures"
+  year: "2025, 2026"
   place: "Montréal"
   url: https://www.earthboundfutures.com/
   image: earthbound-futures.webp
+  credit: Charles Bicari
   ossia: "Show control for a live performance mixing wrestling, music and theatre"
   kind: [performance, stage]
 
@@ -37,7 +39,7 @@
   place: "SAT, Montréal"
   image: reflet.webp
   credit: Agustina Isidori
-  ossia: "Show logic and real-time generative imagery (StreamDiffusion with LoRAs trained on the artists' work)"
+  ossia: "Show logic and real-time generative imagery with custom generative models"
   sat: true
   kind: [installation]
 
@@ -49,7 +51,7 @@
     - label: Bandcamp
       url: https://indistinctvoices.bandcamp.com/album/constant-points-of-data
   image: constant-points-of-data.webp
-  ossia: "Turntablism and elastic tempo manipulation for audiovisual performance, with Ableton Live, Max/Jitter and score"
+  ossia: "ossia score with Ableton Live and Max/Jitter, for turntablism and elastic tempo manipulation in an audiovisual performance"
   kind: [performance]
 
 - title: "flux opératoires"
@@ -241,7 +243,7 @@
   artists: "Navid Navab"
   url: https://www.navidnavab.com/tangibleflux
   image: tangibleFlux.webp
-  ossia: "score with Max, ossia and Jamoma"
+  ossia: "ossia score with Max, ossia and Jamoma"
   kind: [performance]
 
 - title: "SNN#2: Light/Space/Modulator"
@@ -299,9 +301,9 @@
 
 - title: "L'Arbre Intégral"
   artists: "Le Poème en volume"
-  url: https://web.archive.org/web/20221224064957/http://www.donatiengarnier.com/un-spectacle-en-3d/
+  url: https://web.archive.org/web/20210918134745/http://www.donatiengarnier.com/un-spectacle-en-3d/
   image: arbre-intégrale.webp
-  ossia: "score with Reaper, Live, Unity3D and Android smartphones"
+  ossia: "ossia score with Reaper, Live, Unity3D and Android smartphones"
   kind: [stage]
 
 - title: "(à) partir"
@@ -434,7 +436,7 @@
   place: "LaBRI / SCRIME, Bordeaux"
   url: https://didascalie.net/tiki-index.php?page=rech-paroral
   image: paroral.webp
-  ossia: "score with SuperCollider + Unity / Unreal Engine"
+  ossia: "ossia score with SuperCollider and Unity / Unreal Engine"
   kind: [stage]
 
 - title: "Matière"
@@ -476,7 +478,7 @@
 
 - title: "Le Chant des Nanos"
   artists: "Collectif Genre (SCRIME / IdEx Arts et Sciences)"
-  ossia: "score with Max4Live + Modul8"
+  ossia: "ossia score with Max4Live and Modul8"
   kind: [performance]
 
 - title: "Musée de la nature et de la chasse, Gien"

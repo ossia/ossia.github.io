@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free DMX software to sync lights with sound and video"
+title: "Free DMX software: lights in sync with media"
 headline: "DMX lighting and LEDs, in sync with sound and video"
 subtitle: "Control fixtures over Art-Net, sACN and DMX USB, design LED pixel effects with shaders, and synchronise everything with music, video and sensors on one timeline. Free and open-source, on Windows, macOS, Linux and Raspberry Pi."
 permalink: /dmx-lighting.html
@@ -39,4 +39,4 @@ It is a good fit for theatre and dance, concerts, immersive rooms, installations
 </table>
 </div>
 
-Two programs cannot share the same Art-Net port on one computer: if you also use other DMX software, run them on different network interfaces or machines.
+To receive Art-Net, only one program per computer can listen on its port: if another program also receives Art-Net, use separate network interfaces or machines. Sending is not affected.

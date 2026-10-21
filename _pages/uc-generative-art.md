@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free software for generative art and creative coding"
+title: "Generative art and creative coding tool"
 headline: "Generative art and creative coding"
 subtitle: "Shaders, 3D scenes, point clouds, gaussian splats and generative grammars, patched with nodes or written as code, live or rendered frame by frame. Free and open-source, on Windows, macOS, Linux and in the browser."
 permalink: /generative-art.html
@@ -15,7 +15,7 @@ and organise the result in time, as a live performance, an installation or a ren
 
 ## What you can do
 
-- **Shaders**: ISF fragment shaders, compute shaders and raw raster pipelines, with the Lygia library; drop a Shadertoy link and it becomes an ISF shader ([shaders](https://ossia.io/score-docs/processes/shaders.html), [compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html), [shader cookbook](https://ossia.io/score-docs/in-depth/shader-cookbook.html)).
+- **Shaders**: ISF fragment shaders, compute shaders and raw raster pipelines, with the Lygia library from the package manager; drop a Shadertoy link and it becomes an ISF shader ([shaders](https://ossia.io/score-docs/processes/shaders.html), [compute shaders](https://ossia.io/score-docs/processes/compute-shaders.html), [shader cookbook](https://ossia.io/score-docs/in-depth/shader-cookbook.html)).
 - **3D**: a GPU scene pipeline with glTF, FBX, OBJ, PLY and voxel models, PBR materials, lights, cameras, instancing, point clouds, volumetric textures and gaussian splats ([3D pipeline](https://ossia.io/score-docs/in-depth/3d-scene-pipeline.html), [gaussian splats](https://ossia.io/score-docs/examples/3d/3dgs.html), [generative 3D](https://ossia.io/score-docs/examples/3d/generative-3d.html)).
 - **Generative grammars**: Context Free Art and Structure Synth, vertex shader art, text to mesh ([Context Free Art](https://ossia.io/score-docs/processes/context-free-art.html), [Structure Synth](https://ossia.io/score-docs/processes/structure-synth.html)).
 - **Feedback**: delayed cables everywhere, for reaction-diffusion, trails and other image feedback ([reaction-diffusion](https://ossia.io/score-docs/examples/video/2d-geometry-feedback-reaction-diffusion.html)).
@@ -33,7 +33,7 @@ and organise the result in time, as a live performance, an installation or a ren
 <tr><th>What you need</th><th>How ossia score does it</th></tr>
 <tr><td>Trying ideas quickly without boilerplate code</td><td>Shaders, 3D objects and generators connected with cables, with live parameters.</td></tr>
 <tr><td>Writing code when it is the best tool</td><td>JavaScript, GLSL, Faust and C++ inside the same patch.</td></tr>
-<tr><td>Reusing shaders from the community</td><td>ISF shaders, the Lygia library, and Shadertoy links converted automatically.</td></tr>
+<tr><td>Reusing shaders from the community</td><td>ISF shaders, the Lygia library from the package manager, and Shadertoy links converted automatically.</td></tr>
 <tr><td>Turning a sketch into a piece</td><td>A timeline with scenes, automations and cues around the generative patch.</td></tr>
 <tr><td>A rendered video at full quality</td><td>Frame-exact offline rendering, independent of real-time performance.</td></tr>
 </table>

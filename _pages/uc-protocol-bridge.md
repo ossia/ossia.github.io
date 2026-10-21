@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free OSC, MIDI, DMX and MQTT protocol bridge"
+title: "OSC, MIDI, DMX and MQTT protocol bridge"
 headline: "A protocol bridge and control hub"
 subtitle: "Connect MIDI, OSC, DMX, MQTT, serial, HTTP, WebSocket, Bluetooth LE and more: convert messages from one to another, clean and rescale them, and keep the bridge running on a small computer. Free and open-source, on Windows, macOS, Linux and Raspberry Pi."
 permalink: /protocol-bridge.html
@@ -15,8 +15,8 @@ ossia score sits in the middle: every device becomes a tree of parameters, and a
 
 ## What you can do
 
-- **Many protocols in one place**: OSC over UDP, TCP, WebSocket and serial, OSCQuery, MIDI (virtual and network ports, MIDI 2), DMX in and out over Art-Net, sACN and USB interfaces, MQTT, CoAP, HTTP, WebSocket, serial, Bluetooth LE, LSL, and receiving CAN bus data on Linux ([devices](https://ossia.io/score-docs/devices.html)).
-- **Tracking and control**: PosiStageNet, RTTrP, OpenTrackIO, TUIO, gamepads, Leap Motion and depth cameras as inputs; Bitfocus Companion modules to drive AV equipment ([tracking](https://ossia.io/score-docs/devices/tracking-device.html), [Companion](https://ossia.io/score-docs/devices/companion-device.html)).
+- **Many protocols in one place**: OSC over UDP, TCP, WebSocket and serial, OSCQuery, MIDI (virtual ports, and network ports provided by the operating system), DMX in and out over Art-Net, sACN and USB interfaces, MQTT, CoAP, HTTP, WebSocket, serial, Bluetooth LE, LSL, and receiving CAN bus data on Linux ([devices](https://ossia.io/score-docs/devices.html)).
+- **Tracking and control**: PosiStageNet, RTTrP, OpenTrackIO, TUIO, gamepads, Leap Motion and depth cameras as inputs; Bitfocus Companion modules from the package manager to drive AV equipment ([tracking](https://ossia.io/score-docs/devices/tracking-device.html), [Companion](https://ossia.io/score-docs/devices/companion-device.html)).
 - **Map without programming**: connect parameters with curves, scale, smooth and filter them (deadzone, noise gate, hysteresis, debounce), combine several inputs into one ([mapping overview](https://ossia.io/score-docs/examples/data/mapping-overview.html), [value filter](https://ossia.io/score-docs/processes/value-filter.html)).
 - **Permanent mappings**: the mapper device keeps a bridge running even when no score is playing, with mappings written in JavaScript ([mapper device](https://ossia.io/score-docs/devices/mapper-device.html)).
 - **Your own protocols**: describe a device with a text or binary protocol in a short script, with framings such as SLIP, COBS, STX/ETX or size prefixes, over TCP, UDP, serial or Bluetooth ([QML protocols](https://ossia.io/score-docs/in-depth/qml-protocols.html)).

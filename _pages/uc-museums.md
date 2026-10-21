@@ -1,6 +1,6 @@
 ---
 layout: use-case
-title: "Free show control software for museums and exhibitions"
+title: "Museum and exhibition AV software"
 headline: "Museums and permanent exhibitions"
 subtitle: "Run sound, video, lights and interactive exhibits all day without staff, monitor them, give the team a simple control panel, and hand over projects that keep working. Free and open-source, on Windows, macOS, Linux and Raspberry Pi."
 permalink: /museums-exhibitions.html
@@ -21,7 +21,7 @@ ossia score runs the media and the interactive parts of an exhibit, from a singl
 - **A panel for the staff**: start, stop and trigger scenes from a browser, a phone or a tablet on the local network ([remote control](https://ossia.io/score-docs/in-depth/remote.html)).
 - **Kiosk applications**: package an exhibit with its own touch interface as a standalone application, without the editor (see [custom apps](/custom-apps.html)).
 - **Projects that can be handed over**: collect all media into the project folder, find missing files, and archive the project as a zip ([project files](https://ossia.io/score-docs/reference/project-files.html)).
-- **Synchronised rooms**: sound, video, lights and props on the same timeline, with cues and scenes; control AV equipment through Bitfocus Companion modules ([cues](https://ossia.io/score-docs/cues.html), [scenes](https://ossia.io/score-docs/common-practices/6-scenes.html)).
+- **Synchronised rooms**: sound, video, lights and props on the same timeline, with cues and scenes; control AV equipment through Bitfocus Companion modules from the package manager ([cues](https://ossia.io/score-docs/cues.html), [scenes](https://ossia.io/score-docs/common-practices/6-scenes.html)).
 - **Visitor interaction** with buttons, sensors, cameras and depth cameras (see [interactive installations](/interactive-installations.html)).
 
 <picture><img src="/assets/gallery/carrousel.webp" width="800" height="597" loading="lazy" alt="A geodesic pavilion next to an abbey, and inside it a large wooden sculpture lit in orange"/></picture>

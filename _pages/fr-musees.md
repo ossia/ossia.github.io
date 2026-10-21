@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre de régie pour les musées et les expositions"
+title: "Logiciel audiovisuel pour musées et expositions"
 headline: "Musées et expositions permanentes"
 subtitle: "Faites fonctionner son, vidéo, lumière et dispositifs interactifs toute la journée sans personnel, surveillez-les, donnez à l'équipe un panneau de contrôle simple, et transmettez des projets qui continuent de fonctionner. Libre et gratuit, sous Windows, macOS, Linux et Raspberry Pi."
 permalink: /fr/musees-expositions.html
@@ -22,7 +22,7 @@ ossia score fait fonctionner les médias et les parties interactives d'un dispos
 - **Un panneau pour l'équipe** : lancer, arrêter et déclencher des scènes depuis un navigateur, un téléphone ou une tablette sur le réseau local ([contrôle à distance](https://ossia.io/score-docs/in-depth/remote.html)).
 - **Bornes** : empaquetez un dispositif avec sa propre interface tactile en application autonome, sans l'éditeur (voir [applications sur mesure](/fr/applications-sur-mesure.html)).
 - **Des projets transmissibles** : rassemblez tous les médias dans le dossier du projet, retrouvez les fichiers manquants, et archivez le projet en zip ([fichiers du projet](https://ossia.io/score-docs/reference/project-files.html)).
-- **Des salles synchronisées** : son, vidéo, lumière et accessoires sur la même timeline, avec cues et scènes ; pilotage du matériel audiovisuel grâce aux modules Bitfocus Companion ([cues](https://ossia.io/score-docs/cues.html), [scènes](https://ossia.io/score-docs/common-practices/6-scenes.html)).
+- **Des salles synchronisées** : son, vidéo, lumière et accessoires sur la même timeline, avec cues et scènes ; pilotage du matériel audiovisuel grâce aux modules Bitfocus Companion du gestionnaire de paquets ([cues](https://ossia.io/score-docs/cues.html), [scènes](https://ossia.io/score-docs/common-practices/6-scenes.html)).
 - **Interaction avec les visiteurs** par boutons, capteurs, caméras et caméras de profondeur (voir [installations interactives](/fr/installations-interactives.html)).
 
 <picture><img src="/assets/gallery/carrousel.webp" width="800" height="597" loading="lazy" alt="Un pavillon géodésique près d'une abbaye, et à l'intérieur une grande sculpture en bois éclairée en orange"/></picture>

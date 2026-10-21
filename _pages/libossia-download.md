@@ -82,12 +82,12 @@ Each download below is a single archive containing the builds for every supporte
   <h2 class="binding-title" id="pd-binding"><img alt="" src="/assets/logo/pd.png" height="60" width="auto" />PureData</h2>
   <div class="features-list">
     ossia-pd is a set of PureData externals.
-    The recommended way to install it is from PureData itself, with <i>Help → Find externals</i> (search for "ossia").
-    The archive below works on macOS (Intel and Apple Silicon), Windows (x86_64) and Linux (x86_64).
+    The recommended way to install it is from PureData itself, with <i>Help → Find externals</i> (search for "ossia"); on macOS, use this method.
+    The archive below is for Windows (x86_64) and Linux (x86_64).
   </div><br/>
   <div>
     <ul>
-    <li><a href="{{ release }}/ossia-pd-{{ site.libossia_version }}.zip">Download the PureData externals (macOS, Windows, Linux)</a></li><br/>
+    <li><a href="{{ release }}/ossia-pd-{{ site.libossia_version }}.zip">Download the PureData externals (Windows, Linux)</a></li><br/>
     <li><a href="https://github.com/ossia/libossia/tree/master/src/ossia-pd">Source code</a></li>
     <li><a href="https://ossia.io/ossia-docs/?plaintext--pd#introduction">API documentation</a></li>
     </ul>

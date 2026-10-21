@@ -1,12 +1,12 @@
 ---
 layout: use-case
-title: "Free software for live electronic music"
+title: "Live electronic music software"
 headline: "Live electronic music"
 subtitle: "Synthesizers, drum machines, samplers, step sequencers and plug-ins on a timeline that follows tempo, MIDI clock or timecode vinyl — with visuals and lights in the same project. Free and open-source, on Windows, macOS, Linux and Raspberry Pi."
 permalink: /live-music.html
 translation: /fr/musique-live.html
 category: site-score
-description: "Free, open-source software for live electronic music: synths, drum machines, sampler, step sequencer, arpeggiator, looper, VST and CLAP hosting, MIDI clock and timecode vinyl."
+description: "Free, open-source software for live electronic music: synths, drum machines, sampler, step sequencer, looper, plug-ins, MIDI clock and timecode vinyl."
 image: /assets/social/ossia-score-og.jpg
 ---
 
@@ -21,7 +21,7 @@ improvised around loops and patterns, or anything in between, and the visuals an
 - **Sync**: generate or follow MIDI clock and MIDI timecode, follow LTC, and control the timeline with a timecode vinyl on a turntable ([MIDI sync](https://ossia.io/score-docs/processes/midi-sync.html), [timecode vinyl](https://ossia.io/score-docs/processes/xwax-dvs.html)).
 - **Plug-ins and effects**: VST, VST3, CLAP (with sample-accurate automation), LV2 and JSFX hosting; the Airwindows effects, Faust, and built-in compressor, limiter, reverbs, filters and delays ([audio plug-ins](https://ossia.io/score-docs/processes/audio-plugins.html), [audio effects](https://ossia.io/score-docs/processes/audio-effects.html)).
 - **Microtonal music** with Scala scales and keyboard mappings ([scales](https://ossia.io/score-docs/examples/audio/scales.html)).
-- **Controllers**: MIDI controllers with named knobs and faders, MCU-compatible control surfaces, network MIDI, MIDI 2, wind controllers, tablets and gamepads.
+- **Controllers**: MIDI controllers with named knobs and faders, MCU-compatible control surfaces, network MIDI ports provided by the operating system, wind controllers, tablets and gamepads.
 - **Audiovisual**: audio-reactive shaders, 3D and video, and DMX lights driven by the music (see [video](/projection-mapping.html) and [lighting](/dmx-lighting.html)).
 
 ## Live music needs, and how ossia score answers them

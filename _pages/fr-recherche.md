@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel pour la recherche, la sonification et les biosignaux"
+title: "Sonification de données et biosignaux"
 headline: "Recherche, sonification et biosignaux"
 subtitle: "Recevez les données du matériel de laboratoire et des capteurs, jouez des jeux de données en son, en lumière ou en images, enregistrez et rejouez des sessions, et construisez expériences et œuvres de biofeedback sur une timeline. Libre et gratuit, développé avec des laboratoires de recherche."
 permalink: /fr/recherche-sonification.html

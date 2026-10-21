@@ -13,9 +13,9 @@ description: "Politique de confidentialité d'ossia.io et de nos logiciels libre
 
 ## Qui sommes-nous
 
-Ce site est publié par l'**association ossia** (France) et par **ossia.io**, organisme à but non lucratif basé à Montréal (Québec). Tous deux développent ossia score et libossia.
+Ce site est publié par **ossia.io**, l'organisme à but non lucratif qui développe ossia score et libossia, en France et au Québec.
 
-Personne responsable de la protection des renseignements personnels : **Myriam Desainte-Catherine**, Président.e. de l'association ossia.io, joignable à [contact@ossia.io](mailto:contact@ossia.io).
+Personne responsable de la protection des renseignements personnels : **Myriam Desainte-Catherine**, présidente d'ossia.io, joignable à [contact@ossia.io](mailto:contact@ossia.io).
 
 ## ossia score et libossia
 
@@ -32,7 +32,7 @@ Avec votre accord, le site utilise **Google Analytics** (Google Ireland Limited 
 | Finalité | Ce qu'elle fait | Cookies |
 |---|---|---|
 | **Statistiques de visite** | Compte les pages visitées, le pays approximatif des visiteurs, le navigateur et le type d'appareil, et les clics sur les liens de téléchargement, de communauté et de don, pour améliorer le site. | `_ga`, `_ga_GCNDFW0NH6` |
-| **Mesure des annonces** | Indique à Google Ads quand une personne ayant cliqué sur l'une des annonces gratuites que nous diffusons via Google Ad Grants, le programme de Google pour les organismes à but non lucratif, télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite. | `_gcl_au` et les cookies Google Analytics ci-dessus |
+| **Mesure des annonces** | Indique à Google Ads quand une personne ayant cliqué sur l'une des annonces gratuites que nous diffusons via Google Ad Grants, le programme de Google pour les organismes à but non lucratif, télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite. | `_gcl_au` (une fois le site relié à Google Ads) et les cookies Google Analytics ci-dessus |
 
 * **Base légale :** votre consentement (article 6.1.a du RGPD ; article 82 de la loi Informatique et Libertés ; articles 8.1 et 14 de la *Loi sur la protection des renseignements personnels dans le secteur privé* du Québec).
 * **Ce que nous ne faisons jamais :** de la publicité personnalisée, Google Signals, du reciblage, la vente de données, ou leur croisement avec d'autres informations pour vous identifier.
@@ -48,7 +48,7 @@ Avec votre accord, le site utilise **Google Analytics** (Google Ireland Limited 
 
 ### Vidéos et hébergement
 
-* Les vidéos YouTube et Vimeo intégrées utilisent leurs modes de confidentialité renforcée (`youtube-nocookie.com`, option « do not track » de Vimeo). Sur la page d'accueil, la vidéo YouTube n'est chargée que lorsque vous cliquez dessus.
+* Les vidéos YouTube et Vimeo intégrées ne sont chargées que lorsque vous cliquez dessus, puis utilisent leurs modes de confidentialité renforcée (`youtube-nocookie.com`, option « do not track » de Vimeo).
 * Le site est hébergé par GitHub Pages, qui peut journaliser les adresses IP des visiteurs à des fins de sécurité ; voir la [déclaration de confidentialité de GitHub](https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement).
 * Les polices et toutes les autres ressources sont servies par ossia.io lui-même.
 

@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre pour enseigner les médias interactifs"
+title: "Enseigner les médias interactifs avec ossia score"
 headline: "Enseignement et ateliers"
 subtitle: "Enseignez le son, la vidéo, l'interaction et la programmation avec un seul outil gratuit qui fonctionne sur l'ordinateur de chaque élève, dans un navigateur web sans rien installer, ou sur un Raspberry Pi. Libre, avec des exemples et une documentation pour chaque fonction."
 permalink: /fr/enseignement.html
@@ -11,13 +11,13 @@ description: "Logiciel libre pour enseigner les médias interactifs : tous les s
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score est utilisé dans des universités, des écoles d'art et des ateliers pour enseigner le son, la vidéo, la lumière et l'installation interactifs.
+ossia score est utilisé en cours et en ateliers pour enseigner le son, la vidéo, la lumière et l'installation interactifs, par exemple à l'Université Concordia, à l'UQAM, à l'Université d'Ottawa, à l'Université de Maynooth et à l'Université de Bordeaux.
 Les élèves gardent le même outil après le cours : il est gratuit, il fonctionne sur leur propre ordinateur, et les projets s'ouvrent sur tous les systèmes.
 
 ## Ce que vous pouvez faire
 
 - **Rien à installer** : la [version web](https://ossia.io/score-web) fonctionne avec la caméra, le micro, les contrôleurs MIDI, les manettes et l'OSC, et ouvre directement les exemples et les projets zippés.
-- **Le même outil partout** : Windows (x64 et ARM), macOS, Linux et Raspberry Pi, avec les mêmes fonctions et les mêmes fichiers de projet ([embarqué](https://ossia.io/score-docs/in-depth/embedded.html)).
+- **Le même outil partout** : Windows (x64 et ARM), macOS, Linux et Raspberry Pi, avec les mêmes fichiers de projet et les mêmes fonctions, sauf les fonctions liées à un système ou à un matériel, comme Spout, Syphon ou CUDA ([embarqué](https://ossia.io/score-docs/in-depth/embedded.html)).
 - **Apprendre par l'exemple** : une bibliothèque de partitions d'exemple pour l'audio, la vidéo, la 3D, l'IA, les appareils et les données, et des liens de chaque objet vers sa documentation ([exemples](https://ossia.io/score-docs/examples.html), [prise en main](https://ossia.io/score-docs/quick-start.html)).
 - **Du patch au code** : commencez avec des câbles et des timelines, puis écrivez du JavaScript, du Faust, des shaders ou du C++ dans le même projet ([JavaScript](https://ossia.io/score-docs/processes/javascript.html), [shaders](https://ossia.io/score-docs/processes/shaders.html), [Faust](https://ossia.io/score-docs/processes/faust.html)).
 - **Toutes les disciplines au même endroit** : son et synthèse, vidéo et 3D, lumière DMX, capteurs et Arduino, vision par ordinateur et IA, pour qu'un projet de classe puisse les combiner.

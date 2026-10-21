@@ -41,14 +41,13 @@
       "image": "{{ site.url }}/assets/score.webp",
       "screenshot": "{{ site.url }}/assets/score.webp",
       "applicationCategory": "MultimediaApplication",
-      "operatingSystem": "Windows 10, Windows 11, macOS 13+, Linux",
+      "operatingSystem": "Windows 10, Windows 11, macOS 12+, Linux",
       "softwareVersion": "{{ site.score_version }}",
       "datePublished": "{{ site.score_released_date | date: '%Y-%m-%d' }}",
       "license": "https://www.gnu.org/licenses/gpl-3.0.html",
       "isAccessibleForFree": true,
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
       "author": { "@id": "{{ site.url }}/#organization" },
-      "codeRepository": "https://github.com/ossia/score",
       "releaseNotes": "https://github.com/ossia/score/releases/tag/v{{ site.score_version }}"
     }
     {%- endif -%}

@@ -46,4 +46,4 @@ window.ossiaLoadAnalytics = function(c, now) {
     window.addEventListener(ev, load, { once: true, passive: true });
   });
 };
-if (window.ossiaConsent) window.ossiaLoadAnalytics(window.ossiaConsent, false);
+if (window.ossiaConsent && !navigator.globalPrivacyControl) window.ossiaLoadAnalytics(window.ossiaConsent, false);

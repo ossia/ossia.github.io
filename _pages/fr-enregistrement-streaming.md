@@ -1,7 +1,7 @@
 ---
 layout: use-case
 lang: fr
-title: "Logiciel libre pour enregistrer, diffuser et router la vidéo en direct"
+title: "Enregistrer, diffuser et router la vidéo"
 headline: "Enregistrement, streaming et routage vidéo"
 subtitle: "Faites entrer caméras, cartes de capture et flux réseau, traitez-les sur le GPU avec le son, la 3D et le graphisme, puis enregistrez en fichier, diffusez en ligne ou envoyez l'image vers d'autres logiciels. Libre et gratuit, sous Windows, macOS et Linux."
 permalink: /fr/enregistrement-streaming.html

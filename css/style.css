@@ -688,7 +688,7 @@
 
 	#footer {
 		background: var(--dark-transparent-grey);
-		color: #7c8081;
+		color: #b4b8b9;
         padding: 2em;
 		text-align: center;
 	}
@@ -1862,4 +1862,57 @@ p.download-date {
 }
 .thumbnail-blogpost {
     height: auto;
+}
+
+/* Click-to-load YouTube and Vimeo embeds (js/site.js) */
+.video-facade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4em;
+    width: 100%;
+    max-width: 640px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    padding: 1em;
+    border: 0;
+    border-radius: 6px;
+    background: #1d1f21;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+.videoWrapper .video-facade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: none;
+    border-radius: 0;
+}
+.video-facade-title {
+    font-weight: 700;
+    text-align: center;
+}
+.video-facade-note::before {
+    content: "▶ ";
+}
+.video-facade-note {
+    padding: 0.3em 1em;
+    border-radius: 999px;
+    background: #c00;
+    font-size: 0.9em;
+}
+.video-facade:hover .video-facade-note, .video-facade:focus-visible .video-facade-note {
+    background: #f00;
+}
+
+/* Keep the eight header links on one line until the mobile menu takes over (980px) */
+@media screen and (max-width: 1240px) {
+    #header nav div a {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        font-size: 0.9em;
+    }
 }

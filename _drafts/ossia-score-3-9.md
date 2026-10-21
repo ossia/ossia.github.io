@@ -57,8 +57,8 @@ Fulldome output supports the four usual fisheye projections.
 
 ## More devices and protocols
 
-- Depth cameras: colour, infrared, depth and point clouds from Orbbec, Kinect v1, v2 and Azure, Intel RealSense and Luxonis OAK cameras.
-- Tracking: OpenTrackIO, OpenXR, PosiStageNet, RTTrP and TUIO.
+- Depth cameras, from the package manager: colour, infrared, depth and point clouds from Orbbec, Kinect v1 and v2, Azure Kinect (Windows and Linux), Intel RealSense and Luxonis OAK cameras.
+- Tracking: OpenTrackIO, PosiStageNet, RTTrP and TUIO.
 - MIDI controllers described by a device description, so knobs and faders are addressed directly instead of by CC number.
 - A CAN bus device driven by .dbc databases, LP-Research IMUs, and a device exposing the local machine: CPU, GPU, memory, disks, battery and network.
 - The Artnet device is now called DMX, as it also speaks sACN and DMX USB.
