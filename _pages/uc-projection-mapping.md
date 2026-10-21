@@ -2,7 +2,7 @@
 layout: use-case
 title: "Free projection mapping and video software"
 headline: "Video, projection mapping and VJing"
-subtitle: "Play video, map it on several projectors, generate visuals with shaders and 3D, and share them over NDI, Spout and Syphon — synchronised with sound, lights and sensors. Free and open-source, on Windows, macOS and Linux."
+subtitle: "Video playback, mapping over several projectors, shaders and 3D, cued with the sound and the lights of the show."
 permalink: /projection-mapping.html
 translation: /fr/mapping-video.html
 category: site-score
@@ -10,38 +10,49 @@ description: "Free, open-source software for video playback, multi-projector map
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score has a complete GPU video and 3D pipeline. It is used for video installations, projection mapping on buildings and stages,
-fulldome shows and audio-reactive visuals, often in the same project as the sound and the lights.
+ossia score has a GPU video and 3D pipeline, and it lives in the same project as the sound and the lights.
+It has been used for video installations, mapping on buildings and stages, fulldome shows and audio-reactive visuals.
 
-## What you can do
+<picture><img src="/assets/gallery/resilience-des-bois.webp" width="540" height="360" loading="lazy" alt="An installation where forest images are projected on three white walls and on a model of a landscape placed on a central table"/></picture>
+<p class="figure-caption"><i>Résilience des bois</i>, Shabnam Zeraati, Gilnaz Arzpeyma and Zahra Nabavi, Atelier Circulaire, Montréal: five-projector video mapping run by ossia score on a single older Mac. © Jean-Michael Séminaro</p>
 
-- **Video playback** of most formats (HAP, H.264, ProRes, image sequences…), looping and mixing, with an eight-input video mixer ([video](https://ossia.io/score-docs/processes/video.html), [mixing and mapping](https://ossia.io/score-docs/common-practices/11-video-mixing-and-mapping.html)).
-- **Multi-projector mapping** with per-region perspective warping and edge blending, and fulldome fisheye output ([multi-projector mapping](https://ossia.io/score-docs/examples/video/video-mapping-multi-projector.html), [window device](https://ossia.io/score-docs/devices/window-device.html)).
-- **Generative visuals** with ISF shaders and compute shaders, Context Free Art and Structure Synth ([shaders](https://ossia.io/score-docs/processes/shaders.html)).
-- **3D scenes** since version 3.9: glTF, FBX, OBJ and other models with animations, PBR materials, instancing, point clouds and gaussian splats, all on the GPU ([3D pipeline](https://ossia.io/score-docs/in-depth/3d-scene-pipeline.html)).
-- **Video in and out**: NDI, Spout, Syphon, cameras and screen capture, RTSP and SRT streams, PipeWire and GStreamer, and capture and playout cards (AJA built in and tested at 8K60; Blackmagic DeckLink and Magewell with a custom build); recording to MP4, ProRes, DNxHD or AV1.
-- **Interaction**: audio-reactive visuals, computer vision (blobs, optical flow, contours), pose detection with ONNX models, depth cameras, MIDI and OSC control ([pose detection](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
-- **Timeline**: everything can be automated and cued, so a 20-minute show plays the same way every night, or reacts to the audience.
-- **HDR and cinema formats**: HDR window output on macOS and Windows (HLG, BT.2100, Display P3), 12-bit DCI X'Y'Z' and EXR half-float images ([video formats](https://ossia.io/score-docs/processes/video-formats-color.html)).
-- **Hardware decoding** through Vulkan Video, Direct3D 12 and VideoToolbox, without copies whenever the graphics backend allows it, with HAP, DXV, Cineform and H.265.
-- **Shaders from the web**: drop a Shadertoy link and it becomes an ISF shader; vertex shader art, video-bending effects, and any FFmpeg filter graph ([vertex shader art](https://ossia.io/score-docs/processes/vertex-shader-art.html)).
-- **Slides and text** for lecture-performances and conferences, with presentation and advanced text objects.
-- **Exact-frame offline rendering** to image files from a script, for previews or fixed-media pieces.
+## Playing and mapping
 
-<img src="/assets/blog/v3-9/feedback-cables.webp" width="1230" height="567" loading="lazy" alt="A reaction-diffusion visual effect patched with feedback cables in ossia score"/>
+Most formats play: HAP, H.264, ProRes, image sequences and more, looped and mixed with an eight-input video mixer ([video](https://ossia.io/score-docs/processes/video.html), [mixing and mapping](https://ossia.io/score-docs/common-practices/11-video-mixing-and-mapping.html)).
+Hardware decoding goes through Vulkan Video, Direct3D 12 and VideoToolbox, without copies whenever the graphics backend allows it, with HAP, DXV, Cineform and H.265.
 
-## Video needs, and how ossia score answers them
+Each output window can be warped region by region and edge-blended with its neighbours, and fulldome shows get a fisheye output ([multi-projector mapping](https://ossia.io/score-docs/examples/video/video-mapping-multi-projector.html), [window device](https://ossia.io/score-docs/devices/window-device.html)).
+On macOS and Windows the windows can output HDR (HLG, BT.2100, Display P3), and score reads 12-bit DCI X'Y'Z' and EXR half-float images ([video formats](https://ossia.io/score-docs/processes/video-formats-color.html)).
+
+<picture><img src="/assets/use-cases/video-mixer.webp" width="1200" height="652" loading="lazy" alt="The video mixer of ossia score blending several layers of a generative shader with different blend modes, over the projected result"/></picture>
+
+## Generating images
+
+ISF and compute shaders, Context Free Art and Structure Synth make images from scratch ([shaders](https://ossia.io/score-docs/processes/shaders.html)). Drop a Shadertoy link on score and it turns into an ISF shader; vertex shader art, video-bending effects and any FFmpeg filter graph are there too ([vertex shader art](https://ossia.io/score-docs/processes/vertex-shader-art.html)).
+
+Since 3.9 the GPU also renders 3D scenes: glTF, FBX, OBJ and other models with their animations, PBR materials, instancing, point clouds and gaussian splats ([3D pipeline](https://ossia.io/score-docs/in-depth/3d-scene-pipeline.html)).
+
+<picture><img src="/assets/blog/v3-9/feedback-cables.webp" width="1230" height="567" loading="lazy" alt="A reaction-diffusion pattern made in ossia score by sending a shader's output back into its own input with a feedback cable"/></picture>
+
+## In and out
+
+Video comes in and goes out over NDI, Spout and Syphon, from cameras and screen capture, RTSP and SRT streams, PipeWire and GStreamer.
+Capture and playout cards: AJA is built in and was tested at 8K60; Blackmagic DeckLink and Magewell need a custom build. The program can be recorded to MP4, ProRes, DNxHD or AV1.
+
+Visuals can react to the sound, to computer vision (blobs, optical flow, contours), to pose detection with ONNX models, to depth cameras, or to MIDI and OSC ([pose detection](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
+For lectures and conferences there are presentation and advanced text objects, and a script can render the piece frame by frame to image files, for previews or fixed-media versions.
+
+## In short
 
 <div class="comparison-scroll">
 <table class="comparison">
-<thead><tr><th>What you need</th><th>How ossia score does it</th></tr></thead>
+<thead><tr><th>You want</th><th>In ossia score</th></tr></thead>
 <tbody>
-<tr><td>Mapping video onto several projectors or surfaces</td><td>Per-region warping, edge blending and fulldome fisheye output.</td></tr>
-<tr><td>A written or interactive show that plays the same every night, or reacts</td><td>Every video, shader and 3D parameter can be cued, automated or triggered from the timeline.</td></tr>
-<tr><td>Generative and 3D visuals, at any resolution</td><td>ISF and compute shaders, a GPU 3D pipeline, and no resolution limit or watermark.</td></tr>
-<tr><td>Interactive theatre and dance with cameras and sensors</td><td>Pose detection, depth cameras, computer vision and tracking protocols.</td></tr>
-<tr><td>Exchanging video with other software and hardware</td><td>NDI, Spout, Syphon, RTSP, SRT, and capture and playout cards.</td></tr>
-<tr><td>Video, sound and lights from one computer, Linux included</td><td>One project and one machine, on Windows, macOS or Linux.</td></tr>
+<tr><td>Video on several projectors or surfaces</td><td>Per-region warping, edge blending and fulldome fisheye output.</td></tr>
+<tr><td>A show that plays the same every night, or reacts</td><td>Every video, shader and 3D parameter can be cued, automated or triggered.</td></tr>
+<tr><td>Generative and 3D visuals at any resolution</td><td>ISF and compute shaders and a GPU 3D pipeline, with no resolution limit or watermark.</td></tr>
+<tr><td>Video to and from other software</td><td>NDI, Spout, Syphon, RTSP, SRT, and capture and playout cards.</td></tr>
+<tr><td>Video, sound and lights from one machine, Linux included</td><td>One project on Windows, macOS or Linux.</td></tr>
 </tbody>
 </table>
 </div>

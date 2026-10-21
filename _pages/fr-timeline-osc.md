@@ -3,7 +3,7 @@ layout: use-case
 lang: fr
 title: "Séquenceur et timeline OSC, MIDI et DMX gratuit"
 headline: "Une timeline OSC, MIDI et DMX"
-subtitle: "Dessinez des courbes d'automation pour n'importe quel paramètre OSC, MIDI ou DMX, ajoutez des déclencheurs et des conditions, et découvrez vos appareils automatiquement grâce à OSCQuery. Libre et gratuit, sous Windows, macOS et Linux."
+subtitle: "Des courbes pour n'importe quel paramètre OSC, MIDI ou DMX, une timeline qui sait attendre un événement, et les appareils du réseau trouvés par OSCQuery plutôt que tapés à la main."
 permalink: /fr/timeline-osc-midi-dmx.html
 translation: /osc-midi-dmx-timeline.html
 category: site-score
@@ -11,44 +11,54 @@ description: "Séquenceur OSC, MIDI et DMX libre pour Windows, macOS et Linux : 
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score est né comme un séquenceur OSC : chaque paramètre de chaque appareil du réseau devient une adresse que l'on peut automatiser,
-enregistrer, transformer et écrire dans le temps. Il sert à piloter des patchs, des moteurs de jeu, des serveurs média, de la lumière ou des robots.
+ossia score a commencé comme un séquenceur OSC. Chaque paramètre de chaque appareil du réseau devient une adresse, et une adresse peut être automatisée, enregistrée, transformée et placée dans le temps.
+On s'en sert pour piloter des patchs, des moteurs de jeu, des serveurs média, de la lumière ou des robots.
 
-## Ce que vous pouvez faire
+## Des courbes sur n'importe quelle adresse
 
-- **Des courbes d'automation** sur n'importe quelle adresse : OSC, CC MIDI, canaux DMX, ou paramètres des processus d'ossia score ([automations](https://ossia.io/score-docs/quick-start/writing-automations.html)).
-- **OSCQuery** : parcourez les paramètres des logiciels compatibles (par exemple les patchs et applications qui utilisent libossia) et glissez-les dans la partition au lieu de taper les adresses.
-- **Des timelines interactives** : les déclencheurs attendent un message, les conditions choisissent entre plusieurs branches, les boucles et les scènes se répètent jusqu'à un événement ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html)).
-- **Mapping** : mettez à l'échelle, lissez et transformez les valeurs entre appareils, avec des courbes, du JavaScript ou des expressions mathématiques ([mapper](https://ossia.io/score-docs/devices/mapper-device.html)).
-- **Toutes les entrées** : manettes de jeu, Wiimote, Leap Motion, contrôleurs MIDI, ports série et Arduino, capteurs Bluetooth LE, caméras de profondeur et protocoles de tracking (PosiStageNet, TUIO, RTTrP, OpenTrackIO) ([capteurs vers OSC](https://ossia.io/score-docs/examples/devices/sensors2osc.html)).
-- **De nombreux protocoles** : OSC en UDP, TCP, WebSockets et série, OSCQuery, MIDI, DMX (Art-Net, sACN, DMX USB), MQTT, CoAP, HTTP, LSL, CAN.
-- **Temps musical** : tempo, mesures et quantification quand la partition doit suivre un tempo ([temps musical](https://ossia.io/score-docs/in-depth/musical.html)).
-- **Zéro configuration** : les appareils OSC sont découverts sur le réseau via Bonjour/Zeroconf, et vos propres paramètres peuvent être publiés de la même façon ou en OSCQuery.
-- **Tous les transports OSC** : UDP, TCP client et serveur, encapsulations SLIP et COBS, noms d'hôtes au lieu d'adresses IP.
-- **Des données de capteurs propres** : calibration, zones mortes, noise gate, hystérésis, anti-rebond et courbes d'easing ([filtre de valeurs](https://ossia.io/score-docs/processes/value-filter.html), [calibrateur](https://ossia.io/score-docs/processes/calibrator.html)).
-- **Motifs d'adresses** : combinez, appliquez et balayez des motifs d'adresses OSC pour piloter de nombreux appareils à la fois ([motifs](https://ossia.io/score-docs/in-depth/pattern-matching.html)).
-- **Outils MIDI** : ports MIDI virtuels, ports MIDI réseau fournis par le système d'exploitation, lecture de fichiers MIDI, filtres, gammes microtonales Scala, et le clavier de l'ordinateur comme entrée MIDI ([MIDI](https://ossia.io/score-docs/in-depth/midi.html)).
-- **Enregistrez et rejouez** n'importe quel appareil en CSV, y compris le DMX entrant ([enregistrement](https://ossia.io/score-docs/in-depth/recording.html)).
+Une courbe d'automation peut viser une adresse OSC, un CC MIDI, un canal DMX ou un paramètre d'un processus de score ([automations](https://ossia.io/score-docs/quick-start/writing-automations.html)).
+Quand la partition doit suivre un tempo, il suffit d'activer tempo, mesures et quantification ([temps musical](https://ossia.io/score-docs/in-depth/musical.html)).
 
-<picture><source type="image/avif" srcset="/assets/feature-interaction.avif"><img src="/assets/feature-interaction.webp" width="580" height="452" loading="lazy" alt="Une timeline interactive où un déclencheur attend un événement externe dans ossia score"/></picture>
+La timeline n'est pas obligée de défiler tout droit. Un déclencheur attend un message, une condition choisit une branche, une boucle se répète jusqu'à ce qu'il se passe quelque chose ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html)).
 
-## Les besoins du séquençage OSC, et les réponses d'ossia score
+<picture><source type="image/avif" srcset="/assets/feature-interaction.avif"><img src="/assets/feature-interaction.webp" width="580" height="452" loading="lazy" alt="Une timeline ossia score où un déclencheur attend un événement externe avant la partie suivante"/></picture>
+
+## Trouver les appareils
+
+Les logiciels qui parlent OSCQuery, par exemple les patchs et applications qui utilisent libossia, apparaissent dans l'explorateur d'appareils avec tous leurs paramètres. On en glisse un dans la partition et l'adresse est remplie.
+Les appareils OSC classiques se découvrent sur le réseau local via Bonjour/Zeroconf, et vos propres paramètres peuvent être publiés de la même manière.
+
+<picture><img src="/assets/features/oscquery.webp" width="1600" height="1290" loading="lazy" alt="L'arbre OSCQuery d'une session ossia score affiché en JSON dans un navigateur, à côté du même arbre dans l'explorateur d'appareils"/></picture>
+
+L'OSC passe en UDP, en TCP (client ou serveur), en WebSockets et en série, avec les encapsulations SLIP et COBS, et un nom d'hôte remplace l'adresse IP. Le même projet parle aussi MIDI, DMX (Art-Net, sACN, DMX USB), MQTT, CoAP, HTTP, LSL et CAN.
+
+## Des valeurs propres
+
+Les capteurs sont bruyants. Le mapper et les filtres se placent entre l'entrée et la cible : calibration, zones mortes, noise gate, hystérésis, anti-rebond et courbes d'easing ([filtre de valeurs](https://ossia.io/score-docs/processes/value-filter.html), [calibrateur](https://ossia.io/score-docs/processes/calibrator.html), [mapper](https://ossia.io/score-docs/devices/mapper-device.html)).
+Les correspondances elles-mêmes s'écrivent en courbes, en JavaScript ou en expressions mathématiques.
+Un motif d'adresses OSC envoie une même valeur à tout un groupe d'appareils ([motifs](https://ossia.io/score-docs/in-depth/pattern-matching.html)).
+
+En entrée : manettes, Wiimote, Leap Motion, contrôleurs MIDI, Arduino en série, capteurs Bluetooth LE, caméras de profondeur et protocoles de tracking comme PosiStageNet, TUIO, RTTrP et OpenTrackIO ([capteurs vers OSC](https://ossia.io/score-docs/examples/devices/sensors2osc.html)).
+
+Côté MIDI, il y a les ports virtuels, les ports MIDI réseau fournis par le système d'exploitation, la lecture de fichiers MIDI, des filtres, les gammes microtonales Scala et le clavier de l'ordinateur comme entrée MIDI ([MIDI](https://ossia.io/score-docs/in-depth/midi.html)).
+N'importe quel appareil s'enregistre en CSV pour être rejoué plus tard, DMX entrant compris ([enregistrement](https://ossia.io/score-docs/in-depth/recording.html)).
+
+## En résumé
 
 <div class="comparison-scroll">
 <table class="comparison">
-<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<thead><tr><th>Vous voulez</th><th>Dans ossia score</th></tr></thead>
 <tbody>
-<tr><td>Automatiser dans le temps les paramètres d'un autre logiciel</td><td>Des courbes sur n'importe quelle adresse OSC, MIDI ou DMX, et OSCQuery pour parcourir les paramètres au lieu de les taper.</td></tr>
-<tr><td>Le même outil sous Windows, macOS et Linux</td><td>Les mêmes fonctions sur les trois et sur Raspberry Pi, sauf les fonctions liées à un système ou à un matériel, comme Spout, Syphon ou CUDA.</td></tr>
-<tr><td>Une timeline qui attend des événements, bifurque et boucle</td><td>Déclencheurs, conditions et boucles font partie de la timeline.</td></tr>
-<tr><td>Transformer contrôleurs et capteurs en OSC</td><td>Manettes, contrôleurs MIDI, Arduino, caméras de profondeur et systèmes de tracking, transformés avec des courbes, du JavaScript ou des expressions.</td></tr>
-<tr><td>Du son et de la vidéo à côté des données de contrôle</td><td>Audio, vidéo, 3D et shaders dans la même timeline que vos automations OSC, MIDI et DMX.</td></tr>
-<tr><td>Une surface de contrôle simple sur téléphone ou tablette</td><td>La télécommande web, sans application à installer.</td></tr>
+<tr><td>Automatiser dans le temps les paramètres d'un autre logiciel</td><td>Des courbes sur toute adresse OSC, MIDI ou DMX, et OSCQuery pour parcourir les paramètres.</td></tr>
+<tr><td>Le même outil sous Windows, macOS et Linux</td><td>Les mêmes fonctions sur les trois et sur Raspberry Pi, sauf celles liées à un système ou à un matériel, comme Spout, Syphon ou CUDA.</td></tr>
+<tr><td>Une timeline qui attend, bifurque et boucle</td><td>Déclencheurs, conditions et boucles font partie de la timeline.</td></tr>
+<tr><td>Du son et de la vidéo à côté des données de contrôle</td><td>Audio, vidéo, 3D et shaders dans la même timeline que les automations.</td></tr>
+<tr><td>Une surface de contrôle sur téléphone</td><td>La télécommande web, sans rien installer.</td></tr>
 </tbody>
 </table>
 </div>
 
-## Fonctionne avec
+## Avec vos propres patchs
 
-ossia score parle nativement OSCQuery grâce à [libossia](/site-libossia/about.html), disponible aussi pour Max/MSP, Pure Data, Unity, Python, SuperCollider, openFrameworks et Qt :
-ajoutez quelques objets à votre patch ou à votre projet et ses paramètres apparaissent dans score, prêts à être automatisés.
+score parle nativement OSCQuery grâce à [libossia](/site-libossia/about.html), disponible aussi pour Max/MSP, Pure Data, Unity, Python, SuperCollider, openFrameworks et Qt.
+Quelques objets ajoutés à un patch ou à un projet, et ses paramètres apparaissent dans score, prêts à être automatisés.
