@@ -3,7 +3,7 @@ layout: use-case
 lang: fr
 title: "Logiciel pour la danse et le théâtre interactifs"
 headline: "Danse et théâtre interactifs"
-subtitle: "Les mouvements des interprètes jouent le son, la vidéo et la lumière, dans un spectacle qui reste le même d'un soir à l'autre."
+subtitle: "ossia score permet de faire piloter le son, la vidéo et la lumière par les mouvements des interprètes, au sein d'une conduite écrite qui peut être rejouée chaque soir."
 permalink: /fr/danse-theatre.html
 translation: /dance-theatre.html
 category: site-score
@@ -11,39 +11,27 @@ description: "Logiciel libre pour la danse et le théâtre interactifs : détect
 image: /assets/social/ossia-score-og.jpg
 ---
 
-Des compagnies de danse et de théâtre utilisent ossia score pour relier ce qui se passe sur le plateau au son, à la vidéo, à la lumière et à la machinerie.
-Les parties interactives sont écrites dans une conduite : la pièce garde la structure répétée et répond quand même aux interprètes.
+ossia score permet de relier ce qui se passe sur le plateau au son, à la vidéo, à la lumière et à la machinerie : les parties interactives sont placées à l'intérieur d'une partition écrite, de sorte que la pièce garde la structure répétée tout en réagissant aux interprètes.
+Dans *Our Bodies Know More Than We Do* (Psʌnía, résidence WeSA Jeju, Daejeon, 2025), les mouvements des deux interprètes pilotent par exemple le son et la lumière, et le spectacle de danse hip-hop *Walking Down The Street* (Lina Rahal et Jean-Marie Colin, 2021) est entièrement conduit par score et contrôlé en direct avec un Karlax.
 
-<picture><img src="/assets/gallery/walking-down-the-street.webp" width="540" height="304" loading="lazy" alt="Deux interprètes qui marchent en sens opposés devant un mur blanc, l'un d'eux tenant un long instrument numérique"/></picture>
-<p class="figure-caption"><i>Walking Down The Street</i>, Lina Rahal &amp; Jean-Marie Colin : une pièce de danse hip-hop dont tout le spectacle est piloté par ossia score et joué en direct avec un Karlax. © Jean-Marie Colin</p>
+<picture><img src="/assets/gallery/walking-down-the-street.webp" width="540" height="304" loading="lazy" alt="Deux interprètes marchant en sens opposés devant un mur blanc, l'un tenant un long instrument numérique"/></picture>
+<p class="figure-caption"><i>Walking Down The Street</i>, Lina Rahal et Jean-Marie Colin : une pièce de danse hip-hop entièrement conduite par ossia score et contrôlée en direct avec un Karlax. © Jean-Marie Colin</p>
 
-## Lire le plateau
+## Caméras et capteurs
 
-Une webcam suffit pour suivre les corps : détection de pose de plusieurs personnes avec lissage, segmentation, et profondeur depuis une caméra ordinaire ([détection de pose](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
-Les caméras de profondeur s'installent depuis le gestionnaire de paquets : Orbbec, Intel RealSense, Kinect, Azure Kinect (Windows et Linux) et Luxonis OAK. Les systèmes de tracking arrivent en PosiStageNet, RTTrP, OpenTrackIO et TUIO ([caméras de profondeur](https://ossia.io/score-docs/devices/depth-camera-device.html), [tracking](https://ossia.io/score-docs/devices/tracking-device.html)).
+Une webcam suffit pour suivre les corps, grâce à la détection de pose de plusieurs personnes (avec lissage), à la segmentation et à la profondeur estimée depuis une caméra ordinaire ([détection de pose](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
+Les caméras de profondeur s'installent depuis le gestionnaire de paquets (Orbbec, Intel RealSense, Kinect, Azure Kinect sous Windows et Linux, Luxonis OAK), et les systèmes de tracking sont reçus via PosiStageNet, RTTrP, OpenTrackIO et TUIO ([caméras de profondeur](https://ossia.io/score-docs/devices/depth-camera-device.html), [tracking](https://ossia.io/score-docs/devices/tracking-device.html)).
 
-Les capteurs portés par les interprètes fonctionnent aussi : centrales inertielles, capteurs Bluetooth LE, Leap Motion, manettes, tablettes Wacom, et tout ce qui envoie de l'OSC, du MIDI ou des données série ([Bluetooth LE](https://ossia.io/score-docs/devices/ble-device.html), [Leap Motion](https://ossia.io/score-docs/devices/leapmotion-device.html)).
+On peut également utiliser des capteurs portés par les interprètes : centrales inertielles, capteurs Bluetooth LE, Leap Motion, manettes, tablettes Wacom, et tout appareil qui envoie des données OSC, MIDI ou série ([Bluetooth LE](https://ossia.io/score-docs/devices/ble-device.html), [Leap Motion](https://ossia.io/score-docs/devices/leapmotion-device.html)).
 
 ## Du geste aux médias
 
-Les positions brutes sont lissées et filtrées, les gestes analysés, et classifieurs ou régresseurs apprennent à partir de quelques mouvements enregistrés ([gestes](https://ossia.io/score-docs/processes/gestures.html), [classifieur](https://ossia.io/score-docs/processes/classifier.html)).
-Le résultat pilote la synthèse et la spatialisation, les shaders, la 3D, la vidéo et la lumière DMX, ou sort de score en MIDI et en OSC pour d'autres logiciels ([tracking vers MIDI](https://ossia.io/score-docs/examples/ai/tracking-to-midi.html)).
+Les positions brutes sont lissées et filtrées, les gestes peuvent être analysés, et des classifieurs ou des régresseurs s'entraînent à partir de quelques mouvements enregistrés ([gestes](https://ossia.io/score-docs/processes/gestures.html), [classifieur](https://ossia.io/score-docs/processes/classifier.html)).
+Le résultat peut piloter la synthèse et la spatialisation, des shaders, de la 3D, de la vidéo et de la lumière DMX, ou être envoyé à d'autres logiciels sous forme de messages MIDI et OSC ([tracking vers MIDI](https://ossia.io/score-docs/examples/ai/tracking-to-midi.html)).
 
-Scènes, cues et déclencheurs donnent sa structure à la pièce. Le top peut venir du régisseur ou des interprètes eux-mêmes ([scènes](https://ossia.io/score-docs/common-practices/6-scenes.html), [cues](https://ossia.io/score-docs/cues.html)).
-En répétition, on modifie les correspondances pendant que la pièce tourne, et *Play from here* relance depuis n'importe quelle scène.
+## Structure de la pièce
 
-## En résumé
+Les scènes, les cues et les déclencheurs donnent sa structure à la pièce, et le top peut venir soit du régisseur, soit des interprètes eux-mêmes ([scènes](https://ossia.io/score-docs/common-practices/6-scenes.html), [cues](https://ossia.io/score-docs/cues.html)).
+En répétition, les correspondances peuvent être modifiées pendant que la pièce tourne, et *Play from here* permet de reprendre à n'importe quelle scène ; pour la tournée, les médias sont rassemblés dans le dossier du projet, et le spectacle tourne sur un ordinateur portable ou un Raspberry Pi, sous Windows, macOS ou Linux.
 
-<div class="comparison-scroll">
-<table class="comparison">
-<thead><tr><th>Vous voulez</th><th>Dans ossia score</th></tr></thead>
-<tbody>
-<tr><td>Suivre les interprètes sans leur poser de capteurs</td><td>Détection de pose avec une webcam, caméras de profondeur et systèmes de tracking.</td></tr>
-<tr><td>Une interaction qui se comporte pareil chaque soir</td><td>Des parties interactives dans des scènes et des cues, avec lissage, calibration et seuils.</td></tr>
-<tr><td>Le mouvement qui pilote son, vidéo et lumière ensemble</td><td>Un seul projet pour le son spatialisé, la vidéo, la 3D et le DMX, à partir des mêmes données.</td></tr>
-<tr><td>Un dispositif léger en tournée</td><td>Un ordinateur portable ou un Raspberry Pi, sous Windows, macOS ou Linux, avec les médias rassemblés dans le projet.</td></tr>
-</tbody>
-</table>
-</div>
-
-La [galerie](/gallery.html) présente d'autres pièces de danse et de théâtre, comme *Our Bodies Know More Than We Do* de Psʌnía, où les mouvements des interprètes pilotent le son et la lumière.
+D'autres pièces de danse et de théâtre sont présentées dans la [galerie](/gallery.html).

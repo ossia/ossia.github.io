@@ -2,7 +2,7 @@
 layout: use-case
 title: "OSC, MIDI, DMX and MQTT protocol bridge"
 headline: "A protocol bridge and control hub"
-subtitle: "MIDI, OSC, DMX, MQTT, serial, HTTP, WebSocket and Bluetooth LE in one place: convert messages from one to another, clean them up, and leave the bridge running."
+subtitle: "ossia score can be used to convert messages between MIDI, OSC, DMX, MQTT, serial, HTTP, WebSocket and Bluetooth LE devices, filter them, and keep the bridge running."
 permalink: /protocol-bridge.html
 translation: /fr/passerelle-protocoles.html
 category: site-score
@@ -10,38 +10,24 @@ description: "Free protocol converter and control hub: MIDI to OSC, OSC to DMX, 
 image: /assets/social/ossia-score-og.jpg
 ---
 
-Most setups mix equipment that speaks different languages: a MIDI controller, lights on Art-Net, sensors on serial or MQTT, software on OSC.
-In ossia score every device becomes a tree of parameters, and any parameter can drive any other.
+ossia score can be used as a bridge between equipment which uses different protocols, for instance a MIDI controller, lights over Art-Net, sensors over serial or MQTT and software over OSC: every device is represented as a tree of parameters, and any parameter can drive any other.
+In *VIB.E-MOTION* (Fheel Concepts and Corinne Linder, 2024), for example, the heart rates of the audience are measured by Bluetooth sensors and score handles the network and the sound of this participatory circus performance.
 
-## What it talks to
+## Protocols
 
-OSC over UDP, TCP, WebSocket and serial, and OSCQuery. MIDI, through virtual ports and the network ports your operating system provides. DMX in and out over Art-Net, sACN and USB interfaces. MQTT, CoAP, HTTP, WebSocket, serial, Bluetooth LE and LSL, and CAN bus data received on Linux ([devices](https://ossia.io/score-docs/devices.html)).
-Inputs also include PosiStageNet, RTTrP, OpenTrackIO and TUIO tracking, gamepads, Leap Motion and depth cameras, and Bitfocus Companion modules from the package manager drive AV equipment ([tracking](https://ossia.io/score-docs/devices/tracking-device.html), [Companion](https://ossia.io/score-docs/devices/companion-device.html)).
+score supports OSC over UDP, TCP, WebSocket and serial, and OSCQuery; MIDI, through virtual ports and the network ports provided by the operating system; DMX input and output over Art-Net, sACN and USB interfaces; as well as MQTT, CoAP, HTTP, WebSocket, serial, Bluetooth LE, LSL, and CAN bus data received on Linux ([devices](https://ossia.io/score-docs/devices.html)).
+The inputs also include the PosiStageNet, RTTrP, OpenTrackIO and TUIO tracking protocols, gamepads, Leap Motion and depth cameras, and AV equipment can be controlled through the Bitfocus Companion modules installed from the package manager ([tracking](https://ossia.io/score-docs/devices/tracking-device.html), [Companion](https://ossia.io/score-docs/devices/companion-device.html)).
 
 Devices with their own text or binary protocol are described in a short script, with SLIP, COBS, STX/ETX or size-prefix framing, over TCP, UDP, serial or Bluetooth ([QML protocols](https://ossia.io/score-docs/in-depth/qml-protocols.html)).
-OSC devices are found on the network through Bonjour/Zeroconf, OSCQuery devices can be browsed, and your own parameters are published the same way ([OSCQuery](https://ossia.io/score-docs/devices/oscquery-device.html)).
+OSC devices are discovered on the network through Bonjour/Zeroconf, OSCQuery devices can be browsed, and the parameters of a score can be published the same way ([OSCQuery](https://ossia.io/score-docs/devices/oscquery-device.html)).
 
 ## Mapping
 
-Connecting two parameters takes a curve and a range, no programming. Values can be scaled, smoothed and filtered (deadzone, noise gate, hysteresis, debounce), and several inputs can be combined into one ([mapping overview](https://ossia.io/score-docs/examples/data/mapping-overview.html), [value filter](https://ossia.io/score-docs/processes/value-filter.html)).
-An OSC address pattern sends one value to a whole group of parameters ([pattern matching](https://ossia.io/score-docs/in-depth/pattern-matching.html)).
+Connecting two parameters only requires a curve and a range: values can be scaled, smoothed and filtered (deadzone, noise gate, hysteresis, debounce), several inputs can be combined into one, and an OSC address pattern sends a value to a whole group of parameters ([mapping overview](https://ossia.io/score-docs/examples/data/mapping-overview.html), [value filter](https://ossia.io/score-docs/processes/value-filter.html), [pattern matching](https://ossia.io/score-docs/in-depth/pattern-matching.html)).
 
-For a bridge that runs all the time, the mapper device keeps working when no score is playing. Its mappings are written as JavaScript in a QML file ([mapper device](https://ossia.io/score-docs/devices/mapper-device.html)).
+For a bridge which must run permanently, the mapper device keeps working when no score is playing; its mappings are written in JavaScript in a QML file ([mapper device](https://ossia.io/score-docs/devices/mapper-device.html)).
 It runs headless on a PC or a Raspberry Pi, and device configurations can be exported and reused on another machine ([headless mode](https://ossia.io/score-docs/faq/nogui.html)).
 
 <picture><img src="/assets/features/mapper.webp" width="1600" height="760" loading="lazy" alt="The device setup window of ossia score with the protocol list on the left and the script of a mapper device binding a MIDI control to a new parameter"/></picture>
 
-## In short
-
-<div class="comparison-scroll">
-<table class="comparison">
-<thead><tr><th>You want</th><th>In ossia score</th></tr></thead>
-<tbody>
-<tr><td>A MIDI controller driving software that only speaks OSC, or the reverse</td><td>Drag a MIDI parameter onto an OSC one, with a curve and a range in between.</td></tr>
-<tr><td>Sensors on serial, MQTT or Bluetooth LE controlling lights or sound</td><td>All are devices in the same tree, mapped to DMX, OSC or score's own audio and video.</td></tr>
-<tr><td>To support a device with its own protocol</td><td>A short script describes it once; after that it behaves like any other device.</td></tr>
-<tr><td>A bridge that is always on</td><td>The mapper device, running without a score, headless on a Raspberry Pi.</td></tr>
-<tr><td>Timing as well as translation</td><td>The same project can delay, sequence and automate messages (see the <a href="/osc-midi-dmx-timeline.html">OSC, MIDI and DMX timeline</a>).</td></tr>
-</tbody>
-</table>
-</div>
+When messages also have to be delayed, sequenced or automated over time, the same project can do it (see the [OSC, MIDI and DMX timeline](/osc-midi-dmx-timeline.html) page).
