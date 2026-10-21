@@ -40,7 +40,7 @@ With your consent, the website uses **Google Analytics** (Google Ireland Limited
 
 ### Your choice, and changing your mind
 
-* The banner offers **Refuse all**, **Accept all** and **Customize**, with the same prominence. Closing the settings without saving changes nothing.
+* The banner offers **Refuse**, **Accept** and **Customize**, with the same prominence. **Accept** only enables audience statistics; ad measurement can only be enabled in the settings (**Customize**). Closing the settings without saving changes nothing.
 * Your choice, whether you accept or refuse, is remembered for **6 months** in your browser's local storage (`ossia-consent`: your choices and the date). It never leaves your browser. We then ask again, or earlier if the purposes change.
 * You can change your mind at any time with **Cookie settings** at the bottom of every page. If you withdraw your consent, the Google cookies are deleted and Google Analytics is no longer loaded.
 * If your browser sends the **Global Privacy Control** signal, we treat it as a refusal and do not show the banner.

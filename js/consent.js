@@ -1,7 +1,8 @@
 // Cookie consent for Google Analytics and Google Ads measurement.
 //
 // - Nothing is loaded before consent (Consent Mode "basic", see _includes/head.html).
-// - Refuse, accept and customize are equally prominent; the banner is not modal.
+// - Refuse, accept (visit statistics) and customize are equally prominent; the banner is
+//   not modal. Ad measurement is only enabled from the settings.
 // - The choice (accept or refuse) is kept 6 months, in this browser only.
 // - Global Privacy Control counts as a refusal: no banner, settings still available.
 // - "Cookie settings" in the footer reopens the choices; withdrawing deletes the cookies.
@@ -14,46 +15,47 @@
     ? {
         lang: 'fr',
         policyUrl: '/fr/confidentialite.html',
-        title: "Cookies et mesure d'audience",
-        text: "Avec votre accord, nous utilisons Google Analytics pour compter les visites et mesurer si les annonces gratuites que nous diffusons via Google Ad Grants, le programme de Google pour les organismes à but non lucratif, amènent des personnes vers ossia score. Des données sur votre visite sont alors transmises à Google. Rien n'est chargé si vous n'acceptez pas, et aucune publicité n'est personnalisée pour vous. Vous pouvez changer d'avis à tout moment via « Paramètres des cookies » en bas de chaque page.",
+        title: 'Cookies',
+        text: "Avec votre accord, nous comptons les visites avec Google Analytics ; sinon, rien n'est chargé.",
         policy: 'Politique de confidentialité',
-        refuse: 'Tout refuser',
-        accept: 'Tout accepter',
+        refuse: 'Refuser',
+        accept: 'Accepter',
         customize: 'Personnaliser',
+        refuseAll: 'Tout refuser',
+        acceptAll: 'Tout accepter',
         settings: 'Paramètres des cookies',
-        save: 'Enregistrer mes choix',
-        close: 'Fermer',
+        save: 'Enregistrer',
         stats: 'Statistiques de visite',
         statsDesc:
-          "Google Analytics compte les pages visitées, le pays approximatif, le navigateur et le type d'appareil, ainsi que les clics sur les téléchargements.",
+          "Google Analytics : pages visitées, pays approximatif, navigateur, type d'appareil, clics sur les téléchargements.",
         ads: 'Mesure des annonces',
         adsDesc:
-          "Indique à Google Ads quand une personne ayant cliqué sur l'une de nos annonces Ad Grants télécharge ossia score ou consulte une page importante. Nécessite les statistiques de visite.",
-        always:
-          'Toujours actif : la mémorisation de ce choix, stockée uniquement dans votre navigateur.',
-        who: 'Responsable : ossia.io, organisme à but non lucratif (France et Québec). Destinataire : Google (Irlande, États-Unis).',
+          "Indique à Google Ads quand une personne venue d'une de nos annonces télécharge ossia score. Nécessite les statistiques.",
+        always: 'Votre choix est conservé dans ce navigateur uniquement.',
+        who: 'Responsable : ossia.io. Destinataire : Google.',
         saved: 'Choix enregistré.'
       }
     : {
         lang: 'en',
         policyUrl: '/privacy.html',
-        title: 'Cookies and measurement',
-        text: 'With your permission, we use Google Analytics to count visits and to measure whether the free ads we run through Google Ad Grants, Google\'s program for non-profits, bring people to ossia score. This sends data about your visit to Google. Nothing is loaded unless you accept, and we never personalise ads for you. You can change your mind at any time with "Cookie settings" at the bottom of every page.',
+        title: 'Cookies',
+        text: 'With your consent, we count visits with Google Analytics. Nothing is loaded otherwise.',
         policy: 'Privacy policy',
-        refuse: 'Refuse all',
-        accept: 'Accept all',
+        refuse: 'Refuse',
+        accept: 'Accept',
         customize: 'Customize',
+        refuseAll: 'Refuse all',
+        acceptAll: 'Accept all',
         settings: 'Cookie settings',
-        save: 'Save my choices',
-        close: 'Close',
+        save: 'Save',
         stats: 'Audience statistics',
         statsDesc:
-          'Google Analytics counts pages visited, approximate country, browser and device type, and clicks on downloads.',
+          'Google Analytics: pages visited, approximate country, browser, device type, download clicks.',
         ads: 'Ad measurement',
         adsDesc:
-          'Lets Google Ads know when someone who clicked one of our Ad Grants ads downloads ossia score or visits a key page. Requires audience statistics.',
-        always: 'Always on: remembering this choice, stored only in your browser.',
-        who: 'Controller: ossia.io, a non-profit organisation (France and Québec). Recipient: Google (Ireland, USA).',
+          'Tells Google Ads when someone coming from one of our ads downloads ossia score. Requires audience statistics.',
+        always: 'Your choice is stored in this browser only.',
+        who: 'Controller: ossia.io. Recipient: Google.',
         saved: 'Choice saved.'
       };
 
@@ -145,8 +147,10 @@
     refuse.addEventListener('click', function () {
       apply(false, false);
     });
+    // The banner only describes visit statistics, so Accept only enables those;
+    // ad measurement is a separate choice in the settings.
     accept.addEventListener('click', function () {
-      apply(true, true);
+      apply(true, false);
     });
     custom.addEventListener('click', function () {
       openSettings(custom);
@@ -204,9 +208,9 @@
     who.appendChild(el('a', { href: T.policyUrl }, T.policy));
     dialog.appendChild(who);
     var row = el('div', { class: 'consent-buttons' });
-    var refuse = el('button', { type: 'button' }, T.refuse);
+    var refuse = el('button', { type: 'button' }, T.refuseAll);
     var save = el('button', { type: 'button' }, T.save);
-    var accept = el('button', { type: 'button' }, T.accept);
+    var accept = el('button', { type: 'button' }, T.acceptAll);
     refuse.addEventListener('click', function () {
       closeSettings();
       apply(false, false);

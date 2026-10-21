@@ -70,7 +70,8 @@
   <script>
 {% include consent-head.js %}
   </script>
-  <link rel="stylesheet" href="/css/consent.css" />
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
   <script defer src="/js/site.js"></script>
   <script defer src="/js/consent.js"></script>
 </head>
