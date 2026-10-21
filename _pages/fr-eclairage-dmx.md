@@ -2,8 +2,8 @@
 layout: use-case
 lang: fr
 title: "Logiciel DMX gratuit : lumière et médias en phase"
-headline: "Éclairage DMX et LED, synchronisés avec le son et la vidéo"
-subtitle: "Pilotez vos projecteurs en Art-Net, sACN et DMX USB, créez des effets de pixel mapping LED avec des shaders, et synchronisez le tout avec la musique, la vidéo et les capteurs sur une seule timeline. Libre et gratuit, sous Windows, macOS, Linux et Raspberry Pi."
+headline: "Éclairage DMX et LED"
+subtitle: "Des projecteurs en Art-Net, sACN et DMX USB, des rubans LED nourris par des shaders, et toute la lumière sur la même horloge que le son et la vidéo."
 permalink: /fr/eclairage-dmx.html
 translation: /dmx-lighting.html
 category: site-score
@@ -11,35 +11,42 @@ description: "Logiciel DMX libre pour Windows, macOS, Linux et Raspberry Pi : Ar
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score pilote directement projecteurs DMX et LED : il peut conduire toute la lumière d'un spectacle ou d'une installation, sur la même timeline que le son, la vidéo et l'interaction.
-Il convient au théâtre et à la danse, aux concerts, aux salles immersives, aux installations et à l'art lumineux, partout où la lumière doit suivre précisément les médias.
+ossia score pilote directement projecteurs DMX et LED : il peut conduire toute la lumière d'un spectacle ou d'une installation depuis la timeline qui joue aussi le son et la vidéo.
+C'est précieux partout où la lumière doit tomber pile avec les médias : théâtre et danse, concerts, salles immersives, installations, art lumineux.
 
-## Ce que vous pouvez faire
+## Les projecteurs
 
-- **Sortie DMX** en Art-Net, sACN et sur interfaces DMX USB, avec une bibliothèque de projecteurs issue de l'Open Fixture Library ([DMX](https://ossia.io/score-docs/devices/artnet-device.html)).
-- **Automatisez les paramètres des projecteurs** avec des courbes, mémorisez des états complets et passez de l'un à l'autre sur la timeline ([cues](https://ossia.io/score-docs/cues.html)).
-- **Pixel mapping LED** : générez des motifs avec des shaders ou des tableaux, et pilotez des rubans NeoPixel en SPI depuis un Raspberry Pi ([LED](https://ossia.io/score-docs/common-practices/13-led-design.html)).
-- **Son vers lumière** : pilotez la lumière depuis l'analyse audio, la détection de tempo ou le MIDI.
-- **Interactivité** : déclenchez et modifiez la lumière depuis des capteurs, des caméras, de l'OSC ou des contrôleurs MIDI.
-- **En autonomie** : fonctionnement sans interface sur un petit ordinateur ou un Raspberry Pi, avec démarrage automatique ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)).
-- **Des projecteurs détaillés** : canaux 16 bits, noms des roues de couleurs et de gobos, projecteurs à matrices LED, et création rapide de gradateurs et de PAR RGB.
-- **Des shaders vers les LED** : transformez n'importe quel shader en valeurs RGB ou RGBW dans l'ordre des canaux de votre ruban, prévisualisez-le, et envoyez des tableaux de couleurs vers des univers Art-Net de toute taille ([LED view](https://ossia.io/score-docs/processes/led-view.html), [appareil LED](https://ossia.io/score-docs/devices/led-device.html)).
-- **Interfaces DMX** comme les Enttec DMX USB Pro et Pro Mk2.
-- **Entrée DMX** : recevez et enregistrez de l'Art-Net et du sACN, puis rejouez-le ou transformez-le.
+La sortie passe par l'Art-Net, le sACN ou une interface DMX USB comme les Enttec DMX USB Pro et Pro Mk2. Les projecteurs viennent d'une bibliothèque issue de l'Open Fixture Library ([DMX](https://ossia.io/score-docs/devices/artnet-device.html)).
+Canaux 16 bits, roues de couleurs et de gobos nommées et projecteurs à matrices LED sont pris en charge, et un simple gradateur ou un PAR RGB s'ajoute en deux clics.
 
-## Les besoins de la lumière, et les réponses d'ossia score
+Chaque paramètre de projecteur reçoit une courbe d'automation. Les états complets se mémorisent en cues, et la timeline passe de l'un à l'autre en fondu ([cues](https://ossia.io/score-docs/cues.html)).
+Le DMX entre aussi : score reçoit et enregistre l'Art-Net et le sACN, pour le rejouer ou le transformer ensuite.
+
+## LED et pixels
+
+Les motifs LED se génèrent avec des shaders ou des tableaux. Le Lightness Computer transforme n'importe quel shader en valeurs RGB ou RGBW dans l'ordre des canaux de votre ruban, la LED view le prévisualise, et les couleurs partent vers des univers Art-Net de toute taille ([LED](https://ossia.io/score-docs/common-practices/13-led-design.html), [LED view](https://ossia.io/score-docs/processes/led-view.html)).
+Depuis un Raspberry Pi, les rubans NeoPixel se pilotent directement en SPI ([appareil LED](https://ossia.io/score-docs/devices/led-device.html)).
+
+<picture><img src="/assets/use-cases/led-shaders.webp" width="1200" height="581" loading="lazy" alt="Un patch ossia score où un shader de bruit passe par le Lightness computer vers un aperçu LED de 10 sur 10, puis vers l'Art-Net"/></picture>
+
+## Une lumière qui écoute
+
+La lumière peut suivre l'analyse audio, la détection de tempo ou le MIDI, et changer selon des capteurs, des caméras, de l'OSC ou des contrôleurs MIDI.
+Pour une installation permanente, score tourne sans interface sur un petit ordinateur ou un Raspberry Pi et démarre tout seul ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)).
+
+## En résumé
 
 <div class="comparison-scroll">
 <table class="comparison">
-<thead><tr><th>Ce dont vous avez besoin</th><th>Comment ossia score y répond</th></tr></thead>
+<thead><tr><th>Vous voulez</th><th>Dans ossia score</th></tr></thead>
 <tbody>
-<tr><td>Conduire la lumière d'un spectacle ou d'une installation, sans autre logiciel lumière</td><td>Le DMX directement depuis ossia score en Art-Net, sACN ou DMX USB, avec bibliothèque de projecteurs, cues et courbes.</td></tr>
-<tr><td>Une lumière précisément synchronisée avec le son et la vidéo</td><td>Lumière, son et vidéo partagent une timeline et une horloge.</td></tr>
-<tr><td>Des rubans LED et des effets de pixels</td><td>Motifs LED depuis des shaders ou des tableaux, et rubans NeoPixel en SPI depuis un Raspberry Pi.</td></tr>
-<tr><td>Une lumière qui réagit à la musique, aux capteurs ou aux interprètes</td><td>Analyse audio, détection de tempo, capteurs, caméras, OSC et MIDI pilotent n'importe quel paramètre de projecteur.</td></tr>
-<tr><td>Une installation permanente sur du petit matériel</td><td>Mode sans interface avec démarrage automatique, sur un mini-PC ou un Raspberry Pi.</td></tr>
+<tr><td>Conduire la lumière d'un spectacle sans autre logiciel</td><td>Le DMX directement depuis score en Art-Net, sACN ou DMX USB, avec bibliothèque de projecteurs, cues et courbes.</td></tr>
+<tr><td>Une lumière calée sur le son et la vidéo</td><td>Une timeline et une horloge pour les trois.</td></tr>
+<tr><td>Des rubans LED et des effets de pixels</td><td>Des motifs depuis des shaders ou des tableaux, et des rubans NeoPixel en SPI depuis un Raspberry Pi.</td></tr>
+<tr><td>Une lumière qui réagit à la musique ou aux interprètes</td><td>Analyse audio, détection de tempo, capteurs, caméras, OSC et MIDI sur n'importe quel paramètre.</td></tr>
+<tr><td>Une installation permanente sur du petit matériel</td><td>Mode sans interface avec démarrage automatique, sur mini-PC ou Raspberry Pi.</td></tr>
 </tbody>
 </table>
 </div>
 
-Pour recevoir de l'Art-Net, un seul logiciel par ordinateur peut écouter son port : si un autre logiciel reçoit aussi de l'Art-Net, utilisez des interfaces réseau ou des machines différentes. L'envoi n'est pas concerné.
+À savoir si un autre logiciel reçoit aussi de l'Art-Net sur le même ordinateur : un seul programme peut écouter le port Art-Net, donnez donc à chacun son interface réseau ou sa machine. L'envoi n'est pas concerné.
