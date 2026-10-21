@@ -11,7 +11,7 @@ description: "Residency for the use of ossia score for the Phonema band"
 ---
 
 <div class="videoWrapper">
-    <button type="button" class="video-facade" aria-label="Play the video: ossia score in the Phonemacore project (loads Vimeo)"><span class="video-facade-title">ossia score in the Phonemacore project</span><span class="video-facade-note">Play · loads Vimeo</span></button><template class="video-facade-embed"><iframe title="Video: ossia score in the Phonemacore project" loading="lazy" src="https://player.vimeo.com/video/458968225?dnt=1"  allow="fullscreen" allowfullscreen></iframe></template>
+    <button type="button" class="video-facade"><span class="video-facade-title">ossia score in the Phonemacore project</span><span class="video-facade-note">Play · loads Vimeo</span></button><template class="video-facade-embed"><iframe title="Video: ossia score in the Phonemacore project" loading="lazy" src="https://player.vimeo.com/video/458968225?dnt=1"  allow="fullscreen" allowfullscreen></iframe></template>
 </div>
 
 This year, in june, the band [Phonema](https://phonema.bandcamp.com) joined the SCRIME for one week of musical experimentation. The goal was to see how well ossia score would
