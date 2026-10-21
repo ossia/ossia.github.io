@@ -2,6 +2,8 @@ on:
   push:
     branches:
       - master
+  # Manual deploy, e.g. when GitHub drops a push event during an incident
+  workflow_dispatch:
 
 name: Master branch CI
 

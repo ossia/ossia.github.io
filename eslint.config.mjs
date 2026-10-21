@@ -6,6 +6,7 @@ export default [
   {
     ignores: [
       '_site/**',
+      '.claude/**',
       'node_modules/**',
       'vendor/**',
       'owlcarousel/**',
@@ -32,6 +33,7 @@ export default [
   },
   {
     files: ['.github/**/*.mjs', 'eslint.config.mjs'],
-    languageOptions: { sourceType: 'module', globals: { ...globals.node } }
+    // Node scripts; callbacks passed to page.evaluate() run in the browser
+    languageOptions: { sourceType: 'module', globals: { ...globals.node, ...globals.browser } }
   }
 ];
