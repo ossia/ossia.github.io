@@ -224,7 +224,6 @@
   credit: Brice Ammar-Khodja
   ossia: "score on Orange Pi + ESP32 for sound, light and scent"
   ossia_fr: "score sur Orange Pi + ESP32 pour le son, la lumière et les odeurs"
-  sat: true
   kind: [installation]
 
 - title: "Ballets Résiduels"
@@ -237,7 +236,6 @@
   credit: Diego Bravo
   ossia: "score on Raspberry Pi + ESP32 for sound, light and scent"
   ossia_fr: "score sur Raspberry Pi + ESP32 pour le son, la lumière et les odeurs"
-  sat: true
   kind: [performance, installation]
 
 - title: "[re]capture"
