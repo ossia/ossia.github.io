@@ -3,7 +3,7 @@ layout: score-feature
 title:  "Timing"
 
 noindex: true
-doclink: /in-depth/musical.html#timing
+doclink: /in-depth/musical.html#process-durations-and-the-time-chooser
 permalink: /score/features/timing.html
 category: "site-score"
 
