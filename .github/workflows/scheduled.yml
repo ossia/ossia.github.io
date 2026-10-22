@@ -30,17 +30,20 @@ jobs:
         run: |
           ./.github/scripts/check-downloads.sh _site/score/download.html
           ./.github/scripts/check-downloads.sh _site/site-libossia/download.html
+      # The documentation (/score-docs/) is another repository: its links are
+      # checked on the live site. GitHub line anchors (#L12) are added by
+      # JavaScript, and 418/5xx are temporary errors of external sites.
       - name: External links
         shell: bash
         run: |
           bundle exec htmlproofer ./_site \
             --checks Links \
-            --ignore-status-codes "403,429,999" \
+            --ignore-status-codes "403,418,429,500,502,503,504,999" \
             --no-enforce-https \
             --hydra '{"max_concurrency": 4}' \
             --typhoeus '{"followlocation": true, "connecttimeout": 20, "timeout": 30}' \
-            --ignore-urls "/^\/(score-web|ossia-docs|libossia\/)/,/^https:\/\/ossia\.io\/(score-web|ossia-docs|libossia\/)/,/web\.archive\.org/" \
-            --swap-urls "^https\://ossia\.io/(?!score-docs/|score-web|ossia-docs|libossia/):/" \
+            --ignore-urls "/^\/(score-web|ossia-docs|libossia\/)/,/^https:\/\/ossia\.io\/(score-web|ossia-docs|libossia\/)/,/web\.archive\.org/,/github\.com\/.*#L\d+/" \
+            --swap-urls "^https\://ossia\.io/(?!score-docs/|score-web|ossia-docs|libossia/):/,^/score-docs/:https\://ossia.io/score-docs/" \
             2>&1 | tee htmlproofer.log
       - name: Open or update an issue
         if: failure()

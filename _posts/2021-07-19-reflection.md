@@ -98,7 +98,7 @@ gPropertySuite->propSetDouble(paramProps, kOfxParamPropDisplayMax, 0, 10.0);
 {% endhighlight %}
 
 Hopefully you don't forget all the incantations's updates when you decide that this control would indeed be better as an integer !
-* A very good example is the [1€ filter](https://cristal.univ-lille.fr/~casiez/1euro/) input filtering algorithm. The actual algorithm can fit in a few dozen lines. The [Unreal Engine binding](https://github.com/DarioMazzanti/OneEuroFilterUnreal) is almost 600 lines !
+* A very good example is the [1€ filter](https://gery.casiez.net/1euro/) input filtering algorithm. The actual algorithm can fit in a few dozen lines. The [Unreal Engine binding](https://github.com/DarioMazzanti/OneEuroFilterUnreal) is almost 600 lines !
 * Things like [iPlug](https://github.com/iPlug2/iPlug2/blob/master/Examples/IPlugEffect/IPlugEffect.cpp#L8) are a bit more sane, but we still have to triplicate our parameter creation / access: in an enum in the hpp, in the constructor and finally in `ProcessBlock` where we get the actual value. This is still a whole lot of work versus **JUST ACCESSING A FLOAT IN A STRUCT !!11!1!!**
 * A Krita [plug-in for noise generation](https://github.com/KDE/krita/blob/master/plugins/generators/simplexnoise/simplexnoisegenerator.cpp#L62) -- here Qt's QObject run-time property system is used to declare and use the algorithm controls. That also means inheriting from Qt's QObject, which has a non-negligible memory cost.
 * Wanna receive messages through OSC ? [Make the exceptions rain !](https://github.com/RossBencina/oscpack/blob/master/examples/SimpleReceive.cpp)
