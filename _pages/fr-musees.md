@@ -37,4 +37,4 @@ Lorsqu'un dispositif a besoin de son propre écran tactile, il peut être empaqu
 Les outils de projet rassemblent tous les médias dans le dossier du projet, signalent les fichiers manquants et produisent une archive zip de l'ensemble, ce qui permet de transmettre un dispositif à une autre équipe ([fichiers de projet](https://ossia.io/score-docs/reference/project-files.html)) ; le même projet s'ouvre sur tous les systèmes d'exploitation.
 Le son, la vidéo, la lumière et les accessoires sont sur la même timeline, avec des cues et des scènes, le matériel audiovisuel peut être piloté par les modules Bitfocus Companion installés depuis le gestionnaire de paquets, et les visiteurs peuvent interagir par des boutons, des capteurs, des caméras et des caméras de profondeur ([cues](https://ossia.io/score-docs/cues.html), [scènes](https://ossia.io/score-docs/common-practices/6-scenes.html)).
 
-Dans la [galerie](/gallery.html), le filtre « Museums » présente les dispositifs muséaux réalisés avec ossia.
+Dans la [galerie](/fr/galerie.html), le filtre « Museums » présente les dispositifs muséaux réalisés avec ossia.

@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/loop.png
 description: "Creating loops"
+title_fr: "Boucles"
+description_fr: "Créer des boucles"
 
 tag: "Structure"
 visible: true

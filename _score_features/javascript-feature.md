@@ -9,6 +9,8 @@ category: "site-score"
 
 image: "/assets/features/js.webp"
 description: "Writing JavaScript processes"
+title_fr: "Javascript"
+description_fr: "Écrire des processus JavaScript"
 
 tag: "Scripting"
 visible: true

@@ -9,6 +9,8 @@ category: "site-score"
 
 image: "/assets/features/shader.webp"
 description: "Using and writing ISF shader effects"
+title_fr: "Shaders"
+description_fr: "Utiliser et écrire des effets de shaders ISF"
 
 tag: "Graphics"
 visible: true

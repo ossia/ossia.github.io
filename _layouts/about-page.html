@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+{%- include i18n.html -%}
 
 <article id="main">
     <header class="container" style="padding-top: 6em;text-align:center;">
     
     <div class="menu">
-            <a href="/about.html" class="menu-item" ><span class="icon-svg icon-about"></span>About ossia</a>
-            <a href="/project.html" class="menu-item"><span class="icon-svg icon-feature"></span>Project</a>
+            <a href="{% include translated-url.html ref="about" %}" class="menu-item{% if page.ref == 'about' %} active{% endif %}"><span class="icon-svg icon-about"></span>{{ t.about_menu.about | default: t_en.about_menu.about }}</a>
+            <a href="{% include translated-url.html ref="project" %}" class="menu-item{% if page.ref == 'project' %} active{% endif %}"><span class="icon-svg icon-feature"></span>{{ t.about_menu.project | default: t_en.about_menu.project }}</a>
     </div>
     <!--
     <h1 class="page-title">{{page.title}}</h1>-->
@@ -18,9 +19,3 @@ layout: default
         {{ content }}
     </section>
 </article>
-    
-<script>
-for (const a of document.querySelectorAll('.menu a')) {
-    if (a.textContent === {{ page.title | jsonify }}) { a.classList.add('active'); break; }
-}
-</script>

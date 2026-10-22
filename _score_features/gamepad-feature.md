@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/gamepad.avif
 description: "Using gamepads and wiimotes in a score"
+title_fr: "Manettes de jeu"
+description_fr: "Utiliser des manettes de jeu et des Wiimotes dans une partition"
 
 tag: "Interoperability"
 visible: true

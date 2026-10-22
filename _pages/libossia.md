@@ -3,6 +3,7 @@ layout: page
 title:  "About libossia"
 
 permalink: /site-libossia/about.html
+ref: libossia
 category: site-libossia
 description: "libossia is a modern C++ library for OSC, OSCQuery, MIDI and more, with bindings for Max, PureData, Unity, Python, SuperCollider and others."
 ---
@@ -47,50 +48,4 @@ The source code is hosted on <a href="https://github.com/ossia/libossia" target=
 
 libossia is distributed under the terms of the CeCILL-C license and of the LGPLv3 license.
 
-<h2 class="page-title" style="text-align:center;">Features</h2>
-
-{% assign rawcats = "" %}
-{% for post in site.libossia_features %}
-{% assign tcats = post.tag | join:'|' | append:'|' %}
-{% assign rawcats = rawcats | append:tcats %}
-{% endfor %}
-
-{% assign rawcats = rawcats | split:'|' | sort %}
-
-{% assign cats = "" %}
-
-{% for cat in rawcats %}
-{% if cat != "" %}
-
-{% if cats == "" %}
-{% assign cats = cat | split:'|' %}
-{% endif %}
-
-{% unless cats contains cat %}
-{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
-{% endunless %}
-{% endif %}
-{% endfor %}
-
-<h1> Important: the documentation below is a work-in-progress. </h1>
-
-
-<div>
-    {% for ct in cats %}
-         <h2 class="feature-title">{{ ct }}</h2>
-         <div class="features-list">
-        {% for post in site.libossia_features %}
-                <a href="{{post.url}}" class="thumbnail">
-                    {% if post.image %}<img loading="lazy" class="thumbnail-feature-libossia" src="{{post.image}}" alt="" />{% endif %}
-                    <h3 class="blog-title">{{post.title}} </h3>
-                    <span class="feature-description">{{post.description}}</span>
-                </a>
-        {% endfor %}
-        </div>
-
-    {% endfor %}
-</div>
-
-
-
-
+{% include libossia-features.html %}

@@ -9,6 +9,8 @@ category: "site-score"
 
 image: "/assets/features/controls.webp"
 description: "UI controls"
+title_fr: "Interface utilisateur"
+description_fr: "Contrôles de l'interface"
 
 tag: "Software model"
 visible: true

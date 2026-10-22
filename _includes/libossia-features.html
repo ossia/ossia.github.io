@@ -1,0 +1,48 @@
+{%- include i18n.html -%}
+{%- assign title_key = "title_" | append: lang -%}
+{%- assign description_key = "description_" | append: lang -%}
+{%- assign tag_key = "tag_" | append: lang -%}
+<h2 class="page-title" style="text-align:center;">{{ t.libossia_page.features | default: t_en.libossia_page.features }}</h2>
+
+{% assign rawcats = "" %}
+{% for post in site.libossia_features %}
+{% assign tcats = post.tag | join:'|' | append:'|' %}
+{% assign rawcats = rawcats | append:tcats %}
+{% endfor %}
+
+{% assign rawcats = rawcats | split:'|' | sort %}
+
+{% assign cats = "" %}
+
+{% for cat in rawcats %}
+{% if cat != "" %}
+
+{% if cats == "" %}
+{% assign cats = cat | split:'|' %}
+{% endif %}
+
+{% unless cats contains cat %}
+{% assign cats = cats | join:'|' | append:'|' | append:cat | split:'|' %}
+{% endunless %}
+{% endif %}
+{% endfor %}
+
+<h1> {{ t.libossia_page.wip | default: t_en.libossia_page.wip }} </h1>
+
+
+<div>
+    {% for ct in cats %}
+         {%- assign tag_post = site.libossia_features | where: "tag", ct | first -%}
+         <h2 class="feature-title">{{ tag_post[tag_key] | default: ct }}</h2>
+         <div class="features-list">
+        {% for post in site.libossia_features %}
+                <a href="{{post.url}}" class="thumbnail">
+                    {% if post.image %}<img loading="lazy" class="thumbnail-feature-libossia" src="{{post.image}}" alt="" />{% endif %}
+                    <h3 class="blog-title">{{ post[title_key] | default: post.title }} </h3>
+                    <span class="feature-description">{{ post[description_key] | default: post.description }}</span>
+                </a>
+        {% endfor %}
+        </div>
+
+    {% endfor %}
+</div>

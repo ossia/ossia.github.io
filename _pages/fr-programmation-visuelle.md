@@ -43,4 +43,4 @@ Les classifieurs et régresseurs s'entraînent à partir de quelques exemples en
 
 Les interfaces s'écrivent en QML avec les widgets de score, et un projet terminé peut être empaqueté en application autonome ([interfaces personnalisées](https://ossia.io/score-docs/custom-ui.html), [applications](https://ossia.io/score-docs/development/custom-apps.html)) ; l'éditeur dispose lui-même d'une trentaine de thèmes, dont certains adaptés au daltonisme et à fort contraste.
 
-score est libre (GPLv3), et grâce à [libossia](/site-libossia/about.html), les patchs Max et Pure Data comme les programmes openFrameworks, Processing, Unity ou Python peuvent lui exposer leurs paramètres.
+score est libre (GPLv3), et grâce à [libossia](/fr/libossia.html), les patchs Max et Pure Data comme les programmes openFrameworks, Processing, Unity ou Python peuvent lui exposer leurs paramètres.

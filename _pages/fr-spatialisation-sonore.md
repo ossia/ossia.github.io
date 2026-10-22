@@ -35,4 +35,4 @@ Lorsqu'un lieu dispose déjà d'un moteur de spatialisation, score lui envoie le
 Les sources peuvent aussi suivre des personnes et des objets via des systèmes de tracking (PosiStageNet, RTTrP, OpenTrackIO), des caméras de profondeur ou n'importe quel capteur, et la vidéo, la 3D et la lumière restent synchronisées avec le son puisqu'elles font partie du même projet ([guide de spatialisation](https://ossia.io/score-docs/common-practices/14-spatial-audio.html)).
 Pour les installations multicanales permanentes, score fonctionne sans interface avec lecture automatique, sur un PC ou un Raspberry Pi.
 
-D'autres œuvres spatialisées sont présentées dans la [galerie](/gallery.html).
+D'autres œuvres spatialisées sont présentées dans la [galerie](/fr/galerie.html).

@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/nesting.png
 description: "Nesting scores with the scenario process"
+title_fr: "Imbrication"
+description_fr: "Imbriquer des partitions avec le processus Scenario"
 
 tag: "Structure"
 visible: true

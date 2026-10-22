@@ -1,13 +1,16 @@
 ---
 layout: libossia-feature
 title:  "SuperCollider bindings"
+title_fr: "Bindings SuperCollider"
 
 permalink: /site-libossia/features/supercollider.html
 category: "site-libossia"
 image: /assets/logo/supercollider-logo.png
 description: "Using libossia with SuperCollider"
+description_fr: "Utiliser libossia avec SuperCollider"
 
 tag: "Bindings"
+tag_fr: "Bindings"
 visible: true
 ---
 

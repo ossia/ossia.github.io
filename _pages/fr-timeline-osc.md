@@ -48,4 +48,4 @@ score dispose des mêmes fonctions sous Windows, macOS, Linux et sur Raspberry P
 
 ## Avec vos propres logiciels
 
-score gère nativement OSCQuery grâce à [libossia](/site-libossia/about.html), qui existe aussi pour Max/MSP, Pure Data, Unity, Python, SuperCollider, openFrameworks et Qt : il suffit d'ajouter quelques objets à un patch ou à un projet pour que ses paramètres apparaissent dans score.
+score gère nativement OSCQuery grâce à [libossia](/fr/libossia.html), qui existe aussi pour Max/MSP, Pure Data, Unity, Python, SuperCollider, openFrameworks et Qt : il suffit d'ajouter quelques objets à un patch ou à un projet pour que ses paramètres apparaissent dans score.

@@ -1,13 +1,16 @@
 ---
 layout: libossia-feature
 title:  "Qt / QML bindings"
+title_fr: "Bindings Qt / QML"
 
 permalink: /site-libossia/features/qml.html
 category: "site-libossia"
 image: /assets/logo/qt-logo.png
 description: "Using libossia with QML"
+description_fr: "Utiliser libossia avec QML"
 
 tag: "Bindings"
+tag_fr: "Bindings"
 visible: true
 ---
 

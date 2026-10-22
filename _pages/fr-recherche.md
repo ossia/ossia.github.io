@@ -13,7 +13,7 @@ description: "Logiciel libre pour la recherche : LSL, données HDF5 et CSV, soni
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score est issu de recherches menées au LaBRI et au SCRIME ([historique du projet](/project.html)), et peut être utilisé pour relier du matériel scientifique et des jeux de données au son, à la vidéo et à la lumière, que ce soit pour des expériences, pour de la sonification, ou pour des œuvres réalisées à partir de données physiologiques.
+ossia score est issu de recherches menées au LaBRI et au SCRIME ([historique du projet](/fr/projet.html)), et peut être utilisé pour relier du matériel scientifique et des jeux de données au son, à la vidéo et à la lumière, que ce soit pour des expériences, pour de la sonification, ou pour des œuvres réalisées à partir de données physiologiques.
 Le BioSynth light show d'Erin Gee (2025) pilote par exemple des LED et de la lumière DMX à partir de biosignaux, score fonctionnant sans interface sur un Raspberry Pi, et dans *VIB.E-MOTION* (Fheel Concepts et Corinne Linder, 2024), un spectacle de cirque participatif est piloté par le rythme cardiaque du public.
 
 <picture><img src="/assets/gallery/erin-show.webp" width="540" height="456" loading="lazy" alt="Une personne portant un casque de capteurs debout à une table devant une grande projection, tandis que le public est allongé au sol parmi des tubes LED lumineux"/></picture>

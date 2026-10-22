@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/graph.png
 description: "Creating state machines and graphs"
+title_fr: "Graphes"
+description_fr: "Créer des machines à états et des graphes"
 
 tag: "Structure"
 visible: true

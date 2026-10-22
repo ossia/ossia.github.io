@@ -1,21 +1,27 @@
 {%- comment -%} Labels from _data/i18n (lang, t and t_en are set by _includes/i18n.html, in head.html) {%- endcomment -%}
 {%- capture use_cases_url -%}{% include translated-url.html ref="use-cases" %}{%- endcapture -%}
+{%- capture home_url -%}{% include translated-url.html ref="home" %}{%- endcapture -%}
+{%- capture score_url -%}{% include translated-url.html ref="score" %}{%- endcapture -%}
+{%- capture libossia_url -%}{% include translated-url.html ref="libossia" %}{%- endcapture -%}
+{%- capture docs_url -%}{% include translated-url.html ref="docs" %}{%- endcapture -%}
+{%- capture gallery_url -%}{% include translated-url.html ref="gallery" %}{%- endcapture -%}
+{%- capture about_url -%}{% include translated-url.html ref="about" %}{%- endcapture -%}
 {%- capture download_url -%}{% include translated-url.html ref="download" %}{%- endcapture -%}
 <header id="header">
 	<nav id="nav" aria-label="{{ t.nav.main | default: t_en.nav.main }}" style="vertical-align: middle; ">
         <div id="ossia-logo-header" style="margin-left: 1em;" >
-            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
-                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="{{ home_url }}">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="{{ t.nav.logo_alt | default: t_en.nav.logo_alt }}"/>
                 <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
             </a>
         </div>
         <div class="cat" style="flex-grow:1;">
-            <a href="/score/about.html" data-cat="site-score">{{ t.nav.score | default: t_en.nav.score }}</a>
-			<a href="/site-libossia/about.html" data-cat="site-libossia">{{ t.nav.libossia | default: t_en.nav.libossia }}</a>
-			<a href="/docs.html" data-cat="site-docs">{{ t.nav.docs | default: t_en.nav.docs }}</a>
-            <a href="/gallery.html" data-cat="site-gallery">{{ t.nav.gallery | default: t_en.nav.gallery }}</a>
+            <a href="{{ score_url }}" data-cat="site-score">{{ t.nav.score | default: t_en.nav.score }}</a>
+			<a href="{{ libossia_url }}" data-cat="site-libossia">{{ t.nav.libossia | default: t_en.nav.libossia }}</a>
+			<a href="{{ docs_url }}" data-cat="site-docs">{{ t.nav.docs | default: t_en.nav.docs }}</a>
+            <a href="{{ gallery_url }}" data-cat="site-gallery">{{ t.nav.gallery | default: t_en.nav.gallery }}</a>
             <a href="{{ use_cases_url }}">{{ t.nav.use_cases | default: t_en.nav.use_cases }}</a>
-			<a href="/about.html" data-cat="site-about">{{ t.nav.about | default: t_en.nav.about }}</a>
+			<a href="{{ about_url }}" data-cat="site-about">{{ t.nav.about | default: t_en.nav.about }}</a>
         </div>
         <div>
              <a href="{{ download_url }}">{{ t.nav.download | default: t_en.nav.download }}</a>
@@ -31,13 +37,13 @@
 </div>
 <div id="topPanel">
     <nav aria-label="{{ t.nav.main_mobile | default: t_en.nav.main_mobile }}">
-        <a class="link" href="/">ossia</a>
-        <a class="link" href="/score/about.html">{{ t.nav.score | default: t_en.nav.score }}</a>
-        <a class="link" href="/site-libossia/about.html">{{ t.nav.libossia | default: t_en.nav.libossia }}</a>
-        <a class="link" href="/docs.html">{{ t.nav.docs | default: t_en.nav.docs }}</a>
-        <a class="link" href="/gallery.html">{{ t.nav.gallery | default: t_en.nav.gallery }}</a>
+        <a class="link" href="{{ home_url }}">ossia</a>
+        <a class="link" href="{{ score_url }}">{{ t.nav.score | default: t_en.nav.score }}</a>
+        <a class="link" href="{{ libossia_url }}">{{ t.nav.libossia | default: t_en.nav.libossia }}</a>
+        <a class="link" href="{{ docs_url }}">{{ t.nav.docs | default: t_en.nav.docs }}</a>
+        <a class="link" href="{{ gallery_url }}">{{ t.nav.gallery | default: t_en.nav.gallery }}</a>
         <a class="link" href="{{ use_cases_url }}">{{ t.nav.use_cases | default: t_en.nav.use_cases }}</a>
-        <a class="link" href="/about.html">{{ t.nav.about | default: t_en.nav.about }}</a>
+        <a class="link" href="{{ about_url }}">{{ t.nav.about | default: t_en.nav.about }}</a>
         <a class="link" href="{{ download_url }}">{{ t.nav.download | default: t_en.nav.download }}</a>
         <a class="link" href="https://opencollective.com/ossia" target="_blank">{{ t.nav.donate | default: t_en.nav.donate }}</a>
         {% include language-menu.html mobile=true %}

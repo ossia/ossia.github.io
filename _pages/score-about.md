@@ -3,6 +3,7 @@ layout: page-with-background
 title:  "About ossia score"
 
 permalink: /score/about.html
+ref: score
 category: "site-score"
 description: "Features of ossia score: timeline and nodal editing, OSC, OSCQuery, MIDI, DMX, audio, video, shaders, scripting and interactive scenarios."
 ---
@@ -34,29 +35,4 @@ You can fund the development of ossia on [OpenCollective](https://opencollective
 
 
 
-{% assign cats = "Structure|Audio|Controls|Graphics|Interoperability|Presentation|Scripting|Software model" | split: '|' %}
-
-<div>
-    {% for ct in cats %}
-         <h2 class="feature-title">{{ ct }}</h2>
-         <div class="features-list">
-        {% for post in site.score_features %}
-            {% if post.tag contains ct %}
-            {% if post.visible %}
-                <a href="https://ossia.io/score-docs{{post.doclink}}" class="thumbnail dark" >
-                    <h3 class="blog-title" style="margin-bottom: 0.4em;">{{post.title}}</h3>
-                    {% if post.image contains ".avif" %}
-                    <picture><source type="image/avif" srcset="{{post.image}}"><img class="thumbnail-feature" src="{{ post.image | replace: '.avif', '.webp' }}" alt="{{post.title}}" loading="lazy"/></picture>
-                    {% else %}
-                    <img class="thumbnail-feature" src="{{post.image}}" alt="{{post.title}}" loading="lazy"/>
-                    {% endif %}
-                    <span class="feature-description">{{post.description}}</span>
-                </a>
-            {% endif %}
-            {% endif %}
-        {% endfor %}
-        </div>
-    {% endfor %}
-</div>
-
-
+{% include score-features-grid.html %}

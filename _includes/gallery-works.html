@@ -1,0 +1,121 @@
+{%- comment -%}
+Body of the gallery page (/gallery.html, /fr/galerie.html): cards, filters,
+"More works" table. Interface strings come from `gallery:` in _data/i18n;
+the text of each work from _data/gallery.yml, with the `<field>_<lang>`
+variant (ossia_fr, place_fr...) when it exists.
+{%- endcomment -%}
+{%- include i18n.html -%}
+{%- assign g = t.gallery -%}
+{%- assign g_en = t_en.gallery -%}
+{%- assign k_title = "title_" | append: lang -%}
+{%- assign k_artists = "artists_" | append: lang -%}
+{%- assign k_place = "place_" | append: lang -%}
+{%- assign k_ossia = "ossia_" | append: lang -%}
+{%- assign k_award = "award_" | append: lang -%}
+{%- assign k_label = "label_" | append: lang -%}
+{%- assign alt_pattern = g.alt | default: g_en.alt -%}
+{%- capture sat_line -%}{{ g.sat | default: g_en.sat }} <a href="https://sat.qc.ca">SAT</a>{%- endcapture -%}
+{%- assign works = site.data.gallery -%}
+{%- assign with_image = works | where_exp: "w", "w.image" -%}
+{%- assign without_image = works | where_exp: "w", "w.image == nil" -%}
+<link rel="stylesheet" href="/css/gallery.css" />
+
+<section class="g2">
+
+<p class="g2-intro">{{ g.intro | default: g_en.intro }}</p>
+
+<div class="g2-filters" role="group" aria-label="{{ g.filter_label | default: g_en.filter_label }}">
+    <button type="button" class="g2-filter is-active" data-filter="all" aria-pressed="true">{{ g.filters.all | default: g_en.filters.all }}</button>
+    <button type="button" class="g2-filter" data-filter="installation" aria-pressed="false">{{ g.filters.installation | default: g_en.filters.installation }}</button>
+    <button type="button" class="g2-filter" data-filter="performance" aria-pressed="false">{{ g.filters.performance | default: g_en.filters.performance }}</button>
+    <button type="button" class="g2-filter" data-filter="stage" aria-pressed="false">{{ g.filters.stage | default: g_en.filters.stage }}</button>
+    <button type="button" class="g2-filter" data-filter="museum" aria-pressed="false">{{ g.filters.museum | default: g_en.filters.museum }}</button>
+    <button type="button" class="g2-filter" data-filter="education" aria-pressed="false">{{ g.filters.education | default: g_en.filters.education }}</button>
+</div>
+
+<div class="g2-grid">
+{%- for w in with_image %}
+    {%- assign title = w[k_title] | default: w.title -%}
+    {%- assign artists = w[k_artists] | default: w.artists -%}
+    {%- assign place = w[k_place] | default: w.place -%}
+    {%- assign ossia = w[k_ossia] | default: w.ossia -%}
+    {%- assign award = w[k_award] | default: w.award -%}
+    {%- assign alt = alt_pattern | replace: "%title%", title | replace: "%artists%", artists %}
+    <article class="g2-card{% if w.featured %} g2-card--wide{% endif %}" data-kind="{{ w.kind | join: ' ' }}">
+        {%- if w.url %}<a class="g2-media" href="{{ w.url }}" tabindex="-1" aria-hidden="true">{% else %}<div class="g2-media">{% endif %}
+            <img src="/assets/gallery/{{ w.image | uri_escape }}" alt="{{ alt | escape }}" {% if forloop.index <= 4 %}{% if forloop.first %}fetchpriority="high" {% endif %}{% else %}loading="lazy" {% endif %}decoding="async" />
+            {%- if award %}<span class="g2-award">{{ award }}</span>{% endif %}
+            {%- if w.credit %}<span class="g2-credit">&copy; {{ w.credit }}</span>{% endif %}
+        {%- if w.url %}</a>{% else %}</div>{% endif %}
+        <div class="g2-body">
+            <h2 class="g2-title">{% if w.url %}<a href="{{ w.url }}">{{ title }}</a>{% else %}{{ title }}{% endif %}</h2>
+            <p class="g2-artists">{{ artists }}</p>
+            {%- if w.year or place %}
+            <p class="g2-meta">{{ w.year }}{% if w.year and place %} · {% endif %}{{ place }}</p>
+            {%- endif %}
+            {%- if ossia %}
+            <p class="g2-ossia">{{ ossia }}</p>
+            {%- endif %}
+            {%- if w.sat %}
+            <p class="g2-sat">{{ sat_line }}</p>
+            {%- endif %}
+            {%- if w.links %}
+            <p class="g2-links">{% for l in w.links %}<a href="{{ l.url }}">{{ l[k_label] | default: l.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
+            {%- endif %}
+        </div>
+    </article>
+{%- endfor %}
+</div>
+
+<h2 class="g2-heading">{{ g.more | default: g_en.more }}</h2>
+
+{%- assign h_year = g.table.year | default: g_en.table.year -%}
+{%- assign h_work = g.table.work | default: g_en.table.work -%}
+{%- assign h_artists = g.table.artists | default: g_en.table.artists -%}
+{%- assign h_where = g.table.where | default: g_en.table.where -%}
+{%- assign h_ossia = g.table.ossia | default: g_en.table.ossia %}
+
+<table class="g2-table">
+    <thead>
+        <tr><th>{{ h_year }}</th><th>{{ h_work }}</th><th>{{ h_artists }}</th><th>{{ h_where }}</th><th>{{ h_ossia }}</th></tr>
+    </thead>
+    <tbody>
+    {%- for w in without_image %}
+        {%- assign title = w[k_title] | default: w.title -%}
+        {%- assign artists = w[k_artists] | default: w.artists -%}
+        {%- assign place = w[k_place] | default: w.place -%}
+        {%- assign ossia = w[k_ossia] | default: w.ossia -%}
+        {%- assign award = w[k_award] | default: w.award %}
+        <tr data-kind="{{ w.kind | join: ' ' }}">
+            <td data-label="{{ h_year }}">{{ w.year }}</td>
+            <td data-label="{{ h_work }}" class="g2-table-title">{% if w.url %}<a href="{{ w.url }}">{{ title }}</a>{% else %}{{ title }}{% endif %}{% if award %}<br/><span class="g2-table-award">{{ award }}</span>{% endif %}</td>
+            <td data-label="{{ h_artists }}">{{ artists }}{% if w.sat %}<br/><span class="g2-table-sat">{{ sat_line }}</span>{% endif %}</td>
+            <td data-label="{{ h_where }}">{{ place }}</td>
+            <td data-label="{{ h_ossia }}">{{ ossia }}</td>
+        </tr>
+    {%- endfor %}
+    </tbody>
+</table>
+
+</section>
+
+<script>
+(function () {
+    var buttons = document.querySelectorAll('.g2-filter');
+    var items = document.querySelectorAll('.g2-card, .g2-table tbody tr');
+    buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+            var f = b.dataset.filter;
+            buttons.forEach(function (o) {
+                var on = o === b;
+                o.classList.toggle('is-active', on);
+                o.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+            items.forEach(function (el) {
+                var kinds = (el.dataset.kind || '').split(' ');
+                el.hidden = f !== 'all' && kinds.indexOf(f) === -1;
+            });
+        });
+    });
+})();
+</script>

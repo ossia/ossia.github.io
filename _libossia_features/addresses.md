@@ -1,12 +1,15 @@
 ---
 layout: score-feature
 title:  "Addresses"
+title_fr: "Adresses"
 
 permalink: /score/features/addresses.html
 category: "site-score"
 description: "How addresses work in score and libossia"
+description_fr: "Fonctionnement des adresses dans score et libossia"
 
 tag: "Protocols"
+tag_fr: "Protocoles"
 visible: true
 ---
 

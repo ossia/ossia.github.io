@@ -14,6 +14,17 @@
 #   kind                    list of: installation, performance, stage, museum, education
 #   featured                true: double-width card
 #   sat                     true: made in collaboration with SAT (Société des arts technologiques)
+#
+# French page (/fr/galerie.html): add a field with the `_fr` suffix next to
+# the English one when the English text needs translating; without it the
+# English text is shown.
+#   ossia_fr                what ossia did in the work
+#   award_fr                award line
+#   place_fr                only when the place name differs in French (cities, countries, "residency"...)
+#   artists_fr              only when the line has English words ("in collaboration with", "music by"...)
+#   title_fr                only for descriptive titles, never for the title of a work
+#   label_fr                in a `links` entry, when the label is a generic word
+# Names of works, people, companies and software are not translated.
 
 - title: "EarthBound Futures"
   artists: "EarthBound Futures"
@@ -23,23 +34,28 @@
   image: earthbound-futures.webp
   credit: Charles Bicari
   ossia: "Show control for a live performance mixing wrestling, music and theatre"
+  ossia_fr: "Régie d'une performance live mêlant catch, musique et théâtre"
   kind: [performance, stage]
 
 - title: "The Most Dangerous Games We (Might) Play"
   artists: "Éva B.Csonka, in collaboration with Pía Baltazar"
+  artists_fr: "Éva B.Csonka, en collaboration avec Pía Baltazar"
   year: "2026"
   place: "EMAP residency, iMAL, Brussels"
+  place_fr: "Résidence EMAP, iMAL, Bruxelles"
   url: https://www.imal.org/fr/events/eva-pia
   image: csonka-dangerous-games.webp
   kind: [performance]
 
 - title: "Reflet"
   artists: "Noukii (Anouk Ethier), Isabella Salas, Allison Moore, with RE-AK and Gradiant"
+  artists_fr: "Noukii (Anouk Ethier), Isabella Salas, Allison Moore, avec RE-AK et Gradiant"
   year: "2025–2026"
   place: "SAT, Montréal"
   image: reflet.webp
   credit: Agustina Isidori
   ossia: "Show logic and real-time generative imagery with custom generative models"
+  ossia_fr: "Logique du spectacle et images génératives en temps réel avec des modèles génératifs sur mesure"
   sat: true
   kind: [installation]
 
@@ -52,6 +68,7 @@
       url: https://indistinctvoices.bandcamp.com/album/constant-points-of-data
   image: constant-points-of-data.webp
   ossia: "ossia score with Ableton Live and Max/Jitter, for turntablism and elastic tempo manipulation in an audiovisual performance"
+  ossia_fr: "ossia score avec Ableton Live et Max/Jitter, pour du turntablism et une manipulation élastique du tempo dans une performance audiovisuelle"
   kind: [performance]
 
 - title: "flux opératoires"
@@ -69,6 +86,7 @@
   image: resilience-des-bois.webp
   credit: Jean-Michael Séminaro
   ossia: "Five-projector video mapping, running on a single older Mac"
+  ossia_fr: "Mapping vidéo à cinq projecteurs, sur un seul Mac ancien"
   sat: true
   kind: [installation]
 
@@ -81,6 +99,7 @@
   credit: Miha Godec
   award: "Golden Nica, Prix Ars Electronica 2025"
   ossia: "Network communication between the pendulum and the computers with ossia-max"
+  ossia_fr: "Communication réseau entre le pendule et les ordinateurs avec ossia-max"
   sat: true
   kind: [installation, performance]
   featured: true
@@ -93,6 +112,7 @@
   image: on-air.webp
   credit: Jonathan Goulet
   award: "Honorary Mention, Prix Ars Electronica 2025"
+  award_fr: "Mention honorable, Prix Ars Electronica 2025"
   ossia: "ossia-max"
   kind: [installation]
 
@@ -103,6 +123,7 @@
   url: https://philippevandal.github.io/
   image: vandal-spectral-narratives.webp
   ossia: "Four glass and solvent modules sequenced with score"
+  ossia_fr: "Quatre modules de verre et de solvant séquencés avec score"
   kind: [installation]
 
 - title: "BioSynth light show"
@@ -111,6 +132,7 @@
   url: https://eringee.net
   image: erin-show.webp
   ossia: "LED / DMX lighting console in score, running headless on a Raspberry Pi, driven by biosignals"
+  ossia_fr: "Console lumière LED / DMX dans score, sans interface graphique sur un Raspberry Pi, pilotée par des biosignaux"
   sat: true
   kind: [performance]
 
@@ -118,27 +140,33 @@
   artists: "Psʌnía (Pía Baltazar & Sunjeong Hwang)"
   year: "2025"
   place: "WeSA Jeju residency, Daejeon"
+  place_fr: "Résidence WeSA Jeju, Daejeon"
   url: https://www.baltazar.studio/art/our-bodies
   image: pia-ourbodies.webp
   ossia: "Gestural interface: the two performers' movements drive sound and light"
+  ossia_fr: "Interface gestuelle : les mouvements des deux interprètes pilotent le son et la lumière"
   kind: [performance]
 
 - title: "Some Light in the Crumbling"
   artists: "Pía Baltazar & Saba Alizadeh"
   year: "2025"
   place: "Saint-Rémi Church, Molenbeek, Brussels"
+  place_fr: "Église Saint-Rémi, Molenbeek, Bruxelles"
   url: https://www.baltazar.studio/art/somelightinthecrumbling
   image: pia-somelight.webp
   ossia: "Site-specific concert with loudspeakers spread through the church"
+  ossia_fr: "Concert in situ avec des haut-parleurs répartis dans l'église"
   kind: [performance]
 
 - title: "The Ripples of Consequence"
   artists: "Pía Baltazar, performed by Audréanne Filion"
+  artists_fr: "Pía Baltazar, interprétation : Audréanne Filion"
   year: "2025"
   place: "Le Vivier, Édifice Wilder, Montréal"
   url: https://www.baltazar.studio/art/ripples
   image: pia-ripples.webp
   ossia: "Composition for the Table de Babel (Totem Contemporain)"
+  ossia_fr: "Composition pour la Table de Babel (Totem Contemporain)"
   kind: [performance]
 
 - title: "On the Edge"
@@ -148,6 +176,7 @@
   url: https://www.youtube.com/watch?v=M_nGusbX8zM
   image: pocius-on-the-edge.webp
   ossia: "Visuals made with ossia, in an audiovisual work for video, T-Stick and surround sound"
+  ossia_fr: "Visuels réalisés avec ossia, dans une œuvre audiovisuelle pour vidéo, T-Stick et son surround"
   kind: [performance]
 
 - title: "VIBH2O / VIB.E-MOTION"
@@ -158,6 +187,7 @@
   image: vibh2o.webp
   credit: Emmanuel Grimault
   ossia: "Participatory circus performance driven by audience heart rates (Bluetooth sensors); network and sound in score"
+  ossia_fr: "Spectacle de cirque participatif piloté par le rythme cardiaque du public (capteurs Bluetooth) ; réseau et son dans score"
   sat: true
   kind: [stage]
 
@@ -168,16 +198,19 @@
   url: https://www.baltazar.studio/art/abreathingvoid
   image: pia-breathing.webp
   ossia: "Veil of plastic animated by fans, LED lights and spatialised sound"
+  ossia_fr: "Voile de plastique animé par des ventilateurs, des lumières LED et du son spatialisé"
   kind: [installation]
 
 - title: "METAscène"
   artists: "OARA / SCRIME. Music by György Kurtág Jr., spatialisation with Pía Baltazar and Joseph Larralde"
+  artists_fr: "OARA / SCRIME. Musique de György Kurtág Jr., spatialisation avec Pía Baltazar et Joseph Larralde"
   year: "2024–"
   place: "MÉCA, Bordeaux"
   url: https://oara.fr/metascene/
   image: metascene.webp
   credit: OARA
   ossia: "50+ channels of spatialised sound, three video screens and lighting, all run from score"
+  ossia_fr: "Plus de 50 canaux de son spatialisé, trois écrans vidéo et l'éclairage, le tout piloté depuis score"
   sat: true
   kind: [installation]
   featured: true
@@ -190,17 +223,20 @@
   image: en-sur-et-face.webp
   credit: Brice Ammar-Khodja
   ossia: "score on Orange Pi + ESP32 for sound, light and scent"
+  ossia_fr: "score sur Orange Pi + ESP32 pour le son, la lumière et les odeurs"
   sat: true
   kind: [installation]
 
 - title: "Ballets Résiduels"
   artists: "Brice Ammar-Khodja, in collaboration with Jean-Michaël Celerier"
+  artists_fr: "Brice Ammar-Khodja, en collaboration avec Jean-Michaël Celerier"
   year: "2023–2024"
   place: "Champ des Possibles, Montréal"
   url: https://b-ak.com/projects/ballets-residuels/
   image: ballets-residuels.webp
   credit: Diego Bravo
   ossia: "score on Raspberry Pi + ESP32 for sound, light and scent"
+  ossia_fr: "score sur Raspberry Pi + ESP32 pour le son, la lumière et les odeurs"
   sat: true
   kind: [performance, installation]
 
@@ -212,6 +248,7 @@
   image: recapture.webp
   credit: Alice Jarry
   ossia: "Cameras, video processing, lights, pumps and motors, run entirely by score on a Raspberry Pi"
+  ossia_fr: "Caméras, traitement vidéo, lumières, pompes et moteurs, entièrement pilotés par score sur un Raspberry Pi"
   sat: true
   kind: [installation]
 
@@ -219,9 +256,11 @@
   artists: "Louise Cotter, David Naessens, Luke Naessens, Michelle Delea, David Stalling, Alan Meredith"
   year: "2025"
   place: "Irish Pavilion, Venice Architecture Biennale"
+  place_fr: "Pavillon irlandais, Biennale d'architecture de Venise"
   url: https://irelandatvenice2025.ie/
   image: assembly.webp
   award: "Ireland at the Venice Biennale 2025"
+  award_fr: "L'Irlande à la Biennale de Venise 2025"
   kind: [installation]
   featured: true
 
@@ -230,6 +269,7 @@
   url: https://escuta.org/en/proj/assombros/
   image: assombros.webp
   ossia: "Pepper's ghost peepshow cabinets (first shown as Petit Godot): video and LED sequencing with score on a Raspberry Pi"
+  ossia_fr: "Boîtes de peep-show à fantôme de Pepper (présentées d'abord sous le nom Petit Godot) : séquençage vidéo et LED avec score sur un Raspberry Pi"
   kind: [installation]
 
 - title: "Four For"
@@ -244,6 +284,7 @@
   url: https://www.navidnavab.com/tangibleflux
   image: tangibleFlux.webp
   ossia: "ossia score with Max, ossia and Jamoma"
+  ossia_fr: "ossia score avec Max, ossia et Jamoma"
   kind: [performance]
 
 - title: "SNN#2: Light/Space/Modulator"
@@ -257,6 +298,7 @@
   url: https://www.contour-progressif.net/projets/spectacle/laveuglement
   image: aveuglement.webp
   ossia: "ossia-pd and score"
+  ossia_fr: "ossia-pd et score"
   kind: [stage]
 
 - title: "Nebula"
@@ -270,6 +312,7 @@
   url: https://vimeo.com/282498843
   image: Sun8mm.webp
   ossia: "score and ofxOssia"
+  ossia_fr: "score et ofxOssia"
   kind: [installation]
 
 - title: "Désoleil"
@@ -304,6 +347,7 @@
   url: https://web.archive.org/web/20210918134745/http://www.donatiengarnier.com/un-spectacle-en-3d/
   image: arbre-intégrale.webp
   ossia: "ossia score with Reaper, Live, Unity3D and Android smartphones"
+  ossia_fr: "ossia score avec Reaper, Live, Unity3D et des smartphones Android"
   kind: [stage]
 
 - title: "(à) partir"
@@ -311,6 +355,7 @@
   url: https://vimeo.com/213259612
   image: 14-Virages2.webp
   ossia: "score, ossia-pd and ofxOssia"
+  ossia_fr: "score, ossia-pd et ofxOssia"
   kind: [installation]
 
 - title: "Qui parle donc"
@@ -347,10 +392,12 @@
   artists: "Lina Rahal & Jean-Marie Colin"
   year: "2021"
   place: "SCRIME residency, Bordeaux"
+  place_fr: "Résidence SCRIME, Bordeaux"
   url: https://scrime.u-bordeaux.fr/residences/walking-down-street
   image: walking-down-the-street.webp
   credit: Jean-Marie Colin
   ossia: "Hip-hop dance; the whole show driven by score and controlled live with a Karlax"
+  ossia_fr: "Danse hip-hop ; tout le spectacle est piloté par score et contrôlé en direct avec un Karlax"
   kind: [stage]
 
 - title: "Le regard du hibou"
@@ -393,6 +440,7 @@
   url: https://hal.science/hal-04226027
   image: solo-k.webp
   ossia: "Karlax solo; score drives the music and images"
+  ossia_fr: "Solo de Karlax ; score pilote la musique et les images"
   kind: [performance]
 
 - title: "Ad Astra"
@@ -409,14 +457,17 @@
   url: https://louxorspectacle.com/spectacles/immersion/
   image: louxor-immersion.webp
   ossia: "Floating projection, with score and ofxOssia"
+  ossia_fr: "Projection flottante, avec score et ofxOssia"
   kind: [installation]
 
 - title: "Voyage Voyage"
   artists: "Cie Princesse Léopold, scenography by Thomas Pachoud"
+  artists_fr: "Cie Princesse Léopold, scénographie de Thomas Pachoud"
   place: "Théâtre du Passage, Neuchâtel"
   url: https://web.archive.org/web/2021/https://www.theatredupassage.ch/spectacles/voyage-voyage
   image: voyage-voyage.webp
   ossia: "score and ofxOssia"
+  ossia_fr: "score et ofxOssia"
   kind: [stage]
 
 - title: "Shape of Light, Ascension"
@@ -428,6 +479,7 @@
       url: https://assoikari.wordpress.com/2016/02/08/ascension/
   image: ikari-shape-of-light.webp
   ossia: "score and ofxOssia"
+  ossia_fr: "score et ofxOssia"
   kind: [stage]
 
 - title: "ParOral"
@@ -437,6 +489,7 @@
   url: https://didascalie.net/tiki-index.php?page=rech-paroral
   image: paroral.webp
   ossia: "ossia score with SuperCollider and Unity / Unreal Engine"
+  ossia_fr: "ossia score avec SuperCollider et Unity / Unreal Engine"
   kind: [stage]
 
 - title: "Matière"
@@ -445,6 +498,7 @@
   url: https://assoikari.wordpress.com/2016/09/15/matiere-creation-en-cours/
   image: matiere.webp
   ossia: "score and ofxOssia"
+  ossia_fr: "score et ofxOssia"
   kind: [stage]
 
 - title: "Nova"
@@ -456,18 +510,22 @@
 # ---- Works without a photo: listed in the "More works" table ----
 
 - title: "Calligraphic gesture lecture-performance"
+  title_fr: "Conférence-performance sur le geste calligraphique"
   artists: "Sahar Homami & Pía Baltazar"
   year: "2026"
   place: "Perte de Signal, Montréal"
   ossia: "Qalam pressure sensor, IMU, tablet and Leap Motion processed in score to generate sound and image"
+  ossia_fr: "Capteur de pression Qalam, centrale inertielle, tablette et Leap Motion traités dans score pour générer le son et l'image"
   sat: true
   kind: [performance]
 
 - title: "Dô d'eau"
   artists: "ENSATT sound and lighting students"
+  artists_fr: "Étudiants son et lumière de l'ENSATT"
   year: "2023"
   place: "ENSATT, Lyon"
   ossia: "Spatialised sound, video and DMX lighting with score"
+  ossia_fr: "Son spatialisé, vidéo et éclairage DMX avec score"
   sat: true
   kind: [education]
 
@@ -479,6 +537,7 @@
 - title: "Le Chant des Nanos"
   artists: "Collectif Genre (SCRIME / IdEx Arts et Sciences)"
   ossia: "ossia score with Max4Live and Modul8"
+  ossia_fr: "ossia score avec Max4Live et Modul8"
   kind: [performance]
 
 - title: "Musée de la nature et de la chasse, Gien"
@@ -487,6 +546,7 @@
   kind: [museum]
 
 - title: "Interactive museum route, Chocolaterie Camille Bloch (Switzerland)"
+  title_fr: "Parcours muséal interactif, Chocolaterie Camille Bloch (Suisse)"
   artists: "Blue Yeti"
   ossia: "libossia-QML"
   kind: [museum]

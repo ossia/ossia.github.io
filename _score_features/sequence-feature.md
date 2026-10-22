@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/sequence.png
 description: "Creating sequences"
+title_fr: "Séquences"
+description_fr: "Créer des séquences"
 
 tag: "Structure"
 visible: true

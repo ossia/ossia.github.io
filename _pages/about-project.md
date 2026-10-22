@@ -3,6 +3,7 @@ layout: about-page
 title:  "Project"
 
 permalink: /project.html
+ref: project
 category: site-about
 description: "History of the ossia project: from i-score research at LaBRI and SCRIME to ossia score, publications, partners and funding."
 ---

@@ -3,6 +3,7 @@ layout: page
 title:  "Documentation"
 
 permalink: /docs.html
+ref: docs
 category: site-docs
 description: "Documentation for ossia score and libossia: user manual, tutorials, video guides, API references and community resources."
 ---
