@@ -13,7 +13,7 @@ description: "Logiciel libre pour la musique mixte : partitions interactives, cu
 image: /assets/social/ossia-score-og.jpg
 ---
 
-ossia score est issu des recherches sur les partitions interactives pour la musique menées au LaBRI et au SCRIME, à Bordeaux, avec le projet *i-score* ([historique du projet](/project.html)) ; il a été conçu pour les pièces où musiciens et électronique jouent ensemble, le déroulement temporel étant écrit tandis que les interprètes décident du moment où chaque section commence.
+ossia score est issu des recherches sur les partitions interactives pour la musique menées au LaBRI et au SCRIME, à Bordeaux, avec le projet *i-score* ([historique du projet](/fr/projet.html)) ; il a été conçu pour les pièces où musiciens et électronique jouent ensemble, le déroulement temporel étant écrit tandis que les interprètes décident du moment où chaque section commence.
 Dans *The Ripples of Consequence* de Pía Baltazar (Le Vivier, Montréal, 2025), une composition pour la Table de Babel interprétée par Audréanne Filion, l'électronique est par exemple conduite par score.
 
 ## Partition interactive
@@ -35,4 +35,4 @@ Les patchs Pure Data existants s'exécutent à l'intérieur de la partition, ou 
 En répétition, *Play from here* permet de reprendre à n'importe quel endroit de la pièce.
 Toute la partie électronique, avec ses cues, ses traitements et ses fichiers son, tient dans un seul fichier de projet qui s'ouvre sur tous les systèmes d'exploitation, ce qui permet à d'autres musiciens de reprendre la pièce par la suite.
 
-Pour la musique jouée avec des synthétiseurs, des séquenceurs et des boucles, voir la page [musique électronique live](/fr/musique-live.html) ; d'autres concerts réalisés avec score, comme *pianotronics #3* d'Alain Bonardi, sont présentés dans la [galerie](/gallery.html).
+Pour la musique jouée avec des synthétiseurs, des séquenceurs et des boucles, voir la page [musique électronique live](/fr/musique-live.html) ; d'autres concerts réalisés avec score, comme *pianotronics #3* d'Alain Bonardi, sont présentés dans la [galerie](/fr/galerie.html).

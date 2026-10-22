@@ -3,6 +3,7 @@ layout: about-page
 title:  "About ossia"
 
 permalink: /about.html
+ref: about
 category: site-about
 description: "Meet the ossia team: the artists, researchers and developers behind ossia score and libossia, in France and Canada."
 ---

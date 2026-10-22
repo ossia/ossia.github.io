@@ -9,6 +9,8 @@ category: "site-score"
 
 image: "/assets/features/controlling_score.webp"
 description: "Controlling score execution from external software"
+title_fr: "Contrôler score"
+description_fr: "Contrôler l'exécution de score depuis un logiciel externe"
 
 tag: "Controls"
 visible: true

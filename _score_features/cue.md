@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/cue.png
 description: "Sending cues to control a show"
+title_fr: "Cues"
+description_fr: "Envoyer des cues pour piloter un spectacle"
 
 tag: "Structure"
 visible: true

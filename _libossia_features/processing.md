@@ -1,13 +1,16 @@
 ---
 layout: libossia-feature
 title:  "Processing bindings"
+title_fr: "Bindings Processing"
 
 permalink: /site-libossia/features/processing.html
 category: "site-libossia"
 image: /assets/logo/processing.jpg
 description: "Using libossia with Processing"
+description_fr: "Utiliser libossia avec Processing"
 
 tag: "Bindings"
+tag_fr: "Bindings"
 visible: true
 ---
 

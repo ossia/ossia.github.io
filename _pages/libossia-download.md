@@ -3,6 +3,7 @@ layout: page
 title:  "Download libossia"
 
 permalink: /site-libossia/download.html
+ref: libossia-download
 category: site-libossia
 description: "Download libossia, to connect your creative environment to ossia score and other OSCQuery-compliant software."
 ---

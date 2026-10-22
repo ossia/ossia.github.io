@@ -1,4 +1,5 @@
 nav:
+  logo_alt: logo d'ossia score
   main: Principal
   main_mobile: Principal (mobile)
   menu: Menu
@@ -13,9 +14,13 @@ nav:
   download: télécharger
   donate: don
 footer:
+  design: "Design : HTML5 UP"
   follow: Suivez-nous !
   use_cases: Usages
   privacy: Politique de confidentialité
+about_menu:
+  about: À propos d'ossia
+  project: Le projet
 cta:
   download: Télécharger ossia score
   try: Essayer dans le navigateur
@@ -48,3 +53,88 @@ consent:
   who: "Responsable : ossia.io. Destinataire : Google."
   saved: Choix enregistré.
 months: [janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+libossia_page:
+  features: Fonctionnalités
+  wip: "Important : la documentation ci-dessous est en cours de rédaction."
+# Page galerie (_includes/gallery-works.html)
+gallery:
+  intro: Œuvres, installations, concerts et spectacles réalisés avec ossia.
+  filter_label: Filtrer les œuvres par type
+  filters:
+    all: Tout
+    installation: Installations
+    performance: Performances
+    stage: Scène
+    museum: Musées
+    education: Enseignement
+  alt: "%title%, de %artists%"
+  sat: En collaboration avec la
+  more: Autres œuvres
+  table:
+    year: Année
+    work: Œuvre
+    artists: Artistes
+    where: Lieu
+    ossia: Avec ossia
+home:
+  banner_alt: "L'installation [re]capture, contrôlée avec ossia score"
+  logo_alt: "Logo d'ossia score"
+  catchphrase: "Un séquenceur gratuit et open source"
+  intro: "Un <b>séquenceur intermédia gratuit, open source et multiplateforme</b> pour écrire de façon précise et flexible des scénarios <b>interactifs</b>. <br/> On peut contrôler et séquencer tout logiciel ou matériel compatible OSC : Max/MSP, PureData, openFrameworks, Processing…"
+  download: "Télécharger"
+  supporting: "Organismes de soutien"
+  enlarged_alt: "Capture d'écran agrandie"
+  what_is: "Qu'est-ce qu'ossia score ?"
+  use_cases: "Régie de spectacle, timelines OSC, mapping vidéo, éclairage, installations : voir ce qu'ossia score permet de faire"
+  score_alt: "score"
+  media_title: "Un séquenceur intermédia"
+  media_intro: "On peut séquencer différents types de médias dans une timeline intelligente :"
+  media_1: "Lecture de la plupart des formats audio, avec prise en charge du multicanal"
+  media_2: "Lecture vidéo H.264 et HAP, avec une chaîne de traitement vidéo et de shaders multiplateforme à la pointe"
+  media_3: "Envoi et réception d'OSC, de MIDI et de DMX, ou communication directe par HTTP ou par un port série"
+  media_4: "Contrôle de systèmes IoT grâce à la prise en charge de CoAP, MQTT et BLE"
+  interaction_title: "Des fonctionnalités d'interaction avancées"
+  interaction_intro: "Un séquenceur conçu pour les spectacles interactifs :"
+  interaction_1: "Déclencher n'importe quelle partie de la partition selon des conditions externes ou des contrôles matériels"
+  interaction_2: "Utiliser des conditions pour créer visuellement des partitions à embranchements"
+  interaction_3: "Contrôler et être contrôlé par n'importe quels appareils et protocoles externes, avec une interface utilisateur simplifiée"
+  interaction_alt: "Déclenchement de parties d'une partition par des événements externes dans ossia score"
+  script_alt: "Scripts"
+  script_title: "Un logiciel ouvert et scriptable"
+  script_intro: "Plusieurs langages de programmation sont intégrés à ossia score :"
+  script_1: "Livecoder en JavaScript directement dans la partition pour des mappings avancés, ou créer des scripts de mapping d'appareils"
+  script_2: "Créer des traitements audio très rapides avec Faust"
+  script_3: "Étendre n'importe quelle partie du logiciel par l'API C++"
+  script_4: "Écrire de simples expressions mathématiques pour un contrôle rapide"
+  modular_title: "Travail à la fois modulaire et sur timeline"
+  modular_intro: "On peut connecter les processus de façon modulaire directement depuis la timeline :"
+  modular_1: "Passer à tout moment de la timeline à la vue nodale pour éditer plus précisément les processus"
+  modular_2: "Créer des partitions proches des machines à états pour des scénarios atemporels"
+  modular_3: "Imbriquer et grouper sans limite de profondeur"
+  modular_alt: "Passage de la timeline à la vue nodale dans ossia score"
+  protocols_title: "Protocoles pris en charge"
+  protocols_1: "Ces protocoles sont implémentés derrière une interface commune dans libossia."
+  protocols_2: "Toute application qui utilise libossia peut donc en bénéficier, faire le pont entre eux, etc."
+  protocols_3: "Ces protocoles sont accessibles dans ossia score par une interface simple"
+  gamepad: "Manette de jeu"
+  env_title: "Environnements compatibles"
+  env_intro: "On peut utiliser son langage de creative coding préféré avec ossia :"
+  env_1: "Soit par une connexion OSC classique"
+  env_2: "Soit par le protocole OSCQuery, plus avancé"
+  env_3: "Soit en intégrant directement libossia"
+  trailer: "Bande-annonce d'ossia score 3"
+  trailer_play: "Lire la bande-annonce d'ossia score 3 (charge la vidéo depuis YouTube)"
+  trailer_loads: "Charge la vidéo depuis YouTube"
+  blog: "Blog"
+  gallery: "Galerie"
+  show_photo: "Afficher la photo "
+score_page:
+  categories:
+    Structure: Structure
+    Audio: Audio
+    Controls: Contrôles
+    Graphics: Graphismes
+    Interoperability: Interopérabilité
+    Presentation: Présentation
+    Scripting: Scripts
+    Software model: Modèle logiciel

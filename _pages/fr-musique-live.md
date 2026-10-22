@@ -39,4 +39,4 @@ Sur scène, il prend en charge les contrôleurs MIDI dont les boutons et faders 
 
 Le même projet peut également contenir des shaders, de la 3D et de la vidéo réactifs au son, ainsi que de la lumière DMX pilotée par la musique (voir [vidéo](/fr/mapping-video.html) et [lumière](/fr/eclairage-dmx.html)) ; un set peut être joué depuis un ordinateur portable, ou sans écran depuis un Raspberry Pi.
 
-D'autres concerts et performances réalisés avec score sont présentés dans la [galerie](/gallery.html).
+D'autres concerts et performances réalisés avec score sont présentés dans la [galerie](/fr/galerie.html).

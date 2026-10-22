@@ -1,6 +1,7 @@
 # Interface strings. Other languages have the same keys in _data/i18n/<code>.yml;
 # a key missing there falls back to the English one.
 nav:
+  logo_alt: ossia score logo
   main: Main
   main_mobile: Main (mobile)
   menu: Menu
@@ -15,9 +16,13 @@ nav:
   download: download
   donate: donate
 footer:
+  design: "Design: HTML5 UP"
   follow: Follow us !
   use_cases: Use cases
   privacy: Privacy policy
+about_menu:
+  about: About ossia
+  project: Project
 cta:
   download: Download ossia score
   try: Try it in your browser
@@ -51,3 +56,91 @@ consent:
   who: "Controller: ossia.io. Recipient: Google."
   saved: Choice saved.
 months: [January, February, March, April, May, June, July, August, September, October, November, December]
+libossia_page:
+  features: Features
+  wip: "Important: the documentation below is a work-in-progress."
+# Gallery page (_includes/gallery-works.html)
+gallery:
+  intro: Artworks, installations, concerts and shows made with ossia.
+  filter_label: Filter works by type
+  filters:
+    all: All
+    installation: Installations
+    performance: Performances
+    stage: Stage
+    museum: Museums
+    education: Education
+  # image alt text; %title% and %artists% are replaced
+  alt: "%title% by %artists%"
+  sat: In collaboration with
+  more: More works
+  table:
+    year: Year
+    work: Work
+    artists: Artists
+    where: Where
+    ossia: With ossia
+# Home page (_includes/home-content.html)
+home:
+  banner_alt: "The [re]capture installation, controlled with ossia score"
+  logo_alt: "ossia score logo"
+  catchphrase: "A free and open-source sequencer"
+  intro: "A <b>free, open-source, cross-platform intermedia sequencer </b> for precise and flexible scripting of <b>interactive</b>  scenarios. <br/> Control and score any OSC-compliant software or hardware: Max/MSP, PureData, openFrameworks, Processing…"
+  download: "Download"
+  supporting: "Supporting organizations"
+  enlarged_alt: "Enlarged screenshot"
+  what_is: "What is ossia score ?"
+  use_cases: "Show control, OSC timelines, video mapping, lighting, installations: see what ossia score can do for you"
+  score_alt: "score"
+  media_title: "An intermedia sequencer"
+  media_intro: "Sequence various kinds of media in an intelligent timeline:"
+  media_1: "Playback most audio formats, with support for multichannel"
+  media_2: "H.264 and HAP video playback, with a state-of-the art cross-platform video &amp; shader pipeline"
+  media_3: "Send &amp; receive OSC, MIDI, DMX or directly talk through HTTP or a serial port"
+  media_4: "Control IoT systems with CoAP, MQTT and BLE support"
+  interaction_title: "Advanced interaction facilities"
+  interaction_intro: "A sequencer built for interactive shows:"
+  interaction_1: "Trigger any part of the score upon external conditions or hardware controls"
+  interaction_2: "Use conditions to create branching scores visually"
+  interaction_3: "Control and get controlled through any external devices and protocols with a streamlined user interface"
+  interaction_alt: "Triggering parts of a score from external events in ossia score"
+  script_alt: "Scripting"
+  script_title: "A scriptable, open software"
+  script_intro: "Multiple programming languages are embedded in ossia score:"
+  script_1: "Livecode with JavaScript directly in the score for advanced mappings, or create device mapping scripts"
+  script_2: "Create blazing fast audio processors with Faust"
+  script_3: "Extend any part of the software through the C++ API"
+  script_4: "Write simple math expressions for quick control"
+  modular_title: "Mixed modular &amp; timeline workflow"
+  modular_intro: "Connect processes in a modular way directly from its timeline:"
+  modular_1: "Switch between timeline and nodal view at any point to edit processes more precisely"
+  modular_2: "Create state-machine-like scores for atemporal scenarios"
+  modular_3: "Nest and group without depth limit"
+  modular_alt: "Switching between the timeline and the nodal view in ossia score"
+  protocols_title: "Supported protocols"
+  protocols_1: "These protocols are implemented behind a common interface in libossia."
+  protocols_2: "Any app using libossia can thus benefit from their support, bridge them, etc."
+  protocols_3: "These protocols are available under a simple UI in ossia score"
+  gamepad: "Gamepad"
+  env_title: "Compatible environments"
+  env_intro: "You can use your favorite creative coding language with ossia:"
+  env_1: "Either through traditional OSC connection"
+  env_2: "Or through the more advanced OSCQuery protocol"
+  env_3: "Or through direct integration of libossia"
+  trailer: "ossia score 3 trailer"
+  trailer_play: "Play the ossia score 3 trailer (loads the video from YouTube)"
+  trailer_loads: "Loads the video from YouTube"
+  blog: "Blog"
+  gallery: "Gallery"
+  show_photo: "Show photo "
+# score page (_pages/score-about.md, _includes/score-features-grid.html)
+score_page:
+  categories:
+    Structure: Structure
+    Audio: Audio
+    Controls: Controls
+    Graphics: Graphics
+    Interoperability: Interoperability
+    Presentation: Presentation
+    Scripting: Scripting
+    Software model: Software model

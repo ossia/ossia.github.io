@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/mappings.png
 description: "Mappings in the timeline"
+title_fr: "Processus de mapping"
+description_fr: "Mappings dans la timeline"
 
 tag: "Controls"
 visible: true

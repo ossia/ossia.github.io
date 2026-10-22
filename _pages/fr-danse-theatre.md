@@ -36,4 +36,4 @@ Le résultat peut piloter la synthèse et la spatialisation, des shaders, de la 
 Les scènes, les cues et les déclencheurs donnent sa structure à la pièce, et le top peut venir soit du régisseur, soit des interprètes eux-mêmes ([scènes](https://ossia.io/score-docs/common-practices/6-scenes.html), [cues](https://ossia.io/score-docs/cues.html)).
 En répétition, les correspondances peuvent être modifiées pendant que la pièce tourne, et *Play from here* permet de reprendre à n'importe quelle scène ; pour la tournée, les médias sont rassemblés dans le dossier du projet, et le spectacle tourne sur un ordinateur portable ou un Raspberry Pi, sous Windows, macOS ou Linux.
 
-D'autres pièces de danse et de théâtre sont présentées dans la [galerie](/gallery.html).
+D'autres pièces de danse et de théâtre sont présentées dans la [galerie](/fr/galerie.html).

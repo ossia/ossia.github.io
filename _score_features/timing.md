@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/timing.png
 description: "Timing and processes"
+title_fr: "Gestion du temps"
+description_fr: "Gestion du temps et processus"
 
 tag: "Software model"
 visible: true

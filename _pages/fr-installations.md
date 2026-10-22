@@ -34,11 +34,11 @@ Sur les cartes Linux comme le Raspberry Pi et l'Orange Pi, score lit et écrit l
 Pour le son, score gère la lecture multicanale, la synthèse, les plug-ins VST, CLAP et LV2, Faust, et la spatialisation, soit par DBAP et GBAP, soit par l'intermédiaire de SpatGRIS, de SPAT Revolution et des moteurs ADM-OSC ([spatialisation](https://ossia.io/score-docs/common-practices/14-spatial-audio.html), [audio](https://ossia.io/score-docs/common-practices/4-audio.html)).
 La vidéo, la 3D et la lumière se trouvent dans le même projet (voir [vidéo et mapping](/fr/mapping-video.html) et [éclairage DMX](/fr/eclairage-dmx.html)), et des jeux de données CSV ou HDF5 peuvent être joués sous forme de son, de lumière ou d'images.
 
-Plutôt qu'une playlist, l'œuvre est décrite par des états, des conditions et des boucles, de sorte qu'elle puisse évoluer et réagir à ce qui se passe dans la salle ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html)) ; les parties qui le nécessitent peuvent être écrites en JavaScript, en Faust, en shaders ou en C++, et une application sur mesure peut exposer ses paramètres à score grâce à [libossia](/site-libossia/about.html).
+Plutôt qu'une playlist, l'œuvre est décrite par des états, des conditions et des boucles, de sorte qu'elle puisse évoluer et réagir à ce qui se passe dans la salle ([timelines non linéaires](https://ossia.io/score-docs/quick-start/breaking-the-timeline.html)) ; les parties qui le nécessitent peuvent être écrites en JavaScript, en Faust, en shaders ou en C++, et une application sur mesure peut exposer ses paramètres à score grâce à [libossia](/fr/libossia.html).
 
 ## Fonctionnement autonome
 
 score ouvre le projet et le joue sans l'éditeur, sur un PC, un Raspberry Pi ou un système Linux embarqué construit avec Yocto ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html), [Raspberry Pi](https://ossia.io/score-docs/in-depth/embedded.html)).
 Un appareil système indique l'usage du processeur, de la carte graphique, de la mémoire, de la batterie et du réseau, ce qui permet de surveiller à distance une œuvre qui tourne longtemps ([supervision](https://ossia.io/score-docs/faq/monitor-activity.html)), et pour une borne, le projet peut être empaqueté en application autonome avec sa propre interface ([applications](https://ossia.io/score-docs/development/custom-apps.html)).
 
-D'autres installations sont présentées dans la [galerie](/gallery.html).
+D'autres installations sont présentées dans la [galerie](/fr/galerie.html).

@@ -23,4 +23,4 @@ Beaucoup de projets n'ont besoin que de score, des premières esquisses jusqu'au
 
 ossia score est libre et gratuit (GPLv3), sans limite de fonctionnalités ni de résolution, et fonctionne sous Windows, macOS, Linux, sur Raspberry Pi et sur Linux embarqué, ainsi que [dans le navigateur](https://ossia.io/score-web).
 Les déclencheurs, conditions et embranchements font partie de la timeline elle-même, et score communique avec les autres logiciels en OSC, OSCQuery, MIDI, DMX, NDI, Spout et Syphon, des plug-ins et des patchs Pure Data pouvant s'exécuter à l'intérieur.
-Il est issu des recherches sur les partitions interactives menées au LaBRI et au SCRIME avec le projet *i-score* ; voir l'[historique du projet](/project.html), et la [galerie](/gallery.html) pour les œuvres réalisées avec.
+Il est issu des recherches sur les partitions interactives menées au LaBRI et au SCRIME avec le projet *i-score* ; voir l'[historique du projet](/fr/projet.html), et la [galerie](/fr/galerie.html) pour les œuvres réalisées avec.

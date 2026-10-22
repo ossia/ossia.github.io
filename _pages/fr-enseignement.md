@@ -32,4 +32,4 @@ Le son et la synthèse, la vidéo et la 3D, la lumière DMX, les capteurs et l'A
 
 Pour les kits matériels, un Raspberry Pi fait tourner un projet terminé sans écran, avec des GPIO pour l'électronique ([mode sans interface](https://ossia.io/score-docs/faq/nogui.html)) ; l'éditeur dispose aussi d'une trentaine de thèmes, dont certains adaptés au daltonisme et à fort contraste.
 
-D'autres œuvres sont présentées dans la [galerie](/gallery.html), où le filtre « Education » regroupe les projets étudiants.
+D'autres œuvres sont présentées dans la [galerie](/fr/galerie.html), où le filtre « Education » regroupe les projets étudiants.

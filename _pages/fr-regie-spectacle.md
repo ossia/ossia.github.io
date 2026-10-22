@@ -52,4 +52,4 @@ Les surfaces de contrôle compatibles MCU suivent le processus sélectionné, et
 score fonctionne sous Windows, macOS, Linux et sur Raspberry Pi, avec les mêmes fonctions, à l'exception de celles qui dépendent d'un système ou d'un matériel particulier (Spout, Syphon, CUDA, etc.).
 Il peut conduire un spectacle à lui seul, ou piloter en OSC, MIDI ou DMX ce qui est déjà en place : serveur média, pupitre lumière, station audionumérique.
 
-D'autres spectacles sont présentés dans la [galerie](/gallery.html) ; la [documentation](https://ossia.io/score-docs/) (en anglais) détaille chacune de ces fonctions.
+D'autres spectacles sont présentés dans la [galerie](/fr/galerie.html) ; la [documentation](https://ossia.io/score-docs/) (en anglais) détaille chacune de ces fonctions.

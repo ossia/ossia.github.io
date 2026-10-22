@@ -9,6 +9,8 @@ category: "site-score"
 
 image: "/assets/features/media.webp"
 description: "Media handling"
+title_fr: "Médias"
+description_fr: "Gestion des médias"
 
 tag: "Software model"
 visible: true

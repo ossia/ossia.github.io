@@ -46,4 +46,4 @@ Pour les cartes de capture et de diffusion, AJA est pris en charge directement e
 Les visuels peuvent réagir au son, à la vision par ordinateur (blobs, flux optique, contours), à la détection de pose par des modèles ONNX, aux caméras de profondeur, ou à des messages MIDI et OSC ([détection de pose](https://ossia.io/score-docs/examples/ai/pose-detection.html)).
 Pour les conférences, on dispose d'objets de présentation et de texte avancé, et un script peut calculer une pièce image par image vers des fichiers, pour des prévisualisations ou des versions sur support fixe.
 
-D'autres œuvres vidéo réalisées avec score sont présentées dans la [galerie](/gallery.html).
+D'autres œuvres vidéo réalisées avec score sont présentées dans la [galerie](/fr/galerie.html).

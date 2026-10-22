@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/record.avif
 description: "Recording external parameter changes"
+title_fr: "Enregistrement"
+description_fr: "Enregistrer les changements de paramètres externes"
 
 tag: "Structure"
 visible: true

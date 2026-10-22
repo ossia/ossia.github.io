@@ -9,6 +9,8 @@ category: "site-score"
 
 image: /assets/features/conditions.png
 description: "Create conditional scores"
+title_fr: "Conditions"
+description_fr: "Créer des partitions conditionnelles"
 
 tag: "Structure"
 visible: true
