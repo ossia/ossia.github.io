@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About ossia | ossia</title>
+  <meta name="description" content="Meet the ossia team: the artists, researchers and developers behind ossia score and libossia, in France and Canada." />
+  <link rel="canonical" href="https://ossia.io/about.html" />
+  <link rel="alternate" hreflang="en" href="https://ossia.io/about.html" />
+  <link rel="alternate" hreflang="fr" href="https://ossia.io/fr/a-propos.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ossia.io/about.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="About ossia" />
+  <meta property="og:description" content="Meet the ossia team: the artists, researchers and developers behind ossia score and libossia, in France and Canada." />
+  <meta property="og:url" content="https://ossia.io/about.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="About ossia" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html" data-cat="site-score">score</a>
+			<a href="/site-libossia/about.html" data-cat="site-libossia">libossia</a>
+			<a href="/docs.html" data-cat="site-docs">docs</a>
+            <a href="/gallery.html" data-cat="site-gallery">gallery</a>
+            <a href="/use-cases.html">use cases</a>
+			<a href="/about.html" data-cat="site-about">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Language: English</span><span aria-hidden="true">EN</span></summary>
+  <ul><li><a href="/about.html" lang="en" aria-current="page">English</a></li><li><a href="/fr/a-propos.html" lang="fr" hreflang="fr">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Main (mobile)">
+        <a class="link" href="/">ossia</a>
+        <a class="link" href="/score/about.html">score</a>
+        <a class="link" href="/site-libossia/about.html">libossia</a>
+        <a class="link" href="/docs.html">docs</a>
+        <a class="link" href="/gallery.html">gallery</a>
+        <a class="link" href="/use-cases.html">use cases</a>
+        <a class="link" href="/about.html">about</a>
+        <a class="link" href="/score/download.html">download</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">donate</a>
+        <ul class="lang-links" aria-label="Language"><li><a href="/about.html" lang="en" aria-current="page">English</a></li><li><a href="/fr/a-propos.html" lang="fr" hreflang="fr">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+        <article id="main">
+    <header class="container" style="padding-top: 6em;text-align:center;">
+    
+    <div class="menu">
+            <a href="/about.html" class="menu-item active"><span class="icon-svg icon-about"></span>About ossia</a>
+            <a href="/project.html" class="menu-item"><span class="icon-svg icon-feature"></span>Project</a>
+    </div>
+    <!--
+    <h1 class="page-title">About ossia</h1>-->
+  </header>
+
+    <h1 class="visually-hidden">About ossia</h1>
+    <section class="wrapper style4 container">
+        <h2 class="feature-title" style="margin-top:0.5em;">France</h2>
+<p><br /></p>
+<section class="wrapper style4 association-page">
+
+<div class="bubble-grid">
+<div class="bubble-item">
+    <img alt="Portrait of Jean-Michaël Celerier" class="bubble-image" src="assets/association/jcelerier.webp" />
+    <a href="https://jcelerier.name/" target="_blank" class="bubble-title">Jean-Michaël Celerier</a>
+    <div class="bubble-description">Lead developer. A freelance researcher, interested in art, code, computer music and interactive show control.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Pia Baltazar" class="bubble-image" src="assets/association/pbaltazar.webp" />
+    <a href="https://web.archive.org/web/20260209151532/http://www.baltazars.org/" target="_blank" class="bubble-title">Pia Baltazar</a>
+    <div class="bubble-description">Intermedia composer (The <a href="https://web.archive.org/web/20260209151532/http://www.baltazars.org/">Baltazars</a> duo). She coordinates the ossia organization. She has contributed to the visual syntax and interaction design of score and to the specification design of the libossia namespace model.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Thibaud Keller" class="bubble-image" src="assets/association/tkeller.jpg" />
+    <a href="https://github.com/thibaudk" target="_blank" class="bubble-title">Thibaud Keller</a>
+    <div class="bubble-description">Preacher, workshop conductor, creator of ossia-sclang Quark.
+He gives workshops, conduct residencies and collect user experiences focused on score and the ossia environnement.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Akané Lévy" class="bubble-image" src="assets/association/alevy.webp" />
+    <a href="https://aklevy.github.io" target="_blank" class="bubble-title">Akané Lévy</a>
+    <div class="bubble-description">UI designer, website graphic designer and sometimes developer.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Antoine Villeret" class="bubble-image" src="assets/association/antoine.webp" />
+    <a href="http://antoine.villeret.free.fr/?lang=fr" target="_blank" class="bubble-title">Antoine Villeret</a>
+    <div class="bubble-description">Creator of interactive artworks and experienced software engineer. He is the main developer of ossia-max and ossia-pd.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Jaime Arias" class="bubble-image" src="assets/association/himito.webp" />
+    <a href="https://www.jaime-arias.fr/" target="_blank" class="bubble-title">Jaime Arias</a>
+    <div class="bubble-description">CNRS research engineer interested in applying formal methods to interactive multimedia.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Julien Rabin" class="bubble-image" src="assets/association/julien.png" />
+    <span class="bubble-title">Julien Rabin</span>
+    <div class="bubble-description">Musician, composer, involved with ossia since the very beginnings of the project. Julien is currently involved with writing the documentation for score and is an ossia-max expert.</div>
+</div>
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <a href="http://www.mathieuchamagne.com/" target="_blank" class="bubble-title">Mathieu Chamagne</a>
+    <div class="bubble-description">Mathieu Chamagne invents virtual spaces to be discovered and explored using digital devices. With a piano background, he has been developing a musical practice around electroacoustic instruments since the 90s. </div>
+</div>
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <a href="https://vincentgoudard.com/" target="_blank" class="bubble-title">Vincent Goudard</a>
+    <div class="bubble-description">Researcher and maker crafting digital musical instruments for audio/visual live performances, installations and interactive applications.</div>
+</div>
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <span class="bubble-title">Pierre Cochard</span>
+    <div class="bubble-description">Intermedia creator and musician, he has helped creating multiple artworks and pieces with i-score and ossia score.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Oscar, the ossia mascot" class="bubble-image" src="assets/association/oscar.webp" />
+    <a href="https://opencollective.com/ossia" target="_blank" class="bubble-title">Oscar</a>
+    <div class="bubble-description">Full-time mascot. Interested in the design of time and space.</div>
+</div>
+</div>
+</section>
+
+<h2 class="feature-title">Canada</h2>
+<p><br /></p>
+<section class="wrapper style4 association-page">
+<div class="bubble-grid">
+<div class="bubble-item">
+    <img alt="Portrait of Evan Montpellier" class="bubble-image" src="assets/association/emontpellier.webp" />
+    <a href="https://evanmontpellier.net/" target="_blank" class="bubble-title">Evan Montpellier</a>
+    <div class="bubble-description">Evan Montpellier, coordinator of the Canadian non-profit, is a musician and artist based in Montréal, Québec. Working mainly with selfbuilt software and electronic instruments, Evan creates live video and sound performances, recorded music and interactive artworks.</div>
+</div>
+
+<div class="bubble-item">
+    <img alt="Portrait of Ashley Obscura" class="bubble-image" src="assets/association/aobscura.webp" />
+    <a href="https://web.archive.org/web/20250618164024/https://www.ashleyobscura.net/" target="_blank" class="bubble-title">Ashley Obscura</a>
+    <div class="bubble-description">Ashley Obscura is a multidisciplinary poet, writer and publisher. She is the founder and managing editor of Metatron Press, the author of Ambient Technology and I Am Here, and the scriptwriter of experimental video games Oceanarium, Songs of the Lost, and Museum of Symmetry.</div>
+</div>
+<div class="bubble-item">
+    <img alt="Portrait of Navid Navab" class="bubble-image" src="assets/association/nnavab.webp" />
+    <a href="https://www.navidnavab.com/" target="_blank" class="bubble-title">Navid Navab</a>
+    <div class="bubble-description">A media alchemist, multidisciplinary  composer, audiovisual sculptor, phono-menologist, perSonifier,  gestureBender, and interdisciplinary artist-researcher. Interested in  the poetics of schizophonia, gesture, materiality, and embodiment, his  work investigates the transmutation of matter and the enrichment of its  inherent performative qualities.</div>
+</div>
+
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <a href="https://www.idmil.org/people/travis-west/" target="_blank" class="bubble-title">Travis West</a>
+    <div class="bubble-description">Travis West is a multidisciplinary programmer, composer-performer, and musical instrument designer. His research explores the design of gestural interfaces, sound synthesis algorithms, and the mappings made between the two. </div>
+</div>
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <a href="https://petervanhaaften.net" target="_blank" class="bubble-title">Peter van Haaften</a>
+    <div class="bubble-description">Peter van Haaften is a multidisciplinary composer based in Montreal. He creates live performances, interactive installations, and fixed media for speakers. </div>
+</div>
+<div class="bubble-item">
+    <img alt="" class="bubble-image" src="assets/association/nani.png" />
+    <a href="https://kivanctatar.com/" target="_blank" class="bubble-title">Kıvanç Tatar</a>
+    <div class="bubble-description">Kıvanç Tatar is a musician, new media artist, and researcher focusing on Artificial Intelligence for Music and Interactive Media.</div>
+</div>
+</div>
+</section>
+
+<h2 class="feature-title">Contributors</h2>
+
+<p><strong>score</strong> and <strong>libossia</strong> are specified, developed, documented and tested by a team of collaborators, that has been growing over the years.</p>
+
+<p>Each of us is somehow a different mix between an artist and an developer, and we are all passionate about creating tools for improving our creative workflows, and sharing those with others.</p>
+
+<p>The current core team is composed of:</p>
+<ul>
+  <li><b>Jean-Michaël Celerier</b>: Lead developer and software architect</li>
+  <li><b>Antoine Villeret</b>: libossia (ossia-pd/max and more) and score developer</li>
+  <li><b>Pia Baltazar</b>: Coordination, specifications and some user interface design</li>
+  <li><b>Julien Rabin</b>: Documentation, specifications and some user interface design</li>
+  <li><b>Akané Lévy</b>: Graphic, website and user interface design, initial ofxOssia development</li>
+  <li><b>Thibaud Keller</b>: ossia-superCollider, development, user feedback and more</li>
+  <li><b>Pierre Cochard</b>: ossia-superCollider development, user feedback &amp; beta-test,</li>
+  <li><b>Thomas Pachoud</b>: Specifications, user feedback &amp; beta-test, ofxOssia development</li>
+  <li><b>Renaud Rubiano</b>: ossia-python specifications, user feedback &amp; beta-test</li>
+</ul>
+
+<p>We owe a lot to previous developers, notably:</p>
+<ul>
+  <li><b>Théo De La Hogue</b>: ossia-python development, and previous OSSIA API development</li>
+  <li><b>Nicolas Vuaille, LaBRI</b>: Graphical interface development</li>
+  <li><b>Clément Bossut, LaBRI</b>: OSSIA API specification</li>
+  <li><b>Raphaël Marczak, LaBRI</b>: Main developper of the Virage engine, score proof of concept</li>
+</ul>
+
+<p>And also to the initiators of the Virage/i-score sequencers:</p>
+<ul>
+  <li><b>Myriam Desainte-Catherine, LaBRI</b>: Scientific advising</li>
+  <li><b>Jean-Michel Couturier, Magnolya Roy,  Blue Yeti</b>: graphical interface design</li>
+</ul>
+
+<p>Many individuals and structures have supported the project along its various mutations and incarnations. It’s impossible to cite them all, but we’re very grateful to them!
+Among them: Georges Gagneré, didascalie.net ; Thierry Besche, GMEA ; Yves Bernard, iMal…</p>
+
+<p>The complete list can be found below:</p>
+
+<ul>
+  <li><a href="https://github.com/ossia/score/graphs/contributors">ossia score contributors</a></li>
+  <li><a href="https://github.com/ossia/libossia/graphs/contributors">libossia contributors</a></li>
+</ul>
+
+<h2 class="feature-title">Supporting organizations</h2>
+<p><br />
+Development has been supported over the years by many organizations and grants:</p>
+<div class="logo-grid" style="justify-content: center;">
+<a href="https://www.labri.fr/"><img src="/assets/logo/LABRI_BIG.png" alt="LaBRI" /></a>
+<a href="https://scrime.u-bordeaux.fr/"><img src="/assets/logo/logo-SCRIME-2018-Light.jpg" alt="SCRIME" /></a>
+<a href="https://www.blueyeti.fr/"><img src="/assets/logo/blueyeti.png" alt="Blue Yeti" /></a>
+<a href="https://www.unrealengine.com/"><img src="/assets/logo/unreal_engine.png" width="80" alt="Unreal Engine" /></a>
+<a href="https://www.mozilla.org/"><img src="/assets/logo/mozilla-logo.png" alt="Mozilla" /></a>
+<a href="https://opencollective.com/"><img src="/assets/logo/opencollectivelogo.png" alt="OpenCollective" /></a>
+<a href="https://anr.fr/"><img src="/assets/logo/anr-logo.png" alt="ANR" /></a>
+<a href="https://celtera.dev"><img src="/assets/logo/celtera.png" alt="Celtera" /></a>
+<a href="https://www.anrt.asso.fr"><img src="/assets/logo/logo-cifre-s.png" alt="CIFRE" /></a>
+<a href="https://www.enseignementsup-recherche.gouv.fr/"><img src="/assets/logo/ministere-sup.jpg" alt="Ministère de l'enseignement supérieur et de la recherche" /></a>
+<a href="https://www.culture.gouv.fr/"><img src="/assets/logo/logo-ministere-de-la-culture.png" alt="Ministère de la culture" /></a>
+</div>
+
+<p>With additional support and contributions of other organizations, such as:</p>
+<ul>
+  <li>GMEA</li>
+  <li>L’Arboretum</li>
+  <li>didascalie.net</li>
+  <li>StudioMirio</li>
+</ul>
+
+    </section>
+</article>
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Follow us !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-about") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>

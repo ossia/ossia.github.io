@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery | ossia</title>
+  <meta name="description" content="Artworks, installations, concerts and shows created with ossia score and libossia by artists around the world." />
+  <link rel="canonical" href="https://ossia.io/gallery.html" />
+  <link rel="alternate" hreflang="en" href="https://ossia.io/gallery.html" />
+  <link rel="alternate" hreflang="fr" href="https://ossia.io/fr/galerie.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ossia.io/gallery.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gallery" />
+  <meta property="og:description" content="Artworks, installations, concerts and shows created with ossia score and libossia by artists around the world." />
+  <meta property="og:url" content="https://ossia.io/gallery.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="Gallery" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="fr_FR" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html" data-cat="site-score">score</a>
+			<a href="/site-libossia/about.html" data-cat="site-libossia">libossia</a>
+			<a href="/docs.html" data-cat="site-docs">docs</a>
+            <a href="/gallery.html" data-cat="site-gallery">gallery</a>
+            <a href="/use-cases.html">use cases</a>
+			<a href="/about.html" data-cat="site-about">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Language: English</span><span aria-hidden="true">EN</span></summary>
+  <ul><li><a href="/gallery.html" lang="en" aria-current="page">English</a></li><li><a href="/fr/galerie.html" lang="fr" hreflang="fr">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Main (mobile)">
+        <a class="link" href="/">ossia</a>
+        <a class="link" href="/score/about.html">score</a>
+        <a class="link" href="/site-libossia/about.html">libossia</a>
+        <a class="link" href="/docs.html">docs</a>
+        <a class="link" href="/gallery.html">gallery</a>
+        <a class="link" href="/use-cases.html">use cases</a>
+        <a class="link" href="/about.html">about</a>
+        <a class="link" href="/score/download.html">download</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">donate</a>
+        <ul class="lang-links" aria-label="Language"><li><a href="/gallery.html" lang="en" aria-current="page">English</a></li><li><a href="/fr/galerie.html" lang="fr" hreflang="fr">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+        <article id="main" style="padding-bottom: 2em;">
+    <header class="container" style="padding-top: 4em;text-align:center;">
+        
+        <h1 class="page-title">Gallery</h1>
+    </header>
+    
+<!--  Page content    -->
+        <!--  Page content    -->
+        <link rel="stylesheet" href="/css/gallery.css" />
+
+<section class="g2">
+
+<p class="g2-intro">Artworks, installations, concerts and shows made with ossia.</p>
+
+<div class="g2-filters" role="group" aria-label="Filter works by type">
+    <button type="button" class="g2-filter is-active" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" class="g2-filter" data-filter="installation" aria-pressed="false">Installations</button>
+    <button type="button" class="g2-filter" data-filter="performance" aria-pressed="false">Performances</button>
+    <button type="button" class="g2-filter" data-filter="stage" aria-pressed="false">Stage</button>
+    <button type="button" class="g2-filter" data-filter="museum" aria-pressed="false">Museums</button>
+    <button type="button" class="g2-filter" data-filter="education" aria-pressed="false">Education</button>
+</div>
+
+<div class="g2-grid">
+    <article class="g2-card" data-kind="performance stage"><a class="g2-media" href="https://www.earthboundfutures.com/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/earthbound-futures.webp" alt="EarthBound Futures by EarthBound Futures" fetchpriority="high" decoding="async" /><span class="g2-credit">&copy; Charles Bicari</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.earthboundfutures.com/">EarthBound Futures</a></h2>
+            <p class="g2-artists">EarthBound Futures</p>
+            <p class="g2-meta">2025, 2026 · Montréal</p>
+            <p class="g2-ossia">Show control for a live performance mixing wrestling, music and theatre</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.imal.org/fr/events/eva-pia" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/csonka-dangerous-games.webp" alt="The Most Dangerous Games We (Might) Play by Éva B.Csonka, in collaboration with Pía Baltazar" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.imal.org/fr/events/eva-pia">The Most Dangerous Games We (Might) Play</a></h2>
+            <p class="g2-artists">Éva B.Csonka, in collaboration with Pía Baltazar</p>
+            <p class="g2-meta">2026 · EMAP residency, iMAL, Brussels</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><div class="g2-media">
+            <img src="/assets/gallery/reflet.webp" alt="Reflet by Noukii (Anouk Ethier), Isabella Salas, Allison Moore, with RE-AK and Gradiant" decoding="async" /><span class="g2-credit">&copy; Agustina Isidori</span></div>
+        <div class="g2-body">
+            <h2 class="g2-title">Reflet</h2>
+            <p class="g2-artists">Noukii (Anouk Ethier), Isabella Salas, Allison Moore, with RE-AK and Gradiant</p>
+            <p class="g2-meta">2025–2026 · SAT, Montréal</p>
+            <p class="g2-ossia">Show logic and real-time generative imagery with custom generative models</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.creativeapplications.net/member/constant-points-of-data-indistinct-voices-over-pa/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/constant-points-of-data.webp" alt="Constant Points of Data by Indistinct voices over PA" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.creativeapplications.net/member/constant-points-of-data-indistinct-voices-over-pa/">Constant Points of Data</a></h2>
+            <p class="g2-artists">Indistinct voices over PA</p>
+            <p class="g2-meta">2026</p>
+            <p class="g2-ossia">ossia score with Ableton Live and Max/Jitter, for turntablism and elastic tempo manipulation in an audiovisual performance</p>
+            <p class="g2-links"><a href="https://indistinctvoices.bandcamp.com/album/constant-points-of-data">Bandcamp</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://vimeo.com/1233840973" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/vandal-flux-operatoires.webp" alt="flux opératoires by Philippe Vandal" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://vimeo.com/1233840973">flux opératoires</a></h2>
+            <p class="g2-artists">Philippe Vandal</p>
+            <p class="g2-meta">2026</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://ateliercirculaire.org/project/resiliencedesbois/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/resilience-des-bois.webp" alt="Résilience des bois by Shabnam Zeraati, Gilnaz Arzpeyma, Zahra Nabavi" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Jean-Michael Séminaro</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://ateliercirculaire.org/project/resiliencedesbois/">Résilience des bois</a></h2>
+            <p class="g2-artists">Shabnam Zeraati, Gilnaz Arzpeyma, Zahra Nabavi</p>
+            <p class="g2-meta">2026 · Atelier Circulaire, Montréal</p>
+            <p class="g2-ossia">Five-projector video mapping, running on a single older Mac</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card g2-card--wide" data-kind="installation performance"><a class="g2-media" href="https://www.navidnavab.com/organism-excitable-chaos" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/organism.webp" alt="Organism + Excitable Chaos / Organism in Turbulence by Navid Navab &amp; Garnet Willis" loading="lazy" decoding="async" /><span class="g2-award">Golden Nica, Prix Ars Electronica 2025</span><span class="g2-credit">&copy; Miha Godec</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.navidnavab.com/organism-excitable-chaos">Organism + Excitable Chaos / Organism in Turbulence</a></h2>
+            <p class="g2-artists">Navid Navab &amp; Garnet Willis</p>
+            <p class="g2-meta">2024–2026 · Ars Electronica, ELEKTRA, MaerzMusik, iMAL…</p>
+            <p class="g2-ossia">Network communication between the pendulum and the computers with ossia-max</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://petervanhaaften.net/works/onair" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/on-air.webp" alt="On Air by Peter van Haaften, Michael Montanaro, Garnet Willis" loading="lazy" decoding="async" /><span class="g2-award">Honorary Mention, Prix Ars Electronica 2025</span><span class="g2-credit">&copy; Jonathan Goulet</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://petervanhaaften.net/works/onair">On Air</a></h2>
+            <p class="g2-artists">Peter van Haaften, Michael Montanaro, Garnet Willis</p>
+            <p class="g2-meta">2025 · ELEKTRA Montréal, Ars Electronica, Biennale Némo Paris</p>
+            <p class="g2-ossia">ossia-max</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://philippevandal.github.io/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/vandal-spectral-narratives.webp" alt="spectral narratives by Philippe Vandal" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://philippevandal.github.io/">spectral narratives</a></h2>
+            <p class="g2-artists">Philippe Vandal</p>
+            <p class="g2-meta">2025 · Eisode, Montréal</p>
+            <p class="g2-ossia">Four glass and solvent modules sequenced with score</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://eringee.net" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/erin-show.webp" alt="BioSynth light show by Erin Gee" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://eringee.net">BioSynth light show</a></h2>
+            <p class="g2-artists">Erin Gee</p>
+            <p class="g2-meta">2025</p>
+            <p class="g2-ossia">LED / DMX lighting console in score, running headless on a Raspberry Pi, driven by biosignals</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.baltazar.studio/art/our-bodies" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/pia-ourbodies.webp" alt="Our Bodies Know More Than We Do by Psʌnía (Pía Baltazar &amp; Sunjeong Hwang)" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.baltazar.studio/art/our-bodies">Our Bodies Know More Than We Do</a></h2>
+            <p class="g2-artists">Psʌnía (Pía Baltazar &amp; Sunjeong Hwang)</p>
+            <p class="g2-meta">2025 · WeSA Jeju residency, Daejeon</p>
+            <p class="g2-ossia">Gestural interface: the two performers' movements drive sound and light</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.baltazar.studio/art/somelightinthecrumbling" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/pia-somelight.webp" alt="Some Light in the Crumbling by Pía Baltazar &amp; Saba Alizadeh" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.baltazar.studio/art/somelightinthecrumbling">Some Light in the Crumbling</a></h2>
+            <p class="g2-artists">Pía Baltazar &amp; Saba Alizadeh</p>
+            <p class="g2-meta">2025 · Saint-Rémi Church, Molenbeek, Brussels</p>
+            <p class="g2-ossia">Site-specific concert with loudspeakers spread through the church</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.baltazar.studio/art/ripples" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/pia-ripples.webp" alt="The Ripples of Consequence by Pía Baltazar, performed by Audréanne Filion" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.baltazar.studio/art/ripples">The Ripples of Consequence</a></h2>
+            <p class="g2-artists">Pía Baltazar, performed by Audréanne Filion</p>
+            <p class="g2-meta">2025 · Le Vivier, Édifice Wilder, Montréal</p>
+            <p class="g2-ossia">Composition for the Table de Babel (Totem Contemporain)</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.youtube.com/watch?v=M_nGusbX8zM" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/pocius-on-the-edge.webp" alt="On the Edge by Kasey Pocius" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.youtube.com/watch?v=M_nGusbX8zM">On the Edge</a></h2>
+            <p class="g2-artists">Kasey Pocius</p>
+            <p class="g2-meta">2024 · Sound Symposium XXI, St. John's</p>
+            <p class="g2-ossia">Visuals made with ossia, in an audiovisual work for video, T-Stick and surround sound</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://quaidessavoirs.toulouse-metropole.fr/2025/01/10/lemotion-comme-donnee-scenique-fheel-concepts/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/vibh2o.webp" alt="VIBH2O / VIB.E-MOTION by Fheel Concepts / Corinne Linder" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Emmanuel Grimault</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://quaidessavoirs.toulouse-metropole.fr/2025/01/10/lemotion-comme-donnee-scenique-fheel-concepts/">VIBH2O / VIB.E-MOTION</a></h2>
+            <p class="g2-artists">Fheel Concepts / Corinne Linder</p>
+            <p class="g2-meta">2024 · SAT, Altigone, Quai des Savoirs (Toulouse)</p>
+            <p class="g2-ossia">Participatory circus performance driven by audience heart rates (Bluetooth sensors); network and sound in score</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://www.baltazar.studio/art/abreathingvoid" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/pia-breathing.webp" alt="A Breathing Void by Pía Baltazar" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.baltazar.studio/art/abreathingvoid">A Breathing Void</a></h2>
+            <p class="g2-artists">Pía Baltazar</p>
+            <p class="g2-meta">2024 · Centre Clark, Montréal</p>
+            <p class="g2-ossia">Veil of plastic animated by fans, LED lights and spatialised sound</p>
+        </div>
+    </article>
+    <article class="g2-card g2-card--wide" data-kind="installation"><a class="g2-media" href="https://oara.fr/metascene/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/metascene.webp" alt="METAscène by OARA / SCRIME. Music by György Kurtág Jr., spatialisation with Pía Baltazar and Joseph Larralde" loading="lazy" decoding="async" /><span class="g2-credit">&copy; OARA</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://oara.fr/metascene/">METAscène</a></h2>
+            <p class="g2-artists">OARA / SCRIME. Music by György Kurtág Jr., spatialisation with Pía Baltazar and Joseph Larralde</p>
+            <p class="g2-meta">2024– · MÉCA, Bordeaux</p>
+            <p class="g2-ossia">50+ channels of spatialised sound, three video screens and lighting, all run from score</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://b-ak.com/projects/en-sur-et-face/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/en-sur-et-face.webp" alt="En, Sur et Face by Brice Ammar-Khodja" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Brice Ammar-Khodja</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://b-ak.com/projects/en-sur-et-face/">En, Sur et Face</a></h2>
+            <p class="g2-artists">Brice Ammar-Khodja</p>
+            <p class="g2-meta">2024 · Perte de Signal, Montréal</p>
+            <p class="g2-ossia">score on Orange Pi + ESP32 for sound, light and scent</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance installation"><a class="g2-media" href="https://b-ak.com/projects/ballets-residuels/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/ballets-residuels.webp" alt="Ballets Résiduels by Brice Ammar-Khodja, in collaboration with Jean-Michaël Celerier" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Diego Bravo</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://b-ak.com/projects/ballets-residuels/">Ballets Résiduels</a></h2>
+            <p class="g2-artists">Brice Ammar-Khodja, in collaboration with Jean-Michaël Celerier</p>
+            <p class="g2-meta">2023–2024 · Champ des Possibles, Montréal</p>
+            <p class="g2-ossia">score on Raspberry Pi + ESP32 for sound, light and scent</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://b-ak.com/projects/recapture/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/recapture.webp" alt="[re]capture by Alice Jarry, Brice Ammar-Khodja, Jacqueline Beaumont, Jean-Michaël Celerier, Matthew Halpenny, Asa Perlman, Philippe Vandal" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Alice Jarry</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://b-ak.com/projects/recapture/">[re]capture</a></h2>
+            <p class="g2-artists">Alice Jarry, Brice Ammar-Khodja, Jacqueline Beaumont, Jean-Michaël Celerier, Matthew Halpenny, Asa Perlman, Philippe Vandal</p>
+            <p class="g2-meta">2024–2025 · Eisode, Montréal · Centre culturel canadien, Paris</p>
+            <p class="g2-ossia">Cameras, video processing, lights, pumps and motors, run entirely by score on a Raspberry Pi</p>
+            <p class="g2-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></p>
+        </div>
+    </article>
+    <article class="g2-card g2-card--wide" data-kind="installation"><a class="g2-media" href="https://irelandatvenice2025.ie/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/assembly.webp" alt="Assembly by Louise Cotter, David Naessens, Luke Naessens, Michelle Delea, David Stalling, Alan Meredith" loading="lazy" decoding="async" /><span class="g2-award">Ireland at the Venice Biennale 2025</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://irelandatvenice2025.ie/">Assembly</a></h2>
+            <p class="g2-artists">Louise Cotter, David Naessens, Luke Naessens, Michelle Delea, David Stalling, Alan Meredith</p>
+            <p class="g2-meta">2025 · Irish Pavilion, Venice Architecture Biennale</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://escuta.org/en/proj/assombros/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/assombros.webp" alt="Assombros by Iain Mott &amp; Simone Reis" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://escuta.org/en/proj/assombros/">Assombros</a></h2>
+            <p class="g2-artists">Iain Mott &amp; Simone Reis</p>
+            <p class="g2-ossia">Pepper's ghost peepshow cabinets (first shown as Petit Godot): video and LED sequencing with score on a Raspberry Pi</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://bravozoulou.fr/projets/four-for/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/DID_4858.webp" alt="Four For by Bravo Zoulou" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Didier Crasnault</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://bravozoulou.fr/projets/four-for/">Four For</a></h2>
+            <p class="g2-artists">Bravo Zoulou</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://www.navidnavab.com/tangibleflux" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/tangibleFlux.webp" alt="tangibleFlux φ plenumorphic ∴ chaosmosis by Navid Navab" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.navidnavab.com/tangibleflux">tangibleFlux φ plenumorphic ∴ chaosmosis</a></h2>
+            <p class="g2-artists">Navid Navab</p>
+            <p class="g2-ossia">ossia score with Max, ossia and Jamoma</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://vimeo.com/429115710" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/SNN2.webp" alt="SNN#2: Light/Space/Modulator by Alex Saunier &amp; Chris Salter" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://vimeo.com/429115710">SNN#2: Light/Space/Modulator</a></h2>
+            <p class="g2-artists">Alex Saunier &amp; Chris Salter</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://www.contour-progressif.net/projets/spectacle/laveuglement" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/aveuglement.webp" alt="L&#39;aveuglement by Cie Contour progressif / Mylène Benoît" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.contour-progressif.net/projets/spectacle/laveuglement">L'aveuglement</a></h2>
+            <p class="g2-artists">Cie Contour progressif / Mylène Benoît</p>
+            <p class="g2-ossia">ossia-pd and score</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://web.archive.org/web/20260209152743/http://www.baltazars.org/project/nebula/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/Nebula_ChampignonsNeigeJaune.webp" alt="Nebula by The Baltazars" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://web.archive.org/web/20260209152743/http://www.baltazars.org/project/nebula/">Nebula</a></h2>
+            <p class="g2-artists">The Baltazars</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://vimeo.com/282498843" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/Sun8mm.webp" alt="Sun (~8 mn) by Félicie d&#39;Estienne d&#39;Orves" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://vimeo.com/282498843">Sun (~8 mn)</a></h2>
+            <p class="g2-artists">Félicie d'Estienne d'Orves</p>
+            <p class="g2-ossia">score and ofxOssia</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://fracnouvelleaquitaine-meca.fr/evenement/desoleil-anne-charlotte-finel/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/D%C3%A9soleil.webp" alt="Désoleil by Anne-Charlotte Finel" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://fracnouvelleaquitaine-meca.fr/evenement/desoleil-anne-charlotte-finel/">Désoleil</a></h2>
+            <p class="g2-artists">Anne-Charlotte Finel</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://djeff.com/portfolio/dyew/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/Big_Dyew-1920x917.webp" alt="Dyew by Djeff" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://djeff.com/portfolio/dyew/">Dyew</a></h2>
+            <p class="g2-artists">Djeff</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://web.archive.org/web/20210614062011/http://wpn214.com/en/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/quarre.webp" alt="Quarrè by Pierre Cochard" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://web.archive.org/web/20210614062011/http://wpn214.com/en/">Quarrè</a></h2>
+            <p class="g2-artists">Pierre Cochard</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="museum"><a class="g2-media" href="https://web.archive.org/web/20240805094104/https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/carrousel.webp" alt="Carousel Musical by Blue Yeti, Abbaye aux Dames" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://web.archive.org/web/20240805094104/https://www.abbayeauxdames.org/en/musicaventure/carrousel-musical/">Carousel Musical</a></h2>
+            <p class="g2-artists">Blue Yeti, Abbaye aux Dames</p>
+            <p class="g2-links"><a href="https://web.archive.org/web/20251215210829/http://www.blueyeti.fr/le-carrousel-musical-abbaye-aux-dames/">Blue Yeti</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://web.archive.org/web/20210918134745/http://www.donatiengarnier.com/un-spectacle-en-3d/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/arbre-int%C3%A9grale.webp" alt="L&#39;Arbre Intégral by Le Poème en volume" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://web.archive.org/web/20210918134745/http://www.donatiengarnier.com/un-spectacle-en-3d/">L'Arbre Intégral</a></h2>
+            <p class="g2-artists">Le Poème en volume</p>
+            <p class="g2-ossia">ossia score with Reaper, Live, Unity3D and Android smartphones</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://vimeo.com/213259612" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/14-Virages2.webp" alt="(à) partir by Thibaud le Maguer" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://vimeo.com/213259612">(à) partir</a></h2>
+            <p class="g2-artists">Thibaud le Maguer</p>
+            <p class="g2-ossia">score, ossia-pd and ofxOssia</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://scrime.u-bordeaux.fr/residences/qui-parle-donc" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/Qui-parle-donc_Event.webp" alt="Qui parle donc by Passerelle arts-sciences" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://scrime.u-bordeaux.fr/residences/qui-parle-donc">Qui parle donc</a></h2>
+            <p class="g2-artists">Passerelle arts-sciences</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://scrime.u-bordeaux.fr/residences/meta-chef-dorchestre" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/dome_scrime.webp" alt="Méta Chef d&#39;Orchestre by Serge Delaubier" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://scrime.u-bordeaux.fr/residences/meta-chef-dorchestre">Méta Chef d'Orchestre</a></h2>
+            <p class="g2-artists">Serge Delaubier</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://www.compagnie-ever.com/aleas" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/meca-dome.webp" alt="ALEAS by Compagnie EVER / Camille Rocailleux" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.compagnie-ever.com/aleas">ALEAS</a></h2>
+            <p class="g2-artists">Compagnie EVER / Camille Rocailleux</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://scrime.u-bordeaux.fr/residences/sonotact" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/sonotact.webp" alt="Sonotact by Pascale Criton" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://scrime.u-bordeaux.fr/residences/sonotact">Sonotact</a></h2>
+            <p class="g2-artists">Pascale Criton</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://scrime.u-bordeaux.fr/residences/rain-music" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/metabot_score.webp" alt="Rain of Music by Josu Rekalde" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://scrime.u-bordeaux.fr/residences/rain-music">Rain of Music</a></h2>
+            <p class="g2-artists">Josu Rekalde</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://scrime.u-bordeaux.fr/residences/walking-down-street" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/walking-down-the-street.webp" alt="Walking Down The Street by Lina Rahal &amp; Jean-Marie Colin" loading="lazy" decoding="async" /><span class="g2-credit">&copy; Jean-Marie Colin</span></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://scrime.u-bordeaux.fr/residences/walking-down-street">Walking Down The Street</a></h2>
+            <p class="g2-artists">Lina Rahal &amp; Jean-Marie Colin</p>
+            <p class="g2-meta">2021 · SCRIME residency, Bordeaux</p>
+            <p class="g2-ossia">Hip-hop dance; the whole show driven by score and controlled live with a Karlax</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://vimeo.com/572657592" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/chant-hibou.webp" alt="Le regard du hibou by The Baltazars" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://vimeo.com/572657592">Le regard du hibou</a></h2>
+            <p class="g2-artists">The Baltazars</p>
+            <p class="g2-meta">2021</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://dennis-scheiba.com/events/2021-06-04_kolorit.html" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/heimat.webp" alt="Heimat by Dennis Scheiba" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://dennis-scheiba.com/events/2021-06-04_kolorit.html">Heimat</a></h2>
+            <p class="g2-artists">Dennis Scheiba</p>
+            <p class="g2-meta">2021</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://jim2021.sciencesconf.org/361406" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/hermes-capture%C3%A9cran.webp" alt="HERMES v2 by João Svidzinski" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://jim2021.sciencesconf.org/361406">HERMES v2</a></h2>
+            <p class="g2-artists">João Svidzinski</p>
+            <p class="g2-meta">2021</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://www.luchs.us/parallel-welt" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/STATUE-ART.webp" alt="ParallelWorlds by LUCHS.US Team" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://www.luchs.us/parallel-welt">ParallelWorlds</a></h2>
+            <p class="g2-artists">LUCHS.US Team</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://youtu.be/IPW5e-OhMy8?t=2487" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/S0327146.webp" alt="Proteus by Gordon Delap" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://youtu.be/IPW5e-OhMy8?t=2487">Proteus</a></h2>
+            <p class="g2-artists">Gordon Delap</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="performance"><a class="g2-media" href="https://hal.science/hal-04226027" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/solo-k.webp" alt="Solo.K by Jean-Marie Colin" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://hal.science/hal-04226027">Solo.K</a></h2>
+            <p class="g2-artists">Jean-Marie Colin</p>
+            <p class="g2-meta">2019 · Festival Haizebegi, Bayonne</p>
+            <p class="g2-ossia">Karlax solo; score drives the music and images</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://djeff.com/portfolio/ad-astra/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/adastra.webp" alt="Ad Astra by Djeff" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://djeff.com/portfolio/ad-astra/">Ad Astra</a></h2>
+            <p class="g2-artists">Djeff</p>
+            <p class="g2-meta">2018</p>
+            <p class="g2-ossia">score</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://louxorspectacle.com/spectacles/immersion/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/louxor-immersion.webp" alt="Immersion by Louxor Spectacle" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://louxorspectacle.com/spectacles/immersion/">Immersion</a></h2>
+            <p class="g2-artists">Louxor Spectacle</p>
+            <p class="g2-meta">2017</p>
+            <p class="g2-ossia">Floating projection, with score and ofxOssia</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://web.archive.org/web/2021/https://www.theatredupassage.ch/spectacles/voyage-voyage" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/voyage-voyage.webp" alt="Voyage Voyage by Cie Princesse Léopold, scenography by Thomas Pachoud" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://web.archive.org/web/2021/https://www.theatredupassage.ch/spectacles/voyage-voyage">Voyage Voyage</a></h2>
+            <p class="g2-artists">Cie Princesse Léopold, scenography by Thomas Pachoud</p>
+            <p class="g2-meta">Théâtre du Passage, Neuchâtel</p>
+            <p class="g2-ossia">score and ofxOssia</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://assoikari.wordpress.com/2015/02/27/shape-of-light/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/ikari-shape-of-light.webp" alt="Shape of Light, Ascension by Cie IKARI / Thomas Pachoud" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://assoikari.wordpress.com/2015/02/27/shape-of-light/">Shape of Light, Ascension</a></h2>
+            <p class="g2-artists">Cie IKARI / Thomas Pachoud</p>
+            <p class="g2-meta">2015–2016</p>
+            <p class="g2-ossia">score and ofxOssia</p>
+            <p class="g2-links"><a href="https://assoikari.wordpress.com/2016/02/08/ascension/">Ascension</a></p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://didascalie.net/tiki-index.php?page=rech-paroral" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/paroral.webp" alt="ParOral by Georges Gagneré (didascalie.net)" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://didascalie.net/tiki-index.php?page=rech-paroral">ParOral</a></h2>
+            <p class="g2-artists">Georges Gagneré (didascalie.net)</p>
+            <p class="g2-meta">2015–2016 · LaBRI / SCRIME, Bordeaux</p>
+            <p class="g2-ossia">ossia score with SuperCollider and Unity / Unreal Engine</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="stage"><a class="g2-media" href="https://assoikari.wordpress.com/2016/09/15/matiere-creation-en-cours/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/matiere.webp" alt="Matière by Cie Ikari / Thomas Pachoud" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://assoikari.wordpress.com/2016/09/15/matiere-creation-en-cours/">Matière</a></h2>
+            <p class="g2-artists">Cie Ikari / Thomas Pachoud</p>
+            <p class="g2-meta">2016</p>
+            <p class="g2-ossia">score and ofxOssia</p>
+        </div>
+    </article>
+    <article class="g2-card" data-kind="installation"><a class="g2-media" href="https://serious.computer/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/gallery/nova_visual_01.webp" alt="Nova by Nina Bouchard, Evan Montpellier / Serious Computer Group" loading="lazy" decoding="async" /></a>
+        <div class="g2-body">
+            <h2 class="g2-title"><a href="https://serious.computer/">Nova</a></h2>
+            <p class="g2-artists">Nina Bouchard, Evan Montpellier / Serious Computer Group</p>
+        </div>
+    </article>
+</div>
+
+<h2 class="g2-heading">More works</h2>
+
+<table class="g2-table">
+    <thead>
+        <tr><th>Year</th><th>Work</th><th>Artists</th><th>Where</th><th>With ossia</th></tr>
+    </thead>
+    <tbody>
+        <tr data-kind="performance">
+            <td data-label="Year">2026</td>
+            <td data-label="Work" class="g2-table-title">Calligraphic gesture lecture-performance</td>
+            <td data-label="Artists">Sahar Homami &amp; Pía Baltazar<br /><span class="g2-table-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></span></td>
+            <td data-label="Where">Perte de Signal, Montréal</td>
+            <td data-label="With ossia">Qalam pressure sensor, IMU, tablet and Leap Motion processed in score to generate sound and image</td>
+        </tr>
+        <tr data-kind="education">
+            <td data-label="Year">2023</td>
+            <td data-label="Work" class="g2-table-title">Dô d'eau</td>
+            <td data-label="Artists">ENSATT sound and lighting students<br /><span class="g2-table-sat">In collaboration with <a href="https://sat.qc.ca">SAT</a></span></td>
+            <td data-label="Where">ENSATT, Lyon</td>
+            <td data-label="With ossia">Spatialised sound, video and DMX lighting with score</td>
+        </tr>
+        <tr data-kind="performance">
+            <td data-label="Year"></td>
+            <td data-label="Work" class="g2-table-title">pianotronics #3</td>
+            <td data-label="Artists">Alain Bonardi</td>
+            <td data-label="Where"></td>
+            <td data-label="With ossia">score</td>
+        </tr>
+        <tr data-kind="performance">
+            <td data-label="Year"></td>
+            <td data-label="Work" class="g2-table-title">Le Chant des Nanos</td>
+            <td data-label="Artists">Collectif Genre (SCRIME / IdEx Arts et Sciences)</td>
+            <td data-label="Where"></td>
+            <td data-label="With ossia">ossia score with Max4Live and Modul8</td>
+        </tr>
+        <tr data-kind="museum">
+            <td data-label="Year"></td>
+            <td data-label="Work" class="g2-table-title">Musée de la nature et de la chasse, Gien</td>
+            <td data-label="Artists">Blue Yeti</td>
+            <td data-label="Where"></td>
+            <td data-label="With ossia">libossia-QML</td>
+        </tr>
+        <tr data-kind="museum">
+            <td data-label="Year"></td>
+            <td data-label="Work" class="g2-table-title">Interactive museum route, Chocolaterie Camille Bloch (Switzerland)</td>
+            <td data-label="Artists">Blue Yeti</td>
+            <td data-label="Where"></td>
+            <td data-label="With ossia">libossia-QML</td>
+        </tr>
+    </tbody>
+</table>
+
+</section>
+
+<script>
+(function () {
+    var buttons = document.querySelectorAll('.g2-filter');
+    var items = document.querySelectorAll('.g2-card, .g2-table tbody tr');
+    buttons.forEach(function (b) {
+        b.addEventListener('click', function () {
+            var f = b.dataset.filter;
+            buttons.forEach(function (o) {
+                var on = o === b;
+                o.classList.toggle('is-active', on);
+                o.setAttribute('aria-pressed', on ? 'true' : 'false');
+            });
+            items.forEach(function (el) {
+                var kinds = (el.dataset.kind || '').split(' ');
+                el.hidden = f !== 'all' && kinds.indexOf(f) === -1;
+            });
+        });
+    });
+})();
+</script>
+
+
+<!--     </section> -->
+
+<script>
+for (const a of document.querySelectorAll('.menu a')) {
+    if (a.textContent === "Gallery") { a.classList.add('active'); break; }
+}
+</script>
+    
+
+<!--     </section> -->
+</article>
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Follow us !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-gallery") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>

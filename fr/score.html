@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos d&#39;ossia score | ossia</title>
+  <meta name="description" content="Fonctionnalités d&#39;ossia score : édition sur timeline et en vue nodale, OSC, OSCQuery, MIDI, DMX, audio, vidéo, shaders, scripts et scénarios interactifs." />
+  <link rel="canonical" href="https://ossia.io/fr/score.html" />
+  <link rel="alternate" hreflang="en" href="https://ossia.io/score/about.html" />
+  <link rel="alternate" hreflang="fr" href="https://ossia.io/fr/score.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ossia.io/score/about.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="À propos d&#39;ossia score" />
+  <meta property="og:description" content="Fonctionnalités d&#39;ossia score : édition sur timeline et en vue nodale, OSC, OSCQuery, MIDI, DMX, audio, vidéo, shaders, scripts et scénarios interactifs." />
+  <meta property="og:url" content="https://ossia.io/fr/score.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="À propos d&#39;ossia score" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Principal" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/fr/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="logo d'ossia score"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/fr/score.html" data-cat="site-score">score</a>
+			<a href="/fr/libossia.html" data-cat="site-libossia">libossia</a>
+			<a href="/fr/docs.html" data-cat="site-docs">docs</a>
+            <a href="/fr/galerie.html" data-cat="site-gallery">galerie</a>
+            <a href="/fr/usages.html">usages</a>
+			<a href="/fr/a-propos.html" data-cat="site-about">à propos</a>
+        </div>
+        <div>
+             <a href="/fr/telecharger.html">télécharger</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">don</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Langue : Français</span><span aria-hidden="true">FR</span></summary>
+  <ul><li><a href="/score/about.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/score.html" lang="fr" aria-current="page">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Principal (mobile)">
+        <a class="link" href="/fr/">ossia</a>
+        <a class="link" href="/fr/score.html">score</a>
+        <a class="link" href="/fr/libossia.html">libossia</a>
+        <a class="link" href="/fr/docs.html">docs</a>
+        <a class="link" href="/fr/galerie.html">galerie</a>
+        <a class="link" href="/fr/usages.html">usages</a>
+        <a class="link" href="/fr/a-propos.html">à propos</a>
+        <a class="link" href="/fr/telecharger.html">télécharger</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">don</a>
+        <ul class="lang-links" aria-label="Langue"><li><a href="/score/about.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/score.html" lang="fr" aria-current="page">Français</a></li></ul>
+    </nav>
+</div>
+
+    
+    <div class="page-content transparent" style="background-image: url('/assets/download-bg.webp');" >
+      <article id="main">
+        <header class="container" style="padding-top: 4em;text-align:center;">
+          <h1 class="page-title">À propos d'ossia score</h1>
+        </header>
+
+        <section class="style4 wrapper container">
+          <h3><a href="https://github.com/ossia/score" target="_blank">ossia score</a> est un séquenceur pour les artistes audiovisuels, conçu pour créer des spectacles interactifs, des installations muséales, des œuvres numériques intermédia, de la musique interactive, etc., dans une interface utilisateur intuitive.</h3>
+
+<p><br />
+<img alt="Capture d'écran de l'interface d'ossia score montrant un scénario sur la timeline avec des automations et des processus" class="post-image" src="/assets/score.webp" /></p>
+
+<p>Il permet de séquencer de l’OSC, du MIDI, du DMX, des fichiers son, etc., entre plusieurs logiciels et matériels.
+Sa timeline interactive d’un genre nouveau permet aux partitions qu’on y écrit de dépendre d’événements et de contrôles externes, par un langage visuel simple.</p>
+
+<p>ossia score est un logiciel libre, gratuit et open source ; il fonctionne sur ordinateur (Windows / macOS / Linux), sur mobile et sur les plateformes embarquées.
+Il s’appuie sur <a href="/fr/libossia.html">libossia</a> pour son implémentation, ainsi que sur des technologies open source reconnues comme Qt 5, Boost et LLVM. Il est écrit principalement en C++ moderne.</p>
+
+<p>Voir comment il est utilisé pour la <a href="/fr/regie-spectacle.html">régie de spectacle</a>, le <a href="/fr/timeline-osc-midi-dmx.html">séquencement OSC, MIDI et DMX</a>, le <a href="/fr/mapping-video.html">mapping vidéo</a>, la <a href="/fr/programmation-visuelle.html">programmation visuelle</a>, l’<a href="/fr/eclairage-dmx.html">éclairage DMX</a>, les <a href="/fr/installations-interactives.html">installations interactives</a>, la <a href="/fr/musique-live.html">musique électronique live</a>, la <a href="/fr/spatialisation-sonore.html">spatialisation sonore</a> et l’<a href="/fr/ia-temps-reel.html">IA en temps réel</a>, ou <a href="/fr/usages.html">tous ses usages</a>.</p>
+
+<p><br /></p>
+<p style="text-align: center">
+<a href="/fr/telecharger.html" class="page-button" style="padding-left:4em;padding-right:4em;font-size: 27px;">Télécharger score !</a>
+</p>
+
+<h2 id="licence">Licence</h2>
+<p>ossia score est distribué selon les termes de la licence CeCILL. La licence française CeCILL permet d’utiliser le logiciel selon les termes de la GNU GPLv3.</p>
+
+<h2 id="financement">Financement</h2>
+<p>On peut financer le développement d’ossia sur <a href="https://opencollective.com/ossia">OpenCollective</a>.</p>
+
+<div>
+    
+         <h2 class="feature-title">Structure</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/automations.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Automation</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/automation.png" alt="Automation" loading="lazy" />
+                    
+                    <span class="feature-description">Découvrir comment automatiser des paramètres internes et externes</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/scenario.html#conditions" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Conditions</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/conditions.png" alt="Conditions" loading="lazy" />
+                    
+                    <span class="feature-description">Créer des partitions conditionnelles</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/saving-and-recalling-devices-state.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Cues</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/cue.png" alt="Cues" loading="lazy" />
+                    
+                    <span class="feature-description">Envoyer des cues pour piloter un spectacle</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/non-linear-timelines.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Graphes</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/graph.png" alt="Graphes" loading="lazy" />
+                    
+                    <span class="feature-description">Créer des machines à états et des graphes</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/common-practices/1-looping.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Boucles</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/loop.png" alt="Boucles" loading="lazy" />
+                    
+                    <span class="feature-description">Créer des boucles</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/scenario.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Imbrication</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/nesting.png" alt="Imbrication" loading="lazy" />
+                    
+                    <span class="feature-description">Imbriquer des partitions avec le processus Scenario</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/modular-workflow.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Travail modulaire</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/nodes.webp" alt="Travail modulaire" loading="lazy" />
+                    
+                    <span class="feature-description">Câbles, ports, vue nodale...</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/recording.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Enregistrement</h3>
+                    
+                    <picture><source type="image/avif" srcset="/assets/features/record.avif" /><img class="thumbnail-feature" src="/assets/features/record.webp" alt="Enregistrement" loading="lazy" /></picture>
+                    
+                    <span class="feature-description">Enregistrer les changements de paramètres externes</span>
+                </a>
+            
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/scenario.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Travail temporel</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/temporal.png" alt="Travail temporel" loading="lazy" />
+                    
+                    <span class="feature-description">Créer et éditer des scénarios</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/states-and-automations-in-practice.html#sequence-mode" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Séquences</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/sequence.png" alt="Séquences" loading="lazy" />
+                    
+                    <span class="feature-description">Créer des séquences</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/scenario.html#triggers" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Déclencheurs</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/trigger.png" alt="Déclencheurs" loading="lazy" />
+                    
+                    <span class="feature-description">Déclenchement interactif</span>
+                </a>
+            
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Audio</h2>
+         <div class="features-list">
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/soundfile.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Fichiers son</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/audio.webp" alt="Fichiers son" loading="lazy" />
+                    
+                    <span class="feature-description">Lecture de fichiers son dans ossia score</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/audio-plugins.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Plug-ins audio</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/fx.webp" alt="Plug-ins audio" loading="lazy" />
+                    
+                    <span class="feature-description">Utilisation de plug-ins audio dans ossia score</span>
+                </a>
+            
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/bytebeat.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Bytebeat</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/bytebeat.png" alt="Bytebeat" loading="lazy" />
+                    
+                    <span class="feature-description">Générateur de sons 8 bits qui déménage</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/faust.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Faust</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/faust.webp" alt="Faust" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser Faust pour créer des traitements audio avancés</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/audio-looper.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Looper audio</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/looper.png" alt="Looper audio" loading="lazy" />
+                    
+                    <span class="feature-description">Enregistrer et rejouer de l'audio</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/midi.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">MIDI</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/midi.png" alt="MIDI" loading="lazy" />
+                    
+                    <span class="feature-description">Entrée et sortie MIDI, piano roll et effets MIDI</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/panels/mixer.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Mixage</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/music.png" alt="Mixage" loading="lazy" />
+                    
+                    <span class="feature-description">Mixage audio, flux de travail audio et hiérarchie</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Contrôles</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/controlsurface.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Surface de contrôle</h3>
+                    
+                    <picture><source type="image/avif" srcset="/assets/features/controlsurface.avif" /><img class="thumbnail-feature" src="/assets/features/controlsurface.webp" alt="Surface de contrôle" loading="lazy" /></picture>
+                    
+                    <span class="feature-description">Utiliser la surface de contrôle pour garder la main sur les paramètres de score</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/remote.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Contrôler score</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/controlling_score.webp" alt="Contrôler score" loading="lazy" />
+                    
+                    <span class="feature-description">Contrôler l'exécution de score depuis un logiciel externe</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/lfo.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">LFO</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/lfo.png" alt="LFO" loading="lazy" />
+                    
+                    <span class="feature-description">Moduler n'importe quel paramètre de la partition</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/mapping.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Processus de mapping</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/mappings.png" alt="Processus de mapping" loading="lazy" />
+                    
+                    <span class="feature-description">Mappings dans la timeline</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/step.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Séquenceur pas à pas</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/step.png" alt="Séquenceur pas à pas" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser le processus de séquenceur pas à pas</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Graphismes</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/camera-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Caméra</h3>
+                    
+                    <picture><source type="image/avif" srcset="/assets/features/camera.avif" /><img class="thumbnail-feature" src="/assets/features/camera.webp" alt="Caméra" loading="lazy" /></picture>
+                    
+                    <span class="feature-description">Utiliser une caméra comme entrée pour le VJing</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/shaders.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Shaders</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/shader.webp" alt="Shaders" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser et écrire des effets de shaders ISF</span>
+                </a>
+            
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/texgen.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Textures génératives</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/texgen.webp" alt="Textures génératives" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser des scripts C++</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/working-with-video.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Vidéo</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/videos.webp" alt="Vidéo" loading="lazy" />
+                    
+                    <span class="feature-description">Prise en charge et utilisation de la vidéo</span>
+                </a>
+            
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Interopérabilité</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/joystick-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Manettes de jeu</h3>
+                    
+                    <picture><source type="image/avif" srcset="/assets/features/gamepad.avif" /><img class="thumbnail-feature" src="/assets/features/gamepad.webp" alt="Manettes de jeu" loading="lazy" /></picture>
+                    
+                    <span class="feature-description">Utiliser des manettes de jeu et des Wiimotes dans une partition</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/local-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Arbre local</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/localtree.png" alt="Arbre local" loading="lazy" />
+                    
+                    <span class="feature-description">Contrôler ossia score avec l'arbre local des appareils</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/mapper-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Appareil Mapper</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/mapper.webp" alt="Appareil Mapper" loading="lazy" />
+                    
+                    <span class="feature-description">Mappings entre appareils</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/osc-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">OSC</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/osc.webp" alt="OSC" loading="lazy" />
+                    
+                    <span class="feature-description">Envoyer et recevoir des messages OSC</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/oscquery-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">OSCQuery</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/oscquery.webp" alt="OSCQuery" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser OSCQuery pour la découverte automatique des appareils OSC</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/remote.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Contrôle à distance</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/missing.png" alt="Contrôle à distance" loading="lazy" />
+                    
+                    <span class="feature-description">Contrôle à distance depuis une page web</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/devices/serial-device.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Port série</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/logo/arduino.png" alt="Port série" loading="lazy" />
+                    
+                    <span class="feature-description">Interaction par un port série (Arduino, etc.)</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Présentation</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/interface-overview.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Aperçu de l'interface</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/temporal.png" alt="Aperçu de l'interface" loading="lazy" />
+                    
+                    <span class="feature-description">Aperçu de l'interface</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Scripts</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/reference/commandline.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">API en ligne de commande</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/cmdline.png" alt="API en ligne de commande" loading="lazy" />
+                    
+                    <span class="feature-description">Options de démarrage de score</span>
+                </a>
+            
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/panels/console.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Console de script</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/console.png" alt="Console de script" loading="lazy" />
+                    
+                    <span class="feature-description">Travailler par scripts avec la console</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/processes/javascript.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Javascript</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/js.webp" alt="Javascript" loading="lazy" />
+                    
+                    <span class="feature-description">Écrire des processus JavaScript</span>
+                </a>
+            
+            
+        
+            
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </div>
+    
+         <h2 class="feature-title">Modèle logiciel</h2>
+         <div class="features-list">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/interface-overview.html#ui-controls" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Interface utilisateur</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/controls.webp" alt="Interface utilisateur" loading="lazy" />
+                    
+                    <span class="feature-description">Contrôles de l'interface</span>
+                </a>
+            
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/execution.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Exécution</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/execution.png" alt="Exécution" loading="lazy" />
+                    
+                    <span class="feature-description">Fonctionnement du moteur</span>
+                </a>
+            
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/working-with-devices.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Explorateur d'appareils</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/explorer.png" alt="Explorateur d'appareils" loading="lazy" />
+                    
+                    <span class="feature-description">Contrôler les appareils</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/quick-start/interface-overview.html#objects-inspector-panel" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Inspecteur</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/inspector.png" alt="Inspecteur" loading="lazy" />
+                    
+                    <span class="feature-description">Découvrir les fonctionnalités du panneau de l'inspecteur</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/panels/library.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Bibliothèque</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/library.png" alt="Bibliothèque" loading="lazy" />
+                    
+                    <span class="feature-description">Utiliser la bibliothèque</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/media.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Médias</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/media.webp" alt="Médias" loading="lazy" />
+                    
+                    <span class="feature-description">Gestion des médias</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/musical.html" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Musicalité</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/music.png" alt="Musicalité" loading="lazy" />
+                    
+                    <span class="feature-description">Musicalité, quantification, barres de mesure...</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            
+                <a href="https://ossia.io/score-docs/in-depth/musical.html#process-durations-and-the-time-chooser" class="thumbnail dark">
+                    <h3 class="blog-title" style="margin-bottom: 0.4em;">Gestion du temps</h3>
+                    
+                    <img class="thumbnail-feature" src="/assets/features/timing.png" alt="Gestion du temps" loading="lazy" />
+                    
+                    <span class="feature-description">Gestion du temps et processus</span>
+                </a>
+            
+            
+        
+            
+        
+            
+        
+        </div>
+    
+</div>
+
+
+        </section>
+      </article>
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Suivez-nous !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design : HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/fr/usages.html">Usages</a></li><li><a href="/fr/confidentialite.html">Politique de confidentialité</a></li><li><button type="button" data-consent-settings hidden>Paramètres des cookies</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-score") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+  
+</html>

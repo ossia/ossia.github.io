@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Télécharger ossia score | ossia</title>
+  <meta name="description" content="Téléchargez ossia score 3.9.0 pour Windows, macOS et Linux. Logiciel libre et gratuit, aussi disponible sur le Microsoft Store, Flathub, Homebrew et AUR." />
+  <link rel="canonical" href="https://ossia.io/fr/telecharger.html" />
+  <link rel="alternate" hreflang="en" href="https://ossia.io/score/download.html" />
+  <link rel="alternate" hreflang="fr" href="https://ossia.io/fr/telecharger.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ossia.io/score/download.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Télécharger ossia score" />
+  <meta property="og:description" content="Téléchargez ossia score 3.9.0 pour Windows, macOS et Linux. Logiciel libre et gratuit, aussi disponible sur le Microsoft Store, Flathub, Homebrew et AUR." />
+  <meta property="og:url" content="https://ossia.io/fr/telecharger.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="Télécharger ossia score" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Principal" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/fr/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="logo d'ossia score"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/fr/score.html" data-cat="site-score">score</a>
+			<a href="/fr/libossia.html" data-cat="site-libossia">libossia</a>
+			<a href="/fr/docs.html" data-cat="site-docs">docs</a>
+            <a href="/fr/galerie.html" data-cat="site-gallery">galerie</a>
+            <a href="/fr/usages.html">usages</a>
+			<a href="/fr/a-propos.html" data-cat="site-about">à propos</a>
+        </div>
+        <div>
+             <a href="/fr/telecharger.html">télécharger</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">don</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Langue : Français</span><span aria-hidden="true">FR</span></summary>
+  <ul><li><a href="/score/download.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/telecharger.html" lang="fr" aria-current="page">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Principal (mobile)">
+        <a class="link" href="/fr/">ossia</a>
+        <a class="link" href="/fr/score.html">score</a>
+        <a class="link" href="/fr/libossia.html">libossia</a>
+        <a class="link" href="/fr/docs.html">docs</a>
+        <a class="link" href="/fr/galerie.html">galerie</a>
+        <a class="link" href="/fr/usages.html">usages</a>
+        <a class="link" href="/fr/a-propos.html">à propos</a>
+        <a class="link" href="/fr/telecharger.html">télécharger</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">don</a>
+        <ul class="lang-links" aria-label="Langue"><li><a href="/score/download.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/telecharger.html" lang="fr" aria-current="page">Français</a></li></ul>
+    </nav>
+</div>
+
+    
+    <div class="page-content transparent" style="background-image: url('/assets/download-bg.webp');" >         
+      <article id="main">
+        <header class="container" style="padding-top: 4em;text-align:center;">
+        </header>
+
+        <section class="style4 wrapper container">
+          <div class="support">
+<h2> Soutenez-nous ! </h2>
+Nous vendons score sur le Microsoft Store pour financer la suite de son développement : vous pouvez nous soutenir en l'<a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">achetant sur le Microsoft Store</a>, ou par <a href="https://opencollective.com/ossia">OpenCollective</a> ou <a href="https://github.com/sponsors/jcelerier">GitHub Sponsors</a>.
+</div>
+<h1 class="download-title">Télécharger ossia score v3.9.0</h1>
+<p class="download-date">Sortie le 15 octobre 2026</p>
+<p id="download-current" class="download-page-layout" style="text-align: center">
+<a data-os="win" href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt="" />Microsoft Store</a>
+<a data-os="win" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt="" />Windows</a>
+<a data-os="win-arm" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt="" />Windows sur ARM</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt="" />macOS 12 et suivants (Apple Silicon)</a>
+<a data-os="mac" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="60" alt="" />macOS 12 et suivants (Intel)</a>
+<a data-os="linux linux-x86_64" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt="" />Linux AppImage x86_64</a>
+<a data-os="linux linux-aarch64" href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt="" />Linux AppImage AArch64</a>
+<a data-os="linux linux-x86_64 linux-aarch64" href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt="" />Linux Flatpak</a>
+<a data-os="web" href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt="" />WebAssembly</a>
+</p>
+<div id="download-others-block" style="display: none;">
+<p class="download-others-title" style="text-align: center">Autres plateformes</p>
+<p id="download-others" class="download-page-layout" style="text-align: center"></p>
+</div>
+
+<p>Les nouveautés de chaque version sont décrites dans le <a href="https://github.com/ossia/score/releases/latest" target="_blank">journal des modifications</a> (en anglais), qui donne aussi accès à d’autres téléchargements ; d’autres options d’installation sont détaillées plus bas sur cette page.</p>
+
+<p><br /></p>
+
+<h2 id="configuration-minimale">Configuration minimale</h2>
+<ul>
+  <li><i>score</i> nécessite un système d’exploitation et un processeur 64 bits, sur ordinateur comme sur les plateformes embarquées. <br /></li>
+  <li>Sur x86_64, les versions officielles pour Windows et Linux nécessitent un processeur compatible AVX2 ; sinon, il faut utiliser un paquet de distribution, comme ceux de MSYS2 ou de l’AUR d’Arch Linux.</li>
+  <li>Processeur à 800 MHz, 512 Mo de RAM : <i>score</i> fonctionne par exemple sur un Raspberry Pi Zero 2W.</li>
+  <li>Pour le rendu graphique, une carte graphique compatible au moins avec OpenGL 3.2, Vulkan, Direct3D 11 ou Metal.</li>
+  <li>Le <a href="https://github.com/DistroAV/DistroAV/discussions/831">NDI Runtime</a> (v5 ou plus) peut être nécessaire pour utiliser NDI.</li>
+  <li>Le <a href="https://leap2.ultraleap.com/downloads/">SDK UltraLeap</a> (Gemini ou Hyperion au moins) peut être nécessaire pour utiliser les capteurs UltraLeap.</li>
+</ul>
+
+<h3 type="button" class="collapsible"> Windows </h3>
+<div class="collapsible-content">
+<ul>
+<li> Windows 10 et 11 sont pris en charge, pas les versions antérieures. </li>
+<li> <i>score</i> et <i>libossia</i> utilisent Bonjour pour la découverte automatique des appareils OSCQuery : sous Windows, il faut donc installer les <a href="https://support.apple.com/kb/dl999?locale=fr_FR">Services d'impression Bonjour</a>. </li>
+</ul>
+</div>
+
+<h3 type="button" class="collapsible"> macOS </h3>
+<div class="collapsible-content">
+macOS 12 Monterey au minimum ; les fonctionnalités d'IA nécessitent macOS 13 Ventura ou plus récent.
+<br /><br />
+La dernière version pour macOS 10.15 Catalina et macOS 11 Big Sur est la 3.4.1, téléchargeable depuis la <a href="https://github.com/ossia/score/releases/tag/v3.4.1">page de la version 3.4.1</a>.
+<br />
+La dernière version pour macOS 10.13 High Sierra est la 3.1.8, téléchargeable depuis la <a href="https://github.com/ossia/score/releases/tag/v3.1.8">page de la version 3.1.8</a>.
+</div>
+
+<h3 type="button" class="collapsible"> Linux (ordinateur) </h3>
+<div class="collapsible-content">
+
+<p> Pour intégrer l'AppImage au système, voir : <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/AppImage/awesome-appimage/#desktop-integration">https://github.com/AppImage/awesome-appimage/#desktop-integration</a>
+<br />
+Attention : AppImageLauncher avant la version 3.0.0 ne prend pas en charge l'AppImage de score et plante ; voir <a href="https://github.com/TheAssassin/AppImageLauncher/issues/711">cette discussion</a>, et mettre à jour AppImageLauncher.
+</p>
+
+Toutes les distributions Linux depuis 2022 environ devraient fonctionner :
+<ul>
+<li>Les paquets sont compilés sur AlmaLinux 9.</li>
+<li>Ubuntu 22.04 et suivantes</li>
+<li>Debian Bookworm, etc.</li>
+<li>Fedora 36 et suivantes</li>
+<li>Le système doit avoir au moins glibc 2.34, ainsi que X11, ALSA, libGL, librt, libdbus et libEGL ; ces paquets sont présents sur toutes les distributions de bureau courantes (Debian, Ubuntu, Fedora, OpenSUSE, Arch Linux, etc.).</li>
+<li>JACK ou PipeWire pour l'audio, et Avahi pour Bonjour, sont recommandés.</li>
+<li>libbluez peut être nécessaire pour les Wiimotes (qui passent par Bluetooth) et pour Bluetooth LE.</li>
+<li>La prise en charge de Wayland est encore expérimentale, en particulier sur les bureaux basés sur GNOME.</li>
+</ul>
+</div>
+
+<h3 type="button" class="collapsible"> Ubuntu 22.04 et suivantes</h3>
+<div class="collapsible-content">
+Sous Ubuntu, <i>fuse2</i> doit être installé, car il est nécessaire pour lancer les AppImages :
+
+<pre>
+sudo add-apt-repository universe
+sudo apt install fuse2
+</pre>
+</div>
+
+<h3 type="button" class="collapsible"> Linux (Raspberry Pi, embarqué...) </h3>
+<div class="collapsible-content">
+Lire la <a href="https://ossia.io/score-docs/in-depth/embedded.html">documentation</a> (en anglais) avant d'utiliser score sur un Raspberry Pi.
+<br />
+Le paquet pour Raspberry Pi a aussi été testé sur Arch Linux ARM et Asahi Linux (Mac M1).
+<br />
+Les versions Flatpak et Nix existent aussi en AArch64.
+</div>
+
+<p><br /></p>
+
+<h2 id="installer-avec-un-gestionnaire-de-paquets">Installer avec un gestionnaire de paquets</h2>
+
+<ul>
+<li><a href="https://flathub.org/apps/io.ossia.score">Flatpak</a> : flatpak install flathub io.ossia.score</li>
+<li><a href="https://aur.archlinux.org/packages/ossia-score">Arch Linux (AUR)</a> : paru -S ossia-score</li>
+<li><a href="https://search.nixos.org/packages?channel=unstable&amp;show=ossia-score">Nix</a> : nix-shell -p ossia-score</li>
+<li><a href="https://www.freshports.org/multimedia/ossia-score">FreeBSD</a> : pkg install ossia-score</li>
+<li><a href="https://packages.msys2.org/base/mingw-w64-ossia-score">MSYS2</a> : pacman -S mingw-w64-ucrt-x86_64-ossia-score (UCRT64), mingw-w64-clang-x86_64-ossia-score (CLANG64) ou mingw-w64-clang-aarch64-ossia-score (CLANGARM64)</li>
+<li><a href="https://winget.run/pkg/ossia/score">WinGet</a> : winget install -e --id ossia.score</li>
+<li><a href="https://formulae.brew.sh/cask/ossia-score">Homebrew</a> : brew install --cask ossia-score</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="code-source">Code source</h2>
+
+<p>Le code source de la dernière version :</p>
+<ul>
+  <li><a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-src.tar.xz">code source</a> de la dernière version</li>
+  <li><a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-src.tar.xz.asc">signature</a> du code source</li>
+  <li>ou bien le code le plus récent, <a href="https://github.com/ossia/score">directement sur GitHub</a></li>
+</ul>
+
+<p><br /></p>
+
+<h2 type="button" class="collapsible"> Tous les téléchargements </h2>
+<div class="collapsible-content">
+<p class="download-page-layout" style="text-align: center">
+<a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19" target="_blank" class="page-button download-page"><img src="../assets/microsoft-store.svg" height="80" alt="" />Microsoft Store</a>
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-x86_64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt="" />Windows</a>
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-aarch64.exe" class="page-button download-page"><img src="../assets/windows_logo_2012-Black.svg" height="80" alt="" />Windows sur ARM</a>
+</p>
+<p class="download-page-layout" style="text-align: center">
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-macOS-Intel.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="80" alt="" />macOS (Intel)</a>
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-macOS-AppleSilicon.dmg" class="page-button download-page"><img src="../assets/apple_logo_black.svg" height="80" alt="" />macOS (Apple Silicon / M1, etc.)</a>
+</p>
+<p class="download-page-layout" style="text-align: center">
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-linux-x86_64.AppImage" class="page-button download-page"><img src="../assets/Linux_Platform.svg" height="80" alt="" />Linux AppImage x86_64</a>
+<a href="https://github.com/ossia/score/releases/download/v3.9.0/ossia.score-3.9.0-linux-aarch64.AppImage" class="page-button download-page"><img src="../assets/Pi64_Platform.svg" height="80" alt="" />Linux AppImage AArch64</a>
+<a href="https://flathub.org/apps/io.ossia.score" class="page-button download-page"><img src="../assets/Flatpak_Logo.svg" height="80" alt="" />Linux (Flatpak)</a>
+</p>
+<p class="download-page-layout" style="text-align: center">
+<a href="https://ossia.io/score-web" target="_blank" class="page-button download-page"><img src="../assets/web.png" height="80" alt="" />WebAssembly</a>
+</p>
+</div>
+
+<script src="/js/collapsible.js"></script>
+
+
+        </section>
+      </article>
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Suivez-nous !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design : HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/fr/usages.html">Usages</a></li><li><a href="/fr/confidentialite.html">Politique de confidentialité</a></li><li><button type="button" data-consent-settings hidden>Paramètres des cookies</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-score") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  <script>
+    (function() {
+      const current = document.getElementById('download-current');
+      const others = document.getElementById('download-others');
+      if (!current || !others)
+        return;
+
+      const platform = navigator.platform || '';
+      const ua = navigator.userAgent || '';
+      let os = null;
+      if (platform.includes('Win'))
+        os = 'win';
+      else if (platform.includes('Mac'))
+        os = 'mac';
+      else if (platform.includes('Linux') && !ua.includes('Android')) {
+        if (/x86_64|amd64/i.test(platform))
+          os = 'linux-x86_64';
+        else if (/aarch64|arm64|armv8/i.test(platform))
+          os = 'linux-aarch64';
+        else
+          os = 'linux';
+      }
+
+      // Unknown OS: keep every download in the large row
+      if (!os)
+        return;
+
+      for (const btn of Array.from(current.querySelectorAll('a[data-os]'))) {
+        if (!btn.dataset.os.split(' ').includes(os)) {
+          btn.classList.add('small');
+          others.appendChild(btn);
+        }
+      }
+      document.getElementById('download-others-block').style.display = 'block';
+    })();
+  </script>
+  </body>
+</html>
+
+
