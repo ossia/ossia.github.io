@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User experience workshop | ossia</title>
+  <meta name="description" content="Report from the 2014 user experience workshop where artists and developers tested i-score and shaped its interface." />
+  <link rel="canonical" href="https://ossia.io/posts/ux-workshop/" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="User experience workshop" />
+  <meta property="og:description" content="Report from the 2014 user experience workshop where artists and developers tested i-score and shaped its interface." />
+  <meta property="og:url" content="https://ossia.io/posts/ux-workshop/" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="User experience workshop" />
+  <meta property="og:locale" content="en_US" />
+  
+  <meta property="article:published_time" content="2014-03-15T00:00:00+00:00" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "User experience workshop",
+      "description": "Report from the 2014 user experience workshop where artists and developers tested i-score and shaped its interface.",
+      "image": "https://ossia.io/assets/social/ossia-score-og.jpg",
+      "url": "https://ossia.io/posts/ux-workshop/",
+      "mainEntityOfPage": "https://ossia.io/posts/ux-workshop/",
+      "datePublished": "2014-03-15T00:00:00+00:00",
+      "author": { "@type": "Person", "name": "Julien" },
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html" data-cat="site-score">score</a>
+			<a href="/site-libossia/about.html" data-cat="site-libossia">libossia</a>
+			<a href="/docs.html" data-cat="site-docs">docs</a>
+            <a href="/gallery.html" data-cat="site-gallery">gallery</a>
+            <a href="/use-cases.html">use cases</a>
+			<a href="/about.html" data-cat="site-about">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Language: English</span><span aria-hidden="true">EN</span></summary>
+  <ul><li><a href="/posts/ux-workshop/" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Main (mobile)">
+        <a class="link" href="/">ossia</a>
+        <a class="link" href="/score/about.html">score</a>
+        <a class="link" href="/site-libossia/about.html">libossia</a>
+        <a class="link" href="/docs.html">docs</a>
+        <a class="link" href="/gallery.html">gallery</a>
+        <a class="link" href="/use-cases.html">use cases</a>
+        <a class="link" href="/about.html">about</a>
+        <a class="link" href="/score/download.html">download</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">donate</a>
+        <ul class="lang-links" aria-label="Language"><li><a href="/posts/ux-workshop/" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h1 class="post-title">User experience workshop</h1>
+    <p class="post-meta">News  •  Mar 15, 2014  •  Julien</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <div class="videoWrapper">
+    <button type="button" class="video-facade"><span class="video-facade-title">User experience workshop</span><span class="video-facade-note">Play · loads Vimeo</span></button><template class="video-facade-embed"><iframe title="Video: User experience workshop" loading="lazy" src="https://player.vimeo.com/video/83989990?dnt=1" allow="fullscreen" allowfullscreen=""></iframe></template>
+</div>
+<p>
+<a href="https://vimeo.com/83989990">Le chant du filament</a> from <a href="https://vimeo.com/user24205756">NICOLAS VILLENAVE</a> on <a href="https://vimeo.com">Vimeo</a>.
+</p>
+
+<p>Following November’s last development sprint, GMEA – Centre National de Création Musicale d’Albi-Tarn invited a bunch of i-score users as part of the OSSIA project. This workshop focussed on users experiments with i-score version 0.2.x and feedbacks regarding i-score 0.3 features.</p>
+
+<p>In addition to i-score core developers, were welcomed Pascal Baltazar who coordinates i-score development and extensively used i-score for the Nocturnes project led by Les Baltazars, Mathieu Chamagne who experiments i-score for interactive sound and visual installation as well as doing researches for spatial scenarios representations, Julien Rabin who is in charged of research and development at GMEA as well as working on i-score documentation, Renaud Rubiano who experiments i-score for live art productions and for his in progress installation Mobiles and Antoine Villeret who recently used i-score for Mylène Benoît’s project.</p>
+
+<p>In collaboration with LaBRI and Grame – Centre National de Création Musicale, GMEA also invited Nicolas Villenave to experiment i-score for his project Le chant du filament. Together with Max Bruckert, Clément Bossut et Jaime Chao, Le chant du filament’s team made its Max-based software interoperable in order to make the various light processes controlled by i-score.</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/v0_3/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Version 0.3 development sprint</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Follow us !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "News") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>

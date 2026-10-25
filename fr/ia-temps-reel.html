@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IA en temps réel pour l&#39;image et le son | ossia</title>
+  <meta name="description" content="IA en temps réel libre pour les artistes : détection de pose, segmentation, profondeur, images générées, LLM et apprentissage par l&#39;exemple, en local." />
+  <link rel="canonical" href="https://ossia.io/fr/ia-temps-reel.html" />
+  <link rel="alternate" hreflang="en" href="https://ossia.io/realtime-ai.html" />
+  <link rel="alternate" hreflang="fr" href="https://ossia.io/fr/ia-temps-reel.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ossia.io/realtime-ai.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IA en temps réel pour l&#39;image et le son" />
+  <meta property="og:description" content="IA en temps réel libre pour les artistes : détection de pose, segmentation, profondeur, images générées, LLM et apprentissage par l&#39;exemple, en local." />
+  <meta property="og:url" content="https://ossia.io/fr/ia-temps-reel.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="IA en temps réel pour l&#39;image et le son" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Principal" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/fr/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="logo d'ossia score"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/fr/score.html" data-cat="site-score">score</a>
+			<a href="/fr/libossia.html" data-cat="site-libossia">libossia</a>
+			<a href="/fr/docs.html" data-cat="site-docs">docs</a>
+            <a href="/fr/galerie.html" data-cat="site-gallery">galerie</a>
+            <a href="/fr/usages.html">usages</a>
+			<a href="/fr/a-propos.html" data-cat="site-about">à propos</a>
+        </div>
+        <div>
+             <a href="/fr/telecharger.html">télécharger</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">don</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Langue : Français</span><span aria-hidden="true">FR</span></summary>
+  <ul><li><a href="/realtime-ai.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/ia-temps-reel.html" lang="fr" aria-current="page">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Principal (mobile)">
+        <a class="link" href="/fr/">ossia</a>
+        <a class="link" href="/fr/score.html">score</a>
+        <a class="link" href="/fr/libossia.html">libossia</a>
+        <a class="link" href="/fr/docs.html">docs</a>
+        <a class="link" href="/fr/galerie.html">galerie</a>
+        <a class="link" href="/fr/usages.html">usages</a>
+        <a class="link" href="/fr/a-propos.html">à propos</a>
+        <a class="link" href="/fr/telecharger.html">télécharger</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">don</a>
+        <ul class="lang-links" aria-label="Langue"><li><a href="/realtime-ai.html" lang="en" hreflang="en">English</a></li><li><a href="/fr/ia-temps-reel.html" lang="fr" aria-current="page">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+        <link rel="stylesheet" href="/css/use-cases.css" />
+<article id="main" class="use-case">
+  <header class="container use-case-header">
+    <h1 class="page-title">L'IA en temps réel pour les artistes</h1>
+    <p class="use-case-subtitle">ossia score permet d'exécuter des modèles d'IA en temps réel, comme la détection de pose, la génération d'images ou les modèles de langage, sous forme d'objets d'un patch.</p>
+    <div class="use-case-cta">
+  <a class="page-button cta-primary" href="/fr/telecharger.html">Télécharger ossia score 3.9.0</a>
+  <a class="page-button" href="https://ossia.io/score-web/" target="_blank" rel="noopener">Essayer dans le navigateur</a>
+  <a class="page-button" href="https://ossia.io/score-docs/">Documentation (en anglais)</a>
+  <p class="cta-note">Gratuit et open source (GPLv3) · Windows, macOS, Linux, Raspberry Pi et navigateur web</p>
+</div>
+
+  </header>
+
+  <section class="style4 wrapper container use-case-body">
+    <p>Dans ossia score, un modèle d’IA s’utilise comme n’importe quel autre objet d’un patch : par exemple, l’image d’une caméra entre, et des positions, des images, du texte ou du son sortent et pilotent le reste de l’œuvre.
+Les modèles s’exécutent localement sur l’ordinateur ; les objets d’IA n’envoient rien à un service en ligne.
+<em>Reflet</em> (Noukii, Isabella Salas et Allison Moore, SAT, Montréal, 2025–2026) utilise score pour la logique du spectacle et pour des images produites en temps réel par des modèles génératifs sur mesure.</p>
+
+<picture><img src="/assets/gallery/reflet.webp" width="540" height="407" loading="lazy" alt="Une personne assise devant un ciel d'orage projeté, généré par IA, dans Reflet" /></picture>
+<p class="figure-caption"><i>Reflet</i>, Noukii (Anouk Ethier) avec Isabella Salas et Allison Moore, à la SAT : logique du spectacle et images générées en temps réel par des modèles sur mesure dans ossia score. © Agustina Isidori</p>
+
+<h2 id="pose-et-vision">Pose et vision</h2>
+
+<p>À partir d’une simple webcam, score détecte la pose de plusieurs personnes (avec lissage), détecte et segmente des objets, estime les émotions et les maillages du corps, et calcule la profondeur (<a href="https://ossia.io/score-docs/examples/ai/pose-detection.html">détection de pose</a>, <a href="https://ossia.io/score-docs/processes/ai-recognition.html">reconnaissance</a>).
+Les résultats sont des valeurs ordinaires, que l’on peut transformer en notes MIDI, en messages OSC, en géométrie 3D ou en cues lumière (<a href="https://ossia.io/score-docs/examples/ai/tracking-to-midi.html">tracking vers MIDI</a>, <a href="https://ossia.io/score-docs/examples/ai/tracking-to-geometry.html">tracking vers géométrie</a>).</p>
+
+<h2 id="génération-dimages">Génération d’images</h2>
+
+<p>StreamDiffusion et librediffusion génèrent des images en temps réel à partir d’une caméra, d’une vidéo ou de contenu généré, avec SD et SDXL Turbo, Flux.2 Klein, ControlNet, IP-Adapter et LoRA (<a href="https://ossia.io/score-docs/processes/streamdiffusion.html">StreamDiffusion</a>) ; ces objets nécessitent Windows ou Linux avec une carte graphique NVIDIA.
+Les prompts peuvent être composés et interpolés dans le temps, et pilotés par des caméras, des capteurs ou l’analyse audio (<a href="https://ossia.io/score-docs/processes/ai-prompt-composer.html">compositeur de prompts</a>).</p>
+
+<h2 id="langage-son-et-apprentissage">Langage, son et apprentissage</h2>
+
+<p>Qwen3 et Gemma 3 peuvent être utilisés comme modèles de langage, et d’autres modèles décrivent un flux vidéo en mots (<a href="https://ossia.io/score-docs/processes/qwen-llm.html">LLM Qwen</a>) ; pour le son, on dispose de la séparation de pistes et de vocodeurs neuronaux.</p>
+
+<p>Les classifieurs et régresseurs s’entraînent à partir de quelques exemples enregistrés de gestes ou de données de capteurs, et un interpolateur se déplace entre des états appris (<a href="https://ossia.io/score-docs/processes/classifier.html">classifieur</a>, <a href="https://ossia.io/score-docs/processes/regressor.html">régresseur</a>).
+D’autres modèles ONNX peuvent être chargés via un objet générique, sur CUDA, TensorRT, DirectML ou Core ML ; certains fonctionnent aussi dans la <a href="https://ossia.io/score-web">version web</a> grâce à WebNN.</p>
+
+<p>Comme tout autre processus, les objets d’IA se placent sur la timeline avec des cues, des scènes et des conditions, de sorte qu’un spectacle qui les utilise puisse être rejoué à l’identique chaque soir.</p>
+
+
+    <div class="use-case-cta">
+  <a class="page-button cta-primary" href="/fr/telecharger.html">Télécharger ossia score 3.9.0</a>
+  <a class="page-button" href="https://ossia.io/score-web/" target="_blank" rel="noopener">Essayer dans le navigateur</a>
+  <a class="page-button" href="https://ossia.io/score-docs/">Documentation (en anglais)</a>
+  <p class="cta-note">Gratuit et open source (GPLv3) · Windows, macOS, Linux, Raspberry Pi et navigateur web</p>
+</div>
+
+
+    
+    <nav class="use-case-others" aria-label="Autres usages">
+      <h2>Autres usages d'ossia score</h2>
+      
+<h3 class="use-case-group">Scène et musique</h3>
+<ul class="use-case-links">
+  <li><a href="/fr/regie-spectacle.html">Régie de spectacle</a><br/><span class="use-case-blurb">Cues, scènes et timecode pour le théâtre, les concerts et l'événementiel.</span></li>
+  <li><a href="/fr/musique-live.html">Musique électronique live</a><br/><span class="use-case-blurb">Synthés, boîtes à rythmes, sampler, séquenceurs pas à pas et plug-ins, synchronisés avec l'horloge MIDI, le timecode et les visuels.</span></li>
+  <li><a href="/fr/spatialisation-sonore.html">Spatialisation sonore</a><br/><span class="use-case-blurb">DBAP, GBAP et trajectoires sur tout dispositif de haut-parleurs, jusqu'à 1024 canaux, et pilotage de moteurs de spatialisation.</span></li>
+  <li><a href="/fr/danse-theatre.html">Danse et théâtre interactifs</a><br/><span class="use-case-blurb">Détection de pose, caméras de profondeur, capteurs et tracking pilotent son, vidéo et lumière, dans des cues et des scènes.</span></li>
+  <li><a href="/fr/musique-mixte.html">Musique mixte</a><br/><span class="use-case-blurb">Des partitions interactives qui attendent les interprètes, cues aux pédales, traitement en direct et son spatialisé.</span></li>
+</ul>
+<h3 class="use-case-group">Vidéo et lumière</h3>
+<ul class="use-case-links">
+  <li><a href="/fr/mapping-video.html">Vidéo, mapping et VJing</a><br/><span class="use-case-blurb">Lecture vidéo, mapping multi-projecteurs, shaders, 3D et NDI, synchronisés avec le son et la lumière.</span></li>
+  <li><a href="/fr/eclairage-dmx.html">Éclairage DMX et LED</a><br/><span class="use-case-blurb">Art-Net, sACN et DMX USB avec une bibliothèque de projecteurs et le pixel mapping LED, synchronisés avec le son et la vidéo.</span></li>
+  <li><a href="/fr/art-generatif.html">Art génératif</a><br/><span class="use-case-blurb">Shaders, 3D, gaussian splats et live coding, joués en direct ou rendus image par image.</span></li>
+  <li><a href="/fr/enregistrement-streaming.html">Enregistrement et streaming</a><br/><span class="use-case-blurb">Caméras, SDI, NDI et SRT en entrée ; enregistrement ProRes ou MP4, streaming RTMP et NDI ou Spout en sortie.</span></li>
+</ul>
+<h3 class="use-case-group">Lieux et expériences</h3>
+<ul class="use-case-links">
+  <li><a href="/fr/installations-interactives.html">Installations interactives</a><br/><span class="use-case-blurb">Capteurs, caméras et tracking, son et vidéo, en fonctionnement autonome sur un PC ou un Raspberry Pi.</span></li>
+  <li><a href="/fr/musees-expositions.html">Musées et expositions</a><br/><span class="use-case-blurb">Des dispositifs qui tournent toute la journée sans personnel, supervisés, avec panneau de contrôle et bornes.</span></li>
+  <li><a href="/fr/escape-games.html">Escape games et attractions</a><br/><span class="use-case-blurb">Énigmes, accessoires et capteurs qui pilotent son, vidéo et lumière, avec logique de jeu et panneau maître du jeu.</span></li>
+  <li><a href="/fr/art-cinetique-robotique.html">Art cinétique et robotique</a><br/><span class="use-case-blurb">Moteurs, pompes et robots écrits sur une timeline, réactifs aux capteurs, synchronisés avec son, vidéo et lumière.</span></li>
+</ul>
+<h3 class="use-case-group">Outils et recherche</h3>
+<ul class="use-case-links">
+  <li><a href="/fr/timeline-osc-midi-dmx.html">Timeline OSC, MIDI et DMX</a><br/><span class="use-case-blurb">Automatisez n'importe quel paramètre OSC, MIDI ou DMX sur une timeline interactive, avec déclencheurs et conditions.</span></li>
+  <li><a href="/fr/programmation-visuelle.html">Programmation visuelle</a><br/><span class="use-case-blurb">Patchez audio, vidéo et interaction avec des nœuds et une timeline, et exécutez vos patchs Pure Data.</span></li>
+  <li><a href="/fr/passerelle-protocoles.html">Passerelle entre protocoles</a><br/><span class="use-case-blurb">Convertissez entre MIDI, OSC, DMX, MQTT, série, HTTP et Bluetooth LE, avec mapping et filtrage, en permanence.</span></li>
+  <li><a href="/fr/recherche-sonification.html">Recherche et sonification</a><br/><span class="use-case-blurb">LSL, données HDF5 et CSV, sonification, biofeedback, et sessions enregistrées et rejouées sur une timeline.</span></li>
+  <li><a href="/fr/enseignement.html">Enseignement et ateliers</a><br/><span class="use-case-blurb">Un outil gratuit pour le son, la vidéo, la lumière, les capteurs et le code, sur tous les systèmes et dans le navigateur.</span></li>
+  <li><a href="/fr/applications-sur-mesure.html">Applications sur mesure</a><br/><span class="use-case-blurb">Empaquetez un projet avec votre interface en application pour Windows, macOS, Linux ou le web.</span></li>
+</ul>
+
+    </nav>
+    
+  </section>
+</article>
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Suivez-nous !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design : HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/fr/usages.html">Usages</a></li><li><a href="/fr/confidentialite.html">Politique de confidentialité</a></li><li><button type="button" data-consent-settings hidden>Paramètres des cookies</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-score") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>

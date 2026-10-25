@@ -1,0 +1,140 @@
+/* Cookie consent banner and settings dialog (js/consent.js) */
+.consent-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 1em;
+  transform: translateX(-50%);
+  width: min(60em, calc(100% - 2em));
+  max-height: calc(100vh - 2em);
+  overflow-y: auto;
+  z-index: 20000;
+  box-sizing: border-box;
+  padding: 1.2em 1.5em;
+  background: #ffffff;
+  color: #1d1d1b;
+  border: 1px solid #767676;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+  /* System font: no size change when the web fonts arrive (layout shift) */
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+.consent-banner h2,
+.consent-dialog h2 {
+  font-size: 1.15em;
+  font-weight: 700;
+  margin: 0 0 0.5em 0;
+  line-height: 1.3;
+  color: inherit;
+}
+.consent-banner p,
+.consent-dialog p {
+  margin: 0 0 0.8em 0;
+}
+.consent-banner a,
+.consent-dialog a {
+  color: #1a5d9e;
+  text-decoration: underline;
+}
+.consent-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+}
+/* All choices look exactly the same: no option is pushed over another. */
+.consent-buttons button {
+  flex: 1 1 10em;
+  min-height: 44px;
+  padding: 0.5em 1em;
+  font: inherit;
+  font-weight: 700;
+  color: #1d1d1b;
+  background: #ffffff;
+  border: 2px solid #1d1d1b;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.consent-buttons button:hover {
+  background: #eef6f7;
+}
+.consent-buttons button:focus-visible,
+.consent-option input:focus-visible,
+[data-consent-settings]:focus-visible {
+  outline: 3px solid #1a5d9e;
+  outline-offset: 2px;
+}
+.consent-dialog {
+  width: min(36em, calc(100% - 2em));
+  box-sizing: border-box;
+  padding: 1.5em;
+  border: 1px solid #767676;
+  border-radius: 8px;
+  color: #1d1d1b;
+  background: #ffffff;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+}
+.consent-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+.consent-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.2em 0.7em;
+  align-items: center;
+  margin-bottom: 0.8em;
+}
+.consent-option input {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+.consent-option label {
+  font-weight: 700;
+}
+.consent-option p {
+  grid-column: 2;
+  margin: 0;
+  font-size: 0.93em;
+}
+.consent-option input:disabled + label {
+  color: #595959;
+}
+.consent-note {
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+.consent-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+[data-consent-settings] {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.consent-banner p,
+.consent-dialog p {
+  text-align: left;
+}

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ossia.io/sitemap.xml
+Sitemap: https://ossia.io/score-docs/sitemap.xml

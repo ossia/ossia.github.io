@@ -1,0 +1,35 @@
+/*
+	Static replacement for the styles that skel.js used to inject at runtime
+	(reset, box-sizing and container widths per breakpoint).
+	Breakpoints: narrow <= 980px, narrower <= 840px, mobile <= 736px.
+*/
+
+/* Reset (http://meyerweb.com/eric/tools/css/reset/ v2.0, public domain) */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}body{-webkit-text-size-adjust:none}
+
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+/* Containers */
+.container { margin-left: auto; margin-right: auto; width: 1400px; max-width: 95%; }
+.container.small { width: 1050px; }
+.container.large { width: 100%; max-width: 1750px; }
+
+@media screen and (max-width: 980px) {
+	.container { width: 95%; }
+	.container.small { width: 71.25%; }
+	.container.large { width: 100%; max-width: 118.75%; }
+}
+
+@media screen and (max-width: 840px) {
+	.container, .container.small, .container.large { max-width: none; min-width: 0; width: 95%; }
+}
+
+@media screen and (max-width: 736px) {
+	.container, .container.small, .container.large { width: 100%; }
+}
+
+/* Keep media inside its container. :where() keeps specificity at zero so any
+   existing rule still wins. */
+:where(img, video, iframe) { max-width: 100%; }
+:where(img[width][height]:not([width="auto"])) { height: auto; }
+:where(pre) { max-width: 100%; overflow-x: auto; }

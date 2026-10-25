@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Minimum viable declarative GUI in C++ | ossia</title>
+  <meta name="description" content="Techniques for defining a declarative GUI in C++" />
+  <link rel="canonical" href="https://ossia.io/posts/minimum-viable/" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Minimum viable declarative GUI in C++" />
+  <meta property="og:description" content="Techniques for defining a declarative GUI in C++" />
+  <meta property="og:url" content="https://ossia.io/posts/minimum-viable/" />
+  <meta property="og:image" content="https://ossia.io/assets/blog/mvp-ui/banner.png" />
+  <meta property="og:image:alt" content="Some nifty C++20 code" />
+  <meta property="og:locale" content="en_US" />
+  
+  <meta property="article:published_time" content="2022-03-22T00:00:00+00:00" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "Minimum viable declarative GUI in C++",
+      "description": "Techniques for defining a declarative GUI in C++",
+      "image": "https://ossia.io/assets/blog/mvp-ui/banner.png",
+      "url": "https://ossia.io/posts/minimum-viable/",
+      "mainEntityOfPage": "https://ossia.io/posts/minimum-viable/",
+      "datePublished": "2022-03-22T00:00:00+00:00",
+      "author": { "@type": "Person", "name": "Jean-Michaël Celerier" },
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html" data-cat="site-score">score</a>
+			<a href="/site-libossia/about.html" data-cat="site-libossia">libossia</a>
+			<a href="/docs.html" data-cat="site-docs">docs</a>
+            <a href="/gallery.html" data-cat="site-gallery">gallery</a>
+            <a href="/use-cases.html">use cases</a>
+			<a href="/about.html" data-cat="site-about">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Language: English</span><span aria-hidden="true">EN</span></summary>
+  <ul><li><a href="/posts/minimum-viable/" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Main (mobile)">
+        <a class="link" href="/">ossia</a>
+        <a class="link" href="/score/about.html">score</a>
+        <a class="link" href="/site-libossia/about.html">libossia</a>
+        <a class="link" href="/docs.html">docs</a>
+        <a class="link" href="/gallery.html">gallery</a>
+        <a class="link" href="/use-cases.html">use cases</a>
+        <a class="link" href="/about.html">about</a>
+        <a class="link" href="/score/download.html">download</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">donate</a>
+        <ul class="lang-links" aria-label="Language"><li><a href="/posts/minimum-viable/" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+          <article id="main">
+  <header class="special container">
+    <h1 class="post-title">Minimum viable declarative GUI in C++</h1>
+    <p class="post-meta">Dev  •  Mar 22, 2022  •  Jean-Michaël Celerier</p>
+  </header>
+
+  <section class="style4 wrapper container">
+    <h2 id="introducing-a-toolkit">Introducing a “toolkit”</h2>
+
+<p>Here is the code of a minimal GUI toolkit for defining declarative UIs:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="c1">// That's it. That's the toolkit.</span></code></pre></figure>
+
+<p>Well, this plus some extremely routine parts of “ISO/IEC JTC1 SC22 WG21 N 4860 - Programming Languages : C++”, such as… strings… variable declarations… struct definitions… enums… ints… and a couple others. Code so post-modern it circled back to <a href="https://gist.github.com/bkaradzic/2e39896bc7d8c34e042b">orthodoxy</a>.</p>
+
+<p>So, here is how one uses the C++ language plus this, uh, toolkit to declare a simple item, say, a text label:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">my_label</span> <span class="o">=</span> <span class="s">"foo"</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">my_ui</span><span class="p">;</span></code></pre></figure>
+
+<p>Believe me, dear reader, that is actually enough user code to be able to show the following UI:</p>
+
+<p><img src="/assets/blog/mvp-ui/ui-minimal.png" alt="The UI" /></p>
+
+<p>By user code, I mean that all the “nice” UI work can be done in, say, <code class="language-plaintext highlighter-rouge">foo.hpp</code>:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="cp">#pragma once
+</span><span class="k">constexpr</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">my_label</span> <span class="o">=</span> <span class="s">"foo"</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">my_ui</span><span class="p">;</span></code></pre></figure>
+
+<p>without requiring any custom header. Some yet-unknown .cpp file will include <code class="language-plaintext highlighter-rouge">foo.hpp</code>, and, no matter what the content of <code class="language-plaintext highlighter-rouge">my_ui</code> is, will execute a nice user interface from it. Anyone will be able to create independent libraries which will render UIs according to whatever platform-specific intricacies there are, but the actual UI code will be entirely independent from anything: peak separation of concerns is achieved.</p>
+
+<h3 id="advanced-ui">Advanced UI</h3>
+
+<p>The code above can be trivially extended to showing not one, but TWO labels:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="p">{</span>
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">my_label</span> <span class="o">=</span> <span class="s">"foo"</span><span class="p">;</span>
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">other_label</span> <span class="o">=</span> <span class="s">"bar"</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">my_ui</span><span class="p">;</span></code></pre></figure>
+
+<p>The result:</p>
+
+<p><img src="/assets/blog/mvp-ui/ui-advanced.png" alt="The UI" /></p>
+
+<p>Now, one notices how the visual position of the labels in the UI has the good taste of matching 
+the one in the code: the language provides us with a native primitive for ordering disjoint things, so why not just use it ?</p>
+
+<p>Of course, just putting elements in a vertical row may not be sufficient for <em>every</em>  UI on earth.</p>
+
+<p>Let’s declare that our UI embraces horizontality instead, in the simplest way possible that I could find:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="p">{</span>
+  <span class="k">enum</span> <span class="p">{</span> <span class="n">hbox</span> <span class="p">};</span> 
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">my_label</span> <span class="o">=</span> <span class="s">"foo"</span><span class="p">;</span>
+  <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">other_label</span> <span class="o">=</span> <span class="s">"bar"</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">my_ui</span><span class="p">;</span></code></pre></figure>
+
+<p>And we get:</p>
+
+<p><img src="/assets/blog/mvp-ui/hbox.png" alt="The UI" /></p>
+
+<h3 id="nested-ui">Nested UI</h3>
+
+<p>We may want to imbricate multiple things:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="k">struct</span> <span class="p">{</span>
+  <span class="k">enum</span> <span class="p">{</span> <span class="n">hbox</span> <span class="p">};</span> 
+
+  <span class="k">struct</span> <span class="p">{</span>
+    <span class="k">enum</span> <span class="p">{</span> <span class="n">vbox</span> <span class="p">};</span> 
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="s">"foo"</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">b</span> <span class="o">=</span> <span class="s">"bar"</span><span class="p">;</span>
+  <span class="p">}</span> <span class="n">group1</span><span class="p">;</span>
+  
+  <span class="k">struct</span> <span class="p">{</span>
+    <span class="k">enum</span> <span class="p">{</span> <span class="n">vbox</span> <span class="p">};</span> 
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">a</span> <span class="o">=</span> <span class="s">"quz"</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">char</span><span class="o">*</span> <span class="n">b</span> <span class="o">=</span> <span class="s">"qux"</span><span class="p">;</span>
+  <span class="p">}</span> <span class="n">group2</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">my_ui</span><span class="p">;</span></code></pre></figure>
+
+<p>Gives:</p>
+
+<p><img src="/assets/blog/mvp-ui/quad.png" alt="The UI" /></p>
+
+<p>We may want to go a bit deeper:</p>
+
+<picture><source type="image/avif" srcset="/assets/blog/mvp-ui/complete.avif" /><img loading="lazy" src="/assets/blog/mvp-ui/complete.webp" alt="The complete UI" /></picture>
+
+<p>The controls are pointers to simple structs which define a couple of metadatas in the way mentioned in the <a href="/posts/reflection">reflection</a> blogpost.</p>
+
+<p>A nice thing here is that unlike many frameworks, there’s not much memory to leak, as 
+the very structure of C++ structs is used to define the hierarchical UI.</p>
+
+<p>Of course, there has to be a rendering framework somewhere: the nice thing is that the UI code has no dependency on the actual framework.
+Instead, some separate glue code will transmute our declarative UI definition. Thus, which framework exactly mostly does not matter,
+for a large amount of potential UIs.</p>
+
+<p>To give an example, the screenshots above were taken with a first prototype of renderer which generates QML / QtQuick code (and runs it).</p>
+
+<h2 id="trivial-ui-backends">Trivial UI backends</h2>
+<p>Here is the exact same UI specification, but rendered with <a href="https://github.com/Immediate-Mode-UI/Nuklear">Nuklear</a> instead, which is a fairly different UI paradigm code-wise:</p>
+
+<picture><source type="image/avif" srcset="/assets/blog/mvp-ui/nuklear.avif" /><img loading="lazy" src="/assets/blog/mvp-ui/nuklear.webp" alt="The UI rendered with the Nuklear backend" /></picture>
+
+<p>I have spent an hour on it without prior knowledge of the library and did not find how to do splitters and group boxes well with it, but I’m sure there is a way !</p>
+
+<p>Meanwhile… t r e e s.</p>
+
+<p>The binding from this kind of UI specification to Nuklear holds in a ~200 lines <a href="https://github.com/celtera/avendish/blob/main/include/avnd/binding/ui/nuklear_layout_ui.hpp">(fairly dirty) file</a>.</p>
+
+<p>Here is the core loop, for reference:</p>
+
+<figure class="highlight"><pre><code class="language-cpp" data-lang="cpp"><span class="kt">void</span> <span class="nf">recurseItem</span><span class="p">(</span><span class="k">const</span> <span class="k">auto</span><span class="o">&amp;</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="n">avnd</span><span class="o">::</span><span class="n">for_each_field_ref</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="p">[</span><span class="k">this</span><span class="p">]</span> <span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span> <span class="n">child</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">createItem</span><span class="p">(</span><span class="n">child</span><span class="p">);</span>      
+  <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">Item</span><span class="p">&gt;</span>
+<span class="kt">void</span> <span class="n">createItem</span><span class="p">(</span><span class="k">const</span> <span class="n">Item</span><span class="o">&amp;</span> <span class="n">item</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">constexpr</span> <span class="kt">int</span> <span class="n">child_count</span> <span class="o">=</span> <span class="n">boost</span><span class="o">::</span><span class="n">pfr</span><span class="o">::</span><span class="n">tuple_size_v</span><span class="o">&lt;</span><span class="n">Item</span><span class="o">&gt;</span><span class="p">;</span>
+  <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">spacing</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="n">nk_label</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="s">" "</span><span class="p">,</span> <span class="n">NK_TEXT_LEFT</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">hbox</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="n">nk_layout_row_dynamic</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">row_height</span><span class="p">,</span> <span class="n">child_count</span><span class="p">);</span>
+    <span class="n">recurseItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">vbox</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="n">recurseItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">split</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nk_tree_push</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">NK_TREE_TAB</span><span class="p">,</span> <span class="s">"Split"</span><span class="p">,</span> <span class="n">NK_MINIMIZED</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">recurseItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+      <span class="n">nk_tree_pop</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">group</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">nk_tree_push</span><span class="p">(</span><span class="n">ctx</span><span class="p">,</span> <span class="n">NK_TREE_TAB</span><span class="p">,</span> <span class="n">c_str</span><span class="p">(</span><span class="n">Item</span><span class="o">::</span><span class="n">name</span><span class="p">()),</span> <span class="n">NK_MINIMIZED</span><span class="p">))</span> <span class="p">{</span>
+      <span class="n">recurseItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+      <span class="n">nk_tree_pop</span><span class="p">(</span><span class="n">ctx</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="k">constexpr</span><span class="p">(</span><span class="k">requires</span> <span class="p">{</span> <span class="n">item</span><span class="p">.</span><span class="n">tabs</span><span class="p">;</span> <span class="p">})</span>
+  <span class="p">{</span>
+    <span class="n">createTabs</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+  <span class="p">}</span> 
+  <span class="k">else</span>
+  <span class="p">{</span>
+    <span class="c1">// Normal widget</span>
+    <span class="n">createWidget</span><span class="p">(</span><span class="n">item</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><em>Glory to the post-library era and to declarative, struct &amp; enum-based specification !</em></p>
+
+<p>The only remaining step is to integrate it with score’s internal widget set and there will finally be a
+way to specify audio and media plug-ins in a way entirely independent from any host app or framework, with zero-cost abstractions.</p>
+
+<p>Here is the example plug-in showcased above, done in two ways:</p>
+
+<ul>
+  <li>First version really only uses zero dependencies to show the sausage-making <a href="https://github.com/celtera/avendish/blob/07beb43db484341addc121ac18727258000c44bd/examples/Ui.hpp">https://github.com/celtera/avendish/blob/07beb43db484341addc121ac18727258000c44bd/examples/Ui.hpp</a>.</li>
+  <li>Second version use some helpers macros: <a href="https://github.com/celtera/avendish/blob/main/examples/Helpers/Ui.hpp">https://github.com/celtera/avendish/blob/main/examples/Helpers/Ui.hpp</a>. I don’t find them super convincing, but the nice thing is that the “public API” can be prototyped without issues ; as many distinct versions can exist concurrently. In the end, they pretty much won’t exist in the binary as things can be made constexpr fairly extensively: the whole layout object can be constexpr for instance.</li>
+</ul>
+
+<p>A few small additional things may be useful:</p>
+
+<ul>
+  <li>An API for loading images, for instance to render pretty SVG background à la VCVRack.</li>
+  <li>Maybe investigating reactive properties. I have some ideas for those, which may actually fit in these margins :-)</li>
+</ul>
+
+<p>This work can be tried with the <a href="https://github.com/celtera/avendish">avendish</a> library.</p>
+
+  </section>
+  <section class="wrapper container nav">
+       
+        <a href="/posts/ossia-score-3/" class="post-nav" style="float: left; text-align: left; ">&larr; <strong class="post-nav-title">Introducing ossia score 3</strong></a>
+        
+
+        <div style="position: absolute; left: 50%;">
+            <a href="/blog.html" class="post-nav" style="position: relative; left: -50%;"><strong class="post-nav-title">Back to all posts</strong></a>
+        </div>
+
+        
+        <a href="/posts/distributed/" class="post-nav" style="float: right; text-align: right;"><strong class="post-nav-title">Collaborative and distributed interactive scores</strong> &rarr;</a>
+        
+</section>
+
+</article>
+
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Follow us !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "Dev") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>

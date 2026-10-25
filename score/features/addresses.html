@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!--
+	Twenty by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+--><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Addresses | ossia</title>
+  <meta name="description" content="How addresses work in score and libossia" />
+  <link rel="canonical" href="https://ossia.io/score/features/addresses.html" />
+
+  
+
+  <!-- Open Graph / social previews -->
+  <meta property="og:site_name" content="ossia" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Addresses" />
+  <meta property="og:description" content="How addresses work in score and libossia" />
+  <meta property="og:url" content="https://ossia.io/score/features/addresses.html" />
+  <meta property="og:image" content="https://ossia.io/assets/social/ossia-score-og.jpg" />
+  <meta property="og:image:alt" content="Addresses" />
+  <meta property="og:locale" content="en_US" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ossia_io" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ossia.io/#organization",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "logo": "https://ossia.io/assets/score-logo.png",
+      "email": "contact@ossia.io",
+      "sameAs": [
+        "https://github.com/ossia",
+        "https://x.com/ossia_io",
+        "https://www.instagram.com/ossia_io/",
+        "https://vimeo.com/ossia",
+        "https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw",
+        "https://www.facebook.com/ossia.io",
+        "https://opencollective.com/ossia"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ossia.io/#website",
+      "name": "ossia",
+      "url": "https://ossia.io/",
+      "publisher": { "@id": "https://ossia.io/#organization" }
+    }
+  ]
+}
+</script>
+
+
+  <link rel="icon" type="image/png" href="/assets/score-logo.png" />
+  <link rel="alternate" type="application/rss+xml" title="ossia blog" href="https://ossia.io/feed.xml" />
+
+  <link rel="preload" href="/assets/fonts/catamaran-100-900-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/assets/fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin />
+  
+  <link rel="stylesheet" href="/css/fonts.css" />
+  <link rel="stylesheet" href="/css/skel.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/style-narrow.css" media="screen and (max-width: 980px)" />
+  <link rel="stylesheet" href="/css/style-narrower.css" media="screen and (max-width: 840px)" />
+  <link rel="stylesheet" href="/css/style-mobile.css" media="screen and (max-width: 736px)" />
+
+  <!-- Google Analytics with Consent Mode (basic): nothing is loaded or sent
+       to Google until the visitor accepts. See js/consent.js. -->
+  <script>
+// Consent Mode defaults and the loader for Google Analytics, shared by ossia.io
+// (inlined in _includes/head.html) and score-docs (as /js/consent-head.js).
+// Nothing is loaded or sent to Google until the visitor accepts; see js/consent.js.
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag('consent', 'default', {
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  analytics_storage: 'denied'
+});
+gtag('set', 'ads_data_redaction', true);
+window.ossiaConsentVersion = 1;
+window.ossiaConsent = (function () {
+  try {
+    var c = JSON.parse(localStorage.getItem('ossia-consent'));
+    if (!c || c.v !== window.ossiaConsentVersion) return null;
+    var days = (Date.now() - Date.parse(c.date)) / 864e5;
+    return days >= 0 && days < 182 ? c : null;
+  } catch {
+    return null;
+  }
+})();
+window.ossiaLoadAnalytics = function (c, now) {
+  if (window.ossiaAnalyticsLoaded || !c || !c.analytics) return;
+  window.ossiaAnalyticsLoaded = true;
+  gtag('consent', 'update', {
+    analytics_storage: 'granted',
+    ad_storage: c.ads ? 'granted' : 'denied',
+    ad_user_data: c.ads ? 'granted' : 'denied'
+  });
+  gtag('js', new Date());
+  gtag('config', 'G-GCNDFW0NH6', {
+    cookie_expires: 34128000,
+    cookie_update: false,
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+  var load = function () {
+    if (window.ossiaAnalyticsScript) return;
+    window.ossiaAnalyticsScript = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-GCNDFW0NH6';
+    document.head.appendChild(s);
+  };
+  if (now) {
+    load();
+    return;
+  }
+  // Returning visitors who consented: load once the page has rendered,
+  // or on the first interaction so that early clicks are still measured.
+  window.addEventListener('load', function () {
+    setTimeout(load, 1500);
+  });
+  ['pointerdown', 'keydown', 'scroll'].forEach(function (ev) {
+    window.addEventListener(ev, load, { once: true, passive: true });
+  });
+};
+if (window.ossiaConsent && !navigator.globalPrivacyControl)
+  window.ossiaLoadAnalytics(window.ossiaConsent, false);
+
+  </script>
+  <!-- Not render-blocking: the banner only appears once js/consent.js has run -->
+  <link rel="stylesheet" href="/css/consent.css" media="print" onload="this.media = 'all'" />
+  <script defer src="/js/site.js"></script>
+  <script defer src="/js/consent.js"></script>
+</head>
+
+
+  <body>
+
+    <header id="header">
+	<nav id="nav" aria-label="Main" style="vertical-align: middle; ">
+        <div id="ossia-logo-header" style="margin-left: 1em;" >
+            <a id="homebtn" class="home-logo" style="margin: 0;" href="/">
+                <img src="/assets/score-logo.png" width="45" height="45" alt="ossia score logo"/>
+                <span class="software small" style="padding: 0; padding-left: 0.2em;padding-bottom: 0.1em;">ossia</span>
+            </a>
+        </div>
+        <div class="cat" style="flex-grow:1;">
+            <a href="/score/about.html" data-cat="site-score">score</a>
+			<a href="/site-libossia/about.html" data-cat="site-libossia">libossia</a>
+			<a href="/docs.html" data-cat="site-docs">docs</a>
+            <a href="/gallery.html" data-cat="site-gallery">gallery</a>
+            <a href="/use-cases.html">use cases</a>
+			<a href="/about.html" data-cat="site-about">about</a>
+        </div>
+        <div>
+             <a href="/score/download.html">download</a>
+             <a class="donate" href="https://opencollective.com/ossia" target="_blank" style="padding:0; padding-right: 1em;color: #E5FF28;">donate</a>
+        </div>
+        <details class="lang-menu">
+  <summary><span class="visually-hidden">Language: English</span><span aria-hidden="true">EN</span></summary>
+  <ul><li><a href="/score/features/addresses.html" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+</details>
+	</nav>
+</header>
+
+<!-- Mobile navigation -->
+<div id="topButton">
+    <button type="button" class="toggle" aria-label="Menu" aria-expanded="false" aria-controls="topPanel"></button>
+</div>
+<div id="topPanel">
+    <nav aria-label="Main (mobile)">
+        <a class="link" href="/">ossia</a>
+        <a class="link" href="/score/about.html">score</a>
+        <a class="link" href="/site-libossia/about.html">libossia</a>
+        <a class="link" href="/docs.html">docs</a>
+        <a class="link" href="/gallery.html">gallery</a>
+        <a class="link" href="/use-cases.html">use cases</a>
+        <a class="link" href="/about.html">about</a>
+        <a class="link" href="/score/download.html">download</a>
+        <a class="link" href="https://opencollective.com/ossia" target="_blank">donate</a>
+        <ul class="lang-links" aria-label="Language"><li><a href="/score/features/addresses.html" lang="en" aria-current="page">English</a></li><li class="untranslated"><a href="/fr/" lang="fr" hreflang="fr">Français</a></li></ul>
+    </nav>
+</div>
+
+    <div class="page-content">
+        <article id="main">
+  <header class="container" style="padding-top: 6em;text-align:center;">
+  
+    <div class="menu">
+            <a href="/score/about.html" class="menu-item" ><span class="icon-svg icon-about"></span>About</a>
+            <a href="/score/download.html" class="menu-item" ><span class="icon-svg icon-download"></span>Download</a>
+    </div>
+        
+  <h1 class="page-title">Addresses</h1> 
+  </header>
+  <section class="wrapper style4 container">
+    <h2 id="pattern-match">Pattern match</h2>
+
+<p>It’s possible to do e.g.</p>
+
+<p>Given a device, for instance a MIDI device that looks like</p>
+
+<figure class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">QUNEO</span><span class="p">:/</span><span class="mi">1</span><span class="p">/</span><span class="n">control</span><span class="p">/</span><span class="mi">1</span>
+<span class="n">QUNEO</span><span class="p">:/</span><span class="mi">1</span><span class="p">/</span><span class="n">control</span><span class="p">/</span><span class="mi">4</span>
+<span class="n">QUNEO</span><span class="p">:/</span><span class="mi">1</span><span class="p">/</span><span class="n">control</span><span class="p">/</span><span class="mi">23</span></code></pre></figure>
+
+<p>It’s possible to use</p>
+
+<figure class="highlight"><pre><code class="language-matlab" data-lang="matlab"><span class="n">QUNEO</span><span class="p">:/</span><span class="mi">1</span><span class="p">/</span><span class="n">control</span><span class="p">/</span><span class="o">*</span></code></pre></figure>
+
+<p>to refer to all the controls at once. Such addresses are called pattern matchs and are 
+available in ossia score for instance for use in input and output ports.</p>
+
+<p>Read more about <a href="https://ossia.io/ossia-docs/?c#pattern-matching">the whole set of possibilities in the pattern matching section of the libossia doc</a>.</p>
+
+<h2 id="address-types">Address types</h2>
+
+<p>In multiple cases in score and libossia, an address type can be used.</p>
+
+<p>All the units can be used: for instance, color.hsv, position.xyz… 
+Easy mappings also exist for convenience, listed afterwards.
+Note that some of the names used in those mapping may be later used by user interfaces to 
+do appropriate things (for stuff such as blob, font, label, buffer, filepath, url, width, scale…)</p>
+
+<h3 id="integers">Integers</h3>
+<ul>
+  <li>int</li>
+  <li>integer</li>
+  <li>int32</li>
+  <li>i32</li>
+  <li>long</li>
+</ul>
+
+<h3 id="floating-point">Floating point</h3>
+<ul>
+  <li>float</li>
+  <li>single</li>
+  <li>number</li>
+  <li>num</li>
+  <li>decimal</li>
+  <li>flt</li>
+  <li>float32</li>
+  <li>ieee754</li>
+  <li>real</li>
+  <li>width</li>
+  <li>length</li>
+  <li>len</li>
+  <li>height</li>
+  <li>glfloat</li>
+  <li>x</li>
+  <li>y</li>
+  <li>z</li>
+  <li>w</li>
+  <li>scale</li>
+</ul>
+
+<h3 id="string">String</h3>
+<ul>
+  <li>string</li>
+  <li>str</li>
+  <li>symbol</li>
+  <li>
+    <p>sym</p>
+  </li>
+  <li>
+    <p>font</p>
+  </li>
+  <li>
+    <p>label</p>
+  </li>
+  <li>url</li>
+  <li>filepath</li>
+  <li>path</li>
+  <li>file</li>
+  <li>folder</li>
+  <li>
+    <p>directory</p>
+  </li>
+  <li>bytearray</li>
+  <li>blob</li>
+  <li>buffer</li>
+</ul>
+
+<h3 id="boolean">Boolean</h3>
+<ul>
+  <li>bool</li>
+  <li>boolean</li>
+</ul>
+
+<h3 id="character">Character</h3>
+<ul>
+  <li>char</li>
+  <li>character</li>
+  <li>byte</li>
+</ul>
+
+<h3 id="arrays-vec2vec3vec4">Arrays (vec2/vec3/vec4)</h3>
+<ul>
+  <li>vec2</li>
+  <li>vec2f</li>
+  <li>vector2</li>
+  <li>size</li>
+  <li>dim</li>
+  <li>
+    <p>dims</p>
+  </li>
+  <li>vec3</li>
+  <li>vec3f</li>
+  <li>
+    <p>vector3</p>
+  </li>
+  <li>vec4</li>
+  <li>vector4</li>
+  <li>vec4f</li>
+  <li>rect</li>
+  <li>rectangle</li>
+</ul>
+
+<h3 id="impulse">Impulse</h3>
+<ul>
+  <li>pulse</li>
+  <li>impulse</li>
+  <li>infinitum</li>
+  <li>bang</li>
+</ul>
+
+<h3 id="list">List</h3>
+<ul>
+  <li>list</li>
+  <li>lst</li>
+  <li>tuple</li>
+  <li>vector</li>
+  <li>generic</li>
+  <li>anything</li>
+  <li>any</li>
+  <li>floatArray</li>
+  <li>integerArray</li>
+  <li>stringArray</li>
+</ul>
+
+
+  </section>
+</article>
+
+<script>
+for (const a of document.querySelectorAll('.menu a')) {
+    if (a.textContent === "Addresses") { a.classList.add('active'); break; }
+}
+</script>
+
+    </div>
+    <!-- Footer -->
+<footer id="footer">
+
+    <h2 class="follow-us">Follow us !</h2>
+    <ul class="icons">
+	<li><a href="https://x.com/ossia_io" class="icon circle"><img src="/css/images/social_media/Twitter_Social_Icon_Circle_Color.png" width="32" alt="Twitter" /></a></li>
+	<li><a href="https://github.com/ossia/score" class="icon circle"><img src="/css/images/social_media/GitHub-Mark-Light-64px.png" width="32" alt="GitHub" /></a></li>
+	<li><a href="https://www.instagram.com/ossia_io/" class="icon circle"><img src="/css/images/social_media/Instagram_Glyph_Gradient_RGB.webp" width="32" alt="Instagram" /></a></li>
+	<li><a href="https://vimeo.com/ossia" class="icon circle"><img src="/css/images/social_media/vimeo.png" width="32" alt="Vimeo"/></a></li>
+	<li><a href="https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw" class="icon circle"><img src="/css/images/social_media/youtube_social_circle_red.png" width="32" alt="YouTube"/></a></li>
+	<li><a href="https://www.facebook.com/ossia.io" class="icon circle"><img src="/css/images/social_media/f_logo_RGB-Blue_58.png" width="34" alt="Facebook"/></a></li>
+    </ul>
+    <ul class="copyright">
+        <li>&copy; ossia 2026</li><li>Design: HTML5 UP</li>
+    </ul>
+    <ul class="copyright">
+	<li><a href="/use-cases.html">Use cases</a></li><li><a href="/privacy.html">Privacy policy</a></li><li><button type="button" data-consent-settings hidden>Cookie settings</button></li>
+    </ul>
+</footer>
+
+<script>
+for (const a of document.querySelectorAll('.cat a[data-cat]')) {
+    if (a.dataset.cat === "site-score") { a.classList.add('active'); break; }
+}
+</script>
+
+
+  </body>
+</html>
