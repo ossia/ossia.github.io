@@ -10,7 +10,7 @@ description: "Download ossia score %VERSION% for Windows, macOS and Linux. Free 
 
 <div class="support">
 <h2> Support us! </h2>
-We sell score on the Microsoft store as a way to get financial support to ensure continued development so please consider <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">buying it on the Microsoft Store</a>, or funding us through <a href="https://opencollective.com/ossia">OpenCollective</a> or <a href="https://github.com/sponsors/jcelerier">Github Sponsors</a>!
+ossia score is free on every platform. It is developed by <a href="/association.html">ossia.io, a non-profit association</a>; buying it on the <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">Microsoft Store</a>, donating on <a href="https://opencollective.com/ossia">Open Collective</a> or sponsoring its lead developer on <a href="https://github.com/sponsors/jcelerier">GitHub Sponsors</a> funds its development.
 </div>
 <h1 class="download-title">Download ossia score v{{site.score_version}}</h1>
 <p class="download-date">Released on {{site.score_released_date}}</p>

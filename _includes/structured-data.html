@@ -6,9 +6,17 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "NGO",
       "@id": "{{ site.url }}/#organization",
       "name": "ossia",
+      "legalName": "OSSIA.IO",
+      "description": "Non-profit association (French association loi 1901) that develops and distributes ossia score and libossia, free software for intermedia and interactive art.",
+      "foundingDate": "2020-07-29",
+      "address": { "@type": "PostalAddress", "streetAddress": "31 rue Berthomé", "postalCode": "33400", "addressLocality": "Talence", "addressCountry": "FR" },
+      "identifier": [
+        { "@type": "PropertyValue", "propertyID": "RNA", "value": "W332029655" },
+        { "@type": "PropertyValue", "propertyID": "SIREN", "value": "887785384" }
+      ],
       "url": "{{ site.url }}/",
       "logo": "{{ site.url }}/assets/score-logo.png",
       "email": "{{ site.email }}",

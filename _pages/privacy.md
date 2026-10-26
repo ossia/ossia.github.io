@@ -12,7 +12,7 @@ description: "Privacy policy for ossia.io and our open-source software, ossia sc
 
 ## Who we are
 
-This website is published by **ossia.io**, the non-profit organisation that develops ossia score and libossia, in France and in Québec.
+This website is published by **ossia.io**, the non-profit organisation that develops ossia score and libossia, in France and in Québec (OSSIA.IO, association loi 1901, 31 rue Berthomé, 33400 Talence, France; see [the association](/association.html)).
 
 Person in charge of the protection of personal information: **Myriam Desainte-Catherine**, President of ossia.io, reachable at [contact@ossia.io](mailto:contact@ossia.io).
 

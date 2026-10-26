@@ -13,7 +13,7 @@ description: "Politique de confidentialité d'ossia.io et de nos logiciels libre
 
 ## Qui sommes-nous
 
-Ce site est publié par **ossia.io**, l'organisme à but non lucratif qui développe ossia score et libossia, en France et au Québec.
+Ce site est publié par **ossia.io**, l'organisme à but non lucratif qui développe ossia score et libossia, en France et au Québec (OSSIA.IO, association loi 1901, 31 rue Berthomé, 33400 Talence, France ; voir [l'association](/fr/association.html)).
 
 Personne responsable de la protection des renseignements personnels : **Myriam Desainte-Catherine**, présidente d'ossia.io, joignable à [contact@ossia.io](mailto:contact@ossia.io).
 

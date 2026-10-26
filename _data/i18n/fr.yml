@@ -18,9 +18,13 @@ footer:
   follow: Suivez-nous !
   use_cases: Usages
   privacy: Politique de confidentialité
+  association: L'association ossia.io
+  contact: Contact
 about_menu:
   about: À propos d'ossia
   project: Le projet
+  association: L'association
+  contact: Contact
 cta:
   download: Télécharger ossia score
   try: Essayer dans le navigateur
@@ -77,6 +81,11 @@ gallery:
     where: Lieu
     ossia: Avec ossia
 home:
+  latest_release: "Dernière version : ossia score %VERSION%, sortie le %DATE% · notes de version"
+  association_title: "L'association ossia.io"
+  association_text: "ossia score et libossia sont développés par ossia.io, une association loi 1901 fondée en 2020, qui a pour objet la promotion de la création intermédia, notamment par le développement de logiciels libres."
+  support: "Soutenir l'association"
+  contact: "Nous contacter"
   banner_alt: "L'installation [re]capture, contrôlée avec ossia score"
   logo_alt: "Logo d'ossia score"
   catchphrase: "Un séquenceur gratuit et open source"

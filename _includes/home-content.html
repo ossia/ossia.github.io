@@ -40,6 +40,21 @@
     </div>
 </div>
 </div>
+<!-- The association, latest release -->
+{%- capture association_url -%}{% include translated-url.html ref="association" %}{%- endcapture -%}
+{%- capture contact_url -%}{% include translated-url.html ref="contact" %}{%- endcapture -%}
+{%- if lang == "en" -%}{%- assign released = site.score_released_date -%}{%- else -%}{%- assign rm = site.score_released_date | date: "%-m" | minus: 1 -%}{%- capture released -%}{{ site.score_released_date | date: "%-d" }} {{ t.months[rm] }} {{ site.score_released_date | date: "%Y" }}{%- endcapture -%}{%- endif %}
+<section class="index white home-association">
+    <p class="home-release"><a href="https://ossia.io/score-docs/reference/changelog/v{{ site.score_version }}.html">{{ h.latest_release | default: he.latest_release | replace: "%VERSION%", site.score_version | replace: "%DATE%", released }}</a></p>
+    <h2 style="text-align: center;"><a href="{{ association_url }}" class="title-section" style="color: black; border-color: var(--orange);">{{ h.association_title | default: he.association_title }}</a></h2>
+    <p class="home-association-text">{{ h.association_text | default: he.association_text }}</p>
+    <p class="home-association-cta">
+        <a class="page-button" href="{% include translated-url.html ref="download" %}">{{ h.download | default: he.download }}</a>
+        <a class="page-button" href="https://opencollective.com/ossia">{{ h.support | default: he.support }}</a>
+        <a class="page-button" href="{{ contact_url }}">{{ h.contact | default: he.contact }}</a>
+    </p>
+</section>
+
 <!-- Awards -->
 <section class="index white" style="padding-top: 4em;">
     <h2 style="text-align: center;" ><span class="title-section" style="color: black; border-color:var(--orange);">{{ h.supporting | default: he.supporting }}</span></h2>
