@@ -10,19 +10,14 @@ description: "Contacter l'association ossia.io : courriel, forum, Discord et Git
 
 ## Contact
 
-L'association est joignable à l'adresse **[contact@ossia.io](mailto:contact@ossia.io)**, par exemple pour les partenariats, les ateliers et formations, les projets artistiques, les institutions et la presse.
+L'association est joignable à l'adresse **[contact@ossia.io](mailto:contact@ossia.io)**, par exemple pour les partenariats, les ateliers, les projets artistiques ou la presse.
 
 ## Questions sur les logiciels
 
-Les questions sur l'utilisation d'ossia score et de libossia trouvent plus facilement réponse là où la communauté et les développeurs peuvent y répondre :
+Les questions sur l'utilisation d'ossia score et de libossia peuvent être posées sur le [forum](https://forum.ossia.io) ou sur le [serveur Discord](https://discord.gg/8Hzm4UduaS) ; les bugs et les demandes de fonctionnalités se signalent sur le [gestionnaire de tickets GitHub](https://github.com/ossia/score/issues).
+La [documentation](https://ossia.io/score-docs/) (en anglais) comporte aussi une page de [dépannage](https://ossia.io/score-docs/troubleshooting.html).
 
-- le [forum](https://forum.ossia.io), pour les questions et le partage de projets ;
-- le [serveur Discord](https://discord.gg/8Hzm4UduaS), pour échanger avec d'autres utilisateurs et les développeurs ;
-- le [gestionnaire de tickets GitHub](https://github.com/ossia/score/issues), pour signaler un bug ou proposer une fonctionnalité.
-
-La [documentation](https://ossia.io/score-docs/) (en anglais) répond à beaucoup de questions, notamment sa page de [dépannage](https://ossia.io/score-docs/troubleshooting.html).
-
-## Suivre le projet
+## Réseaux sociaux
 
 Les nouvelles et les œuvres réalisées avec ossia sont publiées sur [Instagram](https://www.instagram.com/ossia_io/), [Facebook](https://www.facebook.com/ossia.io), [X](https://x.com/ossia_io), [YouTube](https://www.youtube.com/channel/UCwghQysyNdstRfv8YUPyglw) et [Vimeo](https://vimeo.com/ossia) ; le code source est sur [GitHub](https://github.com/ossia).
 
@@ -33,4 +28,4 @@ OSSIA.IO<br/>
 33400 Talence<br/>
 France
 
-Pour en savoir plus sur l'association, son objet et ses informations légales : [l'association ossia.io](/fr/association.html).
+Voir aussi la page sur [l'association ossia.io](/fr/association.html).

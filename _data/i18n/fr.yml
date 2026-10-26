@@ -82,8 +82,8 @@ gallery:
     ossia: Avec ossia
 home:
   latest_release: "Dernière version : ossia score %VERSION%, sortie le %DATE% · notes de version"
-  association_title: "Une association à but non lucratif"
-  association_text: "ossia score et libossia sont développés par ossia.io, une association loi 1901 qui promeut la création intermédia par des logiciels libres, et accompagne les artistes, les lieux, les écoles et les chercheurs qui les utilisent."
+  association_title: "L'association ossia.io"
+  association_text: "ossia score et libossia sont développés par ossia.io, une association loi 1901 fondée en 2020, qui a pour objet la promotion de la création intermédia, notamment par le développement de logiciels libres."
   support: "Soutenir l'association"
   contact: "Nous contacter"
   banner_alt: "L'installation [re]capture, contrôlée avec ossia score"
