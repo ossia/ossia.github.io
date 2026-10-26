@@ -2011,3 +2011,24 @@ iframe {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+/* Home page: the association and the latest release; association page buttons */
+.home-association {
+    text-align: center;
+    padding: 2em 1em;
+}
+.home-association p {
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.home-association .home-release a {
+    color: #006b78;
+    font-weight: 600;
+}
+.home-association-cta, .association-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75em;
+}

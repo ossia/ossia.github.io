@@ -11,7 +11,7 @@ description: "Téléchargez ossia score %VERSION% pour Windows, macOS et Linux. 
 
 <div class="support">
 <h2> Soutenez-nous ! </h2>
-Nous vendons score sur le Microsoft Store pour financer la suite de son développement : vous pouvez nous soutenir en l'<a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">achetant sur le Microsoft Store</a>, ou par <a href="https://opencollective.com/ossia">OpenCollective</a> ou <a href="https://github.com/sponsors/jcelerier">GitHub Sponsors</a>.
+ossia score est gratuit sur toutes les plateformes. Il est développé par <a href="/fr/association.html">ossia.io, une association loi 1901</a> ; l'acheter sur le <a href="https://apps.microsoft.com/store/detail/ossia-score/9NGT21X5XB19">Microsoft Store</a>, faire un don sur <a href="https://opencollective.com/ossia">Open Collective</a> ou soutenir son développeur principal sur <a href="https://github.com/sponsors/jcelerier">GitHub Sponsors</a> finance son développement.
 </div>
 {%- assign released_day = site.score_released_date | date: "%-d" -%}
 {%- assign released_month = site.score_released_date | date: "%-m" | minus: 1 -%}

@@ -9,6 +9,8 @@ layout: default
     <div class="menu">
             <a href="{% include translated-url.html ref="about" %}" class="menu-item{% if page.ref == 'about' %} active{% endif %}"><span class="icon-svg icon-about"></span>{{ t.about_menu.about | default: t_en.about_menu.about }}</a>
             <a href="{% include translated-url.html ref="project" %}" class="menu-item{% if page.ref == 'project' %} active{% endif %}"><span class="icon-svg icon-feature"></span>{{ t.about_menu.project | default: t_en.about_menu.project }}</a>
+            <a href="{% include translated-url.html ref="association" %}" class="menu-item{% if page.ref == 'association' %} active{% endif %}"><span class="icon-svg icon-nonprofit"></span>{{ t.about_menu.association | default: t_en.about_menu.association }}</a>
+            <a href="{% include translated-url.html ref="contact" %}" class="menu-item{% if page.ref == 'contact' %} active{% endif %}"><span class="icon-svg icon-chat"></span>{{ t.about_menu.contact | default: t_en.about_menu.contact }}</a>
     </div>
     <!--
     <h1 class="page-title">{{page.title}}</h1>-->
